@@ -1,6 +1,11 @@
 import { useEffect, useState } from 'react'
 import Start from './screens/Start'
 import OtpPhone from './screens/OtpPhone'
+import OtpEmail from './screens/OtpEmail'
+import Protect from './screens/Protect'
+import { WelcomeBackPhone, WelcomeBackEmail } from './screens/WelcomeBack'
+import { EmailStart, EmailProtect, Name } from './screens/FieldScreens'
+import { Password, WelcomeBackEmailPassword } from './screens/PasswordScreens'
 
 /* Screens still waiting for their Figma design. Keep ids in sync with SCREENS
    in ../flow.ts. */
@@ -22,9 +27,20 @@ const STUBS: Record<string, string> = {
 /* The map still asks for the old `landing` id; it now resolves to `start`. */
 const ALIASES: Record<string, string> = { landing: 'start' }
 
+/* Screens built from Figma, keyed by their data-screen id. The map nodes are
+   connected to these ids later. */
 const SCREENS: Record<string, () => React.ReactElement> = {
   start: () => <Start />,
   'otp-phone': () => <OtpPhone />,
+  'otp-email': () => <OtpEmail />,
+  protect: () => <Protect />,
+  'welcome-back-phone': () => <WelcomeBackPhone />,
+  'welcome-back-email': () => <WelcomeBackEmail />,
+  'email-start': () => <EmailStart />,
+  'email-protect': () => <EmailProtect />,
+  name: () => <Name />,
+  password: () => <Password />,
+  'welcome-back-email-password': () => <WelcomeBackEmailPassword />,
 }
 
 function Stub({ title }: { title: string }) {

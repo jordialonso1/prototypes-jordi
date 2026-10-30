@@ -14,7 +14,7 @@ import { ShapeList } from '@uds/generated/enums/shape-enum'
 import bagMotorbikeConfetti from '@uds/assets/illustrations/bagMotorbikeConfetti.svg'
 import hero from '../assets/hero.png'
 import curve from '../assets/curve.svg'
-import statusBar from '../assets/statusbar.svg'
+import { HomeIndicator, StatusBar } from './Chrome'
 import appleLogo from '../assets/icon-apple.svg'
 import googleLogo from '../assets/icon-google.svg'
 
@@ -128,8 +128,8 @@ export default function Start() {
         </div>
       </div>
 
-      <img className="status-bar" src={statusBar} alt="" />
-      <div className="home-indicator" />
+      <StatusBar />
+      <HomeIndicator />
     </section>
   )
 }

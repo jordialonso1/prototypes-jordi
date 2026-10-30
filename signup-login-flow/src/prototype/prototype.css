@@ -44,11 +44,11 @@ input, button { font-family: inherit; }
 .start__legal a { color: inherit; text-decoration: underline; }
 
 /* ---- OTP phone ---- */
-.otp__nav { display: flex; align-items: center; padding: 62px calc(var(--spacing-m) * 1px) calc(var(--spacing-m) * 1px); }
+.nav-bar { display: flex; align-items: center; padding: 62px calc(var(--spacing-m) * 1px) calc(var(--spacing-m) * 1px); }
 .otp__content { display: flex; flex-direction: column; gap: calc(var(--spacing-m) * 1px); padding: calc(var(--spacing-xl) * 1px) calc(var(--spacing-m) * 1px) 0; }
 .otp__heading { display: flex; flex-direction: column; gap: calc(var(--spacing-m) * 1px); }
 .otp__pin { display: flex; gap: calc(var(--component-formField-input-pinInput-gap) * 1px); }
-.otp__cell { flex: 1 1 0; min-width: 0; max-width: calc(var(--component-formField-input-pinInput-cell-maxWidth) * 1px); }
+.otp__pin > .otp__cell { flex: 1 1 0; min-width: 0; max-width: calc(var(--component-formField-input-pinInput-cell-maxWidth) * 1px); }
 .otp__cell input { text-align: center; }
 
 .keyboard {
@@ -71,3 +71,18 @@ input, button { font-family: inherit; }
 .stub h1 { margin: 0; font-size: 26px; line-height: 30px; font-weight: 700; }
 .stub p { margin: 0; color: var(--text-color-secondary); font-size: 15px; line-height: 21px; }
 .stub__tag { align-self: flex-start; padding: 4px 10px; border-radius: 999px; background: var(--background-color-warning); font-size: 12px; font-weight: 700; }
+
+/* ---- Single-column form screens ---- */
+.form__body { flex: 1; display: flex; flex-direction: column; justify-content: space-between; padding: calc(var(--spacing-xl) * 1px) calc(var(--spacing-m) * 1px) calc(var(--spacing-xxl) * 1px); }
+.form__main { display: flex; flex-direction: column; gap: calc(var(--spacing-l) * 1px); }
+.form__heading { display: flex; flex-direction: column; gap: calc(var(--spacing-m) * 1px); }
+.form__stack { display: flex; flex-direction: column; gap: calc(var(--spacing-s) * 1px); }
+.form__identity { display: flex; flex-direction: column; gap: calc(var(--spacing-xs) * 1px); }
+.form__identity p, .reset-account { margin: 0; }
+/* Pinned reset link: Figma leaves 64px below it (vs 48px above the Continue button). */
+.form__body:has(.reset-account) { padding-bottom: calc(var(--spacing-xxxl) * 1px); }
+.link { color: var(--component-hyperlink-text-color-primary-enabled); text-decoration: underline; text-decoration-skip-ink: none; text-underline-position: from-font; }
+.link:hover { color: var(--component-hyperlink-text-color-primary-hover); }
+.brand-icon { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; }
+/* Figma centers icon + label together; uds lets the label grow and pushes the icon to the left edge. */
+.form__stack > button > span > span:last-child { flex-grow: 0; }
