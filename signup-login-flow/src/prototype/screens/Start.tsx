@@ -18,9 +18,10 @@ import { HomeIndicator, StatusBar } from './Chrome'
 import appleLogo from '../assets/icon-apple.svg'
 import googleLogo from '../assets/icon-google.svg'
 
-export default function Start() {
+/* `phone` prefills the phone number field (used by the S02 variant of the screen). */
+export default function Start({ id = 'start', phone }: { id?: string; phone?: string }) {
   return (
-    <section className="screen start" data-screen="start" aria-label="Start">
+    <section className="screen start" data-screen={id} aria-label="Start">
       <div className="start__hero">
         <img className="start__hero-img" src={hero} alt="" />
       </div>
@@ -75,6 +76,7 @@ export default function Start() {
                 label="Phone number"
                 aria-label="Phone number"
                 type="tel"
+                value={phone}
                 size="m"
               />
             </div>

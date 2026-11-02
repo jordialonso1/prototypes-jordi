@@ -19,6 +19,7 @@ const STUBS: Record<string, string> = {
    nodes in ../flow.ts point to). */
 const SCREENS: Record<string, () => React.ReactElement> = {
   start: () => <Start />,
+  'start-phone': () => <Start id="start-phone" phone="612 345 678" />,
   'otp-phone': () => <OtpPhone />,
   'otp-email': () => <OtpEmail />,
   protect: () => <Protect />,
