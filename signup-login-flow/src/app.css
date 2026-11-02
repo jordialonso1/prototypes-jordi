@@ -49,6 +49,11 @@ body {
   --m-screen-sel: #ffd84a;
   --m-sel-stroke: #202125;
   --m-code: #8a6d1f;
+  --m-dep-fill: #f9d2cf;
+  --m-dep-stroke: #d41616;
+  --m-dep-hover: #f4b8b3;
+  --m-dep-sel: #ee8f88;
+  --m-dep-text: #b91c1c;
   --m-dec-fill: #c9dafc;
   --m-dec-stroke: #4a6bc4;
   --m-dec-hover: #b3c9fa;
@@ -92,6 +97,11 @@ body {
   --m-screen-sel: #8a6d1f;
   --m-sel-stroke: #fff;
   --m-code: #e0c36a;
+  --m-dep-fill: #5a1f1f;
+  --m-dep-stroke: #f87171;
+  --m-dep-hover: #6e2828;
+  --m-dep-sel: #8f3434;
+  --m-dep-text: #fca5a5;
   --m-dec-fill: #1f2f55;
   --m-dec-stroke: #5b7fe0;
   --m-dec-hover: #27396a;
@@ -390,4 +400,49 @@ body {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+/* Deprecated screens: red node with a caption below. */
+.map__screen--deprecated rect {
+  fill: var(--m-dep-fill);
+  stroke: var(--m-dep-stroke);
+}
+
+.map__screen--deprecated:hover rect,
+.map__screen--deprecated:focus-visible rect {
+  fill: var(--m-dep-hover);
+}
+
+.map__screen--deprecated.is-selected rect {
+  fill: var(--m-dep-sel);
+  stroke: var(--m-sel-stroke);
+}
+
+.map__deprecated {
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  fill: var(--m-dep-text);
+  pointer-events: none;
+}
+
+/* Signup screens: clickable like screens, drawn in the signup purple. */
+.map__screen--purple rect {
+  fill: var(--m-purple-fill);
+  stroke: var(--m-purple-stroke);
+}
+
+.map__screen--purple:hover rect,
+.map__screen--purple:focus-visible rect {
+  fill: var(--m-purple-fill);
+  filter: var(--m-hover-filter);
+}
+
+.map__screen--purple.is-selected rect {
+  fill: var(--m-purple-fill);
+  stroke: var(--m-sel-stroke);
+}
+
+.map__screen--purple .map__code {
+  fill: var(--m-purple-stroke);
 }
