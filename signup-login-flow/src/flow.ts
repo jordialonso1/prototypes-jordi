@@ -118,7 +118,7 @@ export const NODES: FlowNode[] = [
   LOGIN('l-newacct', 1374, 276),
   S('S26', 'd-pw', 'Password', 'password', 1164, 346),
   LOGIN('l-pw', 1228, 346),
-  D('d-emailotp', 'Email OTP', 1164, 377),
+  S('S28', 'd-emailotp', 'Email OTP', 'otp-email', 1164, 377),
   LOGIN('l-emailotp', 1228, 377),
 
   /* Protect your account (existing account) */
@@ -142,7 +142,7 @@ export const NODES: FlowNode[] = [
   S('S13', 'welcome-right', 'Welcome back! Screen with existing methods', 'welcome-back-phone', 1400, 486),
   S('S27', 'd-pw-r', 'Password', 'password', 1481, 486),
   LOGIN('l-pw-r', 1546, 486),
-  D('d-emailotp-r', 'Email OTP', 1481, 519),
+  S('S29', 'd-emailotp-r', 'Email OTP', 'otp-email', 1481, 519),
   LOGIN('l-emailotp-r', 1546, 519),
   LOGIN('l-social-r', 1482, 552),
 
