@@ -45,6 +45,7 @@ export interface ScreenDef {
 export const SCREENS: ScreenDef[] = [
   /* Designed (Figma) */
   { id: 'start', title: 'Start' },
+  { id: 'start-phone', title: 'Start (phone number filled in)' },
   { id: 'otp-phone', title: 'OTP phone' },
   { id: 'otp-phone-filled', title: 'OTP phone (code filled in)' },
   { id: 'otp-email', title: 'OTP email' },
@@ -83,7 +84,7 @@ const LOGIN = (code: string, id: string, x: number, y: number, label = 'Login'):
 export const NODES: FlowNode[] = [
   /* Landing + phone */
   S('S01', 'landing', 'Sign-in landing', 'start', 497, 380),
-  S('S02', 'phone-entry', 'Introduce phone number and choose OTP method', 'otp-phone', 614, 346),
+  S('S02', 'phone-entry', 'Introduce phone number and choose OTP method', 'start-phone', 614, 346),
   S('S03', 'phone-send', 'Send One Time Password (OTP)', 'otp-phone', 669, 346),
   S('S04', 'phone-input', 'Input OTP', 'otp-phone-filled', 717, 346),
   D('d-newphone', 'New phone number?', 817, 301),
