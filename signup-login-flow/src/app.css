@@ -128,18 +128,18 @@ body {
 }
 
 .page__proto {
+  position: relative;
+  --m-btn-bg: #fff;
+  --m-btn-border: #d4d4d8;
+  --m-btn-text: #202125;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  padding: 24px;
+  /* Top padding leaves room for the High-risk user toggle (top-left). */
+  padding: 56px 24px 24px;
   min-width: 0;
   min-height: 0;
-}
-
-.page__controls {
-  display: flex;
-  gap: 16px;
 }
 
 /* Map */
@@ -445,4 +445,25 @@ body {
 
 .map__screen--purple .map__code {
   fill: var(--m-purple-stroke);
+}
+
+/* Login screens: clickable like screens, drawn in the login green. */
+.map__screen--green rect {
+  fill: var(--m-green-fill);
+  stroke: var(--m-green-stroke);
+}
+
+.map__screen--green:hover rect,
+.map__screen--green:focus-visible rect {
+  fill: var(--m-green-fill);
+  filter: var(--m-hover-filter);
+}
+
+.map__screen--green.is-selected rect {
+  fill: var(--m-green-fill);
+  stroke: var(--m-sel-stroke);
+}
+
+.map__screen--green .map__code {
+  fill: var(--m-green-stroke);
 }

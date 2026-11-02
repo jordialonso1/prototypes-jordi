@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
-import { Checkbox } from '@shared'
 import FlowMap from './FlowMap'
 
 const PROTOTYPE_URL = './prototype/index.html'
@@ -81,13 +80,16 @@ export default function App() {
       </section>
 
       <section className="page__proto" aria-label="Prototype">
-        <div className="page__controls">
-          <Checkbox
-            label="High-risk user"
-            checked={highRisk}
-            onChange={(event) => setHighRisk(event.target.checked)}
-          />
-        </div>
+        <button
+          type="button"
+          role="switch"
+          aria-checked={highRisk}
+          className="map-toggle"
+          onClick={() => setHighRisk(!highRisk)}
+        >
+          <span className="map-toggle__track" aria-hidden="true" />
+          High-risk user
+        </button>
         <div ref={slotRef} className="device-slot">
           <div
             className="device-box"

@@ -557,7 +557,7 @@ function NodeShape({ n, selected, onSelect }: { n: Placed; selected: boolean; on
   }
   return (
     <g
-      className={`map__screen${n.deprecated ? ' map__screen--deprecated' : ''}${n.tone === 'purple' ? ' map__screen--purple' : ''}${selected ? ' is-selected' : ''}`}
+      className={`map__screen${n.deprecated ? ' map__screen--deprecated' : ''}${n.tone === 'purple' ? ' map__screen--purple' : ''}${n.tone === 'green' ? ' map__screen--green' : ''}${selected ? ' is-selected' : ''}`}
       role="button"
       tabIndex={0}
       aria-label={`Open screen: ${n.label}`}
@@ -569,7 +569,7 @@ function NodeShape({ n, selected, onSelect }: { n: Placed; selected: boolean; on
         }
       }}
     >
-      <rect x={x} y={y} width={n.w} height={n.h} rx={8} />
+      <rect x={x} y={y} width={n.w} height={n.h} rx={n.tone === 'green' ? n.h / 2 : 8} />
       {text}
       {n.deprecated && (
         <text className="map__deprecated" x={n.px} y={y + n.h + 9} textAnchor="middle">
