@@ -8,10 +8,12 @@ interface OtpScreenProps {
   helper: string
   cells: number
   suggestion: [string, string]
+  /** Example code typed into the boxes, one digit per cell. */
+  code?: string
 }
 
 /* Verification-code screen: title, body, PIN boxes and the numeric keyboard. */
-export default function OtpScreen({ id, title, body, helper, cells, suggestion }: OtpScreenProps) {
+export default function OtpScreen({ id, title, body, helper, cells, suggestion, code }: OtpScreenProps) {
   return (
     <section className="screen otp" data-screen={id} aria-label={title}>
       <StatusBar />
@@ -38,6 +40,7 @@ export default function OtpScreen({ id, title, body, helper, cells, suggestion }
                 inputMode="numeric"
                 maxLength={1}
                 clearable={false}
+                defaultValue={code?.[i]}
                 aria-label={`Digit ${i + 1}`}
               />
             ))}

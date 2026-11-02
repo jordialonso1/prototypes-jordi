@@ -21,6 +21,7 @@ const SCREENS: Record<string, () => React.ReactElement> = {
   start: () => <Start />,
   'start-phone': () => <Start id="start-phone" phone="612 345 678" />,
   'otp-phone': () => <OtpPhone />,
+  'otp-phone-filled': () => <OtpPhone id="otp-phone-filled" code="0478" />,
   'otp-email': () => <OtpEmail />,
   protect: () => <Protect />,
   'welcome-back-phone': () => <WelcomeBackPhone />,
