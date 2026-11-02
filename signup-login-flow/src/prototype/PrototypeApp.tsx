@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import Start from './screens/Start'
 import OtpPhone from './screens/OtpPhone'
 import OtpEmail from './screens/OtpEmail'
@@ -69,5 +69,6 @@ export default function PrototypeApp() {
   }, [])
 
   const render = SCREENS[screen]
-  return render ? render() : <Stub title={STUBS[screen]} />
+  /* Keyed by screen id so each screen mounts fresh: prefilled example values (S02, S04) disappear when moving to another node. */
+  return <Fragment key={screen}>{render ? render() : <Stub title={STUBS[screen]} />}</Fragment>
 }
