@@ -52,6 +52,7 @@ export const SCREENS: ScreenDef[] = [
   { id: 'welcome-back-email', title: 'Welcome back (email)' },
   { id: 'welcome-back-email-password', title: 'Welcome back (email) - password' },
   { id: 'email-start', title: 'Email start' },
+  { id: 'email-protect', title: 'Enter email (protect your account)' },
   /* Still placeholders ("Design pending") */
   { id: 'input-otp', title: 'Input OTP' },
   { id: 'welcome-no-methods', title: 'Welcome back! No linked methods' },
@@ -85,6 +86,7 @@ export const NODES: FlowNode[] = [
   /* Protect your account (new phone) */
   S('S07', 'protect-new', 'Protect your account', 'protect', 877, 262),
   D('d-emailexists', 'Email exists?', 902, 200),
+  S('S23', 'enter-email-new', 'Enter email', 'email-protect', 902, 231),
   S('S08', 'verify-a', 'Verify OTP', 'otp-email', 1012, 200),
   B('signup-a', 'Signup', 'purple', 1148, 200),
   LOGIN('l-a', 1199, 200),
@@ -128,6 +130,7 @@ export const NODES: FlowNode[] = [
   B('signup-sel', 'Signup', 'purple', 1425, 330),
   LOGIN('l-selNo', 1470, 330),
   D('d-existingemail', 'Existing email?', 1326, 436),
+  S('S24', 'enter-email-exist', 'Enter email', 'email-protect', 1326, 406),
   S('S12', 'validate-email', 'Validate email OTP page', 'otp-email', 1387, 418),
   D('d-verify-new', 'Verify OTP', 1458, 418),
   B('signup-new', 'Signup', 'purple', 1520, 380),
@@ -194,7 +197,8 @@ export const EDGES: FlowEdge[] = [
   { from: 'welcome-nolinked', to: 'protect-exist', bendX: 1235 },
 
   /* Protect your account (new phone) */
-  { from: 'protect-new', to: 'd-emailexists', label: 'email' },
+  { from: 'protect-new', to: 'enter-email-new', label: 'email' },
+  { from: 'enter-email-new', to: 'd-emailexists' },
   { from: 'protect-new', to: 'd-socialother', label: 'social' },
   { from: 'd-emailexists', to: 'welcome-top', label: 'Yes' },
   { from: 'd-emailexists', to: 'verify-a', label: 'No' },
@@ -231,7 +235,8 @@ export const EDGES: FlowEdge[] = [
 
   /* Protect your account (existing account) */
   { from: 'protect-exist', to: 'd-selects', label: 'social' },
-  { from: 'protect-exist', to: 'd-existingemail', label: 'email' },
+  { from: 'protect-exist', to: 'enter-email-exist', label: 'email' },
+  { from: 'enter-email-exist', to: 'd-existingemail' },
   { from: 'd-selects', to: 'l-selA', label: 'Yes, same account A' },
   { from: 'd-selects', to: 'be-selB', label: 'Yes, different account B' },
   { from: 'be-selB', to: 'l-selB' },
