@@ -1,6 +1,5 @@
 <!doctype html>
-<!-- uds-react consumes data-ui-theme/data-ui-mode; data-theme is the Pintxo boilerplate attribute. -->
-<html lang="en" data-theme="core" data-ui-theme="core" data-ui-mode="light">
+<html lang="en" data-theme="core" data-ui-mode="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,10 +26,521 @@
       font-style: normal;
       font-display: swap;
     }
+
+    /* Design tokens (Pintxo core theme, light). Values from tokens-cheatsheet.md
+       and the uds-react component tokens. */
+    :root,
+    [data-theme="core"] {
+      --spacing-xxs: 4px;
+      --spacing-xs: 8px;
+      --spacing-s: 12px;
+      --spacing-m: 16px;
+      --spacing-l: 24px;
+      --spacing-xl: 32px;
+      --spacing-xxl: 48px;
+      --spacing-xxxl: 64px;
+
+      --text-color-primary: rgba(22, 22, 23, 1);
+      --text-color-secondary: rgba(98, 99, 100, 1);
+      --background-color-primary: rgba(255, 255, 255, 1);
+      --background-color-secondary: rgba(242, 242, 243, 1);
+      --background-color-warning: rgba(249, 239, 220, 1);
+      --background-color-promotion: rgba(248, 236, 239, 1);
+      --brand-color-primary: rgba(255, 192, 66, 1);
+      --border-color-primary: rgba(205, 206, 208, 1);
+
+      --component-button-background-primary: rgba(1, 121, 99, 1);
+      --component-button-background-primary-hover: rgba(3, 89, 73, 1);
+      --component-button-background-primary-disabled: rgba(205, 206, 208, 1);
+      --component-button-text-primary-disabled: rgba(98, 99, 100, 1);
+      --component-button-background-neutral: rgba(242, 242, 243, 1);
+      --component-button-background-neutral-hover: rgba(218, 219, 221, 1);
+      --component-hyperlink-text-color: rgba(3, 89, 73, 1);
+      --component-hyperlink-text-color-hover: rgba(6, 60, 50, 1);
+      --component-formfield-focus: rgba(1, 121, 99, 1);
+    }
+
+    * { box-sizing: border-box; margin: 0; }
+    html, body { height: 100%; }
+    body {
+      max-width: 390px;
+      margin: 0 auto;
+      overflow: hidden;
+      font-family: 'Glovo Sans', Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 20px;
+      color: var(--text-color-primary);
+      background: var(--background-color-primary);
+    }
+    button, input { font-family: inherit; }
+    img { display: block; }
+
+    /* Typography (Figma / uds-react sizes) */
+    .t-title1 { font-size: 28px; line-height: 32px; font-weight: 700; }
+    .t-title3 { font-size: 21px; line-height: 24px; font-weight: 700; }
+    .t-body1 { font-size: 16px; line-height: 20px; font-weight: 400; }
+    .t-body1-emphasis { font-size: 16px; line-height: 20px; font-weight: 500; }
+    .t-body2 { font-size: 14px; line-height: 20px; font-weight: 400; }
+    .t-caption { font-size: 12px; line-height: 16px; font-weight: 400; }
+    .t-secondary { color: var(--text-color-secondary); }
+
+    /* Screens */
+    .screen { position: relative; display: none; flex-direction: column; height: 100%; overflow: hidden; background: var(--background-color-primary); }
+    .screen.is-active { display: flex; }
+
+    /* iOS chrome (static replicas of the Figma frames) */
+    .status-bar { position: absolute; top: 0; left: 0; z-index: 3; width: 100%; height: 62px; pointer-events: none; }
+    .home-indicator { position: absolute; left: 50%; bottom: 8px; z-index: 3; width: 144px; height: 5px; border-radius: 2.5px; background: #000; transform: translateX(-50%); }
+
+    /* Buttons */
+    .btn {
+      display: flex; align-items: center; justify-content: center;
+      border: 0; border-radius: 896px; cursor: pointer;
+      font-size: 16px; line-height: 20px; font-weight: 700;
+      color: var(--text-color-primary);
+      background: var(--component-button-background-neutral);
+    }
+    .btn:hover { background: var(--component-button-background-neutral-hover); }
+    .btn--m { min-height: 48px; padding: 12px; }
+    .btn--l { min-height: 64px; padding: 20px 16px; }
+    .btn--block { width: 100%; }
+    .btn--primary { color: #fff; background: var(--component-button-background-primary); }
+    .btn--primary:hover { background: var(--component-button-background-primary-hover); }
+    .btn:disabled, .btn:disabled:hover { cursor: default; color: var(--component-button-text-primary-disabled); background: var(--component-button-background-primary-disabled); }
+    .btn__label { padding: 0 8px; white-space: nowrap; }
+    .btn img { width: 24px; height: 24px; object-fit: contain; }
+    .btn-row { display: flex; gap: var(--spacing-s); }
+    .btn-row .btn { flex: 1 1 0; min-width: 0; max-width: 448px; }
+    .btn-row--wide .btn { min-width: 128px; }
+    .icon-btn { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; padding: 0; border: 0; border-radius: 50%; cursor: pointer; background: var(--component-button-background-neutral); }
+    .icon-btn:hover { background: var(--component-button-background-neutral-hover); }
+    .icon-btn img { width: 24px; height: 24px; }
+    .text-button { display: inline-flex; align-items: center; gap: 4px; padding: 0; border: 0; background: none; cursor: pointer; font-size: 14px; line-height: 20px; font-weight: 500; color: var(--text-color-secondary); }
+    .text-button img { width: 16px; height: 16px; }
+    .link { font-size: 16px; line-height: 20px; font-weight: 700; color: var(--component-hyperlink-text-color); text-decoration: underline; text-decoration-skip-ink: none; text-underline-position: from-font; }
+    .link:hover { color: var(--component-hyperlink-text-color-hover); }
+
+    /* Form fields */
+    .field { display: flex; flex-direction: column; gap: var(--spacing-xxs); min-width: 0; }
+    .field__label { font-size: 14px; line-height: 20px; font-weight: 500; color: var(--text-color-secondary); }
+    .field__helper { font-size: 12px; line-height: 16px; color: var(--text-color-secondary); }
+    .input { display: flex; align-items: center; gap: var(--spacing-xs); height: 56px; padding: 0 12px; border: 1px solid var(--border-color-primary); border-radius: 8px; background: #fff; }
+    .input:focus-within { border-color: var(--component-formfield-focus); box-shadow: 0 0 0 1px var(--component-formfield-focus); }
+    .input input { flex: 1 1 0; min-width: 0; padding: 0; border: 0; outline: 0; font-size: 16px; line-height: 20px; color: var(--text-color-primary); background: transparent; }
+    .input img { flex: none; width: 24px; height: 24px; }
+    .pin { display: flex; gap: var(--spacing-xs); }
+    .pin .input { flex: 1 1 0; min-width: 0; max-width: 64px; height: 64px; }
+    .pin .input input { text-align: center; }
+
+    /* Navigation bar */
+    .nav-bar { display: flex; align-items: center; padding: 62px var(--spacing-m) var(--spacing-m); }
+
+    /* Single-column form screens */
+    .form__body { flex: 1; display: flex; flex-direction: column; justify-content: space-between; padding: var(--spacing-xl) var(--spacing-m) var(--spacing-xxl); }
+    .form__body--reset { padding-bottom: var(--spacing-xxxl); }
+    .form__main { display: flex; flex-direction: column; gap: var(--spacing-l); }
+    .form__heading { display: flex; flex-direction: column; gap: var(--spacing-m); }
+    .form__stack { display: flex; flex-direction: column; gap: var(--spacing-s); }
+    .form__identity { display: flex; flex-direction: column; gap: var(--spacing-xs); }
+
+    /* Start */
+    .start { background: var(--brand-color-primary); }
+    .start__hero { position: absolute; top: 0; left: 0; width: 100%; height: 389px; overflow: hidden; pointer-events: none; }
+    .start__hero img { position: absolute; width: 149.71%; height: 147.32%; left: -24.75%; top: -47.39%; max-width: none; }
+    .start__logo { position: absolute; top: 89px; left: 50%; width: 122px; height: 40px; transform: translateX(-50%); }
+    .start__bottom { position: absolute; right: 0; bottom: 0; left: 0; display: flex; flex-direction: column; }
+    .start__curve { width: 100%; height: 48px; }
+    .start__sheet { display: flex; flex-direction: column; gap: var(--spacing-l); padding: var(--spacing-m) var(--spacing-m) var(--spacing-xxl); background: var(--background-color-primary); }
+    .start__group { display: flex; flex-direction: column; gap: var(--spacing-m); }
+    .start__heading { display: flex; flex-direction: column; align-items: center; gap: var(--spacing-xs); text-align: center; }
+    .start__phone { display: flex; align-items: flex-start; gap: var(--spacing-xs); }
+    .start__phone .field:first-child { flex: 0 0 116px; }
+    .start__phone .field:last-child { flex: 1 1 0; }
+    .start__alt { display: flex; flex-direction: column; align-items: center; gap: var(--spacing-s); }
+    .start__alt .btn-row { align-self: stretch; }
+    .start__more { display: flex; justify-content: center; }
+    .start__legal { text-align: center; color: var(--text-color-secondary); }
+    .start__legal a { color: inherit; text-decoration: underline; }
+
+    /* Banner */
+    .banner { display: flex; align-items: center; gap: var(--spacing-s); padding: var(--spacing-s); border-radius: 8px; background: var(--background-color-promotion); }
+    .banner__accessory { position: relative; flex: none; width: 72px; height: 72px; }
+    .banner__blob { position: absolute; inset: 4px; width: 64px; height: 64px; }
+    .banner__art { position: absolute; left: 15.35%; top: 12.71%; width: 49.1px; height: 54.2px; }
+    .banner__content { display: flex; flex-direction: column; gap: var(--spacing-xxs); }
+
+    /* OTP screens */
+    .otp__content { display: flex; flex-direction: column; gap: var(--spacing-m); padding: var(--spacing-xl) var(--spacing-m) 0; }
+    .otp__heading { display: flex; flex-direction: column; gap: var(--spacing-m); }
+    .otp .v-visible, .otp[data-variant="visible"] .v-masked { display: none; }
+    .otp[data-variant="visible"] .v-visible { display: inline; }
+
+    /* Keyboard (static replica of the iOS numeric keypad) */
+    .keyboard { display: flex; flex-direction: column; gap: 6px; margin-top: auto; padding: 8px 7.667px 76px; border-radius: 27px 27px 0 0; background: #d2d5db; font-family: -apple-system, 'SF Pro', system-ui, sans-serif; color: #000; }
+    .keyboard__suggestion { display: flex; flex-direction: column; align-items: center; padding: 1px 22px 4px; font-size: 17px; line-height: 22px; letter-spacing: -0.43px; color: #1a1a1a; }
+    .keyboard__keys { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+    .key { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 50px; border-radius: 5px; background: #fff; box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3); }
+    .key--empty { background: transparent; box-shadow: none; }
+    .key__digit { font-size: 25px; line-height: 25px; font-weight: 400; }
+    .key__letters { font-size: 10px; line-height: 10px; font-weight: 700; letter-spacing: 1px; }
+    .key svg { width: 24px; height: 24px; }
+
+    /* Placeholder screens (title only) */
+    .stub { justify-content: center; padding: 32px; }
+    .stub h1 { font-size: 26px; line-height: 30px; font-weight: 700; }
   </style>
 </head>
 <body>
-  <div id="root"></div>
-  <script type="module" src="../src/prototype/main.tsx"></script>
+  <!-- Start -->
+  <section class="screen start is-active" data-screen="start" aria-label="Start">
+    <div class="start__hero"><img src="assets/hero.png" alt="" /></div>
+    <img class="start__logo" src="assets/logo.svg" alt="Glovo" />
+    <div class="start__bottom">
+      <img class="start__curve" src="assets/curve.svg" alt="" />
+      <div class="start__sheet">
+        <div class="banner" role="status">
+          <div class="banner__accessory" aria-hidden="true">
+            <img class="banner__blob" src="assets/blob-promotion.svg" alt="" />
+            <img class="banner__art" src="assets/bag-motorbike-confetti.svg" alt="" />
+          </div>
+          <div class="banner__content">
+            <span class="t-body2" style="font-weight: 500">First order with free delivery</span>
+            <span class="t-body2">For new customers only.</span>
+          </div>
+        </div>
+
+        <div class="start__group">
+          <div class="start__heading">
+            <h1 class="t-title3">Welcome!</h1>
+            <p class="t-body2 t-secondary">Let’s start with your phone number</p>
+          </div>
+          <div class="start__phone">
+            <label class="field">
+              <span class="field__label">Prefix</span>
+              <span class="input">
+                <input value="🇪🇸 +34" readonly aria-label="Prefix" />
+                <img src="assets/icon-chevron-down.svg" alt="" />
+              </span>
+            </label>
+            <label class="field">
+              <span class="field__label">Phone number</span>
+              <span class="input"><input type="tel" inputmode="tel" data-fill-phone="612 345 678" aria-label="Phone number" /></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="start__group">
+          <div class="btn-row btn-row--wide">
+            <button class="btn btn--l" type="button"><span class="btn__label">SMS</span></button>
+            <button class="btn btn--l btn--primary" type="button"><span class="btn__label">WhatsApp</span></button>
+          </div>
+          <div class="start__alt">
+            <p class="t-body2 t-secondary">Or continue with</p>
+            <div class="btn-row">
+              <button class="btn btn--l" type="button" aria-label="Apple"><img src="assets/icon-apple.svg" alt="" /></button>
+              <button class="btn btn--l" type="button" aria-label="Google"><img src="assets/icon-google.svg" alt="" /></button>
+              <button class="btn btn--l" type="button" aria-label="Email"><img src="assets/icon-envelope.svg" alt="" /></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="start__more">
+          <button class="text-button" type="button">More <img src="assets/icon-chevron-forward.svg" alt="" /></button>
+        </div>
+
+        <p class="t-caption start__legal">
+          By continuing, you automatically accept our
+          <a href="https://glovoapp.com/docs/es/legal/terms?country=es" target="_blank" rel="noreferrer">Terms &amp; Conditions</a>,
+          <a href="https://glovoapp.com/docs/en/legal/privacy?country=es" target="_blank" rel="noreferrer">Privacy Policy</a> and
+          <a href="https://glovoapp.com/en/legal/cookies?country=es" target="_blank" rel="noreferrer">Cookies Policy</a>
+        </p>
+      </div>
+    </div>
+    <img class="status-bar" src="assets/statusbar.svg" alt="" />
+    <div class="home-indicator"></div>
+  </section>
+
+  <!-- OTP phone (variant "filled": example code typed in) -->
+  <section class="screen otp" data-screen="otp-phone" aria-label="Enter the code">
+    <img class="status-bar" src="assets/statusbar.svg" alt="" />
+    <header class="nav-bar"><button class="icon-btn" type="button" aria-label="Back"><img src="assets/icon-arrow-backward.svg" alt="" /></button></header>
+    <div class="otp__content">
+      <div class="otp__heading">
+        <h1 class="t-title1">Enter the code</h1>
+        <p class="t-body1">Insert the 4-digit verification code that we sent via WhatsApp to +34 634 123 456</p>
+      </div>
+      <div class="field">
+        <span class="field__label">Code</span>
+        <div class="pin" role="group" aria-label="Code">
+          <span class="input"><input inputmode="numeric" maxlength="1" data-fill-filled="0" aria-label="Digit 1" /></span>
+          <span class="input"><input inputmode="numeric" maxlength="1" data-fill-filled="4" aria-label="Digit 2" /></span>
+          <span class="input"><input inputmode="numeric" maxlength="1" data-fill-filled="7" aria-label="Digit 3" /></span>
+          <span class="input"><input inputmode="numeric" maxlength="1" data-fill-filled="8" aria-label="Digit 4" /></span>
+        </div>
+        <span class="field__helper">Resend code or receive via SMS in 00:26</span>
+      </div>
+    </div>
+    <div class="keyboard" data-keyboard="From WhatsApp app|0478"></div>
+    <div class="home-indicator"></div>
+  </section>
+
+  <!-- OTP email (variant "visible": full email address) -->
+  <section class="screen otp" data-screen="otp-email" aria-label="Enter the code from your Email">
+    <img class="status-bar" src="assets/statusbar.svg" alt="" />
+    <header class="nav-bar"><button class="icon-btn" type="button" aria-label="Back"><img src="assets/icon-arrow-backward.svg" alt="" /></button></header>
+    <div class="otp__content">
+      <div class="otp__heading">
+        <h1 class="t-title1">Enter the code from your Email</h1>
+        <p class="t-body1">Insert the 6-digit verification code that we sent via email to <span class="v-masked">jo********o@glovoapp.com</span><span class="v-visible">jordi.alonso@glovoapp.com</span></p>
+      </div>
+      <div class="field">
+        <span class="field__label">Code</span>
+        <div class="pin" role="group" aria-label="Code">
+          <span class="input"><input inputmode="numeric" maxlength="1" aria-label="Digit 1" /></span>
+          <span class="input"><input inputmode="numeric" maxlength="1" aria-label="Digit 2" /></span>
+          <span class="input"><input inputmode="numeric" maxlength="1" aria-label="Digit 3" /></span>
+          <span class="input"><input inputmode="numeric" maxlength="1" aria-label="Digit 4" /></span>
+          <span class="input"><input inputmode="numeric" maxlength="1" aria-label="Digit 5" /></span>
+          <span class="input"><input inputmode="numeric" maxlength="1" aria-label="Digit 6" /></span>
+        </div>
+        <span class="field__helper">Resend code in 00:26</span>
+      </div>
+    </div>
+    <div class="keyboard" data-keyboard="From Email|9700"></div>
+    <div class="home-indicator"></div>
+  </section>
+
+  <!-- Protect your account -->
+  <section class="screen" data-screen="protect" aria-label="Protect your account">
+    <img class="status-bar" src="assets/statusbar.svg" alt="" />
+    <header class="nav-bar"><button class="icon-btn" type="button" aria-label="Back"><img src="assets/icon-arrow-backward.svg" alt="" /></button></header>
+    <div class="form__body">
+      <div class="form__main">
+        <div class="form__heading">
+          <h1 class="t-title1">Protect your account</h1>
+          <p class="t-body1">Choose an option to have a way to recover your account in case you lose access.</p>
+        </div>
+        <div class="form__stack">
+          <button class="btn btn--m btn--block" type="button"><img src="assets/icon-apple.svg" alt="" /><span class="btn__label">Apple</span></button>
+          <button class="btn btn--m btn--block" type="button"><img src="assets/icon-google.svg" alt="" /><span class="btn__label">Google</span></button>
+          <button class="btn btn--m btn--block" type="button"><img src="assets/icon-envelope.svg" alt="" /><span class="btn__label">Email</span></button>
+        </div>
+      </div>
+    </div>
+    <div class="home-indicator"></div>
+  </section>
+
+  <!-- Welcome back (phone) -->
+  <section class="screen" data-screen="welcome-back-phone" aria-label="Welcome back, Jordi">
+    <img class="status-bar" src="assets/statusbar.svg" alt="" />
+    <header class="nav-bar"><button class="icon-btn" type="button" aria-label="Back"><img src="assets/icon-arrow-backward.svg" alt="" /></button></header>
+    <div class="form__body form__body--reset">
+      <div class="form__main">
+        <div class="form__heading">
+          <h1 class="t-title1">Welcome back, Jordi</h1>
+          <p class="t-body1">You already have an account.<br />Log in using a previously saved method.</p>
+        </div>
+        <div class="form__stack">
+          <button class="btn btn--m btn--block" type="button"><img src="assets/icon-google.svg" alt="" /><span class="btn__label">Google</span></button>
+          <button class="btn btn--m btn--block" type="button"><img src="assets/icon-envelope.svg" alt="" /><span class="btn__label">Email verification</span></button>
+          <button class="btn btn--m btn--block" type="button"><span class="btn__label">Password</span></button>
+        </div>
+      </div>
+      <p class="t-body1">This is not you? <a class="link" href="#">Reset your account</a></p>
+    </div>
+    <div class="home-indicator"></div>
+  </section>
+
+  <!-- Welcome back (email) -->
+  <section class="screen" data-screen="welcome-back-email" aria-label="Welcome back, Jordi">
+    <img class="status-bar" src="assets/statusbar.svg" alt="" />
+    <header class="nav-bar"><button class="icon-btn" type="button" aria-label="Back"><img src="assets/icon-arrow-backward.svg" alt="" /></button></header>
+    <div class="form__body">
+      <div class="form__main">
+        <div class="form__heading">
+          <h1 class="t-title1">Welcome back, Jordi</h1>
+          <p class="t-body1">Log in using a previously saved method.</p>
+        </div>
+        <div class="form__stack">
+          <button class="btn btn--m btn--block" type="button"><img src="assets/icon-google.svg" alt="" /><span class="btn__label">Google</span></button>
+          <button class="btn btn--m btn--block" type="button"><img src="assets/icon-envelope.svg" alt="" /><span class="btn__label">Email verification</span></button>
+          <button class="btn btn--m btn--block" type="button"><span class="btn__label">Password</span></button>
+        </div>
+      </div>
+    </div>
+    <div class="home-indicator"></div>
+  </section>
+
+  <!-- Email start -->
+  <section class="screen" data-screen="email-start" aria-label="Let’s start with your email">
+    <img class="status-bar" src="assets/statusbar.svg" alt="" />
+    <header class="nav-bar"><button class="icon-btn" type="button" aria-label="Back"><img src="assets/icon-arrow-backward.svg" alt="" /></button></header>
+    <div class="form__body">
+      <div class="form__main">
+        <div class="form__heading">
+          <h1 class="t-title1">Let’s start with your email</h1>
+          <p class="t-body1">We’ll check if you already have an account. If not, we’ll create a new one.</p>
+        </div>
+        <label class="field"><span class="field__label">Email</span><span class="input"><img src="assets/icon-envelope.svg" alt="" /><input type="email" aria-label="Email" /></span></label>
+      </div>
+      <button class="btn btn--m btn--block btn--primary" type="button" disabled><span class="btn__label">Continue</span></button>
+    </div>
+    <div class="home-indicator"></div>
+  </section>
+
+  <!-- Email protect -->
+  <section class="screen" data-screen="email-protect" aria-label="Enter your email">
+    <img class="status-bar" src="assets/statusbar.svg" alt="" />
+    <header class="nav-bar"><button class="icon-btn" type="button" aria-label="Back"><img src="assets/icon-arrow-backward.svg" alt="" /></button></header>
+    <div class="form__body">
+      <div class="form__main">
+        <div class="form__heading">
+          <h1 class="t-title1">Enter your email</h1>
+          <p class="t-body1">Add your email to have a way to recover your account in case you lose access.</p>
+        </div>
+        <label class="field"><span class="field__label">Email</span><span class="input"><img src="assets/icon-envelope.svg" alt="" /><input type="email" aria-label="Email" /></span></label>
+      </div>
+      <button class="btn btn--m btn--block btn--primary" type="button" disabled><span class="btn__label">Continue</span></button>
+    </div>
+    <div class="home-indicator"></div>
+  </section>
+
+  <!-- Name -->
+  <section class="screen" data-screen="name" aria-label="What is your name?">
+    <img class="status-bar" src="assets/statusbar.svg" alt="" />
+    <header class="nav-bar"><button class="icon-btn" type="button" aria-label="Back"><img src="assets/icon-arrow-backward.svg" alt="" /></button></header>
+    <div class="form__body">
+      <div class="form__main">
+        <div class="form__heading">
+          <h1 class="t-title1">What is your name?</h1>
+          <p class="t-body1">Nearly there! Just tell us what you want us to call you in your profile.</p>
+        </div>
+        <label class="field"><span class="field__label">Name</span><span class="input"><input aria-label="Name" /></span></label>
+      </div>
+      <button class="btn btn--m btn--block btn--primary" type="button" disabled><span class="btn__label">Continue</span></button>
+    </div>
+    <div class="home-indicator"></div>
+  </section>
+
+  <!-- Password (masked email, reset link) -->
+  <section class="screen" data-screen="password" aria-label="Enter your password">
+    <img class="status-bar" src="assets/statusbar.svg" alt="" />
+    <header class="nav-bar"><button class="icon-btn" type="button" aria-label="Back"><img src="assets/icon-arrow-backward.svg" alt="" /></button></header>
+    <div class="form__body">
+      <div class="form__main">
+        <div class="form__heading">
+          <h1 class="t-title1">Enter your password</h1>
+          <p class="t-body1">Use your password to log in to your existing account.</p>
+        </div>
+        <div class="form__identity">
+          <p class="t-body1-emphasis">jo********o@glovoapp.com</p>
+          <p class="t-body1">This is not you? <a class="link" href="#">Reset your account</a></p>
+        </div>
+        <label class="field"><span class="field__label">Password</span><span class="input"><input type="password" aria-label="Password" /><img src="assets/icon-eye-closed.svg" alt="" /></span></label>
+        <a class="link" href="#">Forgot your password?</a>
+      </div>
+      <button class="btn btn--m btn--block btn--primary" type="button" disabled><span class="btn__label">Continue</span></button>
+    </div>
+    <div class="home-indicator"></div>
+  </section>
+
+  <!-- Welcome back (email password) -->
+  <section class="screen" data-screen="welcome-back-email-password" aria-label="Enter your password">
+    <img class="status-bar" src="assets/statusbar.svg" alt="" />
+    <header class="nav-bar"><button class="icon-btn" type="button" aria-label="Back"><img src="assets/icon-arrow-backward.svg" alt="" /></button></header>
+    <div class="form__body">
+      <div class="form__main">
+        <div class="form__heading">
+          <h1 class="t-title1">Enter your password</h1>
+          <p class="t-body1">Use your password to log in to your existing account.</p>
+        </div>
+        <div class="form__identity">
+          <p class="t-body1-emphasis">jordi.alonso@glovoapp.com</p>
+        </div>
+        <label class="field"><span class="field__label">Password</span><span class="input"><input type="password" aria-label="Password" /><img src="assets/icon-eye-closed.svg" alt="" /></span></label>
+        <a class="link" href="#">Forgot your password?</a>
+      </div>
+      <button class="btn btn--m btn--block btn--primary" type="button" disabled><span class="btn__label">Continue</span></button>
+    </div>
+    <div class="home-indicator"></div>
+  </section>
+
+  <script>
+    (function () {
+      /* Screens still waiting for their Figma design. Keep ids in sync with
+         SCREENS in ../src/flow.ts. */
+      var STUBS = {
+        'input-otp': 'Input OTP',
+        'welcome-no-methods': 'Welcome back! No linked methods',
+        'verify-otp': 'Verify OTP'
+      };
+      Object.keys(STUBS).forEach(function (id) {
+        var el = document.createElement('section');
+        el.className = 'screen stub';
+        el.dataset.screen = id;
+        el.setAttribute('aria-label', STUBS[id]);
+        var h1 = document.createElement('h1');
+        h1.textContent = STUBS[id];
+        el.appendChild(h1);
+        document.body.appendChild(el);
+      });
+
+      /* Variants of a screen with prefilled example values or alternate copy.
+         They are only applied while that node is selected. */
+      var VARIANTS = {
+        'start-phone': ['start', 'phone'],
+        'otp-phone-filled': ['otp-phone', 'filled'],
+        'otp-email-visible': ['otp-email', 'visible']
+      };
+
+      /* Static iOS numeric keypad. */
+      var KEYS = [['1', ''], ['2', 'ABC'], ['3', 'DEF'], ['4', 'GHI'], ['5', 'JKL'], ['6', 'MNO'], ['7', 'PQRS'], ['8', 'TUV'], ['9', 'WXYZ']];
+      var BACKSPACE = '<svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M9 5h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-6-7z"/><path d="m12.5 9.5 5 5m0-5-5 5"/></svg>';
+      document.querySelectorAll('[data-keyboard]').forEach(function (kb) {
+        var s = kb.dataset.keyboard.split('|');
+        var html = '<div class="keyboard__suggestion"><span>' + s[0] + '</span><span>' + s[1] + '</span></div><div class="keyboard__keys" aria-hidden="true">';
+        KEYS.forEach(function (k) {
+          html += '<div class="key"><span class="key__digit">' + k[0] + '</span>' + (k[1] ? '<span class="key__letters">' + k[1] + '</span>' : '') + '</div>';
+        });
+        html += '<div class="key key--empty"></div><div class="key"><span class="key__digit">0</span></div><div class="key key--empty">' + BACKSPACE + '</div></div>';
+        kb.innerHTML = html;
+      });
+
+      var screens = {};
+      document.querySelectorAll('.screen').forEach(function (el) { screens[el.dataset.screen] = el; });
+
+      function show(name) {
+        var v = VARIANTS[name] || [name, ''];
+        var target = screens[v[0]];
+        if (!target) return;
+        Object.keys(screens).forEach(function (k) {
+          screens[k].classList.toggle('is-active', screens[k] === target);
+        });
+        /* A screen always starts fresh: clear typed values, then apply the variant. */
+        target.dataset.variant = v[1];
+        target.querySelectorAll('input:not([readonly])').forEach(function (input) {
+          var key = v[1] ? 'fill' + v[1].charAt(0).toUpperCase() + v[1].slice(1) : '';
+          input.value = (key && input.dataset[key]) || '';
+        });
+      }
+
+      /* The wrapper page (map) asks for a screen by its data-screen id. */
+      window.addEventListener('message', function (event) {
+        if (event.origin !== window.location.origin) return;
+        var data = event.data;
+        if (!data) return;
+        if (data.type === 'goto-screen' && (screens[data.screen] || VARIANTS[data.screen])) show(data.screen);
+        /* User flags set by the wrapper. Screens can restyle with
+           html[data-high-risk="true"] in CSS. */
+        if (data.type === 'set-flags') {
+          document.documentElement.dataset.highRisk = data.highRisk ? 'true' : 'false';
+        }
+      });
+
+      /* ?screen=otp-phone-filled opens a screen directly when the page is used alone. */
+      var initial = new URLSearchParams(window.location.search).get('screen');
+      if (initial) show(initial);
+    })();
+  </script>
 </body>
 </html>
