@@ -40,7 +40,7 @@ export function EmailProtect() {
     <FieldScreen
       id="email-protect"
       title="Enter your email"
-      body="Add your email to have a way to recover your account."
+      body="Add your email to have a way to recover your account in case you lose access."
       label="Email"
       withEmailIcon
     />

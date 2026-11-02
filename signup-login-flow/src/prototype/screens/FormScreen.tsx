@@ -5,7 +5,7 @@ import { HomeIndicator, NavBar, StatusBar } from './Chrome'
 interface FormScreenProps {
   id: string
   title: string
-  body: string
+  body: ReactNode
   /** Content below the heading (fields, buttons, links). */
   children?: ReactNode
   /** Disabled primary "Continue" pinned to the bottom. */
