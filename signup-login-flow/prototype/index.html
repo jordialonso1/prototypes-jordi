@@ -135,6 +135,9 @@
     /* Navigation bar */
     .nav-bar { display: flex; align-items: center; padding: 62px var(--spacing-m) var(--spacing-m); }
 
+    /* High-risk user: the Welcome back screens do not offer the Password method. */
+    html[data-high-risk="true"] .btn--password { display: none; }
+
     /* Single-column form screens */
     .form__body { flex: 1; display: flex; flex-direction: column; justify-content: space-between; padding: var(--spacing-xl) var(--spacing-m) var(--spacing-xxl); }
     .form__body--reset { padding-bottom: var(--spacing-xxxl); }
@@ -370,7 +373,7 @@
         <div class="form__stack">
           <button class="btn btn--m btn--block" type="button"><img src="assets/icon-google.svg" alt="" /><span class="btn__label">Google</span></button>
           <button class="btn btn--m btn--block" type="button"><img src="assets/icon-envelope.svg" alt="" /><span class="btn__label">Email verification</span></button>
-          <button class="btn btn--m btn--block" type="button"><span class="btn__label">Password</span></button>
+          <button class="btn btn--m btn--block btn--password" type="button"><span class="btn__label">Password</span></button>
         </div>
       </div>
       <p class="t-body1">This is not you? <a class="link" href="#">Reset your account</a></p>
@@ -391,7 +394,7 @@
         <div class="form__stack">
           <button class="btn btn--m btn--block" type="button"><img src="assets/icon-google.svg" alt="" /><span class="btn__label">Google</span></button>
           <button class="btn btn--m btn--block" type="button"><img src="assets/icon-envelope.svg" alt="" /><span class="btn__label">Email verification</span></button>
-          <button class="btn btn--m btn--block" type="button"><span class="btn__label">Password</span></button>
+          <button class="btn btn--m btn--block btn--password" type="button"><span class="btn__label">Password</span></button>
         </div>
       </div>
     </div>
