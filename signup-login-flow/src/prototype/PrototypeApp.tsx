@@ -10,25 +10,13 @@ import { Password, WelcomeBackEmailPassword } from './screens/PasswordScreens'
 /* Screens still waiting for their Figma design. Keep ids in sync with SCREENS
    in ../flow.ts. */
 const STUBS: Record<string, string> = {
-  'send-otp': 'Send one-time password (OTP)',
   'input-otp': 'Input OTP',
-  'protect-account': 'Protect your account',
-  'welcome-methods': 'Welcome back! Screen with existing methods',
   'welcome-no-methods': 'Welcome back! No linked methods',
-  'welcome-otp': 'Welcome back! Login methods + OTP',
   'verify-otp': 'Verify OTP',
-  'verify-password': 'Verify password',
-  'email-entry': 'Introduce email',
-  'validate-email-otp': 'Validate email OTP page',
-  'social-3p': 'Select method and perform steps on 3rd party',
-  'send-otp-auto': 'Send OTP automatically (no user input)',
 }
 
-/* The map still asks for the old `landing` id; it now resolves to `start`. */
-const ALIASES: Record<string, string> = { landing: 'start' }
-
-/* Screens built from Figma, keyed by their data-screen id. The map nodes are
-   connected to these ids later. */
+/* Screens built from Figma, keyed by their data-screen id (the ids the map
+   nodes in ../flow.ts point to). */
 const SCREENS: Record<string, () => React.ReactElement> = {
   start: () => <Start />,
   'otp-phone': () => <OtpPhone />,
@@ -59,8 +47,7 @@ export default function PrototypeApp() {
   /* `?screen=otp-phone` opens a screen directly when the page is used alone. */
   const [screen, setScreen] = useState(() => {
     const id = new URLSearchParams(window.location.search).get('screen') ?? 'start'
-    const resolved = ALIASES[id] ?? id
-    return SCREENS[resolved] || STUBS[resolved] ? resolved : 'start'
+    return SCREENS[id] || STUBS[id] ? id : 'start'
   })
 
   useEffect(() => {
@@ -69,7 +56,7 @@ export default function PrototypeApp() {
       const data = event.data as { type?: string; screen?: string; highRisk?: boolean } | null
       if (!data) return
       if (data.type === 'goto-screen' && data.screen) {
-        const id = ALIASES[data.screen] ?? data.screen
+        const id = data.screen
         if (SCREENS[id] || STUBS[id]) setScreen(id)
       }
       /* Screens can restyle with html[data-high-risk="true"] in CSS. */
