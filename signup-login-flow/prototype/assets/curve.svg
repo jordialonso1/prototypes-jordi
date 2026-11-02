@@ -1,4 +1,4 @@
-<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="375" height="48" viewBox="0 0 375 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg preserveAspectRatio="none" width="375" height="48" viewBox="0 0 375 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="curve">
 <path id="Back" d="M0.041006 9.22368L0 9.23067L0 48H375V27.2307C375 27.2307 333.762 23.8145 274 18C230.742 13.7912 145.854 -0.00046514 100 1.17658e-08C54.1613 0.00046503 40.6341 2.30577 0.041006 9.22368Z" fill="white" fill-opacity="0.21"/>
 <path id="Middle" d="M101.562 12C55.7083 12.0005 40.625 15.3158 0 22.4213L0 48H375V36.1579C375 36.1579 332.679 30.757 272.917 24.7895C229.659 20.47 147.417 11.9995 101.562 12Z" fill="white" fill-opacity="0.21"/>
