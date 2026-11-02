@@ -224,7 +224,7 @@
             </label>
             <label class="field">
               <span class="field__label">Phone number</span>
-              <span class="input"><input type="tel" inputmode="tel" data-fill-phone="612 345 678" aria-label="Phone number" /></span>
+              <span class="input"><input type="tel" inputmode="tel" aria-label="Phone number" /></span>
             </label>
           </div>
         </div>
@@ -471,8 +471,7 @@
          SCREENS in ../src/flow.ts. */
       var STUBS = {
         'input-otp': 'Input OTP',
-        'welcome-no-methods': 'Welcome back! No linked methods',
-        'verify-otp': 'Verify OTP'
+        'welcome-no-methods': 'Welcome back! No linked methods'
       };
       Object.keys(STUBS).forEach(function (id) {
         var el = document.createElement('section');
@@ -488,7 +487,6 @@
       /* Variants of a screen with prefilled example values or alternate copy.
          They are only applied while that node is selected. */
       var VARIANTS = {
-        'start-phone': ['start', 'phone'],
         'otp-phone-filled': ['otp-phone', 'filled'],
         'otp-email-visible': ['otp-email', 'visible']
       };
