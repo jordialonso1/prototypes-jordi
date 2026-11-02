@@ -45,7 +45,6 @@ export interface ScreenDef {
 export const SCREENS: ScreenDef[] = [
   /* Designed (Figma) */
   { id: 'start', title: 'Start' },
-  { id: 'start-phone', title: 'Start (phone number filled in)' },
   { id: 'otp-phone', title: 'OTP phone' },
   { id: 'otp-phone-filled', title: 'OTP phone (code filled in)' },
   { id: 'otp-email', title: 'OTP email' },
@@ -61,7 +60,6 @@ export const SCREENS: ScreenDef[] = [
   /* Still placeholders ("Design pending") */
   { id: 'input-otp', title: 'Input OTP' },
   { id: 'welcome-no-methods', title: 'Welcome back! No linked methods' },
-  { id: 'verify-otp', title: 'Verify OTP' },
 ]
 
 const S = (code: string, id: string, label: string, screen: string, x: number, y: number): FlowNode => ({
@@ -82,7 +80,7 @@ const LOGIN = (id: string, x: number, y: number, label = 'Login') => B(id, label
 export const NODES: FlowNode[] = [
   /* Landing + phone */
   S('S01', 'landing', 'Sign-in landing', 'start', 497, 380),
-  S('S02', 'phone-entry', 'Introduce phone number and choose OTP method', 'start-phone', 614, 346),
+  S('S02', 'phone-entry', 'Introduce phone number and choose OTP method', 'otp-phone', 614, 346),
   S('S03', 'phone-send', 'Send One Time Password (OTP)', 'otp-phone', 669, 346),
   S('S04', 'phone-input', 'Input OTP', 'otp-phone-filled', 717, 346),
   D('d-newphone', 'New phone number?', 817, 301),
@@ -164,14 +162,14 @@ export const NODES: FlowNode[] = [
   /* Email */
   S('S15', 'email-entry', 'Introduces email', 'email-start', 601, 515),
   D('d-emailexists2', 'Email exists?', 690, 515),
-  S('S16', 'verify-c', 'Verify OTP', 'otp-email', 777, 515),
+  S('S16', 'verify-c', 'Verify OTP', 'otp-email-visible', 777, 515),
   SP('S36', 'signup-c', 'Signup', 885, 515),
   LOGIN('l-c', 947, 515),
   D('d-haslogin', 'Has login methods?', 690, 565),
-  S('S17', 'verify-d', 'Verify OTP', 'email-start', 777, 565),
+  S('S17', 'verify-d', 'Verify OTP', 'otp-email-visible', 777, 565),
   LOGIN('l-d', 855, 565),
   S('S18', 'welcome-otp', 'Welcome back!! login methods + OTP', 'welcome-back-email', 690, 631),
-  S('S19', 'verify-e', 'Verify OTP', 'verify-otp', 777, 631),
+  S('S19', 'verify-e', 'Verify OTP', 'otp-email-visible', 777, 631),
   LOGIN('l-e', 856, 631),
   S('S20', 'verify-pw', 'Verify Password', 'welcome-back-email-password', 777, 668),
   D('d-known2', 'Known device?', 853, 668),
