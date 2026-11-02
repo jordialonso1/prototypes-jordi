@@ -54,6 +54,7 @@ export const SCREENS: ScreenDef[] = [
   { id: 'email-start', title: 'Email start' },
   { id: 'email-protect', title: 'Enter email (protect your account)' },
   { id: 'password', title: 'Password' },
+  { id: 'name', title: 'What is your name?' },
   /* Still placeholders ("Design pending") */
   { id: 'input-otp', title: 'Input OTP' },
   { id: 'welcome-no-methods', title: 'Welcome back! No linked methods' },
@@ -62,6 +63,10 @@ export const SCREENS: ScreenDef[] = [
 
 const S = (code: string, id: string, label: string, screen: string, x: number, y: number): FlowNode => ({
   id, code, label, kind: 'screen', screen, x, y,
+})
+/* Signup: a screen node (opens the name screen) drawn in purple like the other signup consequences. */
+const SP = (code: string, id: string, label: string, x: number, y: number): FlowNode => ({
+  id, code, label, kind: 'screen', screen: 'name', tone: 'purple', x, y,
 })
 const D = (id: string, label: string, x: number, y: number): FlowNode => ({
   id, label, kind: 'decision', x, y,
@@ -89,7 +94,7 @@ export const NODES: FlowNode[] = [
   D('d-emailexists', 'Email exists?', 902, 200),
   S('S23', 'enter-email-new', 'Enter email', 'email-protect', 902, 231),
   S('S08', 'verify-a', 'Verify OTP', 'otp-email', 1012, 200),
-  B('signup-a', 'Signup', 'purple', 1148, 200),
+  SP('S30', 'signup-a', 'Signup', 1148, 200),
   LOGIN('l-a', 1199, 200),
   S('S09', 'welcome-top', 'Welcome back! Screen with existing methods', 'welcome-back-phone', 902, 155),
   D('d-top-social', 'Social', 1007, 90),
@@ -102,7 +107,7 @@ export const NODES: FlowNode[] = [
   B('be-top-email', 'New phone linked to existing account', 'orange', 1129, 155),
   LOGIN('l-top-email', 1192, 155),
   D('d-socialother', 'Social linked to another account?', 999, 262),
-  B('signup-s', 'Signup', 'purple', 1061, 228),
+  SP('S31', 'signup-s', 'Signup', 1061, 228),
   LOGIN('l-s-no', 1110, 228),
   B('be-s', 'New phone linked to existing account', 'orange', 1061, 262),
   LOGIN('l-s-yes', 1110, 262),
@@ -113,7 +118,7 @@ export const NODES: FlowNode[] = [
   D('d-existingacct', 'Existing account?', 1228, 316),
   B('be-linkedB', 'Phone linked to existing account', 'orange', 1228, 251),
   LOGIN('l-B', 1278, 251, 'Login to Account B'),
-  B('signup-e', 'Signup', 'purple', 1283, 316),
+  SP('S32', 'signup-e', 'Signup', 1283, 316),
   B('be-newacct', 'Phone linked to new account', 'orange', 1330, 276),
   LOGIN('l-newacct', 1374, 276),
   S('S26', 'd-pw', 'Password', 'password', 1164, 346),
@@ -128,13 +133,13 @@ export const NODES: FlowNode[] = [
   B('be-selB', 'Phone linked to existing account', 'orange', 1375, 380),
   LOGIN('l-selB', 1440, 380, 'Login to Account B'),
   B('be-selNo', 'Phone linked to existing account', 'orange', 1360, 330),
-  B('signup-sel', 'Signup', 'purple', 1425, 330),
+  SP('S33', 'signup-sel', 'Signup', 1425, 330),
   LOGIN('l-selNo', 1470, 330),
   D('d-existingemail', 'Existing email?', 1326, 436),
   S('S24', 'enter-email-exist', 'Enter email', 'email-protect', 1326, 406),
   S('S12', 'validate-email', 'Validate email OTP page', 'otp-email', 1387, 418),
   D('d-verify-new', 'Verify OTP', 1458, 418),
-  B('signup-new', 'Signup', 'purple', 1520, 380),
+  SP('S34', 'signup-new', 'Signup', 1520, 380),
   B('be-new2', 'Phone linked to new account', 'orange', 1520, 342),
   LOGIN('l-new2', 1520, 304),
   D('d-verify-exist', 'Verify OTP', 1458, 451),
@@ -150,14 +155,14 @@ export const NODES: FlowNode[] = [
   S('S14', 'social-3p', 'Select methods and performs steps on 3rd party', 'start', 614, 425),
   D('d-newaccount', 'New account?', 689, 425),
   LOGIN('l-social-exist', 871, 397),
-  B('signup-f', 'Signup', 'purple', 818, 459),
+  SP('S35', 'signup-f', 'Signup', 818, 459),
   LOGIN('l-social-new', 871, 459),
 
   /* Email */
   S('S15', 'email-entry', 'Introduces email', 'email-start', 601, 515),
   D('d-emailexists2', 'Email exists?', 690, 515),
   S('S16', 'verify-c', 'Verify OTP', 'otp-email', 777, 515),
-  B('signup-c', 'Signup', 'purple', 885, 515),
+  SP('S36', 'signup-c', 'Signup', 885, 515),
   LOGIN('l-c', 947, 515),
   D('d-haslogin', 'Has login methods?', 690, 565),
   S('S17', 'verify-d', 'Verify OTP', 'email-start', 777, 565),
@@ -176,7 +181,7 @@ export const NODES: FlowNode[] = [
   D('d-emailmatch', 'Email matches initial email?', 690, 706),
   LOGIN('l-match', 782, 706),
   LOGIN('l-matchB', 782, 737, 'Login to account B'),
-  B('signup-b', 'Signup (creates Account B)', 'purple', 782, 768),
+  SP('S37', 'signup-b', 'Signup (creates Account B)', 782, 768),
   LOGIN('l-signupB', 840, 768, 'Login to Account B'),
 ]
 

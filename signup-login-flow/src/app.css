@@ -425,3 +425,24 @@ body {
   fill: var(--m-dep-text);
   pointer-events: none;
 }
+
+/* Signup screens: clickable like screens, drawn in the signup purple. */
+.map__screen--purple rect {
+  fill: var(--m-purple-fill);
+  stroke: var(--m-purple-stroke);
+}
+
+.map__screen--purple:hover rect,
+.map__screen--purple:focus-visible rect {
+  fill: var(--m-purple-fill);
+  filter: var(--m-hover-filter);
+}
+
+.map__screen--purple.is-selected rect {
+  fill: var(--m-purple-fill);
+  stroke: var(--m-sel-stroke);
+}
+
+.map__screen--purple .map__code {
+  fill: var(--m-purple-stroke);
+}
