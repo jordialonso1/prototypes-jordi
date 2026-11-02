@@ -58,7 +58,6 @@ export const SCREENS: ScreenDef[] = [
   { id: 'password', title: 'Password' },
   { id: 'name', title: 'What is your name?' },
   /* Still placeholders ("Design pending") */
-  { id: 'input-otp', title: 'Input OTP' },
   { id: 'welcome-no-methods', title: 'Welcome back! No linked methods' },
 ]
 
@@ -177,7 +176,7 @@ export const NODES: FlowNode[] = [
   D('d-phone', 'Has phone associated?', 853, 711),
   LOGIN('l-phone', 941, 711),
   S('S21', 'send-auto', 'Send One Time Password (OTP) automatically', 'otp-phone', 941, 749),
-  S('S22', 'input-auto', 'Input OTP', 'input-otp', 1015, 749),
+  S('S22', 'input-auto', 'Input OTP', 'otp-phone-filled', 1015, 749),
   LOGIN('l-auto', 1081, 749),
   D('d-emailmatch', 'Email matches initial email?', 690, 706),
   LOGIN('l-match', 782, 706),
