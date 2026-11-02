@@ -8,7 +8,7 @@ function WelcomeBack({ id, withReset }: { id: string; withReset: boolean }) {
     <FormScreen
       id={id}
       title="Welcome back, Jordi"
-      body="Choose one of the following to log in."
+      body="Log in using a previously saved method."
       footer={withReset ? <ResetAccount /> : undefined}
     >
       <div className="form__stack">
