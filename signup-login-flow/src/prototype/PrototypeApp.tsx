@@ -34,9 +34,7 @@ const SCREENS: Record<string, () => React.ReactElement> = {
 function Stub({ title }: { title: string }) {
   return (
     <section className="stub" aria-label={title}>
-      <span className="stub__tag">Design pending</span>
       <h1>{title}</h1>
-      <p>Placeholder for this screen of the flow map.</p>
     </section>
   )
 }

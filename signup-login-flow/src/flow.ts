@@ -18,6 +18,8 @@ export interface FlowNode {
   label: string
   kind: NodeKind
   tone?: Tone
+  /** Screen no longer in the design: drawn red with a DEPRECATED caption. */
+  deprecated?: boolean
   /** Prototype screen id (screen nodes only). */
   screen?: string
   x: number
@@ -78,7 +80,7 @@ export const NODES: FlowNode[] = [
   LOGIN('l-known', 1110, 301),
   D('d-second', 'Has second method?', 953, 346),
   S('S05', 'welcome-methods', 'Welcome back! Screen with existing methods', 'welcome-back-phone', 1068, 346),
-  S('S06', 'welcome-nolinked', 'Welcome back! No linked methods', 'welcome-no-methods', 1063, 429),
+  { ...S('S06', 'welcome-nolinked', 'Welcome back! No linked methods', 'welcome-no-methods', 1063, 429), deprecated: true },
 
   /* Protect your account (new phone) */
   S('S07', 'protect-new', 'Protect your account', 'protect', 877, 262),

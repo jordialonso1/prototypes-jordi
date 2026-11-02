@@ -66,11 +66,9 @@ input, button { font-family: inherit; }
 .key__digit { font-size: 25px; line-height: 25px; font-weight: 400; }
 .key__letters { font-size: 10px; line-height: 10px; font-weight: 700; letter-spacing: 1px; }
 
-/* ---- Pending screens ---- */
+/* ---- Placeholder screens (title only) ---- */
 .stub { display: flex; flex-direction: column; justify-content: center; gap: 12px; height: 100%; padding: 32px; }
 .stub h1 { margin: 0; font-size: 26px; line-height: 30px; font-weight: 700; }
-.stub p { margin: 0; color: var(--text-color-secondary); font-size: 15px; line-height: 21px; }
-.stub__tag { align-self: flex-start; padding: 4px 10px; border-radius: 999px; background: var(--background-color-warning); font-size: 12px; font-weight: 700; }
 
 /* ---- Single-column form screens ---- */
 .form__body { flex: 1; display: flex; flex-direction: column; justify-content: space-between; padding: calc(var(--spacing-xl) * 1px) calc(var(--spacing-m) * 1px) calc(var(--spacing-xxl) * 1px); }
