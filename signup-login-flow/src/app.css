@@ -446,3 +446,24 @@ body {
 .map__screen--purple .map__code {
   fill: var(--m-purple-stroke);
 }
+
+/* Login screens: clickable like screens, drawn in the login green. */
+.map__screen--green rect {
+  fill: var(--m-green-fill);
+  stroke: var(--m-green-stroke);
+}
+
+.map__screen--green:hover rect,
+.map__screen--green:focus-visible rect {
+  fill: var(--m-green-fill);
+  filter: var(--m-hover-filter);
+}
+
+.map__screen--green.is-selected rect {
+  fill: var(--m-green-fill);
+  stroke: var(--m-sel-stroke);
+}
+
+.map__screen--green .map__code {
+  fill: var(--m-green-stroke);
+}

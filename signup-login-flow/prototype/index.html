@@ -185,6 +185,33 @@
     .key__letters { font-size: 10px; line-height: 10px; font-weight: 700; letter-spacing: 1px; }
     .key svg { width: 24px; height: 24px; }
 
+    /* End (home) */
+    .end { background: var(--brand-color-primary); }
+    .end__nav { position: absolute; top: 62px; left: 0; right: 0; z-index: 2; display: flex; justify-content: center; padding: 0 16px; }
+    .end__address { display: inline-flex; align-items: center; justify-content: center; height: 40px; min-width: 48px; max-width: 224px; padding: 8px; border: 1px solid var(--border-color-primary); border-radius: 896px; background: #fff; font-size: 14px; line-height: 20px; font-weight: 700; color: var(--text-color-primary); cursor: pointer; }
+    .end__address span { padding: 0 4px; }
+    .end__address img { width: 24px; height: 24px; }
+    .end__categories { position: absolute; top: 141px; left: 50%; width: 393px; height: 282px; transform: translateX(-50%); }
+    .end__bottom { position: absolute; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column; }
+    .end__curve { width: 100%; height: 48px; }
+    .end__content { position: relative; height: 294px; margin-top: -1px; padding: 0 16px; background: #fff; }
+    .end__banner { position: relative; height: 128px; }
+    .end__offer { position: absolute; top: 0; bottom: 0; left: 0; width: 212px; display: flex; flex-direction: column; justify-content: center; gap: 8px; padding: 8px 8px 8px 0; }
+    .end__tag { align-self: flex-start; padding: 2px 4px; border-radius: 4px; font-size: 12px; line-height: 16px; font-weight: 500; color: #fff; background: #ec0e42; }
+    .end__offer h2 { font-size: 21px; line-height: 24px; font-weight: 700; }
+    .end__giftbox { position: absolute; right: 1px; top: 0; width: 128px; height: 128px; }
+    .end__section { position: absolute; top: 136px; left: 16px; right: 16px; padding: 12px 0; font-size: 14px; line-height: 20px; font-weight: 700; color: var(--text-color-secondary); }
+    .end__brands { position: absolute; top: 184px; left: 16px; width: 359px; height: 92px; }
+    .end__dots { position: absolute; top: 276px; left: 0; right: 0; display: flex; justify-content: center; gap: 4px; }
+    .end__dots i { width: 6px; height: 6px; border-radius: 3px; background: var(--border-color-primary); }
+    .end__dots i:first-child { width: 12px; background: var(--text-color-primary); }
+    .tab-bar { display: flex; height: 84px; padding-bottom: 24px; border-top: 1px solid var(--background-color-secondary); background: #fff; }
+    .tab { flex: 1 1 0; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 8px 4px; font-size: 12px; line-height: 16px; font-weight: 500; color: #838486; }
+    .tab--active { color: var(--text-color-primary); }
+    .tab__icon { position: relative; width: 24px; height: 24px; }
+    .tab__icon img { position: absolute; width: 24px; height: 24px; left: 0; top: 0; }
+    .tab__icon .tab__blob { width: 32px; height: 32px; left: -4px; top: -4px; }
+
     /* Placeholder screens (title only) */
     .stub { justify-content: center; padding: 32px; }
     .stub h1 { font-size: 26px; line-height: 30px; font-weight: 700; }
@@ -461,6 +488,37 @@
         <a class="link" href="#">Forgot your password?</a>
       </div>
       <button class="btn btn--m btn--block btn--primary" type="button" disabled><span class="btn__label">Continue</span></button>
+    </div>
+    <div class="home-indicator"></div>
+  </section>
+
+  <!-- End (home): shown after every login -->
+  <section class="screen end" data-screen="end" aria-label="Home">
+    <img class="status-bar" src="assets/statusbar.svg" alt="" />
+    <div class="end__nav">
+      <button class="end__address" type="button"><span>Address</span><img src="assets/icon-chevron-down.svg" alt="" /></button>
+    </div>
+    <img class="end__categories" src="assets/end-categories.svg" alt="Food, Groceries, Shops, Health and Beauty, Express Delivery" />
+    <div class="end__bottom">
+      <img class="end__curve" src="assets/end-curve.svg" alt="" />
+      <div class="end__content">
+        <div class="end__banner">
+          <div class="end__offer">
+            <span class="end__tag">Welcome offer</span>
+            <h2>Enjoy free delivery and 5 € off</h2>
+          </div>
+          <img class="end__giftbox" src="assets/end-giftbox.svg" alt="" />
+        </div>
+        <p class="end__section">Top brands near you</p>
+        <img class="end__brands" src="assets/end-brands.png" alt="VICIO, McDonald’s, KFC, Burger King" />
+        <div class="end__dots" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      </div>
+      <nav class="tab-bar" aria-label="Tabs">
+        <div class="tab tab--active"><span class="tab__icon"><img class="tab__blob" src="assets/tab-blob.svg" alt="" /><img src="assets/tab-house.svg" alt="" /></span>Home</div>
+        <div class="tab"><span class="tab__icon"><img src="assets/tab-search.svg" alt="" /></span>Search</div>
+        <div class="tab"><span class="tab__icon"><img src="assets/tab-bags.svg" alt="" /></span>Orders</div>
+        <div class="tab"><span class="tab__icon"><img src="assets/tab-person.svg" alt="" /></span>Profile</div>
+      </nav>
     </div>
     <div class="home-indicator"></div>
   </section>
