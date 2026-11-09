@@ -116,6 +116,13 @@ function route(from: Placed, to: Placed, edge: FlowEdge): Route {
   const labeled = Boolean(edge.label)
   const x1 = from.px + from.w / 2
   const x2 = to.px - to.w / 2
+  if (edge.enter === 'top') {
+    return {
+      d: `M${x1},${from.py} H${to.px} V${to.py - to.h / 2}`,
+      lx: (x1 + to.px) / 2,
+      ly: from.py,
+    }
+  }
   if (exit === 'bottom') {
     return {
       d: `M${from.px},${from.py + from.h / 2} V${to.py} H${x2}`,

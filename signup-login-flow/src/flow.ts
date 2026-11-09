@@ -34,6 +34,8 @@ export interface FlowEdge {
   bendX?: number
   /** Leave from the bottom of the source node (down, then across) instead of its right side. */
   exit?: 'bottom'
+  /** Arrive at the top of the target (right, then down) instead of its left side. */
+  enter?: 'top'
 }
 
 export interface ScreenDef {
@@ -82,7 +84,7 @@ const LOGIN = (code: string, id: string, x: number, y: number, label = 'Login'):
 })
 
 export const NODES: FlowNode[] = [
-  /* Landing + phone */
+  /* Landing + phone. Codes S06, S23, S24, S25-S29 are retired (screens removed or turned into decisions in the 2026-11 map update). */
   S('S01', 'landing', 'Sign-in landing', 'start', 497, 380),
   S('S02', 'phone-entry', 'Introduce phone number and choose OTP method', 'start-phone', 614, 346),
   S('S03', 'phone-send', 'Send One Time Password (OTP)', 'otp-phone', 669, 346),
@@ -90,14 +92,14 @@ export const NODES: FlowNode[] = [
   D('d-newphone', 'New phone number?', 817, 301),
   D('d-known', 'Known device?', 953, 301),
   LOGIN('S38', 'l-known', 1110, 301),
-  D('d-second', 'Has second method?', 953, 346),
+  D('d-second', 'Multiple methods?', 953, 346),
   S('S05', 'welcome-methods', 'Welcome back! Screen with existing methods', 'welcome-back-phone', 1068, 346),
-  { ...S('S06', 'welcome-nolinked', 'Welcome back! No linked methods', 'welcome-no-methods', 1063, 429), deprecated: true },
+  S('S69', 'verify-single', 'Verify OTP', 'otp-email', 1068, 429),
+  LOGIN('S70', 'l-single', 1130, 429),
 
   /* Protect your account (new phone) */
   S('S07', 'protect-new', 'Protect your account', 'protect', 877, 262),
   D('d-emailexists', 'Email exists?', 902, 200),
-  S('S23', 'enter-email-new', 'Enter email', 'email-protect', 902, 231),
   S('S08', 'verify-a', 'Verify OTP', 'otp-email-visible', 1012, 200),
   SP('S30', 'signup-a', 'Signup', 1148, 200),
   LOGIN('S39', 'l-a', 1199, 200),
@@ -105,7 +107,7 @@ export const NODES: FlowNode[] = [
   D('d-top-social', 'Social', 1007, 90),
   B('be-top-social', 'New phone linked to existing account', 'orange', 1071, 90),
   LOGIN('S40', 'l-top-social', 1121, 90),
-  S('S25', 'd-top-pw', 'Password', 'welcome-back-email-password', 1007, 123),
+  D('d-top-pw', 'Password', 1007, 123),
   B('be-top-pw', 'New phone linked to existing account', 'orange', 1071, 123),
   LOGIN('S41', 'l-top-pw', 1121, 123),
   S('S10', 'verify-top', 'Verify OTP', 'otp-email-visible', 1012, 155),
@@ -126,9 +128,9 @@ export const NODES: FlowNode[] = [
   SP('S32', 'signup-e', 'Signup', 1283, 316),
   B('be-newacct', 'Phone linked to new account', 'orange', 1330, 276),
   LOGIN('S47', 'l-newacct', 1374, 276),
-  S('S26', 'd-pw', 'Password', 'password', 1164, 346),
+  D('d-pw', 'Password', 1164, 346),
   LOGIN('S48', 'l-pw', 1228, 346),
-  S('S28', 'd-emailotp', 'Email OTP', 'otp-email', 1164, 377),
+  D('d-emailotp', 'Email OTP', 1164, 377),
   LOGIN('S49', 'l-emailotp', 1228, 377),
 
   /* Protect your account (existing account) */
@@ -137,11 +139,10 @@ export const NODES: FlowNode[] = [
   LOGIN('S50', 'l-selA', 1428, 355, 'Login to Account A'),
   B('be-selB', 'Phone linked to existing account', 'orange', 1375, 380),
   LOGIN('S51', 'l-selB', 1440, 380, 'Login to Account B'),
-  B('be-selNo', 'Phone linked to existing account', 'orange', 1360, 330),
-  SP('S33', 'signup-sel', 'Signup', 1425, 330),
+  SP('S33', 'signup-sel', 'Signup', 1360, 330),
+  B('be-selNo', 'Phone linked to new account', 'orange', 1415, 330),
   LOGIN('S52', 'l-selNo', 1470, 330),
   D('d-existingemail', 'Existing email?', 1326, 436),
-  S('S24', 'enter-email-exist', 'Enter email', 'email-protect', 1326, 406),
   S('S12', 'validate-email', 'Validate email OTP page', 'otp-email-visible', 1387, 418),
   D('d-verify-new', 'Verify OTP', 1458, 418),
   SP('S34', 'signup-new', 'Signup', 1520, 380),
@@ -150,9 +151,9 @@ export const NODES: FlowNode[] = [
   D('d-verify-exist', 'Verify OTP', 1458, 451),
   LOGIN('S54', 'l-verify-exist', 1546, 451),
   S('S13', 'welcome-right', 'Welcome back! Screen with existing methods', 'welcome-back-phone', 1400, 486),
-  S('S27', 'd-pw-r', 'Password', 'welcome-back-email-password', 1481, 486),
+  D('d-pw-r', 'Password', 1481, 486),
   LOGIN('S55', 'l-pw-r', 1546, 486),
-  S('S29', 'd-emailotp-r', 'Email OTP', 'otp-email-visible', 1481, 519),
+  D('d-emailotp-r', 'Email OTP', 1481, 519),
   LOGIN('S56', 'l-emailotp-r', 1546, 519),
   LOGIN('S57', 'l-social-r', 1482, 552),
 
@@ -172,17 +173,18 @@ export const NODES: FlowNode[] = [
   D('d-haslogin', 'Has login methods?', 690, 565),
   S('S17', 'verify-d', 'Verify OTP', 'otp-email-visible', 777, 565),
   LOGIN('S61', 'l-d', 855, 565),
-  S('S18', 'welcome-otp', 'Welcome back!! login methods + OTP', 'welcome-back-email', 690, 631),
-  S('S19', 'verify-e', 'Verify OTP', 'otp-email-visible', 777, 631),
-  LOGIN('S62', 'l-e', 856, 631),
-  S('S20', 'verify-pw', 'Verify Password', 'welcome-back-email-password', 777, 668),
-  D('d-known2', 'Known device?', 853, 668),
-  LOGIN('S63', 'l-known2', 941, 668),
-  D('d-phone', 'Has phone associated?', 853, 711),
-  LOGIN('S64', 'l-phone', 941, 711),
-  S('S21', 'send-auto', 'Send One Time Password (OTP) automatically', 'otp-phone', 941, 749),
-  S('S22', 'input-auto', 'Input OTP', 'otp-phone-filled', 1015, 749),
-  LOGIN('S65', 'l-auto', 1081, 749),
+  S('S18', 'welcome-otp', 'Welcome back!! login methods + OTP', 'welcome-back-email', 690, 636),
+  S('S19', 'verify-e', 'Verify OTP', 'otp-email-visible', 777, 636),
+  D('d-known3', 'Known device?', 853, 636),
+  LOGIN('S62', 'l-e', 853, 592),
+  S('S20', 'verify-pw', 'Verify Password', 'welcome-back-email-password', 777, 672),
+  D('d-known2', 'Known device?', 853, 672),
+  LOGIN('S63', 'l-known2', 853, 715),
+  D('d-phone', 'Has phone associated?', 955, 672),
+  LOGIN('S64', 'l-phone', 1045, 672),
+  S('S21', 'send-auto', 'Send One Time Password (OTP) automatically', 'otp-phone', 955, 715),
+  S('S22', 'input-auto', 'Input OTP', 'otp-phone-filled', 1035, 715),
+  LOGIN('S65', 'l-auto', 1105, 715),
   D('d-emailmatch', 'Email matches initial email?', 690, 706),
   LOGIN('S66', 'l-match', 782, 706),
   LOGIN('S67', 'l-matchB', 782, 737, 'Login to account B'),
@@ -204,12 +206,11 @@ export const EDGES: FlowEdge[] = [
   { from: 'd-known', to: 'l-known', label: 'Yes' },
   { from: 'd-known', to: 'd-second', label: 'No' },
   { from: 'd-second', to: 'welcome-methods', label: 'Yes' },
-  { from: 'd-second', to: 'welcome-nolinked', label: 'No' },
-  { from: 'welcome-nolinked', to: 'protect-exist', bendX: 1235 },
+  { from: 'd-second', to: 'verify-single', label: 'No' },
+  { from: 'verify-single', to: 'l-single' },
 
   /* Protect your account (new phone) */
-  { from: 'protect-new', to: 'enter-email-new', label: 'email' },
-  { from: 'enter-email-new', to: 'd-emailexists' },
+  { from: 'protect-new', to: 'd-emailexists', label: 'email' },
   { from: 'protect-new', to: 'd-socialother', label: 'social' },
   { from: 'd-emailexists', to: 'welcome-top', label: 'Yes' },
   { from: 'd-emailexists', to: 'verify-a', label: 'No' },
@@ -246,14 +247,13 @@ export const EDGES: FlowEdge[] = [
 
   /* Protect your account (existing account) */
   { from: 'protect-exist', to: 'd-selects', label: 'social' },
-  { from: 'protect-exist', to: 'enter-email-exist', label: 'email' },
-  { from: 'enter-email-exist', to: 'd-existingemail' },
+  { from: 'protect-exist', to: 'd-existingemail', label: 'email' },
   { from: 'd-selects', to: 'l-selA', label: 'Yes, same account A' },
   { from: 'd-selects', to: 'be-selB', label: 'Yes, different account B' },
   { from: 'be-selB', to: 'l-selB' },
-  { from: 'd-selects', to: 'be-selNo', label: 'No' },
-  { from: 'be-selNo', to: 'signup-sel' },
-  { from: 'signup-sel', to: 'l-selNo' },
+  { from: 'd-selects', to: 'signup-sel', label: 'No' },
+  { from: 'signup-sel', to: 'be-selNo' },
+  { from: 'be-selNo', to: 'l-selNo' },
   { from: 'd-existingemail', to: 'validate-email', label: 'No' },
   { from: 'validate-email', to: 'd-verify-new' },
   { from: 'd-verify-new', to: 'signup-new' },
@@ -284,11 +284,13 @@ export const EDGES: FlowEdge[] = [
   { from: 'verify-d', to: 'l-d' },
   { from: 'd-haslogin', to: 'welcome-otp', label: 'Yes' },
   { from: 'welcome-otp', to: 'verify-e', label: 'OTP' },
-  { from: 'verify-e', to: 'l-e' },
+  { from: 'verify-e', to: 'd-known3' },
+  { from: 'd-known3', to: 'l-e', label: 'Yes' },
+  { from: 'd-known3', to: 'd-phone', label: 'No', enter: 'top' },
   { from: 'welcome-otp', to: 'verify-pw', label: 'Password' },
   { from: 'verify-pw', to: 'd-known2' },
   { from: 'd-known2', to: 'l-known2', label: 'Yes' },
-  { from: 'd-known2', to: 'd-phone', label: 'No' },
+  { from: 'd-known2', to: 'd-phone', label: 'No', bendX: 904 },
   { from: 'd-phone', to: 'l-phone', label: 'No' },
   { from: 'd-phone', to: 'send-auto', label: 'Yes' },
   { from: 'send-auto', to: 'input-auto' },
