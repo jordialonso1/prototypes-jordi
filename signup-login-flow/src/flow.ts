@@ -84,11 +84,11 @@ const LOGIN = (code: string, id: string, x: number, y: number, label = 'Login'):
 })
 
 export const NODES: FlowNode[] = [
-  /* Landing + phone. Codes S06, S23, S24, S25-S29 are retired (screens removed or turned into decisions in the 2026-11 map update). */
+  /* Landing + phone. Code S06 is retired (screens removed or turned into decisions in the 2026-11 map update). */
   S('S01', 'landing', 'Sign-in landing', 'start', 497, 380),
   S('S02', 'phone-entry', 'Introduce phone number and choose OTP method', 'start-phone', 614, 346),
-  S('S03', 'phone-send', 'Send One Time Password (OTP)', 'otp-phone', 669, 346),
-  S('S04', 'phone-input', 'Input OTP', 'otp-phone-filled', 717, 346),
+  S('S03', 'phone-send', 'Phone OTP', 'otp-phone', 669, 346),
+  S('S04', 'phone-input', 'Phone OTP', 'otp-phone-filled', 717, 346),
   D('d-newphone', 'New phone number?', 817, 301),
   D('d-known', 'Known device?', 953, 301),
   LOGIN('S38', 'l-known', 1110, 301),
@@ -100,17 +100,18 @@ export const NODES: FlowNode[] = [
   /* Protect your account (new phone) */
   S('S07', 'protect-new', 'Protect your account', 'protect', 877, 262),
   D('d-emailexists', 'Email exists?', 902, 200),
-  S('S08', 'verify-a', 'Verify OTP', 'otp-email-visible', 1012, 200),
+  S('S23', 'enter-email-new', 'Enter email', 'email-protect', 902, 231),
+  S('S08', 'verify-a', 'Email OTP', 'otp-email-visible', 1012, 200),
   SP('S30', 'signup-a', 'Signup', 1148, 200),
   LOGIN('S39', 'l-a', 1199, 200),
   S('S09', 'welcome-top', 'Welcome back! Screen with existing methods', 'welcome-back-phone', 902, 155),
   D('d-top-social', 'Social', 1007, 90),
   B('be-top-social', 'New phone linked to existing account', 'orange', 1071, 90),
   LOGIN('S40', 'l-top-social', 1121, 90),
-  D('d-top-pw', 'Password', 1007, 123),
+  S('S25', 'd-top-pw', 'Password', 'password', 1007, 123),
   B('be-top-pw', 'New phone linked to existing account', 'orange', 1071, 123),
   LOGIN('S41', 'l-top-pw', 1121, 123),
-  S('S10', 'verify-top', 'Verify OTP', 'otp-email-visible', 1012, 155),
+  S('S10', 'verify-top', 'Email OTP', 'otp-email-visible', 1012, 155),
   B('be-top-email', 'New phone linked to existing account', 'orange', 1129, 155),
   LOGIN('S42', 'l-top-email', 1192, 155),
   D('d-socialother', 'Social linked to another account?', 999, 262),
@@ -128,9 +129,9 @@ export const NODES: FlowNode[] = [
   SP('S32', 'signup-e', 'Signup', 1283, 316),
   B('be-newacct', 'Phone linked to new account', 'orange', 1330, 276),
   LOGIN('S47', 'l-newacct', 1374, 276),
-  D('d-pw', 'Password', 1164, 346),
+  S('S26', 'd-pw', 'Password', 'password', 1164, 346),
   LOGIN('S48', 'l-pw', 1228, 346),
-  D('d-emailotp', 'Email OTP', 1164, 377),
+  S('S28', 'd-emailotp', 'Email OTP', 'otp-email', 1164, 377),
   LOGIN('S49', 'l-emailotp', 1228, 377),
 
   /* Protect your account (existing account) */
@@ -143,17 +144,18 @@ export const NODES: FlowNode[] = [
   B('be-selNo', 'Phone linked to new account', 'orange', 1415, 330),
   LOGIN('S52', 'l-selNo', 1470, 330),
   D('d-existingemail', 'Existing email?', 1326, 436),
+  S('S24', 'enter-email-exist', 'Enter email', 'email-protect', 1326, 406),
   S('S12', 'validate-email', 'Validate email OTP page', 'otp-email-visible', 1387, 418),
-  D('d-verify-new', 'Verify OTP', 1458, 418),
+  S('S71', 'd-verify-new', 'Verify OTP', 'otp-email-visible', 1458, 418),
   SP('S34', 'signup-new', 'Signup', 1520, 380),
   B('be-new2', 'Phone linked to new account', 'orange', 1520, 342),
   LOGIN('S53', 'l-new2', 1520, 304),
-  D('d-verify-exist', 'Verify OTP', 1458, 451),
+  S('S72', 'd-verify-exist', 'Verify OTP', 'otp-email-visible', 1458, 451),
   LOGIN('S54', 'l-verify-exist', 1546, 451),
   S('S13', 'welcome-right', 'Welcome back! Screen with existing methods', 'welcome-back-phone', 1400, 486),
-  D('d-pw-r', 'Password', 1481, 486),
+  S('S27', 'd-pw-r', 'Password', 'welcome-back-email-password', 1481, 486),
   LOGIN('S55', 'l-pw-r', 1546, 486),
-  D('d-emailotp-r', 'Email OTP', 1481, 519),
+  S('S29', 'd-emailotp-r', 'Email OTP', 'otp-email-visible', 1481, 519),
   LOGIN('S56', 'l-emailotp-r', 1546, 519),
   LOGIN('S57', 'l-social-r', 1482, 552),
 
@@ -210,7 +212,8 @@ export const EDGES: FlowEdge[] = [
   { from: 'verify-single', to: 'l-single' },
 
   /* Protect your account (new phone) */
-  { from: 'protect-new', to: 'd-emailexists', label: 'email' },
+  { from: 'protect-new', to: 'enter-email-new', label: 'email' },
+  { from: 'enter-email-new', to: 'd-emailexists' },
   { from: 'protect-new', to: 'd-socialother', label: 'social' },
   { from: 'd-emailexists', to: 'welcome-top', label: 'Yes' },
   { from: 'd-emailexists', to: 'verify-a', label: 'No' },
@@ -247,7 +250,8 @@ export const EDGES: FlowEdge[] = [
 
   /* Protect your account (existing account) */
   { from: 'protect-exist', to: 'd-selects', label: 'social' },
-  { from: 'protect-exist', to: 'd-existingemail', label: 'email' },
+  { from: 'protect-exist', to: 'enter-email-exist', label: 'email' },
+  { from: 'enter-email-exist', to: 'd-existingemail' },
   { from: 'd-selects', to: 'l-selA', label: 'Yes, same account A' },
   { from: 'd-selects', to: 'be-selB', label: 'Yes, different account B' },
   { from: 'be-selB', to: 'l-selB' },
