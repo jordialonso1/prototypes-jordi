@@ -326,6 +326,9 @@
     html.highlight-ai .sv-notice[data-ai-label] { --ai-ring: 6px; border-radius: 8px; }
     html.highlight-ai .store-tile__ai[data-ai-label],
     html.highlight-ai .feat-banner__ai[data-ai-label],
+    html.highlight-ai .ai-banner__ai[data-ai-label],
+    html.highlight-ai .pv-image__ai[data-ai-label],
+    html.highlight-ai .groceries__ai[data-ai-label],
     html.highlight-ai .sv-ailabel[data-ai-label] { --ai-gap: 8px; border-radius: 50%; }
     @keyframes ai-pulse {
       0%, 100% {
@@ -569,7 +572,7 @@
     .ai-banner__media { position: absolute; inset: 0; overflow: hidden; border-radius: 12px; }
     .ai-banner__media img { position: absolute; max-width: none; width: 139.73%; height: 202.64%; left: 0.27%; top: -53.76%; }
     .ai-banner .feat-banner__go { right: 8px; bottom: 8px; }
-    .ai-banner > .tag--sponsored { position: absolute; right: 8px; top: 8px; }
+    .ai-banner__ai { position: absolute; right: 8px; top: 72px; width: 16px; height: 16px; }
 
     /* Liquid glass tab bar (from the real app): a floating translucent pill over
        the feed. Blur + saturation let the content show through; the inner
@@ -759,7 +762,7 @@
     .pv-image { position: relative; height: 472px; overflow: hidden; }
     .pv-image > img.pv-image__photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
     .pv-image__curve { position: absolute; left: 0; bottom: 0; width: 100%; height: 8px; }
-    .pv-image .tag { position: absolute; top: 62px; right: 16px; z-index: 2; }
+    .pv-image__ai { position: absolute; top: 62px; right: 16px; z-index: 2; width: 16px; height: 16px; }
 
     .pv-info { display: flex; flex-direction: column; gap: 32px; padding: 24px 16px 44px; }
     .pv-main { display: flex; flex-direction: column; gap: 8px; }
@@ -867,7 +870,7 @@
     /* Groceries (Figma 282:39882): a full-bleed screenshot with the "Enhanced" tag on the ad banner. */
     .groceries__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
     .groceries__back { position: absolute; left: 12px; top: 58px; width: 48px; height: 40px; }
-    .groceries__tag { position: absolute; right: 68.53%; bottom: 49.51%; }
+    .groceries__ai { position: absolute; left: 9.07%; top: 48.28%; width: 16px; height: 16px; }
   </style>
 </head>
 
@@ -955,11 +958,10 @@
             <div class="store-tile__image">
               <img class="store-tile__photo store-tile__photo--top" src="assets/img/honest-greens.png" alt="" />
               <div class="store-tile__tags">
-                <span class="tag tag--neutral"><img src="assets/icons/house-16.svg" alt="" />Same prices as in store</span>
                 <span class="tag-double"><span class="tag tag--promo">-20%</span><span class="tag tag--loyalty"><b>PRIME</b> -30%</span></span>
+                <span class="tag tag--neutral"><img src="assets/icons/house-16.svg" alt="" />Same prices as in store</span>
               </div>
               <span class="tag tag--contrast store-tile__tag-br">Only on Glovo</span>
-              <img data-ai-label="Store tile icon" class="store-tile__ai" src="assets/icons/ai-sparkle-light.svg" alt="" />
               <div class="store-tile__toggle"><img src="assets/icons/heart.svg" alt="" /></div>
             </div>
             <div class="store-tile__desc">
@@ -990,7 +992,7 @@
             <span class="avatar-sq avatar-sq--s"><img src="assets/img/logo-dominos.png" alt="" /></span>
             <span class="tag tag--promo feat-banner__tag">-20%</span>
             <div class="feat-banner__go"><img src="assets/icons/arrow-forward-16.svg" alt="" /></div>
-            <img data-ai-label="Ads featured banner icon" class="feat-banner__ai" src="assets/icons/ai-sparkle-light.svg" alt="" />
+            <img data-ai-label="Ads featured banner icon" class="feat-banner__ai" src="assets/icons/ai-sparkle-solid.svg" alt="" />
           </div>
 
           <article class="store-tile store-tile--v3" data-nav="groceries" role="link" tabindex="0" aria-label="El Súper de Glovo">
@@ -1002,7 +1004,6 @@
                 <span class="tag tag--neutral"><img src="assets/icons/house-16.svg" alt="" />Same prices as in store</span>
               </div>
               <span class="tag tag--positive store-tile__tag-br"><img src="assets/icons/carrot-16.svg" alt="" />Freshness guarantee</span>
-              <img data-ai-label="Store tile icon (Groceries)" class="store-tile__ai" src="assets/icons/ai-sparkle-light.svg" alt="" />
               <div class="store-tile__toggle"><img src="assets/icons/heart.svg" alt="" /></div>
             </div>
             <div class="store-tile__desc">
@@ -1024,7 +1025,7 @@
           <div class="ai-banner inert">
             <div class="ai-banner__media"><img src="assets/img/pepsi-banner.png" alt="" /></div>
             <div class="feat-banner__go"><img src="assets/icons/arrow-forward-16.svg" alt="" /></div>
-            <span data-ai-label="Ads full width featured banner label" class="tag tag--sponsored"><img src="assets/icons/ai-sparkle-light.svg" alt="" /><span data-tag-text="Enhanced" data-tag-text-reference="Reference">Enhanced</span></span>
+            <img data-ai-label="Ads full width featured banner icon" class="ai-banner__ai" src="assets/icons/ai-sparkle-solid.svg" alt="" />
           </div>
 
           <article class="store-tile store-tile--feed inert">
@@ -1033,7 +1034,6 @@
               <div class="store-tile__content">
                 <div class="store-tile__top"><span class="tag tag--promo">2x1 in some products</span></div>
               </div>
-              <img data-ai-label="Store tile icon (Less elements case)" class="store-tile__ai" src="assets/icons/ai-sparkle-light.svg" alt="" />
               <div class="store-tile__toggle"><img src="assets/icons/heart.svg" alt="" /></div>
             </div>
             <div class="store-tile__desc">
@@ -1075,7 +1075,7 @@
             </div>
             <div class="modal__body">
               <p class="pintxo-typography-body1">This ad has not been personalized nor is targeted on the basis of your account information or any prior browsing or purchasing activity. This ad is paid for by Domino’s Pizza.</p>
-              <span data-ai-label="Ads featured banner label" data-ai-after="Ads featured banner icon" class="tag tag--neutral"><img src="assets/icons/ai-sparkle-dark.svg" alt="" /><span data-tag-text="Enhanced" data-tag-text-reference="Reference">Enhanced</span></span>
+              <span data-ai-label="Ads featured banner label" data-ai-after="Ads featured banner icon" class="tag tag--neutral"><img src="assets/icons/ai-sparkle-dark.svg" alt="" />AI generated</span>
             </div>
           </div>
           <div class="modal__unsafe"></div>
@@ -1401,7 +1401,7 @@
 
         <div class="pv-image">
           <img class="pv-image__photo" src="assets/img/avocado-supergreen.png" alt="Avocado supergreen" />
-          <span data-ai-label="Image label" class="tag tag--neutral inert"><img src="assets/icons/ai-sparkle-dark.svg" alt="" /><span data-tag-text="Enhanced" data-tag-text-reference="Reference">Enhanced</span></span>
+          <img data-ai-label="Image icon" class="pv-image__ai inert" src="assets/icons/ai-sparkle-solid.svg" alt="" />
           <img class="pv-image__curve" src="assets/icons/curve-product.svg" alt="" />
         </div>
 
@@ -1483,7 +1483,7 @@
         <div class="otp-banner__img">
           <div class="otp-banner__pic"><img src="assets/img/pepsi-banner.png" alt="" /></div>
           <button class="icon-btn icon-btn--floating otp-banner__close" type="button" data-otp-close aria-label="Close"><img src="assets/icons/cross-24.svg" alt="" /></button>
-          <img data-ai-label="OTP premium banner icon" class="otp-banner__ai" src="assets/icons/ai-sparkle-light.svg" alt="" />
+          <img data-ai-label="OTP premium banner icon" class="otp-banner__ai" src="assets/icons/ai-sparkle-solid.svg" alt="" />
         </div>
         <div class="otp-banner__head">
           <p class="otp-banner__title">Advertising from Pepsi</p>
@@ -1505,7 +1505,7 @@
         </div>
         <div class="feat-banner__media"><img src="assets/img/pepsi-banner.png" alt="" /></div>
         <div class="feat-banner__go"><img src="assets/icons/arrow-forward-16.svg" alt="" /></div>
-        <img data-ai-label="OTP featured banner icon" class="otp-banner__ai-r" src="assets/icons/ai-sparkle-light.svg" alt="" />
+        <img data-ai-label="OTP featured banner icon" class="otp-banner__ai-r" src="assets/icons/ai-sparkle-solid.svg" alt="" />
       </div>
 
       <!-- Ad modalsheet: same sheet as the Store wall one, opened by both banner info buttons -->
@@ -1520,7 +1520,7 @@
             </div>
             <div class="modal__body">
               <p class="pintxo-typography-body1">This ad has not been personalized nor is targeted on the basis of your account information or any prior browsing or purchasing activity. This ad is paid for by Pepsi.</p>
-              <span data-ai-label="OTP ads modal label" data-ai-after="OTP featured banner icon" class="tag tag--neutral"><img src="assets/icons/ai-sparkle-dark.svg" alt="" /><span data-tag-text="Enhanced" data-tag-text-reference="Reference">Enhanced</span></span>
+              <span data-ai-label="OTP ads modal label" data-ai-after="OTP featured banner icon" class="tag tag--neutral"><img src="assets/icons/ai-sparkle-dark.svg" alt="" />AI generated</span>
             </div>
           </div>
           <div class="modal__unsafe"></div>
@@ -1532,7 +1532,7 @@
     <section class="screen" id="screen-groceries" data-screen="groceries" data-parent="store-wall" aria-label="Groceries">
       <img class="groceries__img" src="assets/img/groceries.jpg" alt="" />
       <button class="groceries__back" type="button" data-back aria-label="Back"></button>
-      <span data-ai-label="Groceries banner label" class="tag tag--sponsored groceries__tag"><img src="assets/icons/ai-sparkle-light.svg" alt="" /><span data-tag-text="Enhanced" data-tag-text-reference="Reference">Enhanced</span></span>
+      <img data-ai-label="Groceries banner icon" class="groceries__ai" src="assets/icons/ai-sparkle-solid.svg" alt="" />
     </section>
 
   </div>
@@ -1545,12 +1545,6 @@
       var data = event.data;
       if (data && data.type === 'highlight-ai') {
         document.documentElement.classList.toggle('highlight-ai', !!data.value);
-      }
-      /* { type: 'reference-image', value: boolean }: "Enhanced" tags read "Reference". */
-      if (data && data.type === 'reference-image') {
-        document.querySelectorAll('[data-tag-text]').forEach(function (el) {
-          el.textContent = data.value ? el.dataset.tagTextReference : el.dataset.tagText;
-        });
       }
     });
 
