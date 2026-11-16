@@ -130,7 +130,6 @@ type AiLabelState = {
 
 export default function App() {
   const [highlightAi, setHighlightAi] = useState(false)
-  const [referenceImage, setReferenceImage] = useState(false)
   const [aiContent, setAiContent] = useState<AiContentState>({
     'product-view': [...AI_CONTENT_SCREENS[0].options],
   })
@@ -183,10 +182,6 @@ export default function App() {
   }, [highlightAi, post])
 
   useEffect(() => {
-    post({ type: 'reference-image', value: referenceImage })
-  }, [referenceImage, post])
-
-  useEffect(() => {
     AI_CONTENT_SCREENS.forEach(({ id }) => {
       post({ type: 'ai-content', screen: id, value: aiContent[id] })
     })
@@ -230,11 +225,6 @@ export default function App() {
                 post({ type: 'focus-ai-label', index: 0 })
               }
             }}
-        />
-        <Checkbox
-          label="Reference image"
-          checked={referenceImage}
-          onChange={(event) => setReferenceImage(event.target.checked)}
         />
         {AI_CONTENT_SCREENS.map(({ id, label, options }) => (
           <ContentDropdown
@@ -293,7 +283,6 @@ export default function App() {
             title="Store flow prototype"
             onLoad={() => {
               post({ type: 'highlight-ai', value: highlightAi })
-              post({ type: 'reference-image', value: referenceImage })
               AI_CONTENT_SCREENS.forEach(({ id }) => {
                 post({ type: 'ai-content', screen: id, value: aiContent[id] })
               })
