@@ -3,15 +3,16 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  border: 1px solid #cdced0;
-  background: #fff;
-  color: #161617;
+  border: 0;
+  background: var(--surface);
+  color: var(--text);
   font: inherit;
+  font-weight: 600;
   cursor: pointer;
 }
 
 .ds-button:hover:not(:disabled) {
-  background: #f2f2f3;
+  background: var(--line);
 }
 
 .ds-button:disabled {
@@ -19,27 +20,27 @@
   cursor: default;
 }
 
-/* Default: rounded rectangle with text. */
+/* Default: pill with text. */
 .ds-button--default {
   padding: 8px 16px;
-  border-radius: 8px;
+  border-radius: 999px;
   font-size: 14px;
   line-height: 20px;
 }
 
-/* Primary: filled dark. */
+/* Primary: inverted (white on black, black on white). */
 .ds-button--primary {
   padding: 8px 16px;
-  border-color: #161617;
-  border-radius: 8px;
-  background: #161617;
-  color: #fff;
+  border-radius: 999px;
+  background: var(--text);
+  color: var(--bg);
   font-size: 14px;
   line-height: 20px;
 }
 
 .ds-button--primary:hover:not(:disabled) {
-  background: #3a3a3b;
+  background: var(--text);
+  opacity: 0.85;
 }
 
 /* Icon: 32px round button for arrows and other glyphs. */
