@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Store view</title>
   <link rel="stylesheet" href="../_base/base.css" />
+  <link rel="stylesheet" href="../../../shared-design-system/pintxo/pintxo.css" />
   <link rel="stylesheet" href="./screen.css" />
 </head>
 <body>
@@ -30,7 +31,7 @@
           </div>
         </div>
         <div class="sv-nav__row">
-          <button class="icon-btn icon-btn--floating" type="button" aria-label="Back"><img src="assets/icons/nav-back.svg" alt="" /></button>
+          <button class="icon-btn icon-btn--floating" id="sv-back" type="button" aria-label="Back"><img src="assets/icons/nav-back.svg" alt="" /></button>
           <div class="sv-nav__trailing">
             <button class="icon-btn icon-btn--floating inert" type="button" aria-label="Search"><img src="assets/icons/nav-search.svg" alt="" /></button>
             <button class="icon-btn icon-btn--floating" type="button" aria-label="Translate" data-modal-open="translations-modal"><img src="assets/icons/modal-translate.svg" alt="" /></button>
@@ -42,7 +43,7 @@
       <div class="screen__scroll" id="sv-scroll">
 
         <div class="sv-hero">
-          <img class="sv-hero__bg" src="assets/img/store-header-bg.png" alt="" />
+          <img class="sv-hero__bg" src="assets/img/honest-greens-header.webp" alt="" />
           <div class="sv-hero__top"></div>
           <div class="sv-hero__info">
             <div class="sv-title-row">
@@ -86,185 +87,22 @@
           </div>
         </div>
 
-        <!-- Tab menu: sticks below the fixed nav while the menu scrolls -->
-        <div class="sv-tabs inert" id="sv-tabs">
-          <div class="sv-tab is-selected"><span>Order again</span></div>
-          <div class="sv-tab"><span>Honest Plates</span></div>
-          <div class="sv-tab"><span>Desserts</span></div>
-          <div class="sv-tab"><span>Drinks</span></div>
-          <div class="sv-tab"><span>Extra sauce</span></div>
-          <div class="sv-tab"><span>Desserts</span></div>
-          <div class="sv-tab"><span>Drinks</span></div>
-          <div class="sv-tab"><span>Similar stores</span></div>
-          <div class="sv-tabs__extender"></div>
-        </div>
+        <!-- Tab menu: one tab per catalog section; tapping scrolls to it -->
+        <div class="sv-tabs" id="sv-tabs"></div>
 
-        <div class="sv-menu">
-
-          <!-- Order again -->
-          <section class="sv-section">
-            <div class="sv-section-header"><h2 class="sv-section-header__title pintxo-typography-title3">Order again</h2></div>
-            <div class="sv-carousel">
-
-              <article class="item-tile" role="link" tabindex="0" aria-label="Avocado supergreen">
-                <div class="item-tile__image">
-                  <img src="assets/img/avocado-supergreen.png" alt="" />
-                  <div class="item-tile__overlay"></div>
-                  <div class="item-tile__content">
-                    <div><span class="tag tag--promo">-20%</span></div>
-                    <div class="item-tile__add"><span class="add-btn"><img src="assets/icons/plus-16.svg" alt="" /></span></div>
-                  </div>
-                </div>
-                <div class="item-tile__info">
-                  <p class="item-tile__name">Avocado supergreen</p>
-                  <div class="item-tile__price"><span>9,90€</span><s>12,38€</s></div>
-                </div>
-              </article>
-
-              <article class="item-tile inert">
-                <div class="item-tile__image">
-                  <img src="assets/img/honest-salmon.png" alt="" />
-                  <div class="item-tile__overlay"></div>
-                  <div class="item-tile__content">
-                    <div></div>
-                    <div class="item-tile__add"><span class="add-btn"><img src="assets/icons/plus-16.svg" alt="" /></span></div>
-                  </div>
-                </div>
-                <div class="item-tile__info">
-                  <p class="item-tile__name">Honest salmon</p>
-                  <div class="item-tile__price"><span>8,90€</span></div>
-                </div>
-              </article>
-
-              <article class="item-tile inert">
-                <div class="item-tile__image">
-                  <img src="assets/img/ternera.png" alt="" />
-                  <div class="item-tile__overlay"></div>
-                  <div class="item-tile__content">
-                    <div><span class="tag tag--promo">-20%</span></div>
-                    <div class="item-tile__add"><span class="add-btn"><img src="assets/icons/plus-16.svg" alt="" /></span></div>
-                  </div>
-                </div>
-                <div class="item-tile__info">
-                  <p class="item-tile__name">Ternera Chimichurri</p>
-                  <div class="item-tile__price"><span>3,90€</span><s>4,87€</s></div>
-                </div>
-              </article>
-
-              <article class="item-tile inert">
-                <div class="item-tile__image">
-                  <img src="assets/img/tres-leches.png" alt="" />
-                  <div class="item-tile__overlay"></div>
-                  <div class="item-tile__content">
-                    <div></div>
-                    <div class="item-tile__add"><span class="add-btn"><img src="assets/icons/plus-16.svg" alt="" /></span></div>
-                  </div>
-                </div>
-                <div class="item-tile__info">
-                  <p class="item-tile__name">Tres leches</p>
-                  <div class="item-tile__price"><span>6,50€</span></div>
-                </div>
-              </article>
-
-            </div>
-          </section>
-
-          <!-- Top sellers -->
-          <section class="sv-section">
-            <div class="sv-section-header">
-              <h2 class="sv-section-header__title pintxo-typography-title3">Top sellers</h2>
-              <span class="sv-section-header__btn"><img src="assets/icons/arrow-forward-neutral.svg" alt="" /></span>
-            </div>
-            <div class="sv-rows">
-
-              <article class="item-row inert">
-                <div class="item-row__body">
-                  <div class="item-row__image"><img src="assets/img/honest-salmon.png" alt="" /></div>
-                  <div class="item-row__desc">
-                    <div class="item-row__head"><p class="item-row__name">Honest salmon</p><span class="item-row__price">15,90 €</span></div>
-                    <p class="item-row__text">One of the most popular items in our restaurants - why is that? long seeded bread containing crispy, lightly breaded, lighlty spiced chicken, lettuce and mayonnaise, a classic!</p>
-                    <div class="item-row__tags"><span class="tag tag--neutral">Gluten free</span><span class="tag tag--neutral">Lactose free</span></div>
-                  </div>
-                </div>
-                <div class="item-row__footer"><span class="add-btn"><img src="assets/icons/plus-16.svg" alt="" /></span></div>
-              </article>
-
-              <article class="item-row" role="link" tabindex="0" aria-label="Avocado supergreen">
-                <div class="item-row__body">
-                  <div class="item-row__image"><img src="assets/img/avocado-supergreen.png" alt="" /></div>
-                  <div class="item-row__desc">
-                    <div class="item-row__head"><p class="item-row__name">Avocado supergreen</p><span class="item-row__price">15,90 €</span></div>
-                    <p class="item-row__text">Nuevos Chili Cheese Bites con salsa cheddar y jalapeños.</p>
-                    <div class="item-row__tags"><span class="tag tag--neutral">Gluten free</span><span class="tag tag--neutral">Vegetarian</span><span class="tag tag--neutral">+2</span></div>
-                  </div>
-                </div>
-                <div class="item-row__footer"><span class="add-btn"><img src="assets/icons/plus-16.svg" alt="" /></span></div>
-              </article>
-
-              <article class="item-row inert">
-                <div class="item-row__body">
-                  <div class="item-row__image"><img src="assets/img/ternera.png" alt="" /></div>
-                  <div class="item-row__desc">
-                    <div class="item-row__head"><p class="item-row__name">Ternera Chimichurri</p><span class="item-row__price">15,90 €</span></div>
-                    <p class="item-row__text">One of the most popular items in our restaurants - why is that? long seeded bread containing crispy, lightly breaded, lighlty spiced chicken, lettuce and mayonnaise, a classic!</p>
-                    <div class="item-row__tags"><span class="tag tag--neutral">Gluten free</span><span class="tag tag--neutral">Lactose free</span><span class="tag tag--neutral">+2</span></div>
-                  </div>
-                </div>
-                <div class="item-row__footer"><span class="add-btn"><img src="assets/icons/plus-16.svg" alt="" /></span></div>
-              </article>
-
-            </div>
-          </section>
-
-          <!-- Honest plates (same items as Top sellers in Figma) -->
-          <section class="sv-section">
-            <div class="sv-section-header">
-              <h2 class="sv-section-header__title pintxo-typography-title3">Honest plates</h2>
-              <span class="sv-section-header__btn"><img src="assets/icons/arrow-forward-neutral.svg" alt="" /></span>
-            </div>
-            <div class="sv-rows">
-
-              <article class="item-row inert">
-                <div class="item-row__body">
-                  <div class="item-row__image"><img src="assets/img/honest-salmon.png" alt="" /></div>
-                  <div class="item-row__desc">
-                    <div class="item-row__head"><p class="item-row__name">Honest salmon</p><span class="item-row__price">15,90 €</span></div>
-                    <p class="item-row__text">One of the most popular items in our restaurants - why is that? long seeded bread containing crispy, lightly breaded, lighlty spiced chicken, lettuce and mayonnaise, a classic!</p>
-                    <div class="item-row__tags"><span class="tag tag--neutral">Gluten free</span><span class="tag tag--neutral">Lactose free</span></div>
-                  </div>
-                </div>
-                <div class="item-row__footer"><span class="add-btn"><img src="assets/icons/plus-16.svg" alt="" /></span></div>
-              </article>
-
-              <article class="item-row" role="link" tabindex="0" aria-label="Avocado supergreen">
-                <div class="item-row__body">
-                  <div class="item-row__image"><img src="assets/img/avocado-supergreen.png" alt="" /></div>
-                  <div class="item-row__desc">
-                    <div class="item-row__head"><p class="item-row__name">Avocado supergreen</p><span class="item-row__price">15,90 €</span></div>
-                    <p class="item-row__text">Nuevos Chili Cheese Bites con salsa cheddar y jalapeños.</p>
-                    <div class="item-row__tags"><span class="tag tag--neutral">Gluten free</span><span class="tag tag--neutral">Vegetarian</span><span class="tag tag--neutral">+2</span></div>
-                  </div>
-                </div>
-                <div class="item-row__footer"><span class="add-btn"><img src="assets/icons/plus-16.svg" alt="" /></span></div>
-              </article>
-
-              <article class="item-row inert">
-                <div class="item-row__body">
-                  <div class="item-row__image"><img src="assets/img/ternera.png" alt="" /></div>
-                  <div class="item-row__desc">
-                    <div class="item-row__head"><p class="item-row__name">Ternera Chimichurri</p><span class="item-row__price">15,90 €</span></div>
-                    <p class="item-row__text">One of the most popular items in our restaurants - why is that? long seeded bread containing crispy, lightly breaded, lighlty spiced chicken, lettuce and mayonnaise, a classic!</p>
-                    <div class="item-row__tags"><span class="tag tag--neutral">Gluten free</span><span class="tag tag--neutral">Lactose free</span><span class="tag tag--neutral">+2</span></div>
-                  </div>
-                </div>
-                <div class="item-row__footer"><span class="add-btn"><img src="assets/icons/plus-16.svg" alt="" /></span></div>
-              </article>
-
-            </div>
-          </section>
-
-        </div>
+        <div class="sv-menu" id="sv-menu"></div>
       </div>
+
+      
+      <footer class="footer footer--raised" id="sv-cartbar" hidden>
+        <div class="footer__content">
+          <div class="footer__price">
+            <p class="footer__total pintxo-typography-body1-emphasis" id="sv-total"></p>
+          </div>
+          <button type="button" class="pintxo-button pintxo-button--primary pintxo-button--m pintxo-button--trailing-icon footer__cta" id="sv-cartbtn">Go to cart <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6.16708 3.50805C6.39257 3.27795 6.7619 3.27422 6.99199 3.49972L11.1587 7.58305C11.2706 7.69277 11.3337 7.84292 11.3337 7.99967C11.3337 8.15643 11.2706 8.30658 11.1587 8.4163L6.99199 12.4996C6.7619 12.7251 6.39257 12.7214 6.16708 12.4913C5.94158 12.2612 5.94531 11.8919 6.17541 11.6664L9.91695 7.99967L6.17541 4.33297C5.94531 4.10747 5.94158 3.73814 6.16708 3.50805Z" fill-rule="evenodd" clip-rule="evenodd" fill="currentColor"/></svg></button>
+        </div>
+        <div class="footer__home"></div>
+      </footer>
 
       <!-- Translations dropdown (Figma 179:38458): overlay on the Store view -->
       <div class="modal" id="translations-modal" role="dialog" aria-modal="true" aria-labelledby="translations-modal-title" aria-hidden="true">
@@ -307,5 +145,7 @@
 
   </div>
   <script src="../_base/base.js"></script>
+  <script src="./store-catalog.js"></script>
+  <script src="./sv.js"></script>
 </body>
 </html>

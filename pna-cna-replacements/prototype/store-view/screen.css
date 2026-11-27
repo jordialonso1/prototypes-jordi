@@ -1,0 +1,299 @@
+/* Store view: screen styles, pruned from the prototype CSS to what this screen uses. */
+/* =====================================================================
+       PROTOTYPE OVERRIDES (added; the boilerplate blocks above are untouched)
+
+       1. Typography: Figma / uds-react scale takes precedence over the
+          boilerplate pintxo-typography-* values (user decision).
+          Figma: title1 28/32, title2 24/28, title3 21/24, callout1 16/20,
+          callout2 14/20, body 16/20 and 14/20, caption 12/16.
+       ===================================================================== */
+.pintxo-typography-title1 { font-size: 28px; line-height: 32px; font-weight: 700; }
+.pintxo-typography-title2 { font-size: 24px; line-height: 28px; font-weight: 700; }
+.pintxo-typography-title3 { font-size: 21px; line-height: 24px; font-weight: 700; }
+.pintxo-typography-callout1 { font-size: 16px; line-height: 20px; font-weight: 700; }
+.pintxo-typography-callout2 { font-size: 14px; line-height: 20px; font-weight: 700; }
+.pintxo-typography-body1-emphasis { font-size: 16px; line-height: 20px; font-weight: 500; }
+.pintxo-typography-body2-emphasis { font-size: 14px; line-height: 20px; font-weight: 500; }
+.pintxo-typography-caption { font-size: 12px; line-height: 16px; font-weight: 400; }
+.pintxo-typography-caption-emphasis { font-size: 12px; line-height: 16px; font-weight: 500; }
+/* 2. Viewport: fixed height so each screen scrolls internally and the
+          chrome (header / tab bar / footer) stays put. */
+.prototype-viewport { min-height: 0; height: 100svh; }
+/* 3. Screens. Only one is visible at a time. Each screen is a column:
+          [fixed top chrome] [scrolling content] [fixed bottom chrome]. */
+.screen {
+      position: absolute;
+      inset: 0;
+      display: none;
+      flex-direction: column;
+      background: var(--background-color-primary);
+    }
+.screen.is-active { display: flex; }
+.screen__scroll {
+      flex: 1 1 auto;
+      min-height: 0;
+      overflow-y: auto;
+      overflow-x: hidden;
+      scrollbar-width: none;
+    }
+.screen__scroll::-webkit-scrollbar { display: none; }
+/* 4. Shared helpers */
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; margin: 0; cursor: pointer; }
+img { display: block; }
+[data-nav],
+[data-back] { cursor: pointer; }
+.inert { cursor: default; }
+/* 5. Shared components (used by more than one screen) */
+.blob16 { position: relative; width: 16px; height: 16px; flex: none; }
+.blob16 img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.tag {
+      display: inline-flex; align-items: center; gap: 4px;
+      min-height: 20px; padding: 2px 4px; border-radius: 4px;
+      font-size: 12px; line-height: 16px; font-weight: 500; white-space: nowrap;
+    }
+.tag--promo { background: #e70e42; color: #fff; }
+.tag--neutral { background: var(--background-color-secondary); color: var(--text-color-primary); }
+.tag--sponsored { background: rgba(22, 23, 23, 0.6); color: #fff; }
+.tag img { width: 16px; height: 16px; }
+.icon-btn {
+      display: flex; align-items: center; justify-content: center; flex: none;
+      border-radius: 896px; width: 40px; height: 40px;
+    }
+.icon-btn--neutral { background: var(--background-color-secondary); }
+.icon-btn--floating { background: #fff; border: 1px solid var(--border-color-primary); }
+.icon-btn img { width: 24px; height: 24px; }
+.sb {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 54px; padding-top: 21px; flex: none;
+    }
+.sb__time {
+      flex: 1; text-align: center; line-height: 22px; font-size: 17px; font-weight: 600;
+      font-family: -apple-system, 'SF Pro', 'SF Pro Text', system-ui, sans-serif;
+    }
+.sb__spacer { width: 164px; height: 10px; flex: none; }
+.sb__levels { flex: 1; display: flex; align-items: center; justify-content: center; gap: 7px; padding: 0 16px 0 6px; }
+.sb__levels img:nth-child(1) { width: 19.2px; height: 12.226px; }
+.sb__levels img:nth-child(2) { width: 17.142px; height: 12.328px; }
+.sb__levels img:nth-child(3) { width: 27.328px; height: 13px; }
+.store-tile__ai { position: absolute; right: 7px; bottom: 7px; width: 16px; height: 16px; }
+.store-tile__fav { width: 20px; height: 20px; flex: none; display: flex; align-items: center; justify-content: center; }
+.store-tile__fav img { width: 24px; height: 24px; flex: none; }
+.st-social { display: flex; flex-wrap: wrap; align-items: center; gap: 0 4px; }
+.st-avatars { display: flex; align-items: center; width: 64px; height: 24px; }
+.st-avatar {
+      width: 24px; height: 24px; border-radius: 50%; margin-left: -4px; border: 1px solid #fff;
+      display: flex; align-items: center; justify-content: center; font-size: 12px; line-height: 16px; font-weight: 500;
+    }
+.st-avatar:first-child { margin-left: 0; }
+.st-social > span { font-size: 12px; line-height: 16px; }
+/* Ad modalsheet (Figma 160:38331): overlay on the same screen.
+       Soft transition: scrim fades, sheet slides up with an ease-out curve. */
+.modal {
+      position: absolute; inset: 0; z-index: 50;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      visibility: hidden; pointer-events: none;
+      transition: visibility 0s linear 0.4s;
+    }
+.modal.is-open { visibility: visible; pointer-events: auto; transition-delay: 0s; }
+.modal__scrim {
+      position: absolute; inset: 0; background: rgba(22, 23, 23, 0.49);
+      opacity: 0; transition: opacity 0.35s ease;
+    }
+.modal.is-open .modal__scrim { opacity: 1; }
+.modal__sheet {
+      position: relative; display: flex; flex-direction: column;
+      filter: drop-shadow(0 0 2px rgba(22, 23, 23, 0.05)) drop-shadow(0 0 8px rgba(22, 23, 23, 0.21));
+      transform: translateY(100%);
+      transition: transform 0.4s cubic-bezier(0.32, 0.72, 0, 1);
+    }
+.modal.is-open .modal__sheet { transform: translateY(0); }
+.modal__top { display: block; width: 100%; height: 24px; }
+.modal__surface { background: #fff; display: flex; flex-direction: column; }
+.modal__header { display: flex; align-items: center; gap: 16px; padding: 12px 16px 16px; }
+.modal__title { flex: 1; min-width: 0; margin: 0; padding: 8px 0; color: var(--text-color-primary); }
+.modal__close { width: 40px; height: 40px; }
+.modal__close img { width: 24px; height: 24px; }
+.modal__unsafe { height: 32px; background: #fff; }
+/* Translations dropdown (Figma 179:38458): same sheet, list content. */
+.modal__header--list { padding-bottom: 24px; }
+.modal__list { display: flex; flex-direction: column; padding: 0 16px 34px; }
+.list-item {
+      display: flex; align-items: flex-start; gap: 8px; min-height: 56px; padding: 12px 0;
+      border-radius: 8px; border-bottom: 1px solid var(--border-color-secondary);
+    }
+.list-item:last-child { border-bottom: 0; padding-left: 8px; padding-right: 8px; }
+.list-item__icon { width: 32px; min-height: 32px; flex: none; display: flex; align-items: center; justify-content: center; }
+.list-item__icon img { width: 24px; height: 24px; }
+.list-item__body { flex: 1; min-width: 0; min-height: 32px; padding: 4px 0; }
+.list-item__text { padding: 2px 0; display: flex; flex-direction: column; gap: 2px; }
+.list-item__title { margin: 0; font-size: 16px; line-height: 20px; font-weight: 500; }
+.list-item__desc { margin: 0; font-size: 14px; line-height: 20px; font-weight: 400; }
+@media (prefers-reduced-motion: reduce) {
+.modal,
+.modal__scrim,
+.modal__sheet { transition-duration: 0.01s; }
+}
+/* =====================================================================
+       STORE VIEW (Figma 141:29225)
+       ===================================================================== */
+/* Nav status bar (Store view + Product view) is 62px (22 + 21 + 19), unlike
+       the 54px Store wall one. Nav total = 62 + 56 = 118px. */
+.sb--nav { height: 62px; padding: 21px 24px 19px; gap: 154px; }
+.sb--nav .sb__spacer { display: none; }
+.sb--nav .sb__time { flex: 1; height: 22px; padding-top: 1.5px; }
+.sb--nav .sb__levels { flex: 1; padding: 1px 1px 0 0; }
+.screen { --sv-nav-h: 118px; }
+/* Fixed nav (status bar + buttons) floating over the hero. */
+.sv-nav {
+      position: absolute; top: 0; left: 0; right: 0; z-index: 6;
+      display: flex; flex-direction: column; color: #fff;
+      background: rgba(255, 255, 255, 0); transition: background-color 0.15s ease;
+    }
+.sv-nav .sb__levels--dark,
+.sv-nav .sb__time--dark { display: none; }
+.sv-nav.is-scrolled { background: #fff; color: var(--text-color-primary); }
+.sv-nav.is-scrolled .sb__levels--light { display: none; }
+.sv-nav.is-scrolled .sb__levels--dark { display: flex; }
+.sv-nav__row { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 0 16px 16px; }
+.sv-nav__trailing { display: flex; align-items: center; gap: 8px; }
+.sv-hero { position: relative; height: 288px; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; color: #fff; }
+.sv-hero__bg { position: absolute; inset: 0 0 -20px 0; width: 100%; height: calc(100% + 20px); object-fit: cover; }
+.sv-hero__top {
+      position: absolute; left: 0; top: 0; width: 100%; height: 60px;
+      background: linear-gradient(to bottom, rgba(22, 22, 23, 0.86), rgba(22, 23, 23, 0.6) 50%, rgba(22, 23, 23, 0));
+    }
+.sv-hero__info {
+      position: relative; display: flex; flex-direction: column; gap: 4px; padding: 32px 16px;
+      background: linear-gradient(to bottom, rgba(22, 23, 23, 0), rgba(22, 23, 23, 0.6) 50%, rgba(22, 22, 23, 0.86));
+      isolation: isolate;
+    }
+/* Figma bottomGradient 141:37561 has a 10px background blur. Applied at full strength from the
+       top edge it leaves a hard line across the photo, so the blur is masked to fade in with the
+       gradient (transparent at the top, full at the bottom). */
+.sv-hero__info::before {
+      content: ""; position: absolute; inset: 0; z-index: -1;
+      -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+      -webkit-mask-image: linear-gradient(to bottom, transparent, #000);
+      mask-image: linear-gradient(to bottom, transparent, #000);
+    }
+.sv-title-row { display: flex; align-items: center; gap: 4px; }
+.sv-title-row__main { flex: 1; min-width: 0; display: flex; align-items: center; gap: 12px; }
+/* Store avatar: real Honest Greens logo (cropped from the real-app screenshot,
+       since Figma exposes this avatar only as a Code Connect snippet). */
+.sv-logo {
+      width: 64px; height: 64px; flex: none; border-radius: 12px; overflow: hidden; background: #161617;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+.sv-logo img { width: 100%; height: 100%; object-fit: cover; }
+.sv-title-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.sv-title-text h1 { margin: 0; color: #fff; }
+.sv-traits { display: flex; align-items: center; gap: 4px; height: 24px; font-size: 14px; line-height: 20px; white-space: nowrap; }
+.sv-traits b { font-weight: 500; margin-left: 4px; }
+.sv-traits .sv-dot { font-size: 12px; line-height: 16px; }
+.sv-title-row__chev { padding-right: 8px; display: flex; }
+.sv-title-row__chev img { width: 32px; height: 32px; }
+/* Figma 195:66575: icon-only touchpoint at x=370,y=256 (hero coordinates), i.e. an overlay 16px from the right edge, 96px into the 128px bottom gradient block, directly under the title row. It is out of flow so the block stays 128px (Figma bottomGradient 141:37561). */
+.sv-ailabel { position: absolute; right: 16px; top: 96px; display: flex; align-items: center; }
+.sv-ailabel img { width: 16px; height: 16px; }
+.sv-hero__curve { position: absolute; left: 0; bottom: 0; width: 100%; height: 8px; }
+.sv-logistics {
+      position: relative; margin-top: -20px; display: flex; flex-direction: column; align-items: center; gap: 20px; padding-bottom: 20px;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 20px, #fff 20px);
+    }
+.sv-seg {
+      width: 192px; min-height: 40px; display: flex; align-items: center; gap: 4px; padding: 4px;
+      background: var(--background-color-secondary); border-radius: 896px;
+      box-shadow: 0 0 1px rgba(22, 23, 23, 0.05), 0 0 4px rgba(22, 23, 23, 0.21);
+    }
+.sv-seg__item {
+      flex: 1; min-height: 32px; min-width: 80px; padding: 2px 12px; display: flex; align-items: center; justify-content: center;
+      border-radius: 896px; font-size: 14px; line-height: 20px; color: var(--text-color-primary);
+    }
+.sv-seg__item.is-selected { background: #fff; color: #000; font-weight: 500; }
+.sv-info { width: 100%; display: flex; gap: 8px; padding: 0 8px; }
+.sv-info__col { flex: 1; min-width: 0; height: 40px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+.sv-info__blob { position: relative; width: 32px; height: 32px; flex: none; }
+.sv-info__blob img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.sv-info__text { display: flex; flex-direction: column; justify-content: center; }
+.sv-info__title { padding: 2px 0; font-size: 14px; line-height: 20px; white-space: nowrap; }
+.sv-info__sub { display: flex; align-items: flex-end; gap: 2px; height: 16px; padding-top: 2px; font-size: 12px; line-height: 16px; color: var(--text-color-secondary); white-space: nowrap; }
+.sv-info__sub img { width: 16px; height: 16px; }
+/* Sticky tab menu: sits under the fixed nav once the hero has scrolled away. */
+.sv-tabs {
+      position: sticky; top: var(--sv-nav-h); z-index: 5; display: flex; align-items: flex-end;
+      height: 56px; background: #fff; overflow: hidden;
+    }
+.sv-tab { flex: none; height: 56px; display: flex; flex-direction: column; justify-content: flex-end; font-size: 14px; line-height: 20px; white-space: nowrap; }
+.sv-tab span { flex: 1; display: flex; align-items: center; justify-content: center; padding: 12px; }
+.sv-tab::after { content: ""; display: block; height: 4px; background: #cdced0; }
+.sv-tab.is-selected { font-weight: 700; }
+.sv-tab.is-selected::after { background: #161617; border-radius: 896px; }
+.sv-tabs__extender { flex: 1 0 1px; height: 4px; background: #cdced0; }
+.sv-menu { display: flex; flex-direction: column; gap: 32px; padding: 32px 0; }
+.sv-section { display: flex; flex-direction: column; }
+.sv-section-header { display: flex; align-items: center; gap: 12px; padding: 0 16px; }
+.sv-section-header__title { flex: 1; min-width: 0; padding: 4px 0; margin: 0; }
+.sv-section-header__btn {
+      width: 32px; height: 32px; border-radius: 896px; background: var(--background-color-secondary);
+      display: flex; align-items: center; justify-content: center; flex: none;
+    }
+.sv-section-header__btn img { width: 16px; height: 16px; }
+.sv-section-header__spacer { width: 32px; flex: none; }
+.add-btn {
+      width: 32px; height: 32px; flex: none; border-radius: 896px; background: #fff; border: 1px solid #cdced0;
+      display: flex; align-items: center; justify-content: center;
+    }
+.add-btn img { width: 16px; height: 16px; }
+.sv-carousel { display: flex; gap: 12px; padding: 16px 16px 0; overflow-x: auto; scrollbar-width: none; }
+.sv-carousel::-webkit-scrollbar { display: none; }
+.item-tile { width: 160px; flex: none; display: flex; flex-direction: column; gap: 8px; }
+.item-tile__image { position: relative; height: 160px; border-radius: 16px; overflow: hidden; }
+.item-tile__image > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.item-tile__overlay { position: absolute; inset: 0; background: rgba(22, 23, 23, 0.05); }
+.item-tile__content { position: absolute; inset: 0; padding: 8px; display: flex; flex-direction: column; justify-content: space-between; }
+.item-tile__add { display: flex; justify-content: flex-end; }
+.item-tile__info { display: flex; flex-direction: column; gap: 2px; }
+.item-tile__name { margin: 0; font-size: 16px; line-height: 20px; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.item-tile__price { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; }
+.item-tile__price span:first-child { font-size: 14px; line-height: 20px; }
+.item-tile__price s { font-size: 12px; line-height: 16px; color: var(--text-color-secondary); }
+.sv-rows { display: flex; flex-direction: column; gap: 16px; padding: 16px 16px 0; }
+.item-row { position: relative; display: flex; flex-direction: column; gap: 12px; padding: 16px 0; }
+.item-row::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: #f2f2f3; }
+.item-row__body { display: flex; gap: 16px; align-items: flex-start; }
+.item-row__image { position: relative; width: 112px; height: 112px; flex: none; border-radius: 16px; overflow: hidden; background: #fff; }
+.item-row__image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.item-row__image::after { content: ""; position: absolute; inset: 0; background: rgba(22, 23, 23, 0.05); }
+.item-row__desc { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px; }
+.item-row__head { display: flex; gap: 8px; align-items: flex-start; }
+.item-row__name { flex: 1; min-width: 0; margin: 0; font-size: 16px; line-height: 20px; font-weight: 400; }
+.item-row__price { width: 90px; flex: none; text-align: right; font-size: 14px; line-height: 20px; }
+/* Figma (141:29408): the description box is always 3 lines (60px); longer text is cut with an ellipsis,
+       shorter text leaves the spare line blank. */
+.item-row__text {
+      margin: 0; font-size: 14px; line-height: 20px; min-height: 60px;
+      display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden;
+    }
+.item-row__tags { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; }
+.item-row__footer { display: flex; justify-content: flex-end; }
+
+/* =====================================================================
+   PNA FLOW (added here; the shared store view is untouched)
+   Catalog-driven tabs and rows, working add buttons, and a "View cart" bar.
+   ===================================================================== */
+.sv-tabs { overflow-x: auto; overflow-y: hidden; scrollbar-width: none; }
+.sv-tabs::-webkit-scrollbar { display: none; }
+.sv-tab { cursor: pointer; }
+.sv-tab:focus-visible { outline: 2px solid var(--border-color-active); outline-offset: -2px; }
+button.add-btn { padding: 0; font: inherit; cursor: pointer; }
+.item-row__footer { min-height: 32px; }
+/* Cart-style footer (same as the cart's raised footer). */
+.footer { flex: none; background: var(--background-color-primary); }
+.footer[hidden] { display: none; }
+.footer--raised { border-radius: var(--cornerRadius-m) var(--cornerRadius-m) 0 0; box-shadow: 0 0 2px 0 var(--elevation-shadow-basic-color), 0 0 8px 0 var(--elevation-shadow-raised-color); clip-path: inset(-12px -12px 0 -12px); }
+.footer__content { display: flex; align-items: center; gap: var(--spacing-xs); padding: var(--spacing-s) var(--spacing-m) 0; }
+.footer__price { flex: 1; display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-xs); min-width: 0; }
+.footer__total { margin: 0; font-size: 16px; line-height: 20px; font-weight: 500; }
+.footer__cta { flex: none; }
+.footer__home { height: 34px; display: flex; justify-content: center; align-items: flex-end; padding-bottom: 8px; }
+.footer__home::after { content: ''; width: 134px; height: 5px; border-radius: 100px; background: var(--text-color-primary); }

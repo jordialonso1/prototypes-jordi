@@ -4,22 +4,26 @@ body {
 }
 
 .page {
-  display: grid;
-  grid-template-rows: auto minmax(0, 1fr);
   height: 100svh;
   overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: start;
+  gap: 24px;
+  padding: 64px 48px 32px;
   background: var(--bg);
 }
 
-.page__header {
+.page__side {
+  grid-column: 1;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px 24px;
-  padding: 32px 48px 24px;
-  background: var(--bg);
-  border-bottom: 1px solid var(--line);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.page__header {
+  text-align: left;
 }
 
 .page__title {
@@ -33,8 +37,9 @@ body {
 
 .page__select {
   display: flex;
-  align-items: center;
-  gap: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
   font-size: 14px;
   line-height: 20px;
   color: var(--muted);
@@ -42,6 +47,26 @@ body {
 
 .page__select select {
   font: inherit;
+  width: 280px;
+  max-width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 10px 44px 10px 16px;
+  border: 0;
+  border-radius: 999px;
+  /* Custom chevron so it keeps 16px of white space from the pill's edge. */
+  background-color: var(--surface);
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="%23161617" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.page__reset {
+  font: inherit;
+  font-size: 14px;
+  line-height: 20px;
   padding: 10px 16px;
   border: 0;
   border-radius: 999px;
@@ -50,24 +75,13 @@ body {
   cursor: pointer;
 }
 
-.page__proto {
-  display: flex;
-  min-width: 0;
-  min-height: 0;
-  padding: 24px;
+.page__reset:hover,
+.page__select select:hover {
+  background-color: var(--line);
 }
 
 .device-slot {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 0;
-  min-height: 0;
-}
-
-.device-box {
-  flex: none;
+  grid-column: 2;
 }
 
 .device {
@@ -83,4 +97,29 @@ body {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+@media (max-width: 900px) {
+  .page {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 56px 16px 32px;
+  }
+
+  .page__side {
+    grid-column: 1;
+    align-items: center;
+  }
+
+  .page__header {
+    text-align: center;
+  }
+
+  .page__select {
+    align-items: center;
+  }
+
+  .device-slot {
+    grid-column: 1;
+  }
 }
