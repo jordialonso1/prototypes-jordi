@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Product view</title>
   <link rel="stylesheet" href="../_base/base.css" />
+  <link rel="stylesheet" href="../../../shared-design-system/pintxo/pintxo.css" />
   <link rel="stylesheet" href="./screen.css" />
 </head>
 <body>
@@ -15,17 +16,16 @@
 
       <!-- Fixed nav over the product image -->
       <div class="pv-nav">
-        <div class="sb sb--nav">
-          <div class="sb__time">9:41</div>
-          <div class="sb__spacer"></div>
-          <div class="sb__levels">
+        <div class="pintxo-status-bar">
+          <div class="pintxo-status-bar__time">9:41</div>
+          <div class="pintxo-status-bar__levels">
             <img src="assets/icons/sb-cell-prod.svg" alt="" />
             <img src="assets/icons/sb-wifi-prod.svg" alt="" />
             <img src="assets/icons/sb-battery-prod.svg" alt="" />
           </div>
         </div>
         <div class="pv-nav__row">
-          <button class="icon-btn icon-btn--floating" type="button" aria-label="Back"><img src="assets/icons/nav-back.svg" alt="" /></button>
+          <button class="pintxo-icon-button pintxo-icon-button--floating" type="button" aria-label="Back"><img src="assets/icons/nav-back.svg" alt="" /></button>
         </div>
       </div>
 
@@ -40,7 +40,7 @@
         <div class="pv-info">
           <div class="pv-main">
             <div class="pv-name-price">
-              <span class="tag tag--promo">-20%</span>
+              <span class="pintxo-tag" data-style="promotion">-20%</span>
               <h1 class="pv-name pintxo-typography-title1">Avocado supergreen</h1>
               <p class="pv-price"><span class="pv-price__now">9,90€</span><span class="pv-price__was">12,38€</span></p>
             </div>
@@ -48,15 +48,11 @@
               <div class="pv-text">
               <p class="pv-desc pintxo-typography-body2">Experience the vibrant taste of our Avocado Supergreen! This nutrient-packed delight combines creamy avocados with a blend of fresh greens, offering a refreshing and healthy option for any meal. Rich in vitamins and healthy fats, it's perfect for salads, smoothies, or as a spread. Enjoy the wholesome goodness and elevate your culinary creations!</p>
               <div class="pv-tags">
-                <span class="tag">Gluten free</span><span class="tag">Vegetarian</span><span class="tag">Vegan</span>
+                <span class="pintxo-tag">Gluten free</span><span class="pintxo-tag">Vegetarian</span><span class="pintxo-tag">Vegan</span>
               </div>
               </div>
               <div class="pv-counter-wrap">
-                <div class="counter inert" role="group" aria-label="Quantity">
-                  <span class="counter__btn"><img src="assets/icons/minus-24.svg" alt="Decrease" /></span>
-                  <span class="counter__value">1</span>
-                  <span class="counter__btn"><img src="assets/icons/plus-24.svg" alt="Increase" /></span>
-                </div>
+                <div class="pintxo-counter pintxo-counter--l inert" role="group" aria-label="Quantity"><span class="pintxo-counter__button"><img src="assets/icons/minus-24.svg" alt="Decrease" /></span><span class="pintxo-counter__label">1</span><span class="pintxo-counter__button"><img src="assets/icons/plus-24.svg" alt="Increase" /></span></div>
               </div>
             </div>
           </div>

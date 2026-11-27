@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OTP</title>
   <link rel="stylesheet" href="../_base/base.css" />
+  <link rel="stylesheet" href="../../../shared-design-system/pintxo/pintxo.css" />
   <link rel="stylesheet" href="./screen.css" />
 </head>
 <body>
@@ -20,19 +21,18 @@
       </div>
 
       <header class="otp__header">
-        <div class="sb">
-          <div class="sb__time">9:41</div>
-          <div class="sb__spacer"></div>
-          <div class="sb__levels">
+        <div class="pintxo-status-bar pintxo-status-bar--compact">
+          <div class="pintxo-status-bar__time">9:41</div>
+          <div class="pintxo-status-bar__levels">
             <img src="assets/icons/sb-cell-dark.svg" alt="" />
             <img src="assets/icons/sb-wifi-dark.svg" alt="" />
             <img src="assets/icons/sb-battery-dark.svg" alt="" />
           </div>
         </div>
         <div class="otp__nav">
-          <button class="icon-btn icon-btn--neutral" type="button" aria-label="Close"><img src="assets/icons/chevron-down-24.svg" alt="" /></button>
+          <button class="pintxo-icon-button" type="button" aria-label="Close"><img src="assets/icons/chevron-down-24.svg" alt="" /></button>
           <div class="otp__nav-spacer"></div>
-          <button class="icon-btn icon-btn--neutral inert" type="button" tabindex="-1" aria-label="Info"><img src="assets/icons/nav-info-24.svg" alt="" /></button>
+          <button class="pintxo-icon-button inert" type="button" tabindex="-1" aria-label="Info"><img src="assets/icons/nav-info-24.svg" alt="" /></button>
           <button class="otp__help inert" type="button" tabindex="-1"><span>Help</span></button>
         </div>
       </header>
@@ -51,14 +51,14 @@
       <div class="otp-banner otp-banner--expanded" data-otp-banner="expanded">
         <div class="otp-banner__img">
           <div class="otp-banner__pic"><img src="assets/img/pepsi-banner.png" alt="" /></div>
-          <button class="icon-btn icon-btn--floating otp-banner__close" type="button" data-otp-close aria-label="Close"><img src="assets/icons/cross-24.svg" alt="" /></button>
+          <button class="pintxo-icon-button pintxo-icon-button--floating otp-banner__close" type="button" data-otp-close aria-label="Close"><img src="assets/icons/cross-24.svg" alt="" /></button>
           <img data-ai-label="OTP premium banner icon" class="otp-banner__ai" src="assets/icons/ai-sparkle-solid.svg" alt="" />
         </div>
         <div class="otp-banner__head">
           <p class="otp-banner__title">Advertising from Pepsi</p>
           <div class="otp-banner__row">
             <div class="otp-banner__info">
-              <span class="tag tag--ad">Ad</span>
+              <span class="pintxo-tag" data-style="neutral" data-variant="secondary">Ad</span>
               <span class="otp-banner__infobtn" data-modal-open="otp-ad-modal" role="button" tabindex="0" aria-label="Ad info"><img src="assets/icons/info-circle-16.svg" alt="" /></span>
             </div>
             <span class="otp-banner__link">Visit</span>
@@ -85,11 +85,11 @@
           <div class="modal__surface">
             <div class="modal__header">
               <h2 class="modal__title pintxo-typography-title2" id="otp-ad-modal-title">Paid Ad</h2>
-              <button class="icon-btn icon-btn--neutral modal__close" type="button" aria-label="Close" data-modal-close><img src="assets/icons/cross-24.svg" alt="" /></button>
+              <button class="pintxo-icon-button modal__close" type="button" aria-label="Close" data-modal-close><img src="assets/icons/cross-24.svg" alt="" /></button>
             </div>
             <div class="modal__body">
               <p class="pintxo-typography-body1">This ad has not been personalized nor is targeted on the basis of your account information or any prior browsing or purchasing activity. This ad is paid for by Pepsi.</p>
-              <span data-ai-label="OTP ads modal label" data-ai-after="OTP featured banner icon" class="tag tag--neutral"><img src="assets/icons/ai-sparkle-dark.svg" alt="" />AI generated</span>
+              <span data-ai-label="OTP ads modal label" data-ai-after="OTP featured banner icon" class="pintxo-tag"><img src="assets/icons/ai-sparkle-dark.svg" alt="" />AI generated</span>
             </div>
           </div>
           <div class="modal__unsafe"></div>

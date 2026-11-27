@@ -46,35 +46,6 @@ img { display: block; }
 /* 5. Shared components (used by more than one screen) */
 .blob16 { position: relative; width: 16px; height: 16px; flex: none; }
 .blob16 img { position: absolute; inset: 0; width: 100%; height: 100%; }
-.tag {
-      display: inline-flex; align-items: center; gap: 4px;
-      min-height: 20px; padding: 2px 4px; border-radius: 4px;
-      font-size: 12px; line-height: 16px; font-weight: 500; white-space: nowrap;
-    }
-.tag--promo { background: #e70e42; color: #fff; }
-.tag--neutral { background: var(--background-color-secondary); color: var(--text-color-primary); }
-.tag--sponsored { background: rgba(22, 23, 23, 0.6); color: #fff; }
-.tag img { width: 16px; height: 16px; }
-.icon-btn {
-      display: flex; align-items: center; justify-content: center; flex: none;
-      border-radius: 896px; width: 40px; height: 40px;
-    }
-.icon-btn--neutral { background: var(--background-color-secondary); }
-.icon-btn--floating { background: #fff; border: 1px solid var(--border-color-primary); }
-.icon-btn img { width: 24px; height: 24px; }
-.sb {
-      display: flex; align-items: center; justify-content: space-between;
-      height: 54px; padding-top: 21px; flex: none;
-    }
-.sb__time {
-      flex: 1; text-align: center; line-height: 22px; font-size: 17px; font-weight: 600;
-      font-family: -apple-system, 'SF Pro', 'SF Pro Text', system-ui, sans-serif;
-    }
-.sb__spacer { width: 164px; height: 10px; flex: none; }
-.sb__levels { flex: 1; display: flex; align-items: center; justify-content: center; gap: 7px; padding: 0 16px 0 6px; }
-.sb__levels img:nth-child(1) { width: 19.2px; height: 12.226px; }
-.sb__levels img:nth-child(2) { width: 17.142px; height: 12.328px; }
-.sb__levels img:nth-child(3) { width: 27.328px; height: 13px; }
 .store-tile__ai { position: absolute; right: 7px; bottom: 7px; width: 16px; height: 16px; }
 .store-tile__fav { width: 20px; height: 20px; flex: none; display: flex; align-items: center; justify-content: center; }
 .store-tile__fav img { width: 24px; height: 24px; flex: none; }
@@ -117,31 +88,12 @@ img { display: block; }
 /* Translations dropdown (Figma 179:38458): same sheet, list content. */
 .modal__header--list { padding-bottom: 24px; }
 .modal__list { display: flex; flex-direction: column; padding: 0 16px 34px; }
-.list-item {
-      display: flex; align-items: flex-start; gap: 8px; min-height: 56px; padding: 12px 0;
-      border-radius: 8px; border-bottom: 1px solid var(--border-color-secondary);
-    }
-.list-item:last-child { border-bottom: 0; padding-left: 8px; padding-right: 8px; }
-.list-item__icon { width: 32px; min-height: 32px; flex: none; display: flex; align-items: center; justify-content: center; }
-.list-item__icon img { width: 24px; height: 24px; }
-.list-item__body { flex: 1; min-width: 0; min-height: 32px; padding: 4px 0; }
-.list-item__text { padding: 2px 0; display: flex; flex-direction: column; gap: 2px; }
-.list-item__title { margin: 0; font-size: 16px; line-height: 20px; font-weight: 500; }
-.list-item__desc { margin: 0; font-size: 14px; line-height: 20px; font-weight: 400; }
 @media (prefers-reduced-motion: reduce) {
 .modal,
 .modal__scrim,
 .modal__sheet { transition-duration: 0.01s; }
+
 }
-/* =====================================================================
-       STORE VIEW (Figma 141:29225)
-       ===================================================================== */
-/* Nav status bar (Store view + Product view) is 62px (22 + 21 + 19), unlike
-       the 54px Store wall one. Nav total = 62 + 56 = 118px. */
-.sb--nav { height: 62px; padding: 21px 24px 19px; gap: 154px; }
-.sb--nav .sb__spacer { display: none; }
-.sb--nav .sb__time { flex: 1; height: 22px; padding-top: 1.5px; }
-.sb--nav .sb__levels { flex: 1; padding: 1px 1px 0 0; }
 .screen { --sv-nav-h: 118px; }
 /* Fixed nav (status bar + buttons) floating over the hero. */
 .sv-nav {
@@ -276,7 +228,6 @@ img { display: block; }
     }
 .item-row__tags { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; }
 .item-row__footer { display: flex; justify-content: flex-end; }
-
 /* =====================================================================
    PNA FLOW (added here; the shared store view is untouched)
    Catalog-driven tabs and rows, working add buttons, and a "View cart" bar.
@@ -297,3 +248,4 @@ button.add-btn { padding: 0; font: inherit; cursor: pointer; }
 .footer__cta { flex: none; }
 .footer__home { height: 34px; display: flex; justify-content: center; align-items: flex-end; padding-bottom: 8px; }
 .footer__home::after { content: ''; width: 134px; height: 5px; border-radius: 100px; background: var(--text-color-primary); }
+.sv-nav .pintxo-status-bar { color: inherit; }

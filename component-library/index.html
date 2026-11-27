@@ -271,7 +271,7 @@
   <main class="lib">
     <h1 class="lib__title">Component library</h1>
     <p class="lib__intro">The Pintxo components in <code>shared-design-system/pintxo/</code> that prototypes can reuse. They are plain CSS: link <code>pintxo.css</code> from an HTML prototype. When you add a component to the shared folder, add its examples here too.</p>
-    <nav class="lib__toc" aria-label="Components"><a href="#button">Button</a><a href="#icon-button">Icon button</a><a href="#counter">Counter</a><a href="#banner">Banner</a><a href="#icon-blob">Icon blob</a><a href="#radio-button">Radio button</a><a href="#checkbox">Checkbox</a><a href="#tag">Tag</a><a href="#section-header">Section header</a><a href="#status-bar">Status bar</a><a href="#text-field">Text field</a><a href="#text-button">Text button</a><a href="#button-group">Button group</a><a href="#home-indicator">Home indicator</a></nav>
+    <nav class="lib__toc" aria-label="Components"><a href="#button">Button</a><a href="#icon-button">Icon button</a><a href="#counter">Counter</a><a href="#banner">Banner</a><a href="#icon-blob">Icon blob</a><a href="#radio-button">Radio button</a><a href="#checkbox">Checkbox</a><a href="#tag">Tag</a><a href="#section-header">Section header</a><a href="#status-bar">Status bar</a><a href="#text-field">Text field</a><a href="#text-button">Text button</a><a href="#button-group">Button group</a><a href="#home-indicator">Home indicator</a><a href="#chip">Chip</a><a href="#list-item">List item</a><a href="#tab-bar">Tab bar</a></nav>
     <section class="comp" id="button">
       <header class="comp__head"><h2 class="comp__name">Button</h2><span class="comp__tag">pintxo.css</span></header>
       <p class="comp__desc">Pintxo pill button. Neutral by default, <code>--primary</code> for the main action. Sizes <code>--s</code> 40px, <code>--m</code> 48px, <code>--l</code> 64px. Add <code>--trailing-icon</code> when an icon follows the label, <code>--block</code> for full width. The <code>disabled</code> attribute greys it.</p>
@@ -440,6 +440,18 @@
         </figure><figure class="demo">
           <div class="demo__preview"><span class="pintxo-tag pintxo-typography-caption-emphasis" data-style="contrast" data-variant="secondary">Label</span></div>
           <figcaption><span class="demo__label">contrast secondary</span><details><summary>HTML</summary><pre><code>&lt;span class=&quot;pintxo-tag pintxo-typography-caption-emphasis&quot; data-style=&quot;contrast&quot; data-variant=&quot;secondary&quot;&gt;Label&lt;/span&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><span class="pintxo-tag" data-style="promotion">-20%</span></div>
+          <figcaption><span class="demo__label">promotion</span><details><summary>HTML</summary><pre><code>&lt;span class="pintxo-tag" data-style="promotion"&gt;-20%&lt;/span&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><span class="pintxo-tag" data-style="loyalty"><b>PRIME</b> -30%</span></div>
+          <figcaption><span class="demo__label">loyalty</span><details><summary>HTML</summary><pre><code>&lt;span class="pintxo-tag" data-style="loyalty"&gt;&lt;b&gt;PRIME&lt;/b&gt; -30%&lt;/span&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><span class="pintxo-tag" data-style="sponsored">Sponsored</span></div>
+          <figcaption><span class="demo__label">sponsored</span><details><summary>HTML</summary><pre><code>&lt;span class="pintxo-tag" data-style="sponsored"&gt;Sponsored&lt;/span&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><span class="pintxo-tag-group"><span class="pintxo-tag" data-style="promotion">-20%</span><span class="pintxo-tag" data-style="loyalty"><b>PRIME</b> -30%</span></span></div>
+          <figcaption><span class="demo__label">Tag group</span><details><summary>HTML</summary><pre><code>&lt;span class="pintxo-tag-group"&gt;&lt;span class="pintxo-tag" data-style="promotion"&gt;-20%&lt;/span&gt;&lt;span class="pintxo-tag" data-style="loyalty"&gt;&lt;b&gt;PRIME&lt;/b&gt; -30%&lt;/span&gt;&lt;/span&gt;</code></pre></details></figcaption>
         </figure></div>
     </section><section class="comp" id="section-header">
       <header class="comp__head"><h2 class="comp__name">Section header</h2><span class="comp__tag">pintxo.css</span></header>
@@ -468,6 +480,9 @@
       <div class="demos"><figure class="demo">
           <div class="demo__preview"><div class="pintxo-status-bar"><span class="pintxo-status-bar__time">9:41</span><span class="pintxo-status-bar__levels"><img src="../shared-design-system/pintxo/assets/status-bar-cell.svg" alt="" /><img src="../shared-design-system/pintxo/assets/status-bar-wifi.svg" alt="" /><img src="../shared-design-system/pintxo/assets/status-bar-battery.svg" alt="" /></span></div></div>
           <figcaption><span class="demo__label">Default (light)</span><details><summary>HTML</summary><pre><code>&lt;div class=&quot;pintxo-status-bar&quot;&gt;&lt;span class=&quot;pintxo-status-bar__time&quot;&gt;9:41&lt;/span&gt;&lt;span class=&quot;pintxo-status-bar__levels&quot;&gt;&lt;img src=&quot;../shared-design-system/pintxo/assets/status-bar-cell.svg&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;../shared-design-system/pintxo/assets/status-bar-wifi.svg&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;../shared-design-system/pintxo/assets/status-bar-battery.svg&quot; alt=&quot;&quot; /&gt;&lt;/span&gt;&lt;/div&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><div class="pintxo-status-bar pintxo-status-bar--compact"><span class="pintxo-status-bar__time">9:41</span><span class="pintxo-status-bar__levels"><img src="../shared-design-system/pintxo/assets/status-bar-cell.svg" alt="" /><img src="../shared-design-system/pintxo/assets/status-bar-wifi.svg" alt="" /><img src="../shared-design-system/pintxo/assets/status-bar-battery.svg" alt="" /></span></div></div>
+          <figcaption><span class="demo__label">Compact (54px)</span><details><summary>HTML</summary><pre><code>&lt;div class="pintxo-status-bar pintxo-status-bar--compact"&gt;&lt;span class="pintxo-status-bar__time"&gt;9:41&lt;/span&gt;&lt;span class="pintxo-status-bar__levels"&gt;&lt;img src="../shared-design-system/pintxo/assets/status-bar-cell.svg" alt="" /&gt;&lt;img src="../shared-design-system/pintxo/assets/status-bar-wifi.svg" alt="" /&gt;&lt;img src="../shared-design-system/pintxo/assets/status-bar-battery.svg" alt="" /&gt;&lt;/span&gt;&lt;/div&gt;</code></pre></details></figcaption>
         </figure></div>
     </section><section class="comp" id="text-field">
       <header class="comp__head"><h2 class="comp__name">Text field</h2><span class="comp__tag">pintxo.css</span></header>
@@ -509,6 +524,36 @@
       <div class="demos"><figure class="demo">
           <div class="demo__preview"><div class="pintxo-home-indicator"></div></div>
           <figcaption><span class="demo__label">Default</span><details><summary>HTML</summary><pre><code>&lt;div class="pintxo-home-indicator"&gt;&lt;/div&gt;</code></pre></details></figcaption>
+        </figure></div>
+    </section><section class="comp" id="chip">
+      <header class="comp__head"><h2 class="comp__name">Chip</h2><span class="comp__tag">pintxo.css</span></header>
+      <p class="comp__desc">32px pill filter with an optional 24px icon before or after the label.</p>
+      <p class="comp__where">File: <code>shared-design-system/pintxo/pintxo.css</code></p>
+      <div class="demos"><figure class="demo">
+          <div class="demo__preview"><button class="pintxo-chip"><span>Promotions</span></button></div>
+          <figcaption><span class="demo__label">Label only</span><details><summary>HTML</summary><pre><code>&lt;button class="pintxo-chip"&gt;&lt;span&gt;Promotions&lt;/span&gt;&lt;/button&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><button class="pintxo-chip"><span>Food type</span><img src="../shared-design-system/pintxo/assets/icon-chevron-down-24.svg" alt="" /></button></div>
+          <figcaption><span class="demo__label">Trailing icon</span><details><summary>HTML</summary><pre><code>&lt;button class="pintxo-chip"&gt;&lt;span&gt;Food type&lt;/span&gt;&lt;img src="../shared-design-system/pintxo/assets/icon-chevron-down-24.svg" alt="" /&gt;&lt;/button&gt;</code></pre></details></figcaption>
+        </figure></div>
+    </section><section class="comp" id="list-item">
+      <header class="comp__head"><h2 class="comp__name">List item</h2><span class="comp__tag">pintxo.css</span></header>
+      <p class="comp__desc">Row with a 24px leading icon, a 16/20 medium title and an optional description. Rows are separated by a hairline, the last one has none.</p>
+      <p class="comp__where">File: <code>shared-design-system/pintxo/pintxo.css</code></p>
+      <div class="demos"><figure class="demo">
+          <div class="demo__preview"><div style="width:100%"><div class="pintxo-list-item"><span class="pintxo-list-item__icon"><img src="../shared-design-system/pintxo/assets/icon-chevron-forward-16.svg" alt="" /></span><div class="pintxo-list-item__body"><div class="pintxo-list-item__text"><p class="pintxo-list-item__title">Store information</p></div></div></div><div class="pintxo-list-item"><span class="pintxo-list-item__icon"><img src="../shared-design-system/pintxo/assets/icon-chevron-forward-16.svg" alt="" /></span><div class="pintxo-list-item__body"><div class="pintxo-list-item__text"><p class="pintxo-list-item__title">Share store</p></div></div></div></div></div>
+          <figcaption><span class="demo__label">Title only</span><details><summary>HTML</summary><pre><code>&lt;div style="width:100%"&gt;&lt;div class="pintxo-list-item"&gt;&lt;span class="pintxo-list-item__icon"&gt;&lt;img src="../shared-design-system/pintxo/assets/icon-chevron-forward-16.svg" alt="" /&gt;&lt;/span&gt;&lt;div class="pintxo-list-item__body"&gt;&lt;div class="pintxo-list-item__text"&gt;&lt;p class="pintxo-list-item__title"&gt;Store information&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="pintxo-list-item"&gt;&lt;span class="pintxo-list-item__icon"&gt;&lt;img src="../shared-design-system/pintxo/assets/icon-chevron-forward-16.svg" alt="" /&gt;&lt;/span&gt;&lt;div class="pintxo-list-item__body"&gt;&lt;div class="pintxo-list-item__text"&gt;&lt;p class="pintxo-list-item__title"&gt;Share store&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><div style="width:100%"><div class="pintxo-list-item"><span class="pintxo-list-item__icon"><img src="../shared-design-system/pintxo/assets/icon-chevron-forward-16.svg" alt="" /></span><div class="pintxo-list-item__body"><div class="pintxo-list-item__text"><p class="pintxo-list-item__title">Translate</p><p class="pintxo-list-item__description">Show the menu in your language</p></div></div></div></div></div>
+          <figcaption><span class="demo__label">With description</span><details><summary>HTML</summary><pre><code>&lt;div style="width:100%"&gt;&lt;div class="pintxo-list-item"&gt;&lt;span class="pintxo-list-item__icon"&gt;&lt;img src="../shared-design-system/pintxo/assets/icon-chevron-forward-16.svg" alt="" /&gt;&lt;/span&gt;&lt;div class="pintxo-list-item__body"&gt;&lt;div class="pintxo-list-item__text"&gt;&lt;p class="pintxo-list-item__title"&gt;Translate&lt;/p&gt;&lt;p class="pintxo-list-item__description"&gt;Show the menu in your language&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</code></pre></details></figcaption>
+        </figure></div>
+    </section><section class="comp" id="tab-bar">
+      <header class="comp__head"><h2 class="comp__name">Tab bar</h2><span class="comp__tag">pintxo.css</span></header>
+      <p class="comp__desc">Floating liquid-glass pill pinned 16px above the bottom of its positioned container. The active tab is bold with a blob behind its icon. The demo box gives it a positioned parent.</p>
+      <p class="comp__where">File: <code>shared-design-system/pintxo/pintxo.css</code></p>
+      <div class="demos"><figure class="demo">
+          <div class="demo__preview"><div style="position:relative;width:100%;height:96px;background:#e8e0d0"><nav class="pintxo-tab-bar" aria-label="Main"><a class="pintxo-tab-bar__tab pintxo-tab-bar__tab--active"><span class="pintxo-tab-bar__icon"><img src="../shared-design-system/pintxo/assets/icon-chevron-forward-16.svg" alt="" /></span>Home</a><a class="pintxo-tab-bar__tab"><span class="pintxo-tab-bar__icon"><img src="../shared-design-system/pintxo/assets/icon-chevron-forward-16.svg" alt="" /></span>Discover</a><a class="pintxo-tab-bar__tab"><span class="pintxo-tab-bar__icon"><img src="../shared-design-system/pintxo/assets/icon-chevron-forward-16.svg" alt="" /></span>Orders</a></nav></div></div>
+          <figcaption><span class="demo__label">Three tabs, first active</span><details><summary>HTML</summary><pre><code>&lt;div style="position:relative;width:100%;height:96px;background:#e8e0d0"&gt;&lt;nav class="pintxo-tab-bar" aria-label="Main"&gt;&lt;a class="pintxo-tab-bar__tab pintxo-tab-bar__tab--active"&gt;&lt;span class="pintxo-tab-bar__icon"&gt;&lt;img src="../shared-design-system/pintxo/assets/icon-chevron-forward-16.svg" alt="" /&gt;&lt;/span&gt;Home&lt;/a&gt;&lt;a class="pintxo-tab-bar__tab"&gt;&lt;span class="pintxo-tab-bar__icon"&gt;&lt;img src="../shared-design-system/pintxo/assets/icon-chevron-forward-16.svg" alt="" /&gt;&lt;/span&gt;Discover&lt;/a&gt;&lt;a class="pintxo-tab-bar__tab"&gt;&lt;span class="pintxo-tab-bar__icon"&gt;&lt;img src="../shared-design-system/pintxo/assets/icon-chevron-forward-16.svg" alt="" /&gt;&lt;/span&gt;Orders&lt;/a&gt;&lt;/nav&gt;&lt;/div&gt;</code></pre></details></figcaption>
         </figure></div>
     </section></main>
 </body>

@@ -29,13 +29,16 @@ Link it after the boilerplate styles (adjust the `../` count to the prototype's 
 | Icon blob | `pintxo-icon-blob[data-style]` | warning, critical (exclamation triangle, 24px) |
 | Radio button | `pintxo-radio-button`, `__input`, `__label`, `data-align="right"` | Native input restyled; sync `data-checked`, `data-error`, `data-disabled` |
 | Checkbox | `pintxo-checkbox`, `__input`, `__label` | Sync `data-state` (checked, unchecked, indeterminate), `data-error`, `data-disabled` |
-| Tag | `pintxo-tag[data-style][data-variant]` | neutral, positive, critical, warning, contrast; primary or secondary |
+| Tag | `pintxo-tag[data-style][data-variant]`, `pintxo-tag-group` | neutral, positive, critical, warning, contrast, promotion, loyalty, sponsored; primary or secondary. Contrast needs `data-variant="primary"`. Group joins promotion + loyalty |
 | Section header | `pintxo-section-header`, `__text`, `__title`, `__description`, `__trailing` | Description and trailing slot optional; `data-state="error"` reds the description |
-| Status bar | `pintxo-status-bar`, `__time`, `__levels` | 62px iOS bar; icons in `pintxo/assets/status-bar-*.svg` |
+| Status bar | `pintxo-status-bar`, `__time`, `__levels`, `--compact` | 62px iOS bar (54px with `--compact`); icons in `pintxo/assets/status-bar-*.svg` |
 | Text field | `pintxo-text-field`, `__label`, `__control` | 56px input with label; optional trailing icon; focus border green |
 | Text button | `pintxo-text-button` | Borderless 14/20 secondary action, optional 16px icon |
 | Button group | `pintxo-button-group` | Buttons share the row equally; also icon-only sign-in buttons |
 | Home indicator | `pintxo-home-indicator` | iOS 144 x 5 bar; position it yourself |
+| Chip | `pintxo-chip` | 32px pill filter, optional 24px icon |
+| List item | `pintxo-list-item`, `__icon`, `__body`, `__text`, `__title`, `__description` | Hairline between rows, none after the last |
+| Tab bar | `pintxo-tab-bar`, `__tab`, `__tab--active`, `__icon`, `__blob` | Floating glass pill; needs a positioned parent |
 
 Usage examples are in the comment above each component in `pintxo.css`. When a prototype needs a new variant, add it there instead of writing local CSS. Used so far by `pna-cna-replacements`; `ai-label-prototype` and `signup-login-flow` still have their own copies.
 
