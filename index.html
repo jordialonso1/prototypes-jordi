@@ -4,48 +4,100 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prototypes</title>
+    <link rel="stylesheet" href="./shared-design-system/styles/theme.css" />
     <style>
+      * { box-sizing: border-box; }
       body {
         margin: 0;
-        padding: 56px 32px;
-        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-        background: #eceef0;
-        color: #161617;
+        min-height: 100svh;
+        padding: 96px 48px;
+        font-family: var(--font-site);
+        background: var(--bg);
+        color: var(--text);
+        -webkit-font-smoothing: antialiased;
       }
-      main { max-width: 480px; margin: 0 auto; }
-      h1 { margin: 0 0 24px; font-size: 24px; line-height: 28px; }
-      ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+      main {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 520px));
+        gap: 96px;
+        justify-content: center;
+        align-items: start;
+      }
+      h1, h2 {
+        margin: 0 0 40px;
+        font-size: 44px;
+        line-height: 48px;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+      }
+      ul { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+      li { border-bottom: 1px solid var(--line); }
       a {
-        display: block;
-        padding: 16px;
-        border: 1px solid #cdced0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin: 0 -16px;
+        padding: 20px 16px;
         border-radius: 12px;
-        background: #fff;
         color: inherit;
         text-decoration: none;
+        transition: background 0.15s;
       }
-      a:hover { background: #f2f2f3; }
-      strong { display: block; font-size: 16px; line-height: 20px; }
-      span { font-size: 14px; line-height: 20px; color: #626364; }
+      a:hover { background: var(--hover); }
+      a:focus-visible { outline: 2px solid var(--text); outline-offset: -2px; }
+      .thumb { flex: none; width: 64px; height: 64px; border-radius: 12px; object-fit: cover; border: 1px solid var(--line); }
+      .item { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+      strong { font-size: 18px; line-height: 24px; font-weight: 600; letter-spacing: -0.01em; }
+      .item span { font-size: 14px; line-height: 20px; color: var(--muted); }
+      .arrow { flex: none; font-size: 20px; line-height: 20px; color: var(--muted); transition: transform 0.15s, color 0.15s; }
+      a:hover .arrow { color: var(--text); transform: translateX(4px); }
+      @media (max-width: 960px) {
+        body { padding: 56px 24px; }
+        main { grid-template-columns: minmax(0, 520px); gap: 64px; }
+        h1, h2 { font-size: 36px; line-height: 40px; margin-bottom: 24px; }
+      }
     </style>
   </head>
   <body>
     <main>
+      <section>
       <h1>Prototypes</h1>
       <ul>
         <li>
           <a href="./ai-label-prototype/">
-            <strong>AI label prototype</strong>
-            <span>Store wall, Store view and Product view with AI label touchpoints</span>
+            <img class="thumb" src="./thumbnails/ai-label-prototype.jpg" alt="" width="64" height="64" />
+            <div class="item"><strong>AI label prototype</strong><span>Store wall, Store view and Product view with AI label touchpoints</span></div>
+            <span class="arrow" aria-hidden="true">→</span>
           </a>
         </li>
         <li>
           <a href="./signup-login-flow/">
-            <strong>Signup / login flow</strong>
-            <span>Placeholder scaffold using the shared design system</span>
+            <img class="thumb" src="./thumbnails/signup-login-flow.jpg" alt="" width="64" height="64" />
+            <div class="item"><strong>Signup / login flow</strong><span>Placeholder scaffold using the shared design system</span></div>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="./pna-cna-replacements/">
+            <img class="thumb" src="./thumbnails/pna-cna-replacements.jpg" alt="" width="64" height="64" />
+            <div class="item"><strong>PNA / CNA replacements</strong><span>Cart screen: regular, missing customisation (CNA) and out of stock (PNA)</span></div>
+            <span class="arrow" aria-hidden="true">→</span>
           </a>
         </li>
       </ul>
+      </section>
+      <section>
+        <h2>Repositories</h2>
+        <ul>
+        <li>
+          <a href="./component-library/">
+            <div class="item"><strong>Component library</strong><span>Every shared component available to reuse, with live examples</span></div>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+        </ul>
+      </section>
     </main>
   </body>
 </html>

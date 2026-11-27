@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<!--
+  PINTXO PROTOTYPE BOILERPLATE
+  ============================
+  Before using:
+  1. Copy the fonts/ folder from AI Prototyping Context V2/ into the same
+     folder as your prototype HTML. The @font-face blocks reference them
+     by relative path — no encoding needed.
+  2. Set lang="" to the correct locale (e.g. "es", "en", "ar").
+  3. Set data-ui-mode to "light" or "dark" to match the Figma frame.
+  4. Set the viewport width to the target device:
+       Mobile  -> max-width: 390px  (default, already set)
+       Tablet  -> max-width: 768px
+       Desktop -> max-width: 1280px  (remove the centering wrapper if full-bleed)
+-->
+<html lang="es" data-theme="core" data-ui-mode="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Component library</title>
+
+  <style>
+    /* =====================================================================
+       FONTS — loaded from the fonts/ folder sitting next to this file.
+       Copy fonts/ from AI Prototyping Context V2/ into your output folder.
+       Do NOT inline or base64-encode these. Do not modify these @font-face
+       blocks in any way when generating a prototype.
+       ===================================================================== */
+    @font-face {
+      font-family: 'Glovo Sans';
+      src: url(fonts/GlovoSans-Book.woff2) format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Glovo Sans';
+      src: url(fonts/GlovoSans-Medium.woff2) format('woff2');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Glovo Sans';
+      src: url(fonts/GlovoSans-Bold.woff2) format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* =====================================================================
+       DESIGN TOKENS — Core theme (light mode)
+       Source: uds-react/src/generated/style/
+         core-theme-constants.scss  (geometry — same for light and dark)
+         core-theme-mode-colors.scss (colors — light mixin shown here)
+       To switch to dark mode: change data-ui-mode="dark" on <html> AND
+       swap in the dark-mode color values from core-dark-css-variables mixin.
+       ===================================================================== */
+    :root,
+    [data-theme="core"] {
+      /* -- Spacing scale -------------------------------------------------- */
+      --spacing-none:  0px;
+      --spacing-xxxs:  2px;
+      --spacing-xxs:   4px;
+      --spacing-xs:    8px;
+      --spacing-s:    12px;
+      --spacing-m:    16px;
+      --spacing-l:    24px;
+      --spacing-xl:   32px;
+      --spacing-xxl:  48px;
+      --spacing-xxxl: 64px;
+      --spacing-xxxxl: 80px;
+
+      /* -- Corner radius scale --------------------------------------------- */
+      --cornerRadius-none:  0px;
+      --cornerRadius-xxxs:  2px;
+      --cornerRadius-xxs:   4px;
+      --cornerRadius-xs:    8px;
+      --cornerRadius-s:    12px;
+      --cornerRadius-m:    16px;
+      --cornerRadius-l:    24px;
+      --cornerRadius-xl:   32px;
+      --cornerRadius-xxl:  48px;
+      --cornerRadius-full: 896px;
+
+      /* -- Border widths --------------------------------------------------- */
+      --border-width-none: 0px;
+      --border-width-s:    1px;
+      --border-width-m:    2px;
+      --border-width-l:    4px;
+
+      /* -- Icon sizes ----------------------------------------------------- */
+      --icon-size-s:  16px;
+      --icon-size-m:  24px;
+      --icon-size-l:  32px;
+      --icon-size-xl: 48px;
+
+      /* -- Elevation shadows ----------------------------------------------- */
+      --elevation-shadow-basic-color:    rgba(22, 23, 23, 0.05);
+      --elevation-shadow-raised-color:   rgba(22, 23, 23, 0.21);
+      --elevation-shadow-floating-color: rgba(22, 23, 23, 0.21);
+
+      /* -- Semantic text colors (light) ------------------------------------ */
+      --text-color-primary:        rgba(22, 22, 23, 1);    /* gray9  */
+      --text-color-secondary:      rgba(98, 99, 100, 1);   /* gray39 */
+      --text-color-disabled:       rgba(167, 168, 170, 1); /* gray66 */
+      --text-color-critical:       rgba(212, 22, 22, 1);   /* red46  */
+      --text-color-positive:       rgba(1, 121, 99, 1);    /* green24 */
+      --text-color-warning:        rgba(137, 97, 16, 1);   /* yellow30 */
+      --text-color-marketing:      rgba(19, 114, 170, 1);  /* blue38 */
+      --text-color-persistentLight: rgba(255, 255, 255, 1);
+      --text-color-persistentDark:  rgba(22, 22, 23, 1);
+
+      /* -- Semantic background colors (light) ------------------------------ */
+      --background-color-primary:    rgba(255, 255, 255, 1);  /* white */
+      --background-color-secondary:  rgba(242, 242, 243, 1);  /* gray95 */
+      --background-color-critical:   rgba(249, 235, 235, 1);  /* red95 */
+      --background-color-positive:   rgba(224, 240, 237, 1);  /* green91 */
+      --background-color-warning:    rgba(249, 239, 220, 1);  /* yellow92 */
+      --background-color-marketing:  rgba(211, 231, 243, 1);  /* blue89 */
+      --background-color-loyalty:    rgba(230, 229, 246, 1);  /* purple93 */
+      --background-color-persistentLight: rgba(255, 255, 255, 1);
+      --background-color-persistentDark:  rgba(22, 22, 23, 1);
+
+      /* -- Semantic border colors (light) ---------------------------------- */
+      --border-color-primary:    rgba(205, 206, 208, 1);  /* gray81 */
+      --border-color-secondary:  rgba(242, 242, 243, 1);  /* gray95 */
+      --border-color-active:     rgba(0, 158, 129, 1);    /* green31 */
+      --border-color-critical:   rgba(212, 22, 22, 1);    /* red46  */
+      --border-color-warning:    rgba(236, 159, 4, 1);    /* yellow47 */
+      --border-color-marketing:  rgba(19, 114, 170, 1);   /* blue38 */
+      --border-color-loyalty:    rgba(89, 77, 219, 1);    /* purple58 */
+
+      /* -- Brand colors ---------------------------------------------------- */
+      --brand-color-primary:   rgba(255, 192, 66, 1);   /* yellow63 — Glovo yellow */
+      --brand-color-secondary: rgba(0, 158, 129, 1);    /* green31  — Glovo green  */
+
+      /* -- Semantic icon colors (light) ------------------------------------ */
+      --icon-color-foreground-primary:    rgba(22, 22, 23, 1);
+      --icon-color-foreground-secondary:  rgba(98, 99, 100, 1);
+      --icon-color-foreground-disabled:   rgba(167, 168, 170, 1);
+      --icon-color-foreground-critical:   rgba(212, 22, 22, 1);
+      --icon-color-foreground-positive:   rgba(1, 121, 99, 1);
+      --icon-color-foreground-warning:    rgba(137, 97, 16, 1);
+      --icon-color-foreground-marketing:  rgba(19, 114, 170, 1);
+      --icon-color-foreground-persistentLight: rgba(255, 255, 255, 1);
+      --icon-color-foreground-persistentDark:  rgba(22, 22, 23, 1);
+
+      /* -- Button (primary variant, light) --------------------------------- */
+      --component-button-background-color-primary-enabled:  rgba(1, 121, 99, 1);    /* green24 */
+      --component-button-background-color-primary-hover:    rgba(3, 89, 73, 1);     /* green18 */
+      --component-button-background-color-primary-pressed:  rgba(3, 89, 73, 1);     /* green18 */
+      --component-button-background-color-primary-disabled: rgba(205, 206, 208, 1); /* gray81 */
+      --component-button-icon-color-foreground-primary-enabled:  rgba(255, 255, 255, 1);
+      --component-button-icon-color-foreground-primary-disabled: rgba(98, 99, 100, 1);
+      --component-button-cornerRadius: 896px;
+      --component-button-minHeight-s: 40px;
+      --component-button-minHeight-m: 48px;
+      --component-button-minHeight-l: 64px;
+
+      /* -- RadioButton (light) --------------------------------------------- */
+      --component-radioButton-background-color-enabled-selected:   rgba(0, 158, 129, 1);    /* green31 */
+      --component-radioButton-background-color-enabled-unselected: rgba(242, 242, 243, 1);  /* gray95  */
+      --component-radioButton-border-color-enabled-unselected:     rgba(98, 99, 100, 1);    /* gray39  */
+      --component-radioButton-thumb-color-enabled-selected:        rgba(255, 255, 255, 1);
+
+      /* -- ListItem (light) ------------------------------------------------ */
+      --component-listItem-cornerRadius: 0px;
+      --component-listItem-padding-horizontal: 16px;
+      --component-listItem-padding-vertical:   12px;
+      --component-listItem-gap:                16px;
+    }
+
+    /* =====================================================================
+       TYPOGRAPHY UTILITY CLASSES
+       Mirror of pintxo-typography-* classes from uds-react.
+       Font sizes in px, line heights in px — matching the token scale.
+       ===================================================================== */
+    .pintxo-typography-feature1 { font-size: 64px; line-height: 72px; font-weight: 700; letter-spacing: 0; }
+    .pintxo-typography-feature2 { font-size: 49px; line-height: 56px; font-weight: 700; letter-spacing: 0; }
+    .pintxo-typography-feature3 { font-size: 37px; line-height: 44px; font-weight: 700; letter-spacing: 0; }
+    .pintxo-typography-title1   { font-size: 32px; line-height: 40px; font-weight: 700; letter-spacing: 0; }
+    .pintxo-typography-title2   { font-size: 24px; line-height: 32px; font-weight: 700; letter-spacing: 0; }
+    .pintxo-typography-title3   { font-size: 21px; line-height: 28px; font-weight: 700; letter-spacing: 0; }
+    .pintxo-typography-callout1 { font-size: 18px; line-height: 24px; font-weight: 500; letter-spacing: 0; }
+    .pintxo-typography-callout2 { font-size: 16px; line-height: 24px; font-weight: 500; letter-spacing: 0; }
+    .pintxo-typography-callout3 { font-size: 14px; line-height: 20px; font-weight: 500; letter-spacing: 0; }
+    .pintxo-typography-body1          { font-size: 16px; line-height: 24px; font-weight: 400; letter-spacing: 0; }
+    .pintxo-typography-body1-emphasis  { font-size: 16px; line-height: 24px; font-weight: 500; letter-spacing: 0; }
+    .pintxo-typography-body1-link      { font-size: 16px; line-height: 24px; font-weight: 400; letter-spacing: 0; text-decoration: underline; }
+    .pintxo-typography-body2          { font-size: 14px; line-height: 20px; font-weight: 400; letter-spacing: 0; }
+    .pintxo-typography-body2-emphasis  { font-size: 14px; line-height: 20px; font-weight: 500; letter-spacing: 0; }
+    .pintxo-typography-body2-link      { font-size: 14px; line-height: 20px; font-weight: 400; letter-spacing: 0; text-decoration: underline; }
+    .pintxo-typography-caption         { font-size: 12px; line-height: 16px; font-weight: 400; letter-spacing: 0; }
+    .pintxo-typography-caption-emphasis { font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0; }
+    .pintxo-typography-caption-link    { font-size: 12px; line-height: 16px; font-weight: 400; letter-spacing: 0; text-decoration: underline; }
+
+    /* =====================================================================
+       ELEVATION UTILITY CLASSES
+       ===================================================================== */
+    .pintxo-elevation-hollow  { box-shadow: none; }
+    .pintxo-elevation-primary { box-shadow: 0 0 2px 0 var(--elevation-shadow-basic-color); }
+    .pintxo-elevation-raised  { box-shadow: 0 0 8px 0 var(--elevation-shadow-raised-color); }
+    .pintxo-elevation-floating { box-shadow: 0 0 24px 0 var(--elevation-shadow-floating-color); }
+
+    /* =====================================================================
+       RESET & BASE
+       ===================================================================== */
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Glovo Sans', Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--text-color-primary);
+      background: var(--background-color-primary);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* =====================================================================
+       DEVICE VIEWPORT WRAPPER
+       Simulates a mobile frame (390px). Adjust max-width for tablet/desktop.
+       ===================================================================== */
+    .prototype-viewport {
+      max-width: 390px;  /* Mobile (iPhone 14). Change to 768px (tablet) or 1280px (desktop) */
+      min-height: 100svh;
+      margin: 0 auto;
+      background: var(--background-color-primary);
+      position: relative;
+      overflow: hidden;
+    }
+  </style>
+
+  <link rel="stylesheet" href="../shared-design-system/styles/theme.css" />
+  <link rel="stylesheet" href="../shared-design-system/pintxo/pintxo.css" />
+
+  <style>
+    /* Component library page: site theme (Trade Republic style). The previews
+       stay on white because the Pintxo components are designed for light. */
+    body { background: var(--bg); color: var(--text); font-family: var(--font-site); }
+    .lib { max-width: 1040px; margin: 0 auto; padding: 96px 48px 96px; }
+    .lib__title { margin: 0 0 16px; font-size: 44px; line-height: 48px; font-weight: 700; letter-spacing: -0.03em; }
+    .lib__intro { margin: 0 0 32px; max-width: 640px; font-size: 16px; line-height: 24px; color: var(--muted); }
+    .lib__toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 24px; position: sticky; top: 0; padding: 16px 0; background: var(--bg); z-index: 1; border-bottom: 1px solid var(--line); }
+    .lib__toc a { padding: 8px 16px; border-radius: 999px; background: var(--surface); color: var(--text); text-decoration: none; font-size: 14px; line-height: 20px; font-weight: 600; }
+    .lib__toc a:hover { background: var(--line); }
+    .comp { margin: 0; padding: 48px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 80px; }
+    .comp__head { display: flex; align-items: center; gap: 12px; margin: 0 0 12px; }
+    .comp__name { margin: 0; font-size: 28px; line-height: 32px; font-weight: 700; letter-spacing: -0.02em; }
+    .comp__tag { padding: 2px 10px; border-radius: 999px; background: var(--surface); font-size: 12px; line-height: 16px; font-weight: 600; color: var(--muted); }
+    .comp__desc { margin: 0 0 8px; max-width: 640px; font-size: 14px; line-height: 20px; color: var(--muted); }
+    .comp__desc code { color: var(--text); }
+    .comp__where { margin: 0 0 24px; font-size: 12px; line-height: 16px; color: var(--muted); }
+    code { font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 0.92em; }
+    .demos { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+    .demo { margin: 0; display: flex; flex-direction: column; border-radius: 16px; overflow: hidden; background: var(--surface); }
+    .demo__preview { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start; gap: 12px; padding: 24px; min-height: 96px; margin: 8px 8px 0; border-radius: 12px; background: #fff; color: #161617; }
+    figcaption { padding: 12px 16px; font-size: 12px; line-height: 16px; }
+    .demo__label { font-weight: 600; }
+    details { margin-top: 4px; }
+    summary { cursor: pointer; color: var(--muted); }
+    pre { margin: 8px 0 0; padding: 12px; overflow-x: auto; border-radius: 8px; background: var(--bg); color: var(--text); white-space: pre-wrap; word-break: break-all; }
+    @media (max-width: 720px) { .lib { padding: 56px 24px; } .lib__title { font-size: 36px; line-height: 40px; } }
+  </style>
+</head>
+
+<body>
+  <main class="lib">
+    <h1 class="lib__title">Component library</h1>
+    <p class="lib__intro">The Pintxo components in <code>shared-design-system/pintxo/</code> that prototypes can reuse. They are plain CSS: link <code>pintxo.css</code> from an HTML prototype. When you add a component to the shared folder, add its examples here too.</p>
+    <nav class="lib__toc" aria-label="Components"><a href="#button">Button</a><a href="#icon-button">Icon button</a><a href="#counter">Counter</a><a href="#banner">Banner</a><a href="#icon-blob">Icon blob</a></nav>
+    <section class="comp" id="button">
+      <header class="comp__head"><h2 class="comp__name">Button</h2><span class="comp__tag">pintxo.css</span></header>
+      <p class="comp__desc">Pintxo pill button. Neutral by default, <code>--primary</code> for the main action. Sizes <code>--s</code> 40px, <code>--m</code> 48px, <code>--l</code> 64px. Add <code>--trailing-icon</code> when an icon follows the label, <code>--block</code> for full width. The <code>disabled</code> attribute greys it.</p>
+      <p class="comp__where">File: <code>shared-design-system/pintxo/pintxo.css</code></p>
+      <div class="demos"><figure class="demo">
+          <div class="demo__preview"><button class="pintxo-button pintxo-button--s">Add more items</button></div>
+          <figcaption><span class="demo__label">Neutral s</span><details><summary>HTML</summary><pre><code>&lt;button class="pintxo-button pintxo-button--s"&gt;Add more items&lt;/button&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><button class="pintxo-button pintxo-button--primary pintxo-button--m">Continue</button></div>
+          <figcaption><span class="demo__label">Primary m</span><details><summary>HTML</summary><pre><code>&lt;button class="pintxo-button pintxo-button--primary pintxo-button--m"&gt;Continue&lt;/button&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><button class="pintxo-button pintxo-button--primary pintxo-button--m pintxo-button--trailing-icon">Go to checkout <img src="assets/icon-chevron-forward-white.svg" alt="" /></button></div>
+          <figcaption><span class="demo__label">Primary m, trailing icon</span><details><summary>HTML</summary><pre><code>&lt;button class="pintxo-button pintxo-button--primary pintxo-button--m pintxo-button--trailing-icon"&gt;Go to checkout &lt;img src="assets/icon-chevron-forward-white.svg" alt="" /&gt;&lt;/button&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><button class="pintxo-button pintxo-button--primary pintxo-button--m" disabled>Go to checkout</button></div>
+          <figcaption><span class="demo__label">Primary m, disabled</span><details><summary>HTML</summary><pre><code>&lt;button class="pintxo-button pintxo-button--primary pintxo-button--m" disabled&gt;Go to checkout&lt;/button&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><button class="pintxo-button pintxo-button--primary pintxo-button--l">Sign up</button></div>
+          <figcaption><span class="demo__label">Primary l</span><details><summary>HTML</summary><pre><code>&lt;button class="pintxo-button pintxo-button--primary pintxo-button--l"&gt;Sign up&lt;/button&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><button class="pintxo-button pintxo-button--l">Cancel</button></div>
+          <figcaption><span class="demo__label">Neutral l</span><details><summary>HTML</summary><pre><code>&lt;button class="pintxo-button pintxo-button--l"&gt;Cancel&lt;/button&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><button class="pintxo-button pintxo-button--primary pintxo-button--m pintxo-button--block">Full width</button></div>
+          <figcaption><span class="demo__label">Primary m, block</span><details><summary>HTML</summary><pre><code>&lt;button class="pintxo-button pintxo-button--primary pintxo-button--m pintxo-button--block"&gt;Full width&lt;/button&gt;</code></pre></details></figcaption>
+        </figure></div>
+    </section><section class="comp" id="icon-button">
+      <header class="comp__head"><h2 class="comp__name">Icon button</h2><span class="comp__tag">pintxo.css</span></header>
+      <p class="comp__desc">Round icon-only button. 40px with a 24px icon by default, <code>--s</code> is 32px with a 16px icon. <code>--floating</code> is the white version with a border, used over images. Always set an <code>aria-label</code>.</p>
+      <p class="comp__where">File: <code>shared-design-system/pintxo/pintxo.css</code></p>
+      <div class="demos"><figure class="demo">
+          <div class="demo__preview"><button class="pintxo-icon-button" aria-label="Back"><img src="assets/icon-back-24.svg" alt="" /></button></div>
+          <figcaption><span class="demo__label">Default (40px)</span><details><summary>HTML</summary><pre><code>&lt;button class="pintxo-icon-button" aria-label="Back"&gt;&lt;img src="assets/icon-back-24.svg" alt="" /&gt;&lt;/button&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><button class="pintxo-icon-button pintxo-icon-button--s" aria-label="Empty cart"><img src="assets/icon-trash-16.svg" alt="" /></button></div>
+          <figcaption><span class="demo__label">Small (32px)</span><details><summary>HTML</summary><pre><code>&lt;button class="pintxo-icon-button pintxo-icon-button--s" aria-label="Empty cart"&gt;&lt;img src="assets/icon-trash-16.svg" alt="" /&gt;&lt;/button&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><button class="pintxo-icon-button pintxo-icon-button--floating" aria-label="Back"><img src="assets/icon-back-24.svg" alt="" /></button></div>
+          <figcaption><span class="demo__label">Floating</span><details><summary>HTML</summary><pre><code>&lt;button class="pintxo-icon-button pintxo-icon-button--floating" aria-label="Back"&gt;&lt;img src="assets/icon-back-24.svg" alt="" /&gt;&lt;/button&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><button class="pintxo-icon-button pintxo-icon-button--s pintxo-icon-button--floating" aria-label="Add"><img src="assets/icon-plus-16.svg" alt="" /></button></div>
+          <figcaption><span class="demo__label">Floating, small</span><details><summary>HTML</summary><pre><code>&lt;button class="pintxo-icon-button pintxo-icon-button--s pintxo-icon-button--floating" aria-label="Add"&gt;&lt;img src="assets/icon-plus-16.svg" alt="" /&gt;&lt;/button&gt;</code></pre></details></figcaption>
+        </figure></div>
+    </section><section class="comp" id="counter">
+      <header class="comp__head"><h2 class="comp__name">Counter</h2><span class="comp__tag">pintxo.css</span></header>
+      <p class="comp__desc">Quantity stepper. xs (32px) by default, <code>--l</code> is the 48px one. A disabled button greys its icon. For the floating "+" on a product tile use a small floating icon button instead.</p>
+      <p class="comp__where">File: <code>shared-design-system/pintxo/pintxo.css</code></p>
+      <div class="demos"><figure class="demo">
+          <div class="demo__preview"><div class="pintxo-counter"><button class="pintxo-counter__button" aria-label="Remove"><img src="assets/icon-trash-16.svg" alt="" /></button><span class="pintxo-counter__label">1</span><button class="pintxo-counter__button" aria-label="Add one more"><img src="assets/icon-plus-16.svg" alt="" /></button></div></div>
+          <figcaption><span class="demo__label">xs</span><details><summary>HTML</summary><pre><code>&lt;div class="pintxo-counter"&gt;&lt;button class="pintxo-counter__button" aria-label="Remove"&gt;&lt;img src="assets/icon-trash-16.svg" alt="" /&gt;&lt;/button&gt;&lt;span class="pintxo-counter__label"&gt;1&lt;/span&gt;&lt;button class="pintxo-counter__button" aria-label="Add one more"&gt;&lt;img src="assets/icon-plus-16.svg" alt="" /&gt;&lt;/button&gt;&lt;/div&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><div class="pintxo-counter"><button class="pintxo-counter__button" aria-label="Remove"><img src="assets/icon-trash-16.svg" alt="" /></button><span class="pintxo-counter__label">1</span><button class="pintxo-counter__button" aria-label="Add one more" disabled><img src="assets/icon-plus-16.svg" alt="" /></button></div></div>
+          <figcaption><span class="demo__label">xs, plus disabled</span><details><summary>HTML</summary><pre><code>&lt;div class="pintxo-counter"&gt;&lt;button class="pintxo-counter__button" aria-label="Remove"&gt;&lt;img src="assets/icon-trash-16.svg" alt="" /&gt;&lt;/button&gt;&lt;span class="pintxo-counter__label"&gt;1&lt;/span&gt;&lt;button class="pintxo-counter__button" aria-label="Add one more" disabled&gt;&lt;img src="assets/icon-plus-16.svg" alt="" /&gt;&lt;/button&gt;&lt;/div&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><div class="pintxo-counter pintxo-counter--l"><button class="pintxo-counter__button" aria-label="Remove"><img src="assets/icon-trash-16.svg" alt="" /></button><span class="pintxo-counter__label">2</span><button class="pintxo-counter__button" aria-label="Add one more"><img src="assets/icon-plus-16.svg" alt="" /></button></div></div>
+          <figcaption><span class="demo__label">l</span><details><summary>HTML</summary><pre><code>&lt;div class="pintxo-counter pintxo-counter--l"&gt;&lt;button class="pintxo-counter__button" aria-label="Remove"&gt;&lt;img src="assets/icon-trash-16.svg" alt="" /&gt;&lt;/button&gt;&lt;span class="pintxo-counter__label"&gt;2&lt;/span&gt;&lt;button class="pintxo-counter__button" aria-label="Add one more"&gt;&lt;img src="assets/icon-plus-16.svg" alt="" /&gt;&lt;/button&gt;&lt;/div&gt;</code></pre></details></figcaption>
+        </figure></div>
+    </section><section class="comp" id="banner">
+      <header class="comp__head"><h2 class="comp__name">Banner</h2><span class="comp__tag">pintxo.css</span></header>
+      <p class="comp__desc">Message banner. Set the style with <code>data-style</code>: neutral, positive, critical, warning, marketing, loyalty. Combine with an icon blob for warnings and errors.</p>
+      <p class="comp__where">File: <code>shared-design-system/pintxo/pintxo.css</code></p>
+      <div class="demos"><figure class="demo">
+          <div class="demo__preview"><div class="pintxo-banner"><div class="pintxo-banner__content"><p class="pintxo-banner__title">Title</p><p class="pintxo-banner__description">Description</p></div></div></div>
+          <figcaption><span class="demo__label">neutral</span><details><summary>HTML</summary><pre><code>&lt;div class="pintxo-banner"&gt;&lt;div class="pintxo-banner__content"&gt;&lt;p class="pintxo-banner__title"&gt;Title&lt;/p&gt;&lt;p class="pintxo-banner__description"&gt;Description&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><div class="pintxo-banner" data-style="positive"><div class="pintxo-banner__content"><p class="pintxo-banner__title">Title</p><p class="pintxo-banner__description">Description</p></div></div></div>
+          <figcaption><span class="demo__label">positive</span><details><summary>HTML</summary><pre><code>&lt;div class="pintxo-banner" data-style="positive"&gt;&lt;div class="pintxo-banner__content"&gt;&lt;p class="pintxo-banner__title"&gt;Title&lt;/p&gt;&lt;p class="pintxo-banner__description"&gt;Description&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><div class="pintxo-banner" data-style="warning"><span class="pintxo-icon-blob" data-style="warning" aria-hidden="true"></span><div class="pintxo-banner__content"><p class="pintxo-banner__title">Missing selections</p><p class="pintxo-banner__description">Review before checkout</p></div></div></div>
+          <figcaption><span class="demo__label">warning + icon blob</span><details><summary>HTML</summary><pre><code>&lt;div class="pintxo-banner" data-style="warning"&gt;&lt;span class="pintxo-icon-blob" data-style="warning" aria-hidden="true"&gt;&lt;/span&gt;&lt;div class="pintxo-banner__content"&gt;&lt;p class="pintxo-banner__title"&gt;Missing selections&lt;/p&gt;&lt;p class="pintxo-banner__description"&gt;Review before checkout&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><div class="pintxo-banner" data-style="critical"><span class="pintxo-icon-blob" data-style="critical" aria-hidden="true"></span><div class="pintxo-banner__content"><p class="pintxo-banner__title">Some items are not available</p><p class="pintxo-banner__description">You won’t be charged for them</p></div></div></div>
+          <figcaption><span class="demo__label">critical + icon blob</span><details><summary>HTML</summary><pre><code>&lt;div class="pintxo-banner" data-style="critical"&gt;&lt;span class="pintxo-icon-blob" data-style="critical" aria-hidden="true"&gt;&lt;/span&gt;&lt;div class="pintxo-banner__content"&gt;&lt;p class="pintxo-banner__title"&gt;Some items are not available&lt;/p&gt;&lt;p class="pintxo-banner__description"&gt;You won’t be charged for them&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><div class="pintxo-banner" data-style="marketing"><div class="pintxo-banner__content"><p class="pintxo-banner__title">Title</p><p class="pintxo-banner__description">Description</p></div></div></div>
+          <figcaption><span class="demo__label">marketing</span><details><summary>HTML</summary><pre><code>&lt;div class="pintxo-banner" data-style="marketing"&gt;&lt;div class="pintxo-banner__content"&gt;&lt;p class="pintxo-banner__title"&gt;Title&lt;/p&gt;&lt;p class="pintxo-banner__description"&gt;Description&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><div class="pintxo-banner" data-style="loyalty"><div class="pintxo-banner__content"><p class="pintxo-banner__title">Title</p><p class="pintxo-banner__description">Description</p></div></div></div>
+          <figcaption><span class="demo__label">loyalty</span><details><summary>HTML</summary><pre><code>&lt;div class="pintxo-banner" data-style="loyalty"&gt;&lt;div class="pintxo-banner__content"&gt;&lt;p class="pintxo-banner__title"&gt;Title&lt;/p&gt;&lt;p class="pintxo-banner__description"&gt;Description&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</code></pre></details></figcaption>
+        </figure></div>
+    </section><section class="comp" id="icon-blob">
+      <header class="comp__head"><h2 class="comp__name">Icon blob</h2><span class="comp__tag">pintxo.css</span></header>
+      <p class="comp__desc">24px blob with an exclamation triangle. Styles: warning, critical. Meant to sit at the start of a banner.</p>
+      <p class="comp__where">File: <code>shared-design-system/pintxo/pintxo.css</code></p>
+      <div class="demos"><figure class="demo">
+          <div class="demo__preview"><span class="pintxo-icon-blob" data-style="warning" aria-hidden="true"></span></div>
+          <figcaption><span class="demo__label">warning</span><details><summary>HTML</summary><pre><code>&lt;span class="pintxo-icon-blob" data-style="warning" aria-hidden="true"&gt;&lt;/span&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><span class="pintxo-icon-blob" data-style="critical" aria-hidden="true"></span></div>
+          <figcaption><span class="demo__label">critical</span><details><summary>HTML</summary><pre><code>&lt;span class="pintxo-icon-blob" data-style="critical" aria-hidden="true"&gt;&lt;/span&gt;</code></pre></details></figcaption>
+        </figure></div>
+    </section></main>
+</body>
+</html>

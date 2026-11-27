@@ -11,22 +11,23 @@ body {
   grid-template-rows: auto minmax(0, 1fr);
   height: 100svh;
   overflow: hidden;
-  background: #f4f4f5;
+  background: var(--bg);
 }
 
 .page__header {
   grid-column: 1 / -1;
-  padding: 16px 24px;
-  background: #fff;
-  border-bottom: 1px solid #e4e4e7;
+  padding: 32px 48px 24px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
 }
 
 .page__title {
   margin: 0;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 32px;
+  line-height: 36px;
   font-weight: 700;
-  color: #202125;
+  letter-spacing: -0.03em;
+  color: var(--text);
 }
 
 /* The map has its own light / dark theme (the rest of the page stays light). */
@@ -129,9 +130,9 @@ body {
 
 .page__proto {
   position: relative;
-  --m-btn-bg: #fff;
-  --m-btn-border: #d4d4d8;
-  --m-btn-text: #202125;
+  --m-btn-bg: var(--surface);
+  --m-btn-border: var(--line);
+  --m-btn-text: var(--text);
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,0 +1,201 @@
+/* =========================================================================
+   Pintxo components for plain-HTML prototypes (the ones that run in an iframe
+   and can't import the React components of @shared).
+
+   Link it from a prototype's index.html, after the boilerplate <style>:
+     <link rel="stylesheet" href="../../shared-design-system/pintxo/pintxo.css" />
+   (adjust the number of ../ to the prototype's depth).
+
+   Rules:
+   - Class names use the same `pintxo-` prefix as uds-react. Variants are
+     modifier classes (`pintxo-button--primary`) or `data-style` attributes.
+   - Values come from uds-react (core-theme-constants.scss) and use the token
+     custom properties defined in AI Prototyping Context V2's boilerplate, so
+     the boilerplate <style> must be present. Typography is set per component.
+   - Icons stay as <img> in the markup; sizes are set here.
+   ========================================================================= */
+
+/* ---- Button ------------------------------------------------------------
+   <button class="pintxo-button pintxo-button--primary pintxo-button--m">
+     Go to checkout <img src="chevron.svg" alt="" />
+   </button>
+   Variants: --neutral (default), --primary. Sizes: --s 40, --m 48, --l 64.
+   Add --trailing-icon when an <img> follows the label (less right padding).
+   --block makes it full width. Use the disabled attribute for disabled. */
+.pintxo-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  min-height: var(--component-button-minHeight-s);
+  padding: 0 var(--spacing-m);
+  border: 0;
+  border-radius: var(--component-button-cornerRadius);
+  background: var(--background-color-secondary);
+  color: var(--text-color-primary);
+  font: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.pintxo-button img { width: 16px; height: 16px; flex: none; }
+.pintxo-button--primary {
+  background: var(--component-button-background-color-primary-enabled);
+  color: var(--text-color-persistentLight);
+}
+.pintxo-button--primary:hover:not(:disabled),
+.pintxo-button--primary:active:not(:disabled) {
+  background: var(--component-button-background-color-primary-hover);
+}
+.pintxo-button--s { min-height: var(--component-button-minHeight-s); padding: 0 var(--spacing-s); }
+.pintxo-button--m {
+  min-height: var(--component-button-minHeight-m);
+  padding: 0 var(--spacing-l);
+  font-size: 16px;
+}
+.pintxo-button--l {
+  min-height: var(--component-button-minHeight-l);
+  padding: 0 var(--spacing-l);
+  font-size: 16px;
+}
+.pintxo-button--l img { width: 24px; height: 24px; }
+.pintxo-button--trailing-icon { padding-right: var(--spacing-m); }
+.pintxo-button--block { display: flex; width: 100%; }
+.pintxo-button:disabled {
+  background: var(--component-button-background-color-primary-disabled);
+  color: var(--component-button-icon-color-foreground-primary-disabled);
+  cursor: default;
+}
+
+/* ---- Icon button -------------------------------------------------------
+   <button class="pintxo-icon-button" aria-label="Back"><img src="x.svg" alt="" /></button>
+   Default 40px with a 24px icon. --s is 32px with a 16px icon.
+   Style: neutral (default) or --floating (white with a border). */
+.pintxo-icon-button {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--cornerRadius-full);
+  background: var(--background-color-secondary);
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.pintxo-icon-button img { width: 24px; height: 24px; }
+.pintxo-icon-button--s { width: 32px; height: 32px; }
+.pintxo-icon-button--s img { width: 16px; height: 16px; }
+.pintxo-icon-button--floating {
+  background: var(--background-color-primary);
+  border: 1px solid var(--border-color-primary);
+}
+
+/* ---- Counter -----------------------------------------------------------
+   <div class="pintxo-counter">
+     <button class="pintxo-counter__button" aria-label="Remove"><img src="trash.svg" alt="" /></button>
+     <span class="pintxo-counter__label">1</span>
+     <button class="pintxo-counter__button" aria-label="Add"><img src="plus.svg" alt="" /></button>
+   </div>
+   Default is the xs size (32px, 16px icons). --l is the 48px one (24px icons,
+   120px wide, label 16/20). A disabled button greys its icon. For the
+   floating "+" on a tile use .pintxo-icon-button--s.pintxo-icon-button--floating. */
+.pintxo-counter {
+  display: inline-flex;
+  align-items: center;
+  min-width: 32px;
+  min-height: 32px;
+  border: 2px solid transparent;
+  border-radius: var(--cornerRadius-full);
+  background: var(--background-color-secondary);
+}
+.pintxo-counter__button {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--cornerRadius-full);
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.pintxo-counter__button img { width: 16px; height: 16px; }
+.pintxo-counter__button:disabled { cursor: default; }
+.pintxo-counter__button:disabled img { opacity: 0.4; }
+.pintxo-counter__label {
+  min-width: 12px;
+  padding: var(--spacing-xxs);
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+}
+.pintxo-counter--l { justify-content: space-between; min-width: 120px; min-height: 48px; }
+.pintxo-counter--l .pintxo-counter__button { width: 48px; height: 48px; }
+.pintxo-counter--l .pintxo-counter__button img { width: 24px; height: 24px; }
+.pintxo-counter--l .pintxo-counter__label { font-size: 16px; line-height: 20px; }
+
+/* ---- Banner + icon blob ------------------------------------------------
+   <div class="pintxo-banner" data-style="warning">
+     <span class="pintxo-icon-blob" data-style="warning" aria-hidden="true"></span>
+     <div class="pintxo-banner__content">
+       <p class="pintxo-banner__title">Title</p>
+       <p class="pintxo-banner__description">Description</p>
+     </div>
+   </div>
+   Banner styles: neutral, positive, critical, warning, marketing, loyalty.
+   Icon blob (24px, exclamation triangle): warning, critical. */
+.pintxo-banner {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-s);
+  width: 100%;
+  padding: var(--spacing-s);
+  border-radius: var(--cornerRadius-xs);
+  background: var(--background-color-secondary);
+  color: var(--text-color-primary);
+}
+.pintxo-banner[data-style='positive'] { background: var(--background-color-positive); }
+.pintxo-banner[data-style='critical'] { background: var(--background-color-critical); }
+.pintxo-banner[data-style='warning'] { background: var(--background-color-warning); }
+.pintxo-banner[data-style='marketing'] { background: var(--background-color-marketing); }
+.pintxo-banner[data-style='loyalty'] { background: var(--background-color-loyalty); }
+.pintxo-banner__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xxs);
+  min-width: 0;
+}
+.pintxo-banner__content > * { margin: 0; font-size: 14px; line-height: 20px; }
+.pintxo-banner__title { font-weight: 700; }
+.pintxo-banner__description { font-weight: 400; }
+
+.pintxo-icon-blob {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.pintxo-icon-blob[data-style='warning'] {
+  background-image:
+    url(assets/exclamation-triangle-fg.svg),
+    url(assets/exclamation-triangle-bg.svg),
+    url(assets/icon-blob-warning.svg);
+  background-size: 20.02px 18.23px, 18.27px 16.48px, 24px 24px;
+}
+.pintxo-icon-blob[data-style='critical'] {
+  background-image:
+    url(assets/exclamation-triangle-fg.svg),
+    url(assets/exclamation-triangle-bg.svg),
+    url(assets/icon-blob-critical.svg);
+  background-size: 20.02px 18.23px, 18.27px 16.48px, 24px 24px;
+}
