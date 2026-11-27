@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="core" data-ui-mode="light">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="data:," />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product view</title>
+  <link rel="stylesheet" href="../_base/base.css" />
+  <link rel="stylesheet" href="./screen.css" />
+</head>
+<body>
+  <div class="prototype-viewport">
+
+<section class="screen is-active" id="screen-product-view" data-screen="product-view" aria-label="Product view">
+
+      <!-- Fixed nav over the product image -->
+      <div class="pv-nav">
+        <div class="sb sb--nav">
+          <div class="sb__time">9:41</div>
+          <div class="sb__spacer"></div>
+          <div class="sb__levels">
+            <img src="assets/icons/sb-cell-prod.svg" alt="" />
+            <img src="assets/icons/sb-wifi-prod.svg" alt="" />
+            <img src="assets/icons/sb-battery-prod.svg" alt="" />
+          </div>
+        </div>
+        <div class="pv-nav__row">
+          <button class="icon-btn icon-btn--floating" type="button" aria-label="Back"><img src="assets/icons/nav-back.svg" alt="" /></button>
+        </div>
+      </div>
+
+      <div class="screen__scroll">
+
+        <div class="pv-image">
+          <img class="pv-image__photo" src="assets/img/avocado-supergreen.png" alt="Avocado supergreen" />
+          <img data-ai-label="Image icon" class="pv-image__ai inert" src="assets/icons/ai-sparkle-solid.svg" alt="" />
+          <img class="pv-image__curve" src="assets/icons/curve-product.svg" alt="" />
+        </div>
+
+        <div class="pv-info">
+          <div class="pv-main">
+            <div class="pv-name-price">
+              <span class="tag tag--promo">-20%</span>
+              <h1 class="pv-name pintxo-typography-title1">Avocado supergreen</h1>
+              <p class="pv-price"><span class="pv-price__now">9,90€</span><span class="pv-price__was">12,38€</span></p>
+            </div>
+            <div class="pv-details">
+              <div class="pv-text">
+              <p class="pv-desc pintxo-typography-body2">Experience the vibrant taste of our Avocado Supergreen! This nutrient-packed delight combines creamy avocados with a blend of fresh greens, offering a refreshing and healthy option for any meal. Rich in vitamins and healthy fats, it's perfect for salads, smoothies, or as a spread. Enjoy the wholesome goodness and elevate your culinary creations!</p>
+              <div class="pv-tags">
+                <span class="tag">Gluten free</span><span class="tag">Vegetarian</span><span class="tag">Vegan</span>
+              </div>
+              </div>
+              <div class="pv-counter-wrap">
+                <div class="counter inert" role="group" aria-label="Quantity">
+                  <span class="counter__btn"><img src="assets/icons/minus-24.svg" alt="Decrease" /></span>
+                  <span class="counter__value">1</span>
+                  <span class="counter__btn"><img src="assets/icons/plus-24.svg" alt="Increase" /></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-ai-label="Footer banner for multiple generated content" data-ai-content="product-view" class="sv-notice">
+            <img src="assets/icons/ai-sparkle-banner.svg" alt="" />
+            <p data-ai-content-copy>Images, descriptions, dietary tags and translations are generated with AI</p>
+          </div>
+        </div>
+
+      </div>
+
+      <footer class="pv-footer">
+        <button class="pv-footer__btn" type="button">Add · 9,90€</button>
+      </footer>
+    </section>
+
+  </div>
+  <script src="../_base/base.js"></script>
+</body>
+</html>

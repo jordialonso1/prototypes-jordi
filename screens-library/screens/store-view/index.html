@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="core" data-ui-mode="light">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="data:," />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Store view</title>
+  <link rel="stylesheet" href="../_base/base.css" />
+  <link rel="stylesheet" href="./screen.css" />
+</head>
+<body>
+  <div class="prototype-viewport">
+
+<section class="screen is-active" id="screen-store-view" data-screen="store-view" aria-label="Store view">
+
+      <!-- Fixed nav: floats over the hero, turns white once the page scrolls -->
+      <div class="sv-nav" id="sv-nav">
+        <div class="sb sb--nav">
+          <div class="sb__time">9:41</div>
+          <div class="sb__spacer"></div>
+          <div class="sb__levels sb__levels--light">
+            <img src="assets/icons/sb-cell-light.svg" alt="" />
+            <img src="assets/icons/sb-wifi-light.svg" alt="" />
+            <img src="assets/icons/sb-battery-light.svg" alt="" />
+          </div>
+          <div class="sb__levels sb__levels--dark">
+            <img src="assets/icons/sb-cell-dark.svg" alt="" />
+            <img src="assets/icons/sb-wifi-dark.svg" alt="" />
+            <img src="assets/icons/sb-battery-dark.svg" alt="" />
+          </div>
+        </div>
+        <div class="sv-nav__row">
+          <button class="icon-btn icon-btn--floating" type="button" aria-label="Back"><img src="assets/icons/nav-back.svg" alt="" /></button>
+          <div class="sv-nav__trailing">
+            <button class="icon-btn icon-btn--floating inert" type="button" aria-label="Search"><img src="assets/icons/nav-search.svg" alt="" /></button>
+            <button class="icon-btn icon-btn--floating" type="button" aria-label="Translate" data-modal-open="translations-modal"><img src="assets/icons/modal-translate.svg" alt="" /></button>
+            <button class="icon-btn icon-btn--floating inert" type="button" aria-label="More"><img src="assets/icons/nav-more.svg" alt="" /></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="screen__scroll" id="sv-scroll">
+
+        <div class="sv-hero">
+          <img class="sv-hero__bg" src="assets/img/store-header-bg.png" alt="" />
+          <div class="sv-hero__top"></div>
+          <div class="sv-hero__info">
+            <div class="sv-title-row">
+              <div class="sv-title-row__main">
+                <div class="sv-logo"><img src="assets/img/honest-greens-logo.png" alt="" /></div>
+                <div class="sv-title-text">
+                  <h1 class="pintxo-typography-title1">Honest Greens</h1>
+                  <div class="sv-traits">
+                    <span class="blob16"><img src="assets/icons/blob-green.svg" alt="" /><img src="assets/icons/thumb-up-white.svg" alt="" /></span>
+                    <b>95%</b><span>(413)</span><span class="sv-dot">•</span><span>32 Reviews</span>
+                  </div>
+                </div>
+              </div>
+              <div class="sv-title-row__chev"><img src="assets/icons/chevron-forward-32.svg" alt="" /></div>
+            </div>
+            <div data-ai-label="Header image icon" class="sv-ailabel"><img src="assets/icons/ai-sparkle-light.svg" alt="" /></div>
+          </div>
+          <img class="sv-hero__curve" src="assets/icons/curve.svg" alt="" />
+        </div>
+
+        <div class="sv-logistics">
+          <div class="sv-seg inert">
+            <div class="sv-seg__item is-selected">Delivery</div>
+            <div class="sv-seg__item">Pickup</div>
+          </div>
+          <div class="sv-info">
+            <div class="sv-info__col">
+              <span class="sv-info__blob"><img src="assets/icons/blob-logistics.svg" alt="" /><img src="assets/icons/clock-32.svg" alt="" /></span>
+              <div class="sv-info__text">
+                <div class="sv-info__title">20-35min</div>
+                <div class="sv-info__sub">Delivery time</div>
+              </div>
+            </div>
+            <div class="sv-info__col">
+              <span class="sv-info__blob"><img src="assets/icons/blob-logistics.svg" alt="" /><img src="assets/icons/bike-32.svg" alt="" /></span>
+              <div class="sv-info__text">
+                <div class="sv-info__title">2,49€</div>
+                <div class="sv-info__sub">Fees info <img src="assets/icons/info-circle-store.svg" alt="" /></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab menu: sticks below the fixed nav while the menu scrolls -->
+        <div class="sv-tabs inert" id="sv-tabs">
+          <div class="sv-tab is-selected"><span>Order again</span></div>
+          <div class="sv-tab"><span>Honest Plates</span></div>
+          <div class="sv-tab"><span>Desserts</span></div>
+          <div class="sv-tab"><span>Drinks</span></div>
+          <div class="sv-tab"><span>Extra sauce</span></div>
+          <div class="sv-tab"><span>Desserts</span></div>
+          <div class="sv-tab"><span>Drinks</span></div>
+          <div class="sv-tab"><span>Similar stores</span></div>
+          <div class="sv-tabs__extender"></div>
+        </div>
+
+        <div class="sv-menu">
+
+          <!-- Order again -->
+          <section class="sv-section">
+            <div class="sv-section-header"><h2 class="sv-section-header__title pintxo-typography-title3">Order again</h2></div>
+            <div class="sv-carousel">
+
+              <article class="item-tile" role="link" tabindex="0" aria-label="Avocado supergreen">
+                <div class="item-tile__image">
+                  <img src="assets/img/avocado-supergreen.png" alt="" />
+                  <div class="item-tile__overlay"></div>
+                  <div class="item-tile__content">
+                    <div><span class="tag tag--promo">-20%</span></div>
+                    <div class="item-tile__add"><span class="add-btn"><img src="assets/icons/plus-16.svg" alt="" /></span></div>
+                  </div>
+                </div>
+                <div class="item-tile__info">
+                  <p class="item-tile__name">Avocado supergreen</p>
+                  <div class="item-tile__price"><span>9,90€</span><s>12,38€</s></div>
+                </div>
+              </article>
+
+              <article class="item-tile inert">
+                <div class="item-tile__image">
+                  <img src="assets/img/honest-salmon.png" alt="" />
+                  <div class="item-tile__overlay"></div>
+                  <div class="item-tile__content">
+                    <div></div>
+                    <div class="item-tile__add"><span class="add-btn"><img src="assets/icons/plus-16.svg" alt="" /></span></div>
+                  </div>
+                </div>
+                <div class="item-tile__info">
+                  <p class="item-tile__name">Honest salmon</p>
+                  <div class="item-tile__price"><span>8,90€</span></div>
+                </div>
+              </article>
+
+              <article class="item-tile inert">
+                <div class="item-tile__image">
+                  <img src="assets/img/ternera.png" alt="" />
+                  <div class="item-tile__overlay"></div>
+                  <div class="item-tile__content">
+                    <div><span class="tag tag--promo">-20%</span></div>
+                    <div class="item-tile__add"><span class="add-btn"><img src="assets/icons/plus-16.svg" alt="" /></span></div>
+                  </div>
+                </div>
+                <div class="item-tile__info">
+                  <p class="item-tile__name">Ternera Chimichurri</p>
+                  <div class="item-tile__price"><span>3,90€</span><s>4,87€</s></div>
+                </div>
+              </article>
+
+              <article class="item-tile inert">
+                <div class="item-tile__image">
+                  <img src="assets/img/tres-leches.png" alt="" />
+                  <div class="item-tile__overlay"></div>
+                  <div class="item-tile__content">
+                    <div></div>
+                    <div class="item-tile__add"><span class="add-btn"><img src="assets/icons/plus-16.svg" alt="" /></span></div>
+                  </div>
+                </div>
+                <div class="item-tile__info">
+                  <p class="item-tile__name">Tres leches</p>
+                  <div class="item-tile__price"><span>6,50€</span></div>
+                </div>
+              </article>
+
+            </div>
+          </section>
+
+          <!-- Top sellers -->
+          <section class="sv-section">
+            <div class="sv-section-header">
+              <h2 class="sv-section-header__title pintxo-typography-title3">Top sellers</h2>
+              <span class="sv-section-header__btn"><img src="assets/icons/arrow-forward-neutral.svg" alt="" /></span>
+            </div>
+            <div class="sv-rows">
+
+              <article class="item-row inert">
+                <div class="item-row__body">
+                  <div class="item-row__image"><img src="assets/img/honest-salmon.png" alt="" /></div>
+                  <div class="item-row__desc">
+                    <div class="item-row__head"><p class="item-row__name">Honest salmon</p><span class="item-row__price">15,90 €</span></div>
+                    <p class="item-row__text">One of the most popular items in our restaurants - why is that? long seeded bread containing crispy, lightly breaded, lighlty spiced chicken, lettuce and mayonnaise, a classic!</p>
+                    <div class="item-row__tags"><span class="tag tag--neutral">Gluten free</span><span class="tag tag--neutral">Lactose free</span></div>
+                  </div>
+                </div>
+                <div class="item-row__footer"><span class="add-btn"><img src="assets/icons/plus-16.svg" alt="" /></span></div>
+              </article>
+
+              <article class="item-row" role="link" tabindex="0" aria-label="Avocado supergreen">
+                <div class="item-row__body">
+                  <div class="item-row__image"><img src="assets/img/avocado-supergreen.png" alt="" /></div>
+                  <div class="item-row__desc">
+                    <div class="item-row__head"><p class="item-row__name">Avocado supergreen</p><span class="item-row__price">15,90 €</span></div>
+                    <p class="item-row__text">Nuevos Chili Cheese Bites con salsa cheddar y jalapeños.</p>
+                    <div class="item-row__tags"><span class="tag tag--neutral">Gluten free</span><span class="tag tag--neutral">Vegetarian</span><span class="tag tag--neutral">+2</span></div>
+                  </div>
+                </div>
+                <div class="item-row__footer"><span class="add-btn"><img src="assets/icons/plus-16.svg" alt="" /></span></div>
+              </article>
+
+              <article class="item-row inert">
+                <div class="item-row__body">
+                  <div class="item-row__image"><img src="assets/img/ternera.png" alt="" /></div>
+                  <div class="item-row__desc">
+                    <div class="item-row__head"><p class="item-row__name">Ternera Chimichurri</p><span class="item-row__price">15,90 €</span></div>
+                    <p class="item-row__text">One of the most popular items in our restaurants - why is that? long seeded bread containing crispy, lightly breaded, lighlty spiced chicken, lettuce and mayonnaise, a classic!</p>
+                    <div class="item-row__tags"><span class="tag tag--neutral">Gluten free</span><span class="tag tag--neutral">Lactose free</span><span class="tag tag--neutral">+2</span></div>
+                  </div>
+                </div>
+                <div class="item-row__footer"><span class="add-btn"><img src="assets/icons/plus-16.svg" alt="" /></span></div>
+              </article>
+
+            </div>
+          </section>
+
+          <!-- Honest plates (same items as Top sellers in Figma) -->
+          <section class="sv-section">
+            <div class="sv-section-header">
+              <h2 class="sv-section-header__title pintxo-typography-title3">Honest plates</h2>
+              <span class="sv-section-header__btn"><img src="assets/icons/arrow-forward-neutral.svg" alt="" /></span>
+            </div>
+            <div class="sv-rows">
+
+              <article class="item-row inert">
+                <div class="item-row__body">
+                  <div class="item-row__image"><img src="assets/img/honest-salmon.png" alt="" /></div>
+                  <div class="item-row__desc">
+                    <div class="item-row__head"><p class="item-row__name">Honest salmon</p><span class="item-row__price">15,90 €</span></div>
+                    <p class="item-row__text">One of the most popular items in our restaurants - why is that? long seeded bread containing crispy, lightly breaded, lighlty spiced chicken, lettuce and mayonnaise, a classic!</p>
+                    <div class="item-row__tags"><span class="tag tag--neutral">Gluten free</span><span class="tag tag--neutral">Lactose free</span></div>
+                  </div>
+                </div>
+                <div class="item-row__footer"><span class="add-btn"><img src="assets/icons/plus-16.svg" alt="" /></span></div>
+              </article>
+
+              <article class="item-row" role="link" tabindex="0" aria-label="Avocado supergreen">
+                <div class="item-row__body">
+                  <div class="item-row__image"><img src="assets/img/avocado-supergreen.png" alt="" /></div>
+                  <div class="item-row__desc">
+                    <div class="item-row__head"><p class="item-row__name">Avocado supergreen</p><span class="item-row__price">15,90 €</span></div>
+                    <p class="item-row__text">Nuevos Chili Cheese Bites con salsa cheddar y jalapeños.</p>
+                    <div class="item-row__tags"><span class="tag tag--neutral">Gluten free</span><span class="tag tag--neutral">Vegetarian</span><span class="tag tag--neutral">+2</span></div>
+                  </div>
+                </div>
+                <div class="item-row__footer"><span class="add-btn"><img src="assets/icons/plus-16.svg" alt="" /></span></div>
+              </article>
+
+              <article class="item-row inert">
+                <div class="item-row__body">
+                  <div class="item-row__image"><img src="assets/img/ternera.png" alt="" /></div>
+                  <div class="item-row__desc">
+                    <div class="item-row__head"><p class="item-row__name">Ternera Chimichurri</p><span class="item-row__price">15,90 €</span></div>
+                    <p class="item-row__text">One of the most popular items in our restaurants - why is that? long seeded bread containing crispy, lightly breaded, lighlty spiced chicken, lettuce and mayonnaise, a classic!</p>
+                    <div class="item-row__tags"><span class="tag tag--neutral">Gluten free</span><span class="tag tag--neutral">Lactose free</span><span class="tag tag--neutral">+2</span></div>
+                  </div>
+                </div>
+                <div class="item-row__footer"><span class="add-btn"><img src="assets/icons/plus-16.svg" alt="" /></span></div>
+              </article>
+
+            </div>
+          </section>
+
+        </div>
+      </div>
+
+      <!-- Translations dropdown (Figma 179:38458): overlay on the Store view -->
+      <div class="modal" id="translations-modal" role="dialog" aria-modal="true" aria-labelledby="translations-modal-title" aria-hidden="true">
+        <div class="modal__scrim" data-modal-close></div>
+        <div class="modal__sheet">
+          <img class="modal__top" src="assets/icons/modal-top.svg" alt="" />
+          <div class="modal__surface">
+            <div class="modal__header modal__header--list">
+              <h2 class="modal__title pintxo-typography-title2" id="translations-modal-title">Options</h2>
+              <button class="icon-btn icon-btn--neutral modal__close" type="button" aria-label="Close" data-modal-close><img src="assets/icons/cross-24.svg" alt="" /></button>
+            </div>
+            <div class="modal__list">
+              <div class="list-item inert">
+                <span class="list-item__icon"><img src="assets/icons/modal-info.svg" alt="" /></span>
+                <div class="list-item__body"><div class="list-item__text"><p class="list-item__title">Store information</p></div></div>
+              </div>
+              <div class="list-item inert">
+                <span class="list-item__icon"><img src="assets/icons/modal-heart.svg" alt="" /></span>
+                <div class="list-item__body"><div class="list-item__text"><p class="list-item__title">Add to favourites</p></div></div>
+              </div>
+              <div class="list-item inert">
+                <span class="list-item__icon"><img src="assets/icons/modal-share.svg" alt="" /></span>
+                <div class="list-item__body"><div class="list-item__text"><p class="list-item__title">Share store</p></div></div>
+              </div>
+              <div class="list-item inert">
+                <span class="list-item__icon"><img src="assets/icons/modal-translate.svg" alt="" /></span>
+                <div class="list-item__body">
+                  <div class="list-item__text">
+                    <p class="list-item__title">Translate to Spanish</p>
+                    <p data-ai-label="Content translations" class="list-item__desc">AI generated</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal__unsafe"></div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <script src="../_base/base.js"></script>
+</body>
+</html>

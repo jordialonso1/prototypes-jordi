@@ -1,0 +1,213 @@
+    /* =====================================================================
+       FONTS — loaded from the fonts/ folder sitting next to this file.
+       Copy fonts/ from AI Prototyping Context V2/ into your output folder.
+       Do NOT inline or base64-encode these. Do not modify these @font-face
+       blocks in any way when generating a prototype.
+       ===================================================================== */
+    @font-face {
+      font-family: 'Glovo Sans';
+      src: url(fonts/GlovoSans-Book.woff2) format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Glovo Sans';
+      src: url(fonts/GlovoSans-Medium.woff2) format('woff2');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Glovo Sans';
+      src: url(fonts/GlovoSans-Bold.woff2) format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* =====================================================================
+       DESIGN TOKENS — Core theme (light mode)
+       Source: uds-react/src/generated/style/
+         core-theme-constants.scss  (geometry — same for light and dark)
+         core-theme-mode-colors.scss (colors — light mixin shown here)
+       To switch to dark mode: change data-ui-mode="dark" on <html> AND
+       swap in the dark-mode color values from core-dark-css-variables mixin.
+       ===================================================================== */
+    :root,
+    [data-theme="core"] {
+      /* -- Spacing scale -------------------------------------------------- */
+      --spacing-none:  0px;
+      --spacing-xxxs:  2px;
+      --spacing-xxs:   4px;
+      --spacing-xs:    8px;
+      --spacing-s:    12px;
+      --spacing-m:    16px;
+      --spacing-l:    24px;
+      --spacing-xl:   32px;
+      --spacing-xxl:  48px;
+      --spacing-xxxl: 64px;
+      --spacing-xxxxl: 80px;
+
+      /* -- Corner radius scale --------------------------------------------- */
+      --cornerRadius-none:  0px;
+      --cornerRadius-xxxs:  2px;
+      --cornerRadius-xxs:   4px;
+      --cornerRadius-xs:    8px;
+      --cornerRadius-s:    12px;
+      --cornerRadius-m:    16px;
+      --cornerRadius-l:    24px;
+      --cornerRadius-xl:   32px;
+      --cornerRadius-xxl:  48px;
+      --cornerRadius-full: 896px;
+
+      /* -- Border widths --------------------------------------------------- */
+      --border-width-none: 0px;
+      --border-width-s:    1px;
+      --border-width-m:    2px;
+      --border-width-l:    4px;
+
+      /* -- Icon sizes ----------------------------------------------------- */
+      --icon-size-s:  16px;
+      --icon-size-m:  24px;
+      --icon-size-l:  32px;
+      --icon-size-xl: 48px;
+
+      /* -- Elevation shadows ----------------------------------------------- */
+      --elevation-shadow-basic-color:    rgba(22, 23, 23, 0.05);
+      --elevation-shadow-raised-color:   rgba(22, 23, 23, 0.21);
+      --elevation-shadow-floating-color: rgba(22, 23, 23, 0.21);
+
+      /* -- Semantic text colors (light) ------------------------------------ */
+      --text-color-primary:        rgba(22, 22, 23, 1);    /* gray9  */
+      --text-color-secondary:      rgba(98, 99, 100, 1);   /* gray39 */
+      --text-color-disabled:       rgba(167, 168, 170, 1); /* gray66 */
+      --text-color-critical:       rgba(212, 22, 22, 1);   /* red46  */
+      --text-color-positive:       rgba(1, 121, 99, 1);    /* green24 */
+      --text-color-warning:        rgba(137, 97, 16, 1);   /* yellow30 */
+      --text-color-marketing:      rgba(19, 114, 170, 1);  /* blue38 */
+      --text-color-persistentLight: rgba(255, 255, 255, 1);
+      --text-color-persistentDark:  rgba(22, 22, 23, 1);
+
+      /* -- Semantic background colors (light) ------------------------------ */
+      --background-color-primary:    rgba(255, 255, 255, 1);  /* white */
+      --background-color-secondary:  rgba(242, 242, 243, 1);  /* gray95 */
+      --background-color-critical:   rgba(249, 235, 235, 1);  /* red95 */
+      --background-color-positive:   rgba(224, 240, 237, 1);  /* green91 */
+      --background-color-warning:    rgba(249, 239, 220, 1);  /* yellow92 */
+      --background-color-marketing:  rgba(211, 231, 243, 1);  /* blue89 */
+      --background-color-loyalty:    rgba(230, 229, 246, 1);  /* purple93 */
+      --background-color-persistentLight: rgba(255, 255, 255, 1);
+      --background-color-persistentDark:  rgba(22, 22, 23, 1);
+
+      /* -- Semantic border colors (light) ---------------------------------- */
+      --border-color-primary:    rgba(205, 206, 208, 1);  /* gray81 */
+      --border-color-secondary:  rgba(242, 242, 243, 1);  /* gray95 */
+      --border-color-active:     rgba(0, 158, 129, 1);    /* green31 */
+      --border-color-critical:   rgba(212, 22, 22, 1);    /* red46  */
+      --border-color-warning:    rgba(236, 159, 4, 1);    /* yellow47 */
+      --border-color-marketing:  rgba(19, 114, 170, 1);   /* blue38 */
+      --border-color-loyalty:    rgba(89, 77, 219, 1);    /* purple58 */
+
+      /* -- Brand colors ---------------------------------------------------- */
+      --brand-color-primary:   rgba(255, 192, 66, 1);   /* yellow63 — Glovo yellow */
+      --brand-color-secondary: rgba(0, 158, 129, 1);    /* green31  — Glovo green  */
+
+      /* -- Semantic icon colors (light) ------------------------------------ */
+      --icon-color-foreground-primary:    rgba(22, 22, 23, 1);
+      --icon-color-foreground-secondary:  rgba(98, 99, 100, 1);
+      --icon-color-foreground-disabled:   rgba(167, 168, 170, 1);
+      --icon-color-foreground-critical:   rgba(212, 22, 22, 1);
+      --icon-color-foreground-positive:   rgba(1, 121, 99, 1);
+      --icon-color-foreground-warning:    rgba(137, 97, 16, 1);
+      --icon-color-foreground-marketing:  rgba(19, 114, 170, 1);
+      --icon-color-foreground-persistentLight: rgba(255, 255, 255, 1);
+      --icon-color-foreground-persistentDark:  rgba(22, 22, 23, 1);
+
+      /* -- Button (primary variant, light) --------------------------------- */
+      --component-button-background-color-primary-enabled:  rgba(1, 121, 99, 1);    /* green24 */
+      --component-button-background-color-primary-hover:    rgba(3, 89, 73, 1);     /* green18 */
+      --component-button-background-color-primary-pressed:  rgba(3, 89, 73, 1);     /* green18 */
+      --component-button-background-color-primary-disabled: rgba(205, 206, 208, 1); /* gray81 */
+      --component-button-icon-color-foreground-primary-enabled:  rgba(255, 255, 255, 1);
+      --component-button-icon-color-foreground-primary-disabled: rgba(98, 99, 100, 1);
+      --component-button-cornerRadius: 896px;
+      --component-button-minHeight-s: 40px;
+      --component-button-minHeight-m: 48px;
+      --component-button-minHeight-l: 64px;
+
+      /* -- RadioButton (light) --------------------------------------------- */
+      --component-radioButton-background-color-enabled-selected:   rgba(0, 158, 129, 1);    /* green31 */
+      --component-radioButton-background-color-enabled-unselected: rgba(242, 242, 243, 1);  /* gray95  */
+      --component-radioButton-border-color-enabled-unselected:     rgba(98, 99, 100, 1);    /* gray39  */
+      --component-radioButton-thumb-color-enabled-selected:        rgba(255, 255, 255, 1);
+
+      /* -- ListItem (light) ------------------------------------------------ */
+      --component-listItem-cornerRadius: 0px;
+      --component-listItem-padding-horizontal: 16px;
+      --component-listItem-padding-vertical:   12px;
+      --component-listItem-gap:                16px;
+    }
+
+    /* =====================================================================
+       TYPOGRAPHY UTILITY CLASSES
+       Mirror of pintxo-typography-* classes from uds-react.
+       Font sizes in px, line heights in px — matching the token scale.
+       ===================================================================== */
+    .pintxo-typography-feature1 { font-size: 64px; line-height: 72px; font-weight: 700; letter-spacing: 0; }
+    .pintxo-typography-feature2 { font-size: 49px; line-height: 56px; font-weight: 700; letter-spacing: 0; }
+    .pintxo-typography-feature3 { font-size: 37px; line-height: 44px; font-weight: 700; letter-spacing: 0; }
+    .pintxo-typography-title1   { font-size: 32px; line-height: 40px; font-weight: 700; letter-spacing: 0; }
+    .pintxo-typography-title2   { font-size: 24px; line-height: 32px; font-weight: 700; letter-spacing: 0; }
+    .pintxo-typography-title3   { font-size: 21px; line-height: 28px; font-weight: 700; letter-spacing: 0; }
+    .pintxo-typography-callout1 { font-size: 18px; line-height: 24px; font-weight: 500; letter-spacing: 0; }
+    .pintxo-typography-callout2 { font-size: 16px; line-height: 24px; font-weight: 500; letter-spacing: 0; }
+    .pintxo-typography-callout3 { font-size: 14px; line-height: 20px; font-weight: 500; letter-spacing: 0; }
+    .pintxo-typography-body1          { font-size: 16px; line-height: 24px; font-weight: 400; letter-spacing: 0; }
+    .pintxo-typography-body1-emphasis  { font-size: 16px; line-height: 24px; font-weight: 500; letter-spacing: 0; }
+    .pintxo-typography-body1-link      { font-size: 16px; line-height: 24px; font-weight: 400; letter-spacing: 0; text-decoration: underline; }
+    .pintxo-typography-body2          { font-size: 14px; line-height: 20px; font-weight: 400; letter-spacing: 0; }
+    .pintxo-typography-body2-emphasis  { font-size: 14px; line-height: 20px; font-weight: 500; letter-spacing: 0; }
+    .pintxo-typography-body2-link      { font-size: 14px; line-height: 20px; font-weight: 400; letter-spacing: 0; text-decoration: underline; }
+    .pintxo-typography-caption         { font-size: 12px; line-height: 16px; font-weight: 400; letter-spacing: 0; }
+    .pintxo-typography-caption-emphasis { font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0; }
+    .pintxo-typography-caption-link    { font-size: 12px; line-height: 16px; font-weight: 400; letter-spacing: 0; text-decoration: underline; }
+
+    /* =====================================================================
+       ELEVATION UTILITY CLASSES
+       ===================================================================== */
+    .pintxo-elevation-hollow  { box-shadow: none; }
+    .pintxo-elevation-primary { box-shadow: 0 0 2px 0 var(--elevation-shadow-basic-color); }
+    .pintxo-elevation-raised  { box-shadow: 0 0 8px 0 var(--elevation-shadow-raised-color); }
+    .pintxo-elevation-floating { box-shadow: 0 0 24px 0 var(--elevation-shadow-floating-color); }
+
+    /* =====================================================================
+       RESET & BASE
+       ===================================================================== */
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Glovo Sans', Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--text-color-primary);
+      background: var(--background-color-primary);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* =====================================================================
+       DEVICE VIEWPORT WRAPPER
+       Simulates a mobile frame (390px). Adjust max-width for tablet/desktop.
+       ===================================================================== */
+    .prototype-viewport {
+      max-width: 390px;  /* Mobile (iPhone 14). Change to 768px (tablet) or 1280px (desktop) */
+      min-height: 100svh;
+      margin: 0 auto;
+      background: var(--background-color-primary);
+      position: relative;
+      overflow: hidden;
+    }
+  
