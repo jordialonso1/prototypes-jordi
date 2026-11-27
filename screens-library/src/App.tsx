@@ -57,8 +57,6 @@ export default function App() {
     return () => window.removeEventListener('keydown', onKey)
   }, [open])
 
-  const sources = [...new Set(SCREENS.map((s) => s.source))]
-
   return (
     <main className="lib">
       <header>
@@ -69,27 +67,22 @@ export default function App() {
         </p>
       </header>
 
-      {sources.map((source) => (
-        <section key={source} className="lib__group" aria-label={source}>
-          <h2 className="lib__group-title">{source}</h2>
-          <ul className="lib__grid">
-            {SCREENS.filter((s) => s.source === source).map((s) => (
-              <li key={s.id} className="card">
-                <button
-                  type="button"
-                  className="card__thumb"
-                  disabled={!s.src}
-                  onClick={() => setOpen(s)}
-                  aria-label={`Open ${s.title}`}
-                >
-                  <Preview screen={s} scale={THUMB_SCALE} />
-                </button>
-                <h3 className="card__title">{s.title}</h3>
-              </li>
-            ))}
-          </ul>
-        </section>
-      ))}
+      <ul className="lib__grid">
+        {SCREENS.map((s) => (
+          <li key={s.id} className="card">
+            <button
+              type="button"
+              className="card__thumb"
+              disabled={!s.src}
+              onClick={() => setOpen(s)}
+              aria-label={`Open ${s.title}`}
+            >
+              <Preview screen={s} scale={THUMB_SCALE} />
+            </button>
+            <h3 className="card__title">{s.title}</h3>
+          </li>
+        ))}
+      </ul>
 
       {open && (
         <div className="overlay" onClick={() => setOpen(null)} role="dialog" aria-label={open.title}>
