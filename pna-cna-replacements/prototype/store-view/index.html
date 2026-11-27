@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="core" data-ui-mode="light">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="data:," />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Store view</title>
+  <link rel="stylesheet" href="../_base/base.css" />
+  <link rel="stylesheet" href="../../../shared-design-system/pintxo/pintxo.css" />
+  <link rel="stylesheet" href="./screen.css" />
+</head>
+<body>
+  <div class="prototype-viewport">
+
+<section class="screen is-active" id="screen-store-view" data-screen="store-view" aria-label="Store view">
+
+      <!-- Fixed nav: floats over the hero, turns white once the page scrolls -->
+      <div class="sv-nav" id="sv-nav">
+        <div class="sb sb--nav">
+          <div class="sb__time">9:41</div>
+          <div class="sb__spacer"></div>
+          <div class="sb__levels sb__levels--light">
+            <img src="assets/icons/sb-cell-light.svg" alt="" />
+            <img src="assets/icons/sb-wifi-light.svg" alt="" />
+            <img src="assets/icons/sb-battery-light.svg" alt="" />
+          </div>
+          <div class="sb__levels sb__levels--dark">
+            <img src="assets/icons/sb-cell-dark.svg" alt="" />
+            <img src="assets/icons/sb-wifi-dark.svg" alt="" />
+            <img src="assets/icons/sb-battery-dark.svg" alt="" />
+          </div>
+        </div>
+        <div class="sv-nav__row">
+          <button class="icon-btn icon-btn--floating" id="sv-back" type="button" aria-label="Back"><img src="assets/icons/nav-back.svg" alt="" /></button>
+          <div class="sv-nav__trailing">
+            <button class="icon-btn icon-btn--floating inert" type="button" aria-label="Search"><img src="assets/icons/nav-search.svg" alt="" /></button>
+            <button class="icon-btn icon-btn--floating" type="button" aria-label="Translate" data-modal-open="translations-modal"><img src="assets/icons/modal-translate.svg" alt="" /></button>
+            <button class="icon-btn icon-btn--floating inert" type="button" aria-label="More"><img src="assets/icons/nav-more.svg" alt="" /></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="screen__scroll" id="sv-scroll">
+
+        <div class="sv-hero">
+          <img class="sv-hero__bg" src="assets/img/honest-greens-header.webp" alt="" />
+          <div class="sv-hero__top"></div>
+          <div class="sv-hero__info">
+            <div class="sv-title-row">
+              <div class="sv-title-row__main">
+                <div class="sv-logo"><img src="assets/img/honest-greens-logo.png" alt="" /></div>
+                <div class="sv-title-text">
+                  <h1 class="pintxo-typography-title1">Honest Greens</h1>
+                  <div class="sv-traits">
+                    <span class="blob16"><img src="assets/icons/blob-green.svg" alt="" /><img src="assets/icons/thumb-up-white.svg" alt="" /></span>
+                    <b>95%</b><span>(413)</span><span class="sv-dot">•</span><span>32 Reviews</span>
+                  </div>
+                </div>
+              </div>
+              <div class="sv-title-row__chev"><img src="assets/icons/chevron-forward-32.svg" alt="" /></div>
+            </div>
+            <div data-ai-label="Header image icon" class="sv-ailabel"><img src="assets/icons/ai-sparkle-light.svg" alt="" /></div>
+          </div>
+          <img class="sv-hero__curve" src="assets/icons/curve.svg" alt="" />
+        </div>
+
+        <div class="sv-logistics">
+          <div class="sv-seg inert">
+            <div class="sv-seg__item is-selected">Delivery</div>
+            <div class="sv-seg__item">Pickup</div>
+          </div>
+          <div class="sv-info">
+            <div class="sv-info__col">
+              <span class="sv-info__blob"><img src="assets/icons/blob-logistics.svg" alt="" /><img src="assets/icons/clock-32.svg" alt="" /></span>
+              <div class="sv-info__text">
+                <div class="sv-info__title">20-35min</div>
+                <div class="sv-info__sub">Delivery time</div>
+              </div>
+            </div>
+            <div class="sv-info__col">
+              <span class="sv-info__blob"><img src="assets/icons/blob-logistics.svg" alt="" /><img src="assets/icons/bike-32.svg" alt="" /></span>
+              <div class="sv-info__text">
+                <div class="sv-info__title">2,49€</div>
+                <div class="sv-info__sub">Fees info <img src="assets/icons/info-circle-store.svg" alt="" /></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab menu: one tab per catalog section; tapping scrolls to it -->
+        <div class="sv-tabs" id="sv-tabs"></div>
+
+        <div class="sv-menu" id="sv-menu"></div>
+      </div>
+
+      
+      <footer class="footer footer--raised" id="sv-cartbar" hidden>
+        <div class="footer__content">
+          <div class="footer__price">
+            <p class="footer__total pintxo-typography-body1-emphasis" id="sv-total"></p>
+          </div>
+          <button type="button" class="pintxo-button pintxo-button--primary pintxo-button--m pintxo-button--trailing-icon footer__cta" id="sv-cartbtn">Go to cart <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6.16708 3.50805C6.39257 3.27795 6.7619 3.27422 6.99199 3.49972L11.1587 7.58305C11.2706 7.69277 11.3337 7.84292 11.3337 7.99967C11.3337 8.15643 11.2706 8.30658 11.1587 8.4163L6.99199 12.4996C6.7619 12.7251 6.39257 12.7214 6.16708 12.4913C5.94158 12.2612 5.94531 11.8919 6.17541 11.6664L9.91695 7.99967L6.17541 4.33297C5.94531 4.10747 5.94158 3.73814 6.16708 3.50805Z" fill-rule="evenodd" clip-rule="evenodd" fill="currentColor"/></svg></button>
+        </div>
+        <div class="footer__home"></div>
+      </footer>
+
+      <!-- Translations dropdown (Figma 179:38458): overlay on the Store view -->
+      <div class="modal" id="translations-modal" role="dialog" aria-modal="true" aria-labelledby="translations-modal-title" aria-hidden="true">
+        <div class="modal__scrim" data-modal-close></div>
+        <div class="modal__sheet">
+          <img class="modal__top" src="assets/icons/modal-top.svg" alt="" />
+          <div class="modal__surface">
+            <div class="modal__header modal__header--list">
+              <h2 class="modal__title pintxo-typography-title2" id="translations-modal-title">Options</h2>
+              <button class="icon-btn icon-btn--neutral modal__close" type="button" aria-label="Close" data-modal-close><img src="assets/icons/cross-24.svg" alt="" /></button>
+            </div>
+            <div class="modal__list">
+              <div class="list-item inert">
+                <span class="list-item__icon"><img src="assets/icons/modal-info.svg" alt="" /></span>
+                <div class="list-item__body"><div class="list-item__text"><p class="list-item__title">Store information</p></div></div>
+              </div>
+              <div class="list-item inert">
+                <span class="list-item__icon"><img src="assets/icons/modal-heart.svg" alt="" /></span>
+                <div class="list-item__body"><div class="list-item__text"><p class="list-item__title">Add to favourites</p></div></div>
+              </div>
+              <div class="list-item inert">
+                <span class="list-item__icon"><img src="assets/icons/modal-share.svg" alt="" /></span>
+                <div class="list-item__body"><div class="list-item__text"><p class="list-item__title">Share store</p></div></div>
+              </div>
+              <div class="list-item inert">
+                <span class="list-item__icon"><img src="assets/icons/modal-translate.svg" alt="" /></span>
+                <div class="list-item__body">
+                  <div class="list-item__text">
+                    <p class="list-item__title">Translate to Spanish</p>
+                    <p data-ai-label="Content translations" class="list-item__desc">AI generated</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal__unsafe"></div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <script src="../_base/base.js"></script>
+  <script src="./store-catalog.js"></script>
+  <script src="./sv.js"></script>
+</body>
+</html>

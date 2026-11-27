@@ -271,7 +271,7 @@
   <main class="lib">
     <h1 class="lib__title">Component library</h1>
     <p class="lib__intro">The Pintxo components in <code>shared-design-system/pintxo/</code> that prototypes can reuse. They are plain CSS: link <code>pintxo.css</code> from an HTML prototype. When you add a component to the shared folder, add its examples here too.</p>
-    <nav class="lib__toc" aria-label="Components"><a href="#button">Button</a><a href="#icon-button">Icon button</a><a href="#counter">Counter</a><a href="#banner">Banner</a><a href="#icon-blob">Icon blob</a></nav>
+    <nav class="lib__toc" aria-label="Components"><a href="#button">Button</a><a href="#icon-button">Icon button</a><a href="#counter">Counter</a><a href="#banner">Banner</a><a href="#icon-blob">Icon blob</a><a href="#radio-button">Radio button</a><a href="#checkbox">Checkbox</a><a href="#tag">Tag</a><a href="#section-header">Section header</a><a href="#status-bar">Status bar</a></nav>
     <section class="comp" id="button">
       <header class="comp__head"><h2 class="comp__name">Button</h2><span class="comp__tag">pintxo.css</span></header>
       <p class="comp__desc">Pintxo pill button. Neutral by default, <code>--primary</code> for the main action. Sizes <code>--s</code> 40px, <code>--m</code> 48px, <code>--l</code> 64px. Add <code>--trailing-icon</code> when an icon follows the label, <code>--block</code> for full width. The <code>disabled</code> attribute greys it.</p>
@@ -317,7 +317,7 @@
         </figure></div>
     </section><section class="comp" id="counter">
       <header class="comp__head"><h2 class="comp__name">Counter</h2><span class="comp__tag">pintxo.css</span></header>
-      <p class="comp__desc">Quantity stepper. xs (32px) by default, <code>--l</code> is the 48px one. A disabled button greys its icon. For the floating "+" on a product tile use a small floating icon button instead.</p>
+      <p class="comp__desc">Quantity stepper. xs (32px) by default, <code>--l</code> is the 48px one. A disabled button greys its icon. <code>--collapsed</code> shows only the trailing "+" for a product that is not in the cart yet; swap it for the full counter after the first add. For the floating "+" on a product tile use a small floating icon button instead.</p>
       <p class="comp__where">File: <code>shared-design-system/pintxo/pintxo.css</code></p>
       <div class="demos"><figure class="demo">
           <div class="demo__preview"><div class="pintxo-counter"><button class="pintxo-counter__button" aria-label="Remove"><img src="assets/icon-trash-16.svg" alt="" /></button><span class="pintxo-counter__label">1</span><button class="pintxo-counter__button" aria-label="Add one more"><img src="assets/icon-plus-16.svg" alt="" /></button></div></div>
@@ -328,6 +328,9 @@
         </figure><figure class="demo">
           <div class="demo__preview"><div class="pintxo-counter pintxo-counter--l"><button class="pintxo-counter__button" aria-label="Remove"><img src="assets/icon-trash-16.svg" alt="" /></button><span class="pintxo-counter__label">2</span><button class="pintxo-counter__button" aria-label="Add one more"><img src="assets/icon-plus-16.svg" alt="" /></button></div></div>
           <figcaption><span class="demo__label">l</span><details><summary>HTML</summary><pre><code>&lt;div class="pintxo-counter pintxo-counter--l"&gt;&lt;button class="pintxo-counter__button" aria-label="Remove"&gt;&lt;img src="assets/icon-trash-16.svg" alt="" /&gt;&lt;/button&gt;&lt;span class="pintxo-counter__label"&gt;2&lt;/span&gt;&lt;button class="pintxo-counter__button" aria-label="Add one more"&gt;&lt;img src="assets/icon-plus-16.svg" alt="" /&gt;&lt;/button&gt;&lt;/div&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><div class="pintxo-counter pintxo-counter--collapsed"><button class="pintxo-counter__button" aria-label="Add"><img src="assets/icon-plus-16.svg" alt="" /></button></div></div>
+          <figcaption><span class="demo__label">Collapsed (trailing only)</span><details><summary>HTML</summary><pre><code>&lt;div class=&quot;pintxo-counter pintxo-counter--collapsed&quot;&gt;&lt;button class=&quot;pintxo-counter__button&quot; aria-label=&quot;Add&quot;&gt;&lt;img src=&quot;assets/icon-plus-16.svg&quot; alt=&quot;&quot; /&gt;&lt;/button&gt;&lt;/div&gt;</code></pre></details></figcaption>
         </figure></div>
     </section><section class="comp" id="banner">
       <header class="comp__head"><h2 class="comp__name">Banner</h2><span class="comp__tag">pintxo.css</span></header>
@@ -362,6 +365,106 @@
         </figure><figure class="demo">
           <div class="demo__preview"><span class="pintxo-icon-blob" data-style="critical" aria-hidden="true"></span></div>
           <figcaption><span class="demo__label">critical</span><details><summary>HTML</summary><pre><code>&lt;span class="pintxo-icon-blob" data-style="critical" aria-hidden="true"&gt;&lt;/span&gt;</code></pre></details></figcaption>
+        </figure></div>
+    </section><section class="comp" id="radio-button">
+      <header class="comp__head"><h2 class="comp__name">Radio button</h2><span class="comp__tag">pintxo.css</span></header>
+      <p class="comp__desc">24px radio. Restyles the native input, so it stays focusable. Keep <code>data-checked</code>, <code>data-error</code> and <code>data-disabled</code> in sync with the input in JS. <code>data-align="right"</code> on the label puts the control after the text.</p>
+      <p class="comp__where">File: <code>shared-design-system/pintxo/pintxo.css</code></p>
+      <div class="demos"><figure class="demo">
+          <div class="demo__preview"><label class="pintxo-radio-button"><input class="pintxo-radio-button__input" type="radio" name="demo" data-checked="false" data-error="false" data-disabled="false" /><span class="pintxo-radio-button__label">Medium</span></label></div>
+          <figcaption><span class="demo__label">Unselected</span><details><summary>HTML</summary><pre><code>&lt;label class=&quot;pintxo-radio-button&quot;&gt;&lt;input class=&quot;pintxo-radio-button__input&quot; type=&quot;radio&quot; name=&quot;demo&quot; data-checked=&quot;false&quot; data-error=&quot;false&quot; data-disabled=&quot;false&quot; /&gt;&lt;span class=&quot;pintxo-radio-button__label&quot;&gt;Medium&lt;/span&gt;&lt;/label&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><label class="pintxo-radio-button"><input class="pintxo-radio-button__input" type="radio" name="demo" data-checked="true" data-error="false" data-disabled="false" checked /><span class="pintxo-radio-button__label">Large</span></label></div>
+          <figcaption><span class="demo__label">Selected</span><details><summary>HTML</summary><pre><code>&lt;label class=&quot;pintxo-radio-button&quot;&gt;&lt;input class=&quot;pintxo-radio-button__input&quot; type=&quot;radio&quot; name=&quot;demo&quot; data-checked=&quot;true&quot; data-error=&quot;false&quot; data-disabled=&quot;false&quot; checked /&gt;&lt;span class=&quot;pintxo-radio-button__label&quot;&gt;Large&lt;/span&gt;&lt;/label&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><label class="pintxo-radio-button"><input class="pintxo-radio-button__input" type="radio" name="demo" data-checked="false" data-error="true" data-disabled="false" /><span class="pintxo-radio-button__label">Salmon</span></label></div>
+          <figcaption><span class="demo__label">Error</span><details><summary>HTML</summary><pre><code>&lt;label class=&quot;pintxo-radio-button&quot;&gt;&lt;input class=&quot;pintxo-radio-button__input&quot; type=&quot;radio&quot; name=&quot;demo&quot; data-checked=&quot;false&quot; data-error=&quot;true&quot; data-disabled=&quot;false&quot; /&gt;&lt;span class=&quot;pintxo-radio-button__label&quot;&gt;Salmon&lt;/span&gt;&lt;/label&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><label class="pintxo-radio-button"><input class="pintxo-radio-button__input" type="radio" name="demo" data-checked="false" data-error="false" data-disabled="true" disabled /><span class="pintxo-radio-button__label">Unavailable</span></label></div>
+          <figcaption><span class="demo__label">Disabled</span><details><summary>HTML</summary><pre><code>&lt;label class=&quot;pintxo-radio-button&quot;&gt;&lt;input class=&quot;pintxo-radio-button__input&quot; type=&quot;radio&quot; name=&quot;demo&quot; data-checked=&quot;false&quot; data-error=&quot;false&quot; data-disabled=&quot;true&quot; disabled /&gt;&lt;span class=&quot;pintxo-radio-button__label&quot;&gt;Unavailable&lt;/span&gt;&lt;/label&gt;</code></pre></details></figcaption>
+        </figure></div>
+    </section><section class="comp" id="checkbox">
+      <header class="comp__head"><h2 class="comp__name">Checkbox</h2><span class="comp__tag">pintxo.css</span></header>
+      <p class="comp__desc">24px checkbox. Same approach as the radio button: keep <code>data-state</code> (checked, unchecked, indeterminate), <code>data-error</code> and <code>data-disabled</code> in sync with the input.</p>
+      <p class="comp__where">File: <code>shared-design-system/pintxo/pintxo.css</code></p>
+      <div class="demos"><figure class="demo">
+          <div class="demo__preview"><label class="pintxo-checkbox"><input class="pintxo-checkbox__input" type="checkbox" data-state="unchecked" data-error="false" data-disabled="false" /><span class="pintxo-checkbox__label">Extra salmon</span></label></div>
+          <figcaption><span class="demo__label">Unchecked</span><details><summary>HTML</summary><pre><code>&lt;label class=&quot;pintxo-checkbox&quot;&gt;&lt;input class=&quot;pintxo-checkbox__input&quot; type=&quot;checkbox&quot; data-state=&quot;unchecked&quot; data-error=&quot;false&quot; data-disabled=&quot;false&quot; /&gt;&lt;span class=&quot;pintxo-checkbox__label&quot;&gt;Extra salmon&lt;/span&gt;&lt;/label&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><label class="pintxo-checkbox"><input class="pintxo-checkbox__input" type="checkbox" data-state="checked" data-error="false" data-disabled="false" checked /><span class="pintxo-checkbox__label">Extra salmon</span></label></div>
+          <figcaption><span class="demo__label">Checked</span><details><summary>HTML</summary><pre><code>&lt;label class=&quot;pintxo-checkbox&quot;&gt;&lt;input class=&quot;pintxo-checkbox__input&quot; type=&quot;checkbox&quot; data-state=&quot;checked&quot; data-error=&quot;false&quot; data-disabled=&quot;false&quot; checked /&gt;&lt;span class=&quot;pintxo-checkbox__label&quot;&gt;Extra salmon&lt;/span&gt;&lt;/label&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><label class="pintxo-checkbox"><input class="pintxo-checkbox__input" type="checkbox" data-state="indeterminate" data-error="false" data-disabled="false" /><span class="pintxo-checkbox__label">Some extras</span></label></div>
+          <figcaption><span class="demo__label">Indeterminate</span><details><summary>HTML</summary><pre><code>&lt;label class=&quot;pintxo-checkbox&quot;&gt;&lt;input class=&quot;pintxo-checkbox__input&quot; type=&quot;checkbox&quot; data-state=&quot;indeterminate&quot; data-error=&quot;false&quot; data-disabled=&quot;false&quot; /&gt;&lt;span class=&quot;pintxo-checkbox__label&quot;&gt;Some extras&lt;/span&gt;&lt;/label&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><label class="pintxo-checkbox"><input class="pintxo-checkbox__input" type="checkbox" data-state="unchecked" data-error="true" data-disabled="false" /><span class="pintxo-checkbox__label">Extra salmon</span></label></div>
+          <figcaption><span class="demo__label">Error</span><details><summary>HTML</summary><pre><code>&lt;label class=&quot;pintxo-checkbox&quot;&gt;&lt;input class=&quot;pintxo-checkbox__input&quot; type=&quot;checkbox&quot; data-state=&quot;unchecked&quot; data-error=&quot;true&quot; data-disabled=&quot;false&quot; /&gt;&lt;span class=&quot;pintxo-checkbox__label&quot;&gt;Extra salmon&lt;/span&gt;&lt;/label&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><label class="pintxo-checkbox"><input class="pintxo-checkbox__input" type="checkbox" data-state="unchecked" data-error="false" data-disabled="true" disabled /><span class="pintxo-checkbox__label">Unavailable</span></label></div>
+          <figcaption><span class="demo__label">Disabled</span><details><summary>HTML</summary><pre><code>&lt;label class=&quot;pintxo-checkbox&quot;&gt;&lt;input class=&quot;pintxo-checkbox__input&quot; type=&quot;checkbox&quot; data-state=&quot;unchecked&quot; data-error=&quot;false&quot; data-disabled=&quot;true&quot; disabled /&gt;&lt;span class=&quot;pintxo-checkbox__label&quot;&gt;Unavailable&lt;/span&gt;&lt;/label&gt;</code></pre></details></figcaption>
+        </figure></div>
+    </section><section class="comp" id="tag">
+      <header class="comp__head"><h2 class="comp__name">Tag</h2><span class="comp__tag">pintxo.css</span></header>
+      <p class="comp__desc">Small label. Set <code>data-style</code> (neutral, positive, critical, warning, contrast) and <code>data-variant</code> (primary solid, secondary tinted). Add the caption-emphasis typography class. A leading 16px <code>&lt;svg&gt;</code> or <code>&lt;img&gt;</code> icon is optional.</p>
+      <p class="comp__where">File: <code>shared-design-system/pintxo/pintxo.css</code></p>
+      <div class="demos"><figure class="demo">
+          <div class="demo__preview"><span class="pintxo-tag pintxo-typography-caption-emphasis" data-style="neutral" data-variant="primary">Required</span></div>
+          <figcaption><span class="demo__label">neutral primary</span><details><summary>HTML</summary><pre><code>&lt;span class=&quot;pintxo-tag pintxo-typography-caption-emphasis&quot; data-style=&quot;neutral&quot; data-variant=&quot;primary&quot;&gt;Required&lt;/span&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><span class="pintxo-tag pintxo-typography-caption-emphasis" data-style="neutral" data-variant="secondary">Required</span></div>
+          <figcaption><span class="demo__label">neutral secondary</span><details><summary>HTML</summary><pre><code>&lt;span class=&quot;pintxo-tag pintxo-typography-caption-emphasis&quot; data-style=&quot;neutral&quot; data-variant=&quot;secondary&quot;&gt;Required&lt;/span&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><span class="pintxo-tag pintxo-typography-caption-emphasis" data-style="positive" data-variant="primary">Required</span></div>
+          <figcaption><span class="demo__label">positive primary</span><details><summary>HTML</summary><pre><code>&lt;span class=&quot;pintxo-tag pintxo-typography-caption-emphasis&quot; data-style=&quot;positive&quot; data-variant=&quot;primary&quot;&gt;Required&lt;/span&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><span class="pintxo-tag pintxo-typography-caption-emphasis" data-style="positive" data-variant="secondary">Required</span></div>
+          <figcaption><span class="demo__label">positive secondary</span><details><summary>HTML</summary><pre><code>&lt;span class=&quot;pintxo-tag pintxo-typography-caption-emphasis&quot; data-style=&quot;positive&quot; data-variant=&quot;secondary&quot;&gt;Required&lt;/span&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><span class="pintxo-tag pintxo-typography-caption-emphasis" data-style="critical" data-variant="primary">Required</span></div>
+          <figcaption><span class="demo__label">critical primary</span><details><summary>HTML</summary><pre><code>&lt;span class=&quot;pintxo-tag pintxo-typography-caption-emphasis&quot; data-style=&quot;critical&quot; data-variant=&quot;primary&quot;&gt;Required&lt;/span&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><span class="pintxo-tag pintxo-typography-caption-emphasis" data-style="critical" data-variant="secondary">Required</span></div>
+          <figcaption><span class="demo__label">critical secondary</span><details><summary>HTML</summary><pre><code>&lt;span class=&quot;pintxo-tag pintxo-typography-caption-emphasis&quot; data-style=&quot;critical&quot; data-variant=&quot;secondary&quot;&gt;Required&lt;/span&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><span class="pintxo-tag pintxo-typography-caption-emphasis" data-style="warning" data-variant="primary">Label</span></div>
+          <figcaption><span class="demo__label">warning primary</span><details><summary>HTML</summary><pre><code>&lt;span class=&quot;pintxo-tag pintxo-typography-caption-emphasis&quot; data-style=&quot;warning&quot; data-variant=&quot;primary&quot;&gt;Label&lt;/span&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><span class="pintxo-tag pintxo-typography-caption-emphasis" data-style="warning" data-variant="secondary">Label</span></div>
+          <figcaption><span class="demo__label">warning secondary</span><details><summary>HTML</summary><pre><code>&lt;span class=&quot;pintxo-tag pintxo-typography-caption-emphasis&quot; data-style=&quot;warning&quot; data-variant=&quot;secondary&quot;&gt;Label&lt;/span&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><span class="pintxo-tag pintxo-typography-caption-emphasis" data-style="contrast" data-variant="primary">Label</span></div>
+          <figcaption><span class="demo__label">contrast primary</span><details><summary>HTML</summary><pre><code>&lt;span class=&quot;pintxo-tag pintxo-typography-caption-emphasis&quot; data-style=&quot;contrast&quot; data-variant=&quot;primary&quot;&gt;Label&lt;/span&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><span class="pintxo-tag pintxo-typography-caption-emphasis" data-style="contrast" data-variant="secondary">Label</span></div>
+          <figcaption><span class="demo__label">contrast secondary</span><details><summary>HTML</summary><pre><code>&lt;span class=&quot;pintxo-tag pintxo-typography-caption-emphasis&quot; data-style=&quot;contrast&quot; data-variant=&quot;secondary&quot;&gt;Label&lt;/span&gt;</code></pre></details></figcaption>
+        </figure></div>
+    </section><section class="comp" id="section-header">
+      <header class="comp__head"><h2 class="comp__name">Section header</h2><span class="comp__tag">pintxo.css</span></header>
+      <p class="comp__desc">Title (21/24 bold) with an optional description and an optional trailing slot for a tag, icon button or link. <code>data-state="error"</code> on the header turns the description red.</p>
+      <p class="comp__where">File: <code>shared-design-system/pintxo/pintxo.css</code></p>
+      <div class="demos"><figure class="demo">
+          <div class="demo__preview"><header class="pintxo-section-header"><div class="pintxo-section-header__text"><h2 class="pintxo-section-header__title">You might also like</h2></div></header></div>
+          <figcaption><span class="demo__label">Title only</span><details><summary>HTML</summary><pre><code>&lt;header class=&quot;pintxo-section-header&quot;&gt;&lt;div class=&quot;pintxo-section-header__text&quot;&gt;&lt;h2 class=&quot;pintxo-section-header__title&quot;&gt;You might also like&lt;/h2&gt;&lt;/div&gt;&lt;/header&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><header class="pintxo-section-header"><div class="pintxo-section-header__text"><h2 class="pintxo-section-header__title">Your cart</h2><p class="pintxo-section-header__description">2 products from Honest Greens</p></div></header></div>
+          <figcaption><span class="demo__label">With description</span><details><summary>HTML</summary><pre><code>&lt;header class=&quot;pintxo-section-header&quot;&gt;&lt;div class=&quot;pintxo-section-header__text&quot;&gt;&lt;h2 class=&quot;pintxo-section-header__title&quot;&gt;Your cart&lt;/h2&gt;&lt;p class=&quot;pintxo-section-header__description&quot;&gt;2 products from Honest Greens&lt;/p&gt;&lt;/div&gt;&lt;/header&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><header class="pintxo-section-header"><div class="pintxo-section-header__text"><h2 class="pintxo-section-header__title">Salmon type</h2><p class="pintxo-section-header__description">Choose 1 item</p></div><div class="pintxo-section-header__trailing"><span class="pintxo-tag pintxo-typography-caption-emphasis" data-style="neutral" data-variant="primary">Required</span></div></header></div>
+          <figcaption><span class="demo__label">With tag</span><details><summary>HTML</summary><pre><code>&lt;header class=&quot;pintxo-section-header&quot;&gt;&lt;div class=&quot;pintxo-section-header__text&quot;&gt;&lt;h2 class=&quot;pintxo-section-header__title&quot;&gt;Salmon type&lt;/h2&gt;&lt;p class=&quot;pintxo-section-header__description&quot;&gt;Choose 1 item&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;pintxo-section-header__trailing&quot;&gt;&lt;span class=&quot;pintxo-tag pintxo-typography-caption-emphasis&quot; data-style=&quot;neutral&quot; data-variant=&quot;primary&quot;&gt;Required&lt;/span&gt;&lt;/div&gt;&lt;/header&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><header class="pintxo-section-header"><div class="pintxo-section-header__text"><h2 class="pintxo-section-header__title">Your cart</h2><p class="pintxo-section-header__description">2 products from Honest Greens</p></div><div class="pintxo-section-header__trailing"><button class="pintxo-icon-button" aria-label="Empty cart"><img src="assets/icon-trash-16.svg" alt="" width="24" height="24" /></button></div></header></div>
+          <figcaption><span class="demo__label">With icon button</span><details><summary>HTML</summary><pre><code>&lt;header class=&quot;pintxo-section-header&quot;&gt;&lt;div class=&quot;pintxo-section-header__text&quot;&gt;&lt;h2 class=&quot;pintxo-section-header__title&quot;&gt;Your cart&lt;/h2&gt;&lt;p class=&quot;pintxo-section-header__description&quot;&gt;2 products from Honest Greens&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;pintxo-section-header__trailing&quot;&gt;&lt;button class=&quot;pintxo-icon-button&quot; aria-label=&quot;Empty cart&quot;&gt;&lt;img src=&quot;assets/icon-trash-16.svg&quot; alt=&quot;&quot; width=&quot;24&quot; height=&quot;24&quot; /&gt;&lt;/button&gt;&lt;/div&gt;&lt;/header&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><header class="pintxo-section-header" data-state="error"><div class="pintxo-section-header__text"><h2 class="pintxo-section-header__title">Choose your cutlery</h2><p class="pintxo-section-header__description">Choose 1 item</p></div><div class="pintxo-section-header__trailing"><span class="pintxo-tag pintxo-typography-caption-emphasis" data-style="critical" data-variant="primary">Required</span></div></header></div>
+          <figcaption><span class="demo__label">Error</span><details><summary>HTML</summary><pre><code>&lt;header class=&quot;pintxo-section-header&quot; data-state=&quot;error&quot;&gt;&lt;div class=&quot;pintxo-section-header__text&quot;&gt;&lt;h2 class=&quot;pintxo-section-header__title&quot;&gt;Choose your cutlery&lt;/h2&gt;&lt;p class=&quot;pintxo-section-header__description&quot;&gt;Choose 1 item&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;pintxo-section-header__trailing&quot;&gt;&lt;span class=&quot;pintxo-tag pintxo-typography-caption-emphasis&quot; data-style=&quot;critical&quot; data-variant=&quot;primary&quot;&gt;Required&lt;/span&gt;&lt;/div&gt;&lt;/header&gt;</code></pre></details></figcaption>
+        </figure></div>
+    </section><section class="comp" id="status-bar">
+      <header class="comp__head"><h2 class="comp__name">Status bar</h2><span class="comp__tag">pintxo.css</span></header>
+      <p class="comp__desc">iOS status bar for the top of a prototype screen: 62px tall, time on the left, signal icons on the right, room for the notch in between. The icons are in <code>shared-design-system/pintxo/assets/</code>; adjust the <code>src</code> path to the prototype's depth. Position it yourself, for example inside a fixed nav.</p>
+      <p class="comp__where">File: <code>shared-design-system/pintxo/pintxo.css</code></p>
+      <div class="demos"><figure class="demo">
+          <div class="demo__preview"><div class="pintxo-status-bar"><span class="pintxo-status-bar__time">9:41</span><span class="pintxo-status-bar__levels"><img src="../shared-design-system/pintxo/assets/status-bar-cell.svg" alt="" /><img src="../shared-design-system/pintxo/assets/status-bar-wifi.svg" alt="" /><img src="../shared-design-system/pintxo/assets/status-bar-battery.svg" alt="" /></span></div></div>
+          <figcaption><span class="demo__label">Default (light)</span><details><summary>HTML</summary><pre><code>&lt;div class=&quot;pintxo-status-bar&quot;&gt;&lt;span class=&quot;pintxo-status-bar__time&quot;&gt;9:41&lt;/span&gt;&lt;span class=&quot;pintxo-status-bar__levels&quot;&gt;&lt;img src=&quot;../shared-design-system/pintxo/assets/status-bar-cell.svg&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;../shared-design-system/pintxo/assets/status-bar-wifi.svg&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;../shared-design-system/pintxo/assets/status-bar-battery.svg&quot; alt=&quot;&quot; /&gt;&lt;/span&gt;&lt;/div&gt;</code></pre></details></figcaption>
         </figure></div>
     </section></main>
 </body>

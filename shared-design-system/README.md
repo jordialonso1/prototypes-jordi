@@ -24,9 +24,14 @@ Link it after the boilerplate styles (adjust the `../` count to the prototype's 
 |---|---|---|
 | Button | `pintxo-button`, `--primary`, `--s` `--m` `--l`, `--trailing-icon`, `--block` | Neutral by default; `disabled` attribute greys it |
 | Icon button | `pintxo-icon-button`, `--s` (32px), `--floating` | 40px with 24px icon by default |
-| Counter | `pintxo-counter`, `__button`, `__label`, `--l` | xs (32px) by default; `--l` is the 48px one |
+| Counter | `pintxo-counter`, `__button`, `__label`, `--l`, `--collapsed` | xs (32px) by default; `--l` is the 48px one; `--collapsed` is only the trailing "+" (neutral) |
 | Banner | `pintxo-banner[data-style]`, `__content`, `__title`, `__description` | neutral, positive, critical, warning, marketing, loyalty |
 | Icon blob | `pintxo-icon-blob[data-style]` | warning, critical (exclamation triangle, 24px) |
+| Radio button | `pintxo-radio-button`, `__input`, `__label`, `data-align="right"` | Native input restyled; sync `data-checked`, `data-error`, `data-disabled` |
+| Checkbox | `pintxo-checkbox`, `__input`, `__label` | Sync `data-state` (checked, unchecked, indeterminate), `data-error`, `data-disabled` |
+| Tag | `pintxo-tag[data-style][data-variant]` | neutral, positive, critical, warning, contrast; primary or secondary |
+| Section header | `pintxo-section-header`, `__text`, `__title`, `__description`, `__trailing` | Description and trailing slot optional; `data-state="error"` reds the description |
+| Status bar | `pintxo-status-bar`, `__time`, `__levels` | 62px iOS bar; icons in `pintxo/assets/status-bar-*.svg` |
 
 Usage examples are in the comment above each component in `pintxo.css`. When a prototype needs a new variant, add it there instead of writing local CSS. Used so far by `pna-cna-replacements`; `ai-label-prototype` and `signup-login-flow` still have their own copies.
 

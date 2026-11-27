@@ -27,11 +27,11 @@ img { display: block; }
 .stack--end { align-items: flex-end; }
 /* ---- Section header ---- */
 .section-header { align-self: stretch; }
-.section-header__title-row { display: flex; align-items: flex-end; gap: var(--spacing-xs); }
+.section-header__title-row { display: flex; align-items: center; gap: var(--spacing-xs); }
 .section-header__title { flex: 1; margin: 0; padding: var(--spacing-xxs) 0; }
 .section-header__sub { margin: 0; color: var(--text-color-secondary); }
 .section-header__sub .count { color: var(--text-color-primary); }
-.section-header__sub a { color: rgba(3, 89, 73, 1); font-weight: 700; text-decoration: underline; }
+.section-header__sub a { color: var(--text-color-primary); font-weight: 700; text-decoration: underline; }
 /* ---- Item rows ---- */
 .item-row { align-self: stretch; display: flex; flex-direction: column; gap: var(--spacing-s); padding: var(--spacing-m) 0; }
 .item-row__body { display: flex; align-items: flex-start; gap: var(--spacing-m); }

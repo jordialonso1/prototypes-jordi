@@ -276,3 +276,24 @@ img { display: block; }
     }
 .item-row__tags { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; }
 .item-row__footer { display: flex; justify-content: flex-end; }
+
+/* =====================================================================
+   PNA FLOW (added here; the shared store view is untouched)
+   Catalog-driven tabs and rows, working add buttons, and a "View cart" bar.
+   ===================================================================== */
+.sv-tabs { overflow-x: auto; overflow-y: hidden; scrollbar-width: none; }
+.sv-tabs::-webkit-scrollbar { display: none; }
+.sv-tab { cursor: pointer; }
+.sv-tab:focus-visible { outline: 2px solid var(--border-color-active); outline-offset: -2px; }
+button.add-btn { padding: 0; font: inherit; cursor: pointer; }
+.item-row__footer { min-height: 32px; }
+/* Cart-style footer (same as the cart's raised footer). */
+.footer { flex: none; background: var(--background-color-primary); }
+.footer[hidden] { display: none; }
+.footer--raised { border-radius: var(--cornerRadius-m) var(--cornerRadius-m) 0 0; box-shadow: 0 0 2px 0 var(--elevation-shadow-basic-color), 0 0 8px 0 var(--elevation-shadow-raised-color); clip-path: inset(-12px -12px 0 -12px); }
+.footer__content { display: flex; align-items: center; gap: var(--spacing-xs); padding: var(--spacing-s) var(--spacing-m) 0; }
+.footer__price { flex: 1; display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-xs); min-width: 0; }
+.footer__total { margin: 0; font-size: 16px; line-height: 20px; font-weight: 500; }
+.footer__cta { flex: none; }
+.footer__home { height: 34px; display: flex; justify-content: center; align-items: flex-end; padding-bottom: 8px; }
+.footer__home::after { content: ''; width: 134px; height: 5px; border-radius: 100px; background: var(--text-color-primary); }
