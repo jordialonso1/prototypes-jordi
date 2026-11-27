@@ -271,7 +271,7 @@
   <main class="lib">
     <h1 class="lib__title">Component library</h1>
     <p class="lib__intro">The Pintxo components in <code>shared-design-system/pintxo/</code> that prototypes can reuse. They are plain CSS: link <code>pintxo.css</code> from an HTML prototype. When you add a component to the shared folder, add its examples here too.</p>
-    <nav class="lib__toc" aria-label="Components"><a href="#button">Button</a><a href="#icon-button">Icon button</a><a href="#counter">Counter</a><a href="#banner">Banner</a><a href="#icon-blob">Icon blob</a><a href="#radio-button">Radio button</a><a href="#checkbox">Checkbox</a><a href="#tag">Tag</a><a href="#section-header">Section header</a><a href="#status-bar">Status bar</a></nav>
+    <nav class="lib__toc" aria-label="Components"><a href="#button">Button</a><a href="#icon-button">Icon button</a><a href="#counter">Counter</a><a href="#banner">Banner</a><a href="#icon-blob">Icon blob</a><a href="#radio-button">Radio button</a><a href="#checkbox">Checkbox</a><a href="#tag">Tag</a><a href="#section-header">Section header</a><a href="#status-bar">Status bar</a><a href="#text-field">Text field</a><a href="#text-button">Text button</a><a href="#button-group">Button group</a><a href="#home-indicator">Home indicator</a></nav>
     <section class="comp" id="button">
       <header class="comp__head"><h2 class="comp__name">Button</h2><span class="comp__tag">pintxo.css</span></header>
       <p class="comp__desc">Pintxo pill button. Neutral by default, <code>--primary</code> for the main action. Sizes <code>--s</code> 40px, <code>--m</code> 48px, <code>--l</code> 64px. Add <code>--trailing-icon</code> when an icon follows the label, <code>--block</code> for full width. The <code>disabled</code> attribute greys it.</p>
@@ -334,7 +334,7 @@
         </figure></div>
     </section><section class="comp" id="banner">
       <header class="comp__head"><h2 class="comp__name">Banner</h2><span class="comp__tag">pintxo.css</span></header>
-      <p class="comp__desc">Message banner. Set the style with <code>data-style</code>: neutral, positive, critical, warning, marketing, loyalty. Combine with an icon blob for warnings and errors.</p>
+      <p class="comp__desc">Message banner. Set the style with <code>data-style</code>: neutral, positive, critical, warning, marketing, loyalty, promotion. Combine with an icon blob for warnings and errors; promotion takes an illustration (<code>__accessory</code>) instead.</p>
       <p class="comp__where">File: <code>shared-design-system/pintxo/pintxo.css</code></p>
       <div class="demos"><figure class="demo">
           <div class="demo__preview"><div class="pintxo-banner"><div class="pintxo-banner__content"><p class="pintxo-banner__title">Title</p><p class="pintxo-banner__description">Description</p></div></div></div>
@@ -354,6 +354,9 @@
         </figure><figure class="demo">
           <div class="demo__preview"><div class="pintxo-banner" data-style="loyalty"><div class="pintxo-banner__content"><p class="pintxo-banner__title">Title</p><p class="pintxo-banner__description">Description</p></div></div></div>
           <figcaption><span class="demo__label">loyalty</span><details><summary>HTML</summary><pre><code>&lt;div class="pintxo-banner" data-style="loyalty"&gt;&lt;div class="pintxo-banner__content"&gt;&lt;p class="pintxo-banner__title"&gt;Title&lt;/p&gt;&lt;p class="pintxo-banner__description"&gt;Description&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><div class="pintxo-banner" data-style="promotion"><div class="pintxo-banner__accessory" aria-hidden="true"><img class="pintxo-banner__blob" src="../shared-design-system/pintxo/assets/banner-blob-promotion.svg" alt="" /><img class="pintxo-banner__art" src="../shared-design-system/pintxo/assets/banner-art-delivery.svg" alt="" /></div><div class="pintxo-banner__content"><p class="pintxo-banner__title">First order with free delivery</p><p class="pintxo-banner__description">For new customers only.</p></div></div></div>
+          <figcaption><span class="demo__label">promotion + illustration</span><details><summary>HTML</summary><pre><code>&lt;div class="pintxo-banner" data-style="promotion"&gt;&lt;div class="pintxo-banner__accessory" aria-hidden="true"&gt;&lt;img class="pintxo-banner__blob" src="../shared-design-system/pintxo/assets/banner-blob-promotion.svg" alt="" /&gt;&lt;img class="pintxo-banner__art" src="../shared-design-system/pintxo/assets/banner-art-delivery.svg" alt="" /&gt;&lt;/div&gt;&lt;div class="pintxo-banner__content"&gt;&lt;p class="pintxo-banner__title"&gt;First order with free delivery&lt;/p&gt;&lt;p class="pintxo-banner__description"&gt;For new customers only.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</code></pre></details></figcaption>
         </figure></div>
     </section><section class="comp" id="icon-blob">
       <header class="comp__head"><h2 class="comp__name">Icon blob</h2><span class="comp__tag">pintxo.css</span></header>
@@ -465,6 +468,47 @@
       <div class="demos"><figure class="demo">
           <div class="demo__preview"><div class="pintxo-status-bar"><span class="pintxo-status-bar__time">9:41</span><span class="pintxo-status-bar__levels"><img src="../shared-design-system/pintxo/assets/status-bar-cell.svg" alt="" /><img src="../shared-design-system/pintxo/assets/status-bar-wifi.svg" alt="" /><img src="../shared-design-system/pintxo/assets/status-bar-battery.svg" alt="" /></span></div></div>
           <figcaption><span class="demo__label">Default (light)</span><details><summary>HTML</summary><pre><code>&lt;div class=&quot;pintxo-status-bar&quot;&gt;&lt;span class=&quot;pintxo-status-bar__time&quot;&gt;9:41&lt;/span&gt;&lt;span class=&quot;pintxo-status-bar__levels&quot;&gt;&lt;img src=&quot;../shared-design-system/pintxo/assets/status-bar-cell.svg&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;../shared-design-system/pintxo/assets/status-bar-wifi.svg&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;../shared-design-system/pintxo/assets/status-bar-battery.svg&quot; alt=&quot;&quot; /&gt;&lt;/span&gt;&lt;/div&gt;</code></pre></details></figcaption>
+        </figure></div>
+    </section><section class="comp" id="text-field">
+      <header class="comp__head"><h2 class="comp__name">Text field</h2><span class="comp__tag">pintxo.css</span></header>
+      <p class="comp__desc">Bordered 56px input with a small label above. Focus turns the border green. Add a trailing icon for a selector (use <code>readonly</code> on the input).</p>
+      <p class="comp__where">File: <code>shared-design-system/pintxo/pintxo.css</code></p>
+      <div class="demos"><figure class="demo">
+          <div class="demo__preview"><label class="pintxo-text-field"><span class="pintxo-text-field__label">Phone number</span><span class="pintxo-text-field__control"><input type="tel" inputmode="tel" placeholder="612 345 678" aria-label="Phone number" /></span></label></div>
+          <figcaption><span class="demo__label">Default</span><details><summary>HTML</summary><pre><code>&lt;label class="pintxo-text-field"&gt;&lt;span class="pintxo-text-field__label"&gt;Phone number&lt;/span&gt;&lt;span class="pintxo-text-field__control"&gt;&lt;input type="tel" inputmode="tel" placeholder="612 345 678" aria-label="Phone number" /&gt;&lt;/span&gt;&lt;/label&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><label class="pintxo-text-field"><span class="pintxo-text-field__label">Prefix</span><span class="pintxo-text-field__control"><input value="🇪🇸 +34" readonly aria-label="Prefix" /><img src="../shared-design-system/pintxo/assets/icon-chevron-down-24.svg" alt="" /></span></label></div>
+          <figcaption><span class="demo__label">Selector (trailing icon)</span><details><summary>HTML</summary><pre><code>&lt;label class="pintxo-text-field"&gt;&lt;span class="pintxo-text-field__label"&gt;Prefix&lt;/span&gt;&lt;span class="pintxo-text-field__control"&gt;&lt;input value="🇪🇸 +34" readonly aria-label="Prefix" /&gt;&lt;img src="../shared-design-system/pintxo/assets/icon-chevron-down-24.svg" alt="" /&gt;&lt;/span&gt;&lt;/label&gt;</code></pre></details></figcaption>
+        </figure></div>
+    </section><section class="comp" id="text-button">
+      <header class="comp__head"><h2 class="comp__name">Text button</h2><span class="comp__tag">pintxo.css</span></header>
+      <p class="comp__desc">Borderless secondary action with an optional 16px icon.</p>
+      <p class="comp__where">File: <code>shared-design-system/pintxo/pintxo.css</code></p>
+      <div class="demos"><figure class="demo">
+          <div class="demo__preview"><button class="pintxo-text-button">More <img src="../shared-design-system/pintxo/assets/icon-chevron-forward-16.svg" alt="" /></button></div>
+          <figcaption><span class="demo__label">With trailing icon</span><details><summary>HTML</summary><pre><code>&lt;button class="pintxo-text-button"&gt;More &lt;img src="../shared-design-system/pintxo/assets/icon-chevron-forward-16.svg" alt="" /&gt;&lt;/button&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><button class="pintxo-text-button">Forgot your password?</button></div>
+          <figcaption><span class="demo__label">Text only</span><details><summary>HTML</summary><pre><code>&lt;button class="pintxo-text-button"&gt;Forgot your password?&lt;/button&gt;</code></pre></details></figcaption>
+        </figure></div>
+    </section><section class="comp" id="button-group">
+      <header class="comp__head"><h2 class="comp__name">Button group</h2><span class="comp__tag">pintxo.css</span></header>
+      <p class="comp__desc">Row of <code>pintxo-button</code> that share the width equally. Works for labelled buttons and for icon-only sign-in buttons.</p>
+      <p class="comp__where">File: <code>shared-design-system/pintxo/pintxo.css</code></p>
+      <div class="demos"><figure class="demo">
+          <div class="demo__preview"><div class="pintxo-button-group" style="width:100%"><button class="pintxo-button pintxo-button--l">SMS</button><button class="pintxo-button pintxo-button--primary pintxo-button--l">WhatsApp</button></div></div>
+          <figcaption><span class="demo__label">Neutral + primary</span><details><summary>HTML</summary><pre><code>&lt;div class="pintxo-button-group" style="width:100%"&gt;&lt;button class="pintxo-button pintxo-button--l"&gt;SMS&lt;/button&gt;&lt;button class="pintxo-button pintxo-button--primary pintxo-button--l"&gt;WhatsApp&lt;/button&gt;&lt;/div&gt;</code></pre></details></figcaption>
+        </figure><figure class="demo">
+          <div class="demo__preview"><div class="pintxo-button-group" style="width:100%"><button class="pintxo-button pintxo-button--l" aria-label="Apple"><img src="../shared-design-system/pintxo/assets/icon-apple-24.svg" alt="" /></button><button class="pintxo-button pintxo-button--l" aria-label="Google"><img src="../shared-design-system/pintxo/assets/icon-google-24.svg" alt="" /></button><button class="pintxo-button pintxo-button--l" aria-label="Email"><img src="../shared-design-system/pintxo/assets/icon-envelope-24.svg" alt="" /></button></div></div>
+          <figcaption><span class="demo__label">Icon-only</span><details><summary>HTML</summary><pre><code>&lt;div class="pintxo-button-group" style="width:100%"&gt;&lt;button class="pintxo-button pintxo-button--l" aria-label="Apple"&gt;&lt;img src="../shared-design-system/pintxo/assets/icon-apple-24.svg" alt="" /&gt;&lt;/button&gt;&lt;button class="pintxo-button pintxo-button--l" aria-label="Google"&gt;&lt;img src="../shared-design-system/pintxo/assets/icon-google-24.svg" alt="" /&gt;&lt;/button&gt;&lt;button class="pintxo-button pintxo-button--l" aria-label="Email"&gt;&lt;img src="../shared-design-system/pintxo/assets/icon-envelope-24.svg" alt="" /&gt;&lt;/button&gt;&lt;/div&gt;</code></pre></details></figcaption>
+        </figure></div>
+    </section><section class="comp" id="home-indicator">
+      <header class="comp__head"><h2 class="comp__name">Home indicator</h2><span class="comp__tag">pintxo.css</span></header>
+      <p class="comp__desc">iOS home indicator bar (144 x 5). Position it yourself, usually absolute at the bottom of the screen, centred.</p>
+      <p class="comp__where">File: <code>shared-design-system/pintxo/pintxo.css</code></p>
+      <div class="demos"><figure class="demo">
+          <div class="demo__preview"><div class="pintxo-home-indicator"></div></div>
+          <figcaption><span class="demo__label">Default</span><details><summary>HTML</summary><pre><code>&lt;div class="pintxo-home-indicator"&gt;&lt;/div&gt;</code></pre></details></figcaption>
         </figure></div>
     </section></main>
 </body>
