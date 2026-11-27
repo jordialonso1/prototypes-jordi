@@ -251,7 +251,7 @@
     img { display: block; }
 
     .screen { position: absolute; inset: 0; background: var(--background-color-primary); }
-    .screen[hidden] { display: none; }
+    .screen[hidden], .pintxo-banner[hidden], .stack[hidden] { display: none; }
 
     /* ---- Nav bar (status bar 62 + 52 row = 114) ---- */
     .navbar { position: absolute; top: 0; left: 0; right: 0; z-index: 3; height: 114px; background: var(--background-color-primary); }
@@ -269,11 +269,11 @@
 
     /* ---- Section header ---- */
     .section-header { align-self: stretch; }
-    .section-header__title-row { display: flex; align-items: flex-end; gap: var(--spacing-xs); }
+    .section-header__title-row { display: flex; align-items: center; gap: var(--spacing-xs); }
     .section-header__title { flex: 1; margin: 0; padding: var(--spacing-xxs) 0; }
     .section-header__sub { margin: 0; color: var(--text-color-secondary); }
     .section-header__sub .count { color: var(--text-color-primary); }
-    .section-header__sub a { color: rgba(3, 89, 73, 1); font-weight: 700; text-decoration: underline; }
+    .section-header__sub a { color: var(--text-color-primary); font-weight: 700; text-decoration: underline; }
 
     /* ---- Item rows ---- */
     .item-row { align-self: stretch; display: flex; flex-direction: column; gap: var(--spacing-s); padding: var(--spacing-m) 0; }
@@ -312,15 +312,10 @@
     .footer { position: absolute; left: 0; right: 0; bottom: 0; z-index: 3; background: var(--background-color-primary); }
     .footer--raised { border-radius: var(--cornerRadius-m) var(--cornerRadius-m) 0 0; box-shadow: 0 0 2px 0 var(--elevation-shadow-basic-color), 0 0 8px 0 var(--elevation-shadow-raised-color); clip-path: inset(-12px -12px 0 -12px); }
     .footer__content { display: flex; align-items: center; gap: var(--spacing-xs); padding: var(--spacing-s) var(--spacing-m) 0; }
-    .footer--plain .footer__content { gap: var(--spacing-s); padding-bottom: var(--spacing-s); }
     .footer__price { flex: 1; display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-xs); min-width: 0; }
-    .footer--plain .footer__price { flex: none; width: 165px; }
     .footer__total { margin: 0; font-weight: 500; }
     .footer__original { margin: 0; color: var(--text-color-secondary); text-decoration: line-through; }
-    .footer__fees { display: flex; align-items: center; gap: var(--spacing-xxs); color: var(--text-color-secondary); }
-    .footer__fees p { margin: 0; }
     .footer__cta { flex: none; }
-    .footer--plain .footer__cta { flex: 1; }
     .footer__home { height: 34px; display: flex; justify-content: center; align-items: flex-end; padding-bottom: 8px; }
     .footer__home::after { content: ''; width: 134px; height: 5px; border-radius: 100px; background: var(--text-color-primary); }
   </style>
@@ -340,7 +335,7 @@
           <header class="section-header">
             <div class="section-header__title-row">
               <h1 class="section-header__title pintxo-typography-title3">Your cart</h1>
-              <button type="button" class="pintxo-icon-button pintxo-icon-button--s" aria-label="Empty cart"><img src="assets/icon-trash-16.svg" width="16" height="16" alt="" /></button>
+              <button type="button" class="pintxo-icon-button" aria-label="Empty cart"><img src="assets/icon-trash-16.svg" width="24" height="24" alt="" /></button>
             </div>
             <p class="section-header__sub pintxo-typography-body2"><span class="count">2 products from</span> <a href="#">Healthy Poke</a></p>
           </header>
@@ -397,7 +392,7 @@
             <p class="footer__total pintxo-typography-body1-emphasis">8,00€</p>
             <p class="footer__original pintxo-typography-body1">10,00€</p>
           </div>
-          <button type="button" class="pintxo-button pintxo-button--primary pintxo-button--m pintxo-button--trailing-icon footer__cta">Go to checkout <img src="assets/icon-chevron-forward-white.svg" alt="" /></button>
+          <button type="button" class="pintxo-button pintxo-button--primary pintxo-button--m pintxo-button--trailing-icon footer__cta">Go to checkout <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6.16708 3.50805C6.39257 3.27795 6.7619 3.27422 6.99199 3.49972L11.1587 7.58305C11.2706 7.69277 11.3337 7.84292 11.3337 7.99967C11.3337 8.15643 11.2706 8.30658 11.1587 8.4163L6.99199 12.4996C6.7619 12.7251 6.39257 12.7214 6.16708 12.4913C5.94158 12.2612 5.94531 11.8919 6.17541 11.6664L9.91695 7.99967L6.17541 4.33297C5.94531 4.10747 5.94158 3.73814 6.16708 3.50805Z" fill-rule="evenodd" clip-rule="evenodd" fill="currentColor"/></svg></button>
         </div>
         <div class="footer__home"></div>
       </footer>
@@ -410,7 +405,7 @@
           <header class="section-header">
             <div class="section-header__title-row">
               <h1 class="section-header__title pintxo-typography-title3">Your cart</h1>
-              <button type="button" class="pintxo-icon-button pintxo-icon-button--s" aria-label="Empty cart"><img src="assets/icon-trash-16.svg" width="16" height="16" alt="" /></button>
+              <button type="button" class="pintxo-icon-button" aria-label="Empty cart"><img src="assets/icon-trash-16.svg" width="24" height="24" alt="" /></button>
             </div>
             <p class="section-header__sub pintxo-typography-body2"><span class="count">2 products from</span> <a href="#">Healthy Poke</a></p>
           </header>
@@ -492,14 +487,14 @@
         </div>
       </div>
 
-      <footer class="footer footer--plain">
+      <footer class="footer footer--raised">
         <div class="footer__content">
           <div class="footer__price">
             <p class="footer__total pintxo-typography-body1-emphasis">20,80€</p>
-            <div class="footer__fees pintxo-typography-body2"><p>+ fees</p><img src="assets/icon-info-16.svg" width="16" height="16" alt="" /></div>
           </div>
-          <button type="button" class="pintxo-button pintxo-button--primary pintxo-button--m footer__cta" disabled>Go to checkout</button>
+          <button type="button" class="pintxo-button pintxo-button--primary pintxo-button--m pintxo-button--trailing-icon footer__cta" disabled>Go to checkout <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6.16708 3.50805C6.39257 3.27795 6.7619 3.27422 6.99199 3.49972L11.1587 7.58305C11.2706 7.69277 11.3337 7.84292 11.3337 7.99967C11.3337 8.15643 11.2706 8.30658 11.1587 8.4163L6.99199 12.4996C6.7619 12.7251 6.39257 12.7214 6.16708 12.4913C5.94158 12.2612 5.94531 11.8919 6.17541 11.6664L9.91695 7.99967L6.17541 4.33297C5.94531 4.10747 5.94158 3.73814 6.16708 3.50805Z" fill-rule="evenodd" clip-rule="evenodd" fill="currentColor"/></svg></button>
         </div>
+        <div class="footer__home"></div>
       </footer>
     </section>
 
@@ -510,7 +505,7 @@
           <header class="section-header">
             <div class="section-header__title-row">
               <h1 class="section-header__title pintxo-typography-title3">Your cart</h1>
-              <button type="button" class="pintxo-icon-button pintxo-icon-button--s" aria-label="Empty cart"><img src="assets/icon-trash-16.svg" width="16" height="16" alt="" /></button>
+              <button type="button" class="pintxo-icon-button" aria-label="Empty cart"><img src="assets/icon-trash-16.svg" width="24" height="24" alt="" /></button>
             </div>
             <p class="section-header__sub pintxo-typography-body2"><span class="count">2 products from</span> <a href="#">Healthy Poke</a></p>
           </header>
@@ -612,7 +607,7 @@
             <p class="footer__total pintxo-typography-body1-emphasis">8,00€</p>
             <p class="footer__original pintxo-typography-body1">10,00€</p>
           </div>
-          <button type="button" class="pintxo-button pintxo-button--primary pintxo-button--m pintxo-button--trailing-icon footer__cta">Go to checkout <img src="assets/icon-chevron-forward-white.svg" alt="" /></button>
+          <button type="button" class="pintxo-button pintxo-button--primary pintxo-button--m pintxo-button--trailing-icon footer__cta">Go to checkout <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6.16708 3.50805C6.39257 3.27795 6.7619 3.27422 6.99199 3.49972L11.1587 7.58305C11.2706 7.69277 11.3337 7.84292 11.3337 7.99967C11.3337 8.15643 11.2706 8.30658 11.1587 8.4163L6.99199 12.4996C6.7619 12.7251 6.39257 12.7214 6.16708 12.4913C5.94158 12.2612 5.94531 11.8919 6.17541 11.6664L9.91695 7.99967L6.17541 4.33297C5.94531 4.10747 5.94158 3.73814 6.16708 3.50805Z" fill-rule="evenodd" clip-rule="evenodd" fill="currentColor"/></svg></button>
         </div>
         <div class="footer__home"></div>
       </footer>
@@ -621,36 +616,40 @@
 
     <script src="catalog.js"></script>
     <script>
-      /* Fills each cart version with real Honest Greens products from catalog.js.
-         The static placeholder markup stays as the fallback if the data is missing. */
+      /* Cart state + rendering for each version, using real Honest Greens products
+         from catalog.js. The static placeholder markup stays as the fallback if the
+         data is missing. Counters, tile "+" and "Add more items" are interactive. */
       (function () {
         var C = window.CATALOG;
         if (!C) return;
         var P = C.products;
-        var CART = {
-          regular: { items: [['42274330448'], ['42336174195']], tiles: ['42320609711', '42333383578'] },
-          cna:     { items: [['42359521784', 'missing'], ['42274330448']], tiles: ['42320609711', '42333383578'] },
-          pna:     { items: [['42361803644'], ['42362378176']], oos: '42359521787', tiles: ['42320609711', '42333383578'] }
+        var TILES = ['42320609711', '42333383578', '42320609716', '42374661323', '42287289486', '42247726007'];
+        var STATE = {
+          regular: { items: [{ id: '42274330448', qty: 1 }, { id: '42336174195', qty: 1 }], tiles: TILES },
+          cna:     { items: [{ id: '42359521784', qty: 1, missing: true }, { id: '42274330448', qty: 1 }], tiles: TILES },
+          pna:     { items: [{ id: '42361803644', qty: 1 }, { id: '42362378176', qty: 1 }], oos: '42359521787', tiles: TILES }
         };
         function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
         function money(n) { return n.toFixed(2).replace('.', ',') + '€'; }
-        var TRASH = '<img src="assets/icon-trash-16.svg" width="16" height="16" alt="" />';
-        var PLUS = '<img src="assets/icon-plus-16.svg" width="16" height="16" alt="" />';
-        function row(p, mod) {
-          mod = mod || '';
-          var compact = mod === 'pna';
-          var info = mod === 'missing'
+        function icon(name, size) { return '<img src="assets/icon-' + name + '.svg" width="' + size + '" height="' + size + '" alt="" />'; }
+        function desc(p) { return p.selected && p.selected.length ? '<p class="item-row__desc pintxo-typography-body2">' + esc(p.selected.join(', ')) + '</p>' : ''; }
+
+        function row(it, compact) {
+          var p = P[it.id];
+          var info = it.missing
             ? '<div class="item-row__warning pintxo-typography-body2"><img src="assets/icon-warning-critical.svg" width="16" height="14.6" alt="" /><p>Action required</p></div>'
-            : '';
+            : desc(p);
+          var left = it.qty > 1
+            ? '<button type="button" class="pintxo-counter__button" data-act="dec" aria-label="Remove one">' + icon('minus-24', 16) + '</button>'
+            : '<button type="button" class="pintxo-counter__button" data-act="dec" aria-label="Remove">' + icon('trash-16', 16) + '</button>';
           return '<article class="item-row' + (compact ? ' item-row--compact' : '') + '" data-id="' + p.id + '">' +
             '<div class="item-row__body"><div class="thumb"><img src="' + esc(p.image) + '" alt="" loading="lazy" /></div>' +
             '<div class="item-row__info"><div class="item-row__head">' +
-            '<p class="item-row__name ' + 'item-row__name--medium pintxo-typography-body1-emphasis' + '">' + esc(p.name) + '</p>' +
-            '<p class="item-row__price pintxo-typography-body2">' + money(p.price) + '</p></div>' + info + '</div></div>' +
-            '<div class="item-row__footer"><div class="pintxo-counter">' +
-            '<button type="button" class="pintxo-counter__button" aria-label="Remove">' + TRASH + '</button>' +
-            '<span class="pintxo-counter__label">1</span>' +
-            '<button type="button" class="pintxo-counter__button" aria-label="Add one more"' + (mod === 'missing' ? ' disabled' : '') + '>' + PLUS + '</button>' +
+            '<p class="item-row__name item-row__name--medium pintxo-typography-body1-emphasis">' + esc(p.name) + '</p>' +
+            '<p class="item-row__price pintxo-typography-body2">' + money(p.price * it.qty) + '</p></div>' + info + '</div></div>' +
+            '<div class="item-row__footer"><div class="pintxo-counter">' + left +
+            '<span class="pintxo-counter__label">' + it.qty + '</span>' +
+            '<button type="button" class="pintxo-counter__button" data-act="inc" aria-label="Add one more"' + (it.missing ? ' disabled' : '') + '>' + icon('plus-16', 16) + '</button>' +
             '</div></div></article>';
         }
         function oos(p) {
@@ -658,41 +657,90 @@
             '<div class="thumb thumb--l"><img src="' + esc(p.image) + '" alt="" loading="lazy" /></div>' +
             '<div class="item-row__info"><p class="item-row__flag pintxo-typography-caption-emphasis">Out of stock</p>' +
             '<div class="item-row__head"><p class="item-row__name item-row__name--medium pintxo-typography-body1-emphasis">' + esc(p.name) + '</p>' +
-            '<p class="item-row__price pintxo-typography-body2">' + money(p.price) + '</p></div>' +
+            '<p class="item-row__price pintxo-typography-body2">' + money(p.price) + '</p></div>' + desc(p) +
+            '</div></div>' +
+            '<div class="item-row__footer"><div class="pintxo-counter">' +
+            '<button type="button" class="pintxo-counter__button" data-act="oos-remove" aria-label="Remove">' + icon('trash-16', 16) + '</button>' +
+            '<span class="pintxo-counter__label">1</span>' +
+            '<button type="button" class="pintxo-counter__button" aria-label="Add one more" disabled>' + icon('plus-16', 16) + '</button>' +
             '</div></div></article>';
         }
         function tile(p) {
           return '<article class="tile" data-id="' + p.id + '"><div class="tile__img"><img src="' + esc(p.image) + '" alt="" loading="lazy" />' +
-            '<button type="button" class="pintxo-icon-button pintxo-icon-button--s pintxo-icon-button--floating tile__add" aria-label="Add ' + esc(p.name) + '">' + PLUS + '</button></div>' +
+            '<button type="button" class="pintxo-icon-button pintxo-icon-button--s pintxo-icon-button--floating tile__add" data-act="tile-add" aria-label="Add ' + esc(p.name) + '">' + icon('plus-16', 16) + '</button></div>' +
             '<div class="tile__text"><p class="tile__name pintxo-typography-body1-emphasis">' + esc(p.name) + '</p>' +
             '<p class="tile__price pintxo-typography-body2">' + money(p.price) + '</p></div></article>';
         }
-        Object.keys(CART).forEach(function (id) {
-          var cfg = CART[id];
+
+        function nextNew(st) {
+          var inCart = st.items.map(function (i) { return i.id; });
+          for (var k = 0; k < C.addMore.length; k++) if (inCart.indexOf(C.addMore[k]) < 0) return C.addMore[k];
+          return null;
+        }
+        function addItem(st, id) {
+          var f = st.items.filter(function (i) { return i.id === id; })[0];
+          if (f) { if (!f.missing) f.qty++; } else st.items.push({ id: id, qty: 1 });
+        }
+
+        function render(id) {
+          var st = STATE[id];
           var el = document.querySelector('.screen[data-screen="' + id + '"]');
           if (!el) return;
-          var rows = el.querySelectorAll('.stack--end > .item-row');
-          var anchor = el.querySelector('.stack--end > .pintxo-button');
-          rows.forEach(function (r) { r.remove(); });
-          var total = 0;
-          cfg.items.forEach(function (it) {
-            var p = P[it[0]];
-            total += p.price;
-            anchor.insertAdjacentHTML('beforebegin', row(p, id === 'pna' ? 'pna' : it[1]));
+          var stack = el.querySelector('.stack--end');
+          var addBtn = stack.querySelector(':scope > .pintxo-button');
+          stack.querySelectorAll(':scope > .item-row').forEach(function (r) { r.remove(); });
+          var total = 0, count = 0, anyMissing = false;
+          st.items.forEach(function (it) {
+            total += P[it.id].price * it.qty; count += it.qty;
+            if (it.missing) anyMissing = true;
+            addBtn.insertAdjacentHTML('beforebegin', row(it, id === 'pna'));
           });
           var sub = el.querySelector('.section-header__sub');
-          sub.querySelector('.count').textContent = cfg.items.length + ' products from';
+          sub.querySelector('.count').textContent = count + (count === 1 ? ' product from' : ' products from');
           sub.querySelector('a').textContent = C.store;
-          if (cfg.oos) {
-            var o = el.querySelector('.item-row--oos');
-            o.insertAdjacentHTML('beforebegin', oos(P[cfg.oos]));
-            o.remove();
+          addBtn.disabled = !nextNew(st);
+          var o = el.querySelector('.item-row--oos');
+          if (o) {
+            o.closest('.stack').hidden = !st.oos;
+            if (st.oos) o.outerHTML = oos(P[st.oos]);
           }
-          var tiles = el.querySelector('.tiles');
-          tiles.innerHTML = cfg.tiles.map(function (t) { return tile(P[t]); }).join('');
+          el.querySelector('.tiles').innerHTML = st.tiles.map(function (t) { return tile(P[t]); }).join('');
           el.querySelector('.footer__total').textContent = money(total);
           var orig = el.querySelector('.footer__original');
           if (orig) orig.remove(); /* the API has no original prices */
+          if (id === 'cna') {
+            var banner = el.querySelector('.pintxo-banner');
+            if (banner) banner.hidden = !anyMissing;
+          }
+          el.querySelector('.footer__cta').disabled = !count || anyMissing;
+        }
+
+        Object.keys(STATE).forEach(function (id) {
+          var el = document.querySelector('.screen[data-screen="' + id + '"]');
+          if (!el) return;
+          var st = STATE[id];
+          el.addEventListener('click', function (e) {
+            var b = e.target.closest('button');
+            if (!b || b.disabled) return;
+            var article = b.closest('[data-id]');
+            var act = b.dataset.act;
+            if (act === 'inc' || act === 'dec') {
+              var it = st.items.filter(function (i) { return i.id === article.dataset.id; })[0];
+              if (!it) return;
+              it.qty += act === 'inc' ? 1 : -1;
+              if (it.qty < 1) st.items.splice(st.items.indexOf(it), 1);
+            } else if (act === 'oos-remove') {
+              st.oos = null;
+            } else if (act === 'tile-add') {
+              addItem(st, article.dataset.id);
+            } else if (b.classList.contains('pintxo-button') && b.textContent.trim() === 'Add more items') {
+              var n = nextNew(st); if (n) addItem(st, n);
+            } else if (b.getAttribute('aria-label') === 'Empty cart') {
+              st.items = []; st.oos = null;
+            } else return;
+            render(id);
+          });
+          render(id);
         });
       })();
     </script>
