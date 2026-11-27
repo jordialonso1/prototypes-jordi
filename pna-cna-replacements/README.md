@@ -6,7 +6,7 @@ Read this before iterating. It is the hand-off for a new session.
 
 ## What it is
 
-- **Wrapper page** (`src/App.tsx`, `src/app.css`): header with an **Option** selector, a **Use case** selector and a **Reset** button. The 390x844 device is scaled to fit. It talks to the prototype with `postMessage`:
+- **Wrapper page** (`src/App.tsx`, `src/app.css`): same layout as the AI label prototype: a left column (`aside.page__side`) with the title and, below it, the **Option** selector, the **Use case** selector and a **Reset** button; the 390x844 device is centered and scaled down to fit. Below 900px wide it stacks and centers. It talks to the prototype with `postMessage`:
   - `goto-screen {screen}` shows a use case, `goto-option {option}` sets `data-option` on the prototype's `<html>`, `reset-screen {screen}` restores a use case.
 - **Option** = which design we are prototyping. Only **Currently live** exists (how the app behaves today). New design proposals get added as further options that reuse the same screens, so stakeholders can compare them with the live behaviour. To add one: add it to `OPTIONS` in `App.tsx`, then make the screens react to `document.documentElement.dataset.option` in `prototype/index.html` (the hook is in the `message` listener at the bottom).
 - **Use case** = the three Cart situations that exist today: `regular`, `cna` (missing customisation), `pna` (out of stock). Each is a `<section class="screen" data-screen="...">` in `prototype/index.html`.
