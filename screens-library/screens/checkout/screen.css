@@ -1,0 +1,63 @@
+/* Checkout (Delivery): screen layout. Components come from shared-design-system/pintxo/pintxo.css,
+   tokens and fonts from ../_base/base.css. */
+.prototype-viewport { height: 100svh; }
+.screen { position: absolute; inset: 0; display: none; flex-direction: column; background: var(--background-color-primary); }
+.screen.is-active { display: flex; }
+.screen__scroll { flex: 1 1 auto; min-height: 0; overflow-y: auto; overflow-x: hidden; scrollbar-width: none; }
+.screen__scroll::-webkit-scrollbar { display: none; }
+button { font: inherit; color: inherit; cursor: pointer; }
+img { display: block; }
+
+/* Header: status bar, back button, large title */
+.co-header { display: flex; flex-direction: column; padding-bottom: var(--spacing-xs); }
+.co-header .pintxo-status-bar { gap: 124px; }
+.co-header .pintxo-status-bar__time { padding-left: 8px; padding-right: 6px; }
+.co-header__body { display: flex; flex-direction: column; gap: var(--spacing-l); padding: 0 var(--spacing-m); }
+.co-navbar { display: flex; align-items: center; min-height: 40px; }
+.co-title { margin: 0; font-size: 28px; line-height: 32px; font-weight: 700; letter-spacing: 0; }
+
+/* Page sections */
+.co-main { display: flex; flex-direction: column; gap: var(--spacing-xl); padding: var(--spacing-xl) var(--spacing-m) var(--spacing-xl); }
+.co-block { display: flex; flex-direction: column; gap: var(--spacing-m); }
+.co-list { display: flex; flex-direction: column; }
+.co-cards { display: flex; flex-direction: column; gap: var(--spacing-xxs); }
+.co-map-card { padding: var(--spacing-xs); }
+.co-map { width: 100%; height: 120.7px; border-radius: var(--cornerRadius-s); object-fit: cover; }
+.co-order-line { margin: 0; padding: 0 var(--spacing-xs); font-size: 14px; line-height: 20px; }
+.co-body1 { font-size: 16px; line-height: 20px; font-weight: 400; }
+.co-save-tip { align-self: flex-start; }
+.pintxo-card:is(button) { align-items: stretch; }
+.pintxo-card:is(button) .pintxo-list-item { width: 100%; }
+
+/* Mastercard mark, three vectors stacked in 24px */
+.co-mc { position: relative; width: 24px; height: 24px; background: var(--background-color-persistentLight); overflow: hidden; }
+.co-mc img { position: absolute; top: 50%; transform: translate(-50%, -50%); }
+.co-mc img.co-mc__c { left: calc(50% + 0.11px); width: 5.248px; height: 9.429px; }
+.co-mc img.co-mc__l { left: calc(50% - 4.74px); width: 9.717px; height: 12px; }
+.co-mc img.co-mc__r { left: calc(50% + 4.96px); width: 9.696px; height: 11.996px; }
+
+/* Summary sheet */
+.co-sheet { background: var(--background-color-secondary); }
+.co-sheet__body { display: flex; flex-direction: column; gap: var(--spacing-m); padding: 40px var(--spacing-m) 20px; }
+.co-summary { display: flex; flex-direction: column; gap: var(--spacing-m); }
+.co-rows { display: flex; flex-direction: column; }
+.co-divider { margin: 10px 0 -1px; }
+.co-medium { font-weight: 500; }
+.co-rows .pintxo-list-item__title { font-size: 16px; line-height: 20px; }
+.co-total { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; padding: 4px 0; font-size: 21px; line-height: 24px; font-weight: 700; white-space: nowrap; }
+.co-total span:first-child { color: #000; }
+.co-saving { display: flex; align-items: center; gap: var(--spacing-xs); min-height: 24px; }
+.co-saving__icon { position: relative; flex: none; width: 24px; height: 24px; }
+.co-saving__icon img { position: absolute; inset: 0; width: 24px; height: 24px; }
+.co-saving__text { margin: 0; font-size: 14px; line-height: 20px; }
+.co-saving__text b { font-weight: 500; }
+.pintxo-card[data-style='positive'] { gap: var(--spacing-xs); }
+.co-prime { gap: var(--spacing-m); cursor: pointer; }
+.co-prime__body { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: var(--spacing-xxs); padding: 2px 0; }
+.co-prime .pintxo-tag > img.co-prime__logo { width: 68px; height: 16px; }
+.co-prime .pintxo-tag { padding: 2px 4px; }
+.co-prime__title { font-size: 14px; line-height: 20px; font-weight: 500; }
+.co-prime__sub { font-size: 12px; line-height: 16px; color: var(--text-color-secondary); }
+.co-prime__link { font-size: 14px; line-height: 20px; font-weight: 700; color: var(--text-color-positive); text-decoration: underline; }
+.co-legal { display: flex; flex-direction: column; gap: var(--spacing-xxs); font-size: 12px; line-height: 16px; color: var(--text-color-secondary); }
+.co-legal p { margin: 0; }

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="core" data-ui-mode="light">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="data:," />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout</title>
+  <link rel="stylesheet" href="../_base/base.css" />
+  <link rel="stylesheet" href="../../../shared-design-system/pintxo/pintxo.css" />
+  <link rel="stylesheet" href="./screen.css" />
+</head>
+<body>
+  <div class="prototype-viewport">
+
+    <!-- Checkout, Delivery state (Figma "Pickup toggle in Checkout", frame 2316:19007) -->
+    <section class="screen is-active" id="screen-checkout" data-screen="checkout" aria-label="Checkout">
+      <div class="screen__scroll">
+
+        <header class="co-header">
+          <div class="pintxo-status-bar pintxo-status-bar--compact">
+            <span class="pintxo-status-bar__time">9:41</span>
+            <span class="pintxo-status-bar__levels">
+              <img src="../../../shared-design-system/pintxo/assets/status-bar-cell.svg" alt="" /><img src="../../../shared-design-system/pintxo/assets/status-bar-wifi.svg" alt="" /><img src="../../../shared-design-system/pintxo/assets/status-bar-battery.svg" alt="" />
+            </span>
+          </div>
+          <div class="co-header__body">
+            <div class="co-navbar">
+              <button class="pintxo-icon-button" type="button" aria-label="Back"><img src="assets/hdr-back.svg" alt="" /></button>
+            </div>
+            <h1 class="co-title">Checkout</h1>
+          </div>
+        </header>
+
+        <main class="co-main">
+
+          <!-- Delivery / Pickup, map, addresses -->
+          <section class="co-block" aria-label="Delivery address">
+            <div class="pintxo-segmented-control" role="tablist" aria-label="Order type">
+              <button class="pintxo-segmented-control__segment" type="button" role="tab" aria-selected="true">Delivery</button>
+              <button class="pintxo-segmented-control__segment" type="button" role="tab" aria-selected="false">Pickup</button>
+            </div>
+            <div class="pintxo-card pintxo-card--plain co-map-card">
+              <img class="co-map" src="assets/map.png" alt="Map of the delivery address" />
+            </div>
+            <div class="co-list">
+              <div class="pintxo-list-item pintxo-list-item--plain">
+                <span class="pintxo-list-item__icon"><img src="assets/address-pin.svg" alt="" /></span>
+                <div class="pintxo-list-item__body">
+                  <div class="pintxo-list-item__text">
+                    <p class="pintxo-list-item__title">Carrer d’Àvila, 54</p>
+                    <p class="pintxo-list-item__description">Second reception</p>
+                    <p class="pintxo-list-item__description pintxo-list-item__description--warning">Far from current location</p>
+                  </div>
+                </div>
+                <div class="pintxo-list-item__trailing">
+                  <button class="pintxo-icon-button" type="button" aria-label="Edit address"><img src="assets/edit.svg" alt="" /></button>
+                </div>
+              </div>
+              <div class="pintxo-list-item pintxo-list-item--plain">
+                <span class="pintxo-list-item__icon"><img src="assets/gift.svg" alt="" /></span>
+                <div class="pintxo-list-item__body">
+                  <div class="pintxo-list-item__text">
+                    <p class="pintxo-list-item__title">Sending to someone else?</p>
+                    <p class="pintxo-list-item__description">Add their details to help the courier</p>
+                  </div>
+                </div>
+                <div class="pintxo-list-item__trailing">
+                  <button class="pintxo-icon-button pintxo-icon-button--transparent" type="button" aria-label="Add recipient"><img src="assets/chevron-forward.svg" alt="" /></button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Delivery options -->
+          <section class="co-block" aria-label="Delivery options">
+            <header class="pintxo-section-header">
+              <div class="pintxo-section-header__text">
+                <h2 class="pintxo-section-header__title">Delivery options
+                  <button class="pintxo-icon-button pintxo-icon-button--xs pintxo-icon-button--transparent" type="button" aria-label="More info"><img src="assets/info-16.svg" alt="" /></button>
+                </h2>
+              </div>
+            </header>
+            <div class="pintxo-card">
+              <div class="pintxo-expander" data-open="true" data-expander>
+                <button class="pintxo-expander__header" type="button" aria-expanded="true">
+                  <span class="pintxo-expander__content">
+                    <span class="pintxo-expander__title">Standard</span>
+                    <span class="pintxo-expander__subtitle">20-30 min</span>
+                  </span>
+                  <span class="pintxo-expander__chevron"><img src="assets/chevron-up.svg" alt="" data-chevron-up="assets/chevron-up.svg" data-chevron-down="assets/chevron-down.svg" /></span>
+                </button>
+                <div class="pintxo-expander__body" role="radiogroup" aria-label="Delivery speed" data-options>
+                  <div class="pintxo-card pintxo-card--selected" role="radio" aria-checked="true" tabindex="0">
+                    <div class="pintxo-card__main"><span class="pintxo-card__text"><span class="pintxo-card__title">Standard</span><span class="pintxo-card__subtitle">20-30 min</span></span></div>
+                  </div>
+                  <div class="pintxo-card" role="radio" aria-checked="false" tabindex="0">
+                    <div class="pintxo-card__main"><span class="pintxo-card__text"><span class="pintxo-card__title">Priority</span><span class="pintxo-card__subtitle">15-25 min</span></span><span class="pintxo-card__trailing">+1,00€</span></div>
+                  </div>
+                  <div class="pintxo-card" role="radio" aria-checked="false" tabindex="0">
+                    <div class="pintxo-card__main"><span class="pintxo-card__text"><span class="pintxo-card__title">Schedule</span><span class="pintxo-card__subtitle">Select time</span></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Your order -->
+          <section class="co-block" aria-label="Your order">
+            <header class="pintxo-section-header"><div class="pintxo-section-header__text"><h2 class="pintxo-section-header__title">Your order</h2></div></header>
+            <div class="pintxo-expander" data-open="false" data-expander>
+              <button class="pintxo-expander__header" type="button" aria-expanded="false">
+                <span class="pintxo-expander__content">
+                  <span class="pintxo-expander__title">Salad Market</span>
+                  <span class="pintxo-expander__subtitle">3 products</span>
+                </span>
+                <span class="pintxo-expander__chevron"><img src="assets/chevron-down.svg" alt="" data-chevron-up="assets/chevron-up.svg" data-chevron-down="assets/chevron-down.svg" /></span>
+              </button>
+              <div class="pintxo-expander__body">
+                <p class="co-order-line">Avocado supergreen x1</p>
+                <p class="co-order-line">Honest salmon x1</p>
+                <p class="co-order-line">Terra bowl x1</p>
+              </div>
+            </div>
+            <div class="co-list">
+              <div class="pintxo-list-item pintxo-list-item--plain">
+                <span class="pintxo-list-item__icon"><img src="assets/allergies.svg" alt="" /></span>
+                <div class="pintxo-list-item__body"><div class="pintxo-list-item__text"><p class="pintxo-list-item__title">Allergies</p></div></div>
+                <div class="pintxo-list-item__trailing pintxo-list-item__trailing--chevron"><img src="assets/chevron-forward.svg" alt="" /></div>
+              </div>
+              <div class="pintxo-list-item pintxo-list-item--plain">
+                <span class="pintxo-list-item__icon"><img src="assets/cutlery.svg" alt="" /></span>
+                <div class="pintxo-list-item__body">
+                  <div class="pintxo-list-item__text">
+                    <p class="pintxo-list-item__title">Need cutlery?</p>
+                    <p class="pintxo-list-item__description">Help us minimize waste. Only ask for cutlery when you need it.</p>
+                  </div>
+                </div>
+                <div class="pintxo-list-item__trailing"><button class="pintxo-toggle" type="button" role="switch" aria-checked="false" aria-label="Need cutlery?"></button></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Payment -->
+          <section class="co-block" aria-label="Payment">
+            <header class="pintxo-section-header"><div class="pintxo-section-header__text"><h2 class="pintxo-section-header__title">Payment</h2></div></header>
+            <div class="co-cards">
+              <button class="pintxo-card" type="button">
+                <div class="pintxo-list-item pintxo-list-item--plain pintxo-list-item--compact">
+                  <span class="pintxo-list-item__icon">
+                    <span class="co-mc" aria-hidden="true"><img class="co-mc__c" src="assets/mc-center.svg" alt="" /><img class="co-mc__l" src="assets/mc-left.svg" alt="" /><img class="co-mc__r" src="assets/mc-right.svg" alt="" /></span>
+                  </span>
+                  <div class="pintxo-list-item__body"><div class="pintxo-list-item__text"><p class="pintxo-list-item__title">Card ending in 3245</p></div></div>
+                  <div class="pintxo-list-item__trailing pintxo-list-item__trailing--chevron"><img src="assets/chevron-forward.svg" alt="" /></div>
+                </div>
+              </button>
+              <button class="pintxo-card" type="button">
+                <div class="pintxo-list-item pintxo-list-item--plain pintxo-list-item--compact">
+                  <span class="pintxo-list-item__icon"><img src="assets/promo.svg" alt="" /></span>
+                  <div class="pintxo-list-item__body"><div class="pintxo-list-item__text"><p class="pintxo-list-item__title">Add a promo code</p></div></div>
+                  <div class="pintxo-list-item__trailing pintxo-list-item__trailing--chevron"><img src="assets/chevron-forward.svg" alt="" /></div>
+                </div>
+              </button>
+            </div>
+          </section>
+
+          <!-- Courier tip -->
+          <section class="co-block" aria-label="Courier tip">
+            <header class="pintxo-section-header"><div class="pintxo-section-header__text"><h2 class="pintxo-section-header__title">Courier tip</h2></div></header>
+            <div class="pintxo-chip-group" role="radiogroup" aria-label="Courier tip" data-tips>
+              <button class="pintxo-chip" data-variant="contrast" type="button" role="radio" aria-checked="true"><span>0%</span></button>
+              <button class="pintxo-chip" data-variant="contrast" type="button" role="radio" aria-checked="false"><span>5%</span></button>
+              <button class="pintxo-chip" data-variant="contrast" type="button" role="radio" aria-checked="false"><span>10%</span></button>
+              <button class="pintxo-chip" data-variant="contrast" type="button" role="radio" aria-checked="false"><span>15%</span></button>
+            </div>
+            <label class="pintxo-checkbox co-save-tip">
+              <input class="pintxo-checkbox__input" type="checkbox" checked data-state="checked" />
+              <span class="pintxo-checkbox__label co-body1">Save tip for next order</span>
+            </label>
+          </section>
+
+        </main>
+
+        <!-- Summary sheet -->
+        <img class="pintxo-curve" src="assets/curve.svg" alt="" />
+        <div class="co-sheet">
+          <div class="co-sheet__body">
+            <section class="co-summary" aria-label="Summary">
+              <header class="pintxo-section-header"><div class="pintxo-section-header__text"><h2 class="pintxo-section-header__title">Summary</h2></div></header>
+              <div class="co-rows">
+                <div class="pintxo-list-item pintxo-list-item--plain pintxo-list-item--compact"><div class="pintxo-list-item__body"><div class="pintxo-list-item__text"><p class="pintxo-list-item__title pintxo-list-item__title--regular">Products</p></div></div><p class="pintxo-list-item__value">8,00€</p></div>
+                <div class="pintxo-list-item pintxo-list-item--plain pintxo-list-item--compact"><div class="pintxo-list-item__body"><div class="pintxo-list-item__text"><p class="pintxo-list-item__title pintxo-list-item__title--regular">Promotions</p></div></div><p class="pintxo-list-item__value">-2,00€</p></div>
+                <div class="pintxo-list-item pintxo-list-item--plain pintxo-list-item--compact"><div class="pintxo-list-item__body"><div class="pintxo-list-item__text"><p class="pintxo-list-item__title">Subtotal</p></div></div><p class="pintxo-list-item__value co-medium">6,00€</p></div>
+                <hr class="pintxo-divider co-divider" />
+                <div class="pintxo-list-item pintxo-list-item--plain pintxo-list-item--compact"><div class="pintxo-list-item__body"><div class="pintxo-list-item__text"><p class="pintxo-list-item__title pintxo-list-item__title--regular">Delivery</p></div></div><p class="pintxo-list-item__value">2,99€</p></div>
+                <hr class="pintxo-divider co-divider" />
+                <div class="co-total"><span>Total to pay</span><span>14,99€</span></div>
+              </div>
+            </section>
+
+            <div class="pintxo-card" data-style="positive">
+              <div class="co-saving">
+                <span class="co-saving__icon" aria-hidden="true"><img src="assets/saving-blob.svg" alt="" /><img src="assets/saving-icon.svg" alt="" /></span>
+                <p class="co-saving__text">You’re saving <b>2,00€</b> on this order.</p>
+              </div>
+              <label class="pintxo-card pintxo-card--row co-prime">
+                <span class="co-prime__body">
+                  <span class="pintxo-tag" data-style="loyalty"><img class="co-prime__logo" src="assets/prime-logo.svg" alt="Prime" /></span>
+                  <span class="co-prime__title">Save extra 3,29€ with Prime</span>
+                  <span class="co-prime__sub">One month for free, then 7,99€/month. Cancel anytime</span>
+                  <a class="co-prime__link" href="#" onclick="return false">Learn more</a>
+                </span>
+                <input class="pintxo-checkbox__input" type="checkbox" data-state="unchecked" aria-label="Add Prime" />
+              </label>
+            </div>
+
+            <div class="co-legal">
+              <p>Couriers earn between 4€ and 5€ on average for each order they deliver, plus tips.</p>
+              <p>Contactless delivery: when possible, couriers will leave the order in front of your door. Please select credit card for this option.</p>
+            </div>
+          </div>
+
+          <footer class="pintxo-footer">
+            <button class="pintxo-button pintxo-button--primary pintxo-button--m pintxo-button--block" type="button">Pay to order</button>
+          </footer>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+  <script src="../_base/base.js"></script>
+  <script src="./screen.js"></script>
+</body>
+</html>

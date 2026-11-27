@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Food wall</title>
   <link rel="stylesheet" href="../_base/base.css" />
+  <link rel="stylesheet" href="../../../shared-design-system/pintxo/pintxo.css" />
   <link rel="stylesheet" href="./screen.css" />
 </head>
 <body>
@@ -15,34 +16,32 @@
 
       <!-- Collapsed header: fades in after scroll (search field + chips stay fixed) -->
       <div class="sw-sticky" id="sw-sticky" aria-hidden="true">
-        <div class="sb">
-          <div class="sb__time">9:41</div>
-          <div class="sb__spacer"></div>
-          <div class="sb__levels">
+        <div class="pintxo-status-bar pintxo-status-bar--compact">
+          <div class="pintxo-status-bar__time">9:41</div>
+          <div class="pintxo-status-bar__levels">
             <img src="assets/icons/sb-cell-dark.svg" alt="" />
             <img src="assets/icons/sb-wifi-dark.svg" alt="" />
             <img src="assets/icons/sb-battery-dark.svg" alt="" />
           </div>
         </div>
         <div class="sw-sticky__row">
-          <button class="icon-btn icon-btn--floating inert" type="button" tabindex="-1" aria-label="Back"><img src="assets/icons/nav-back.svg" alt="" /></button>
+          <button class="pintxo-icon-button pintxo-icon-button--floating inert" type="button" tabindex="-1" aria-label="Back"><img src="assets/icons/nav-back.svg" alt="" /></button>
           <div class="sw-sticky__search inert"><img src="assets/icons/search-24.svg" alt="" /><span>Search in Food</span></div>
-          <button class="icon-btn icon-btn--floating inert" type="button" tabindex="-1" aria-label="Map"><img src="assets/icons/map-24.svg" alt="" /></button>
+          <button class="pintxo-icon-button pintxo-icon-button--floating inert" type="button" tabindex="-1" aria-label="Map"><img src="assets/icons/map-24.svg" alt="" /></button>
         </div>
         <div class="sw-chips">
-          <div class="sw-chip"><span>Promotions</span></div>
-          <div class="sw-chip"><span>Food type</span><img src="assets/icons/selector-chevron.svg" alt="" /></div>
-          <div class="sw-chip"><img src="assets/icons/person-walking.svg" alt="" /><span>Pickup</span></div>
-          <div class="sw-chip"><span>InStore prices</span></div>
+          <div class="pintxo-chip"><span>Promotions</span></div>
+          <div class="pintxo-chip"><span>Food type</span><img src="assets/icons/selector-chevron.svg" alt="" /></div>
+          <div class="pintxo-chip"><img src="assets/icons/person-walking.svg" alt="" /><span>Pickup</span></div>
+          <div class="pintxo-chip"><span>InStore prices</span></div>
         </div>
       </div>
       <div class="screen__scroll" id="sw-scroll">
 
         <header class="sw-header">
-          <div class="sb">
-            <div class="sb__time">9:41</div>
-            <div class="sb__spacer"></div>
-            <div class="sb__levels">
+          <div class="pintxo-status-bar pintxo-status-bar--compact">
+            <div class="pintxo-status-bar__time">9:41</div>
+            <div class="pintxo-status-bar__levels">
               <img src="assets/icons/sb-cell-dark.svg" alt="" />
               <img src="assets/icons/sb-wifi-dark.svg" alt="" />
               <img src="assets/icons/sb-battery-dark.svg" alt="" />
@@ -51,11 +50,11 @@
 
           <div class="sw-nav">
             <div class="sw-nav__row">
-              <button class="icon-btn icon-btn--neutral inert" type="button" aria-label="Back"><img src="assets/icons/nav-back-gray.svg" alt="" /></button>
+              <button class="pintxo-icon-button inert" type="button" aria-label="Back"><img src="assets/icons/nav-back-gray.svg" alt="" /></button>
               <div class="sw-nav__body">
                 <button class="sw-address inert" type="button"><span>Address</span><img src="assets/icons/chevron-down-24.svg" alt="" /></button>
               </div>
-              <button class="icon-btn icon-btn--neutral inert" type="button" aria-label="Map"><img src="assets/icons/map-24.svg" alt="" /></button>
+              <button class="pintxo-icon-button inert" type="button" aria-label="Map"><img src="assets/icons/map-24.svg" alt="" /></button>
             </div>
             <h1 class="sw-nav__title pintxo-typography-title1">Food</h1>
           </div>
@@ -73,10 +72,10 @@
           </div>
 
           <div class="sw-chips">
-            <div class="sw-chip"><span>Promotions</span></div>
-            <div class="sw-chip"><span>Food type</span><img src="assets/icons/selector-chevron.svg" alt="" /></div>
-            <div class="sw-chip"><img src="assets/icons/person-walking.svg" alt="" /><span>Pickup</span></div>
-            <div class="sw-chip"><span>InStore prices</span></div>
+            <div class="pintxo-chip"><span>Promotions</span></div>
+            <div class="pintxo-chip"><span>Food type</span><img src="assets/icons/selector-chevron.svg" alt="" /></div>
+            <div class="pintxo-chip"><img src="assets/icons/person-walking.svg" alt="" /><span>Pickup</span></div>
+            <div class="pintxo-chip"><span>InStore prices</span></div>
           </div>
         </header>
 
@@ -87,10 +86,10 @@
             <div class="store-tile__image">
               <img class="store-tile__photo store-tile__photo--top" src="assets/img/honest-greens.png" alt="" />
               <div class="store-tile__tags">
-                <span class="tag-double"><span class="tag tag--promo">-20%</span><span class="tag tag--loyalty"><b>PRIME</b> -30%</span></span>
-                <span class="tag tag--neutral"><img src="assets/icons/house-16.svg" alt="" />Same prices as in store</span>
+                <span class="pintxo-tag-group"><span class="pintxo-tag" data-style="promotion">-20%</span><span class="pintxo-tag" data-style="loyalty"><b>PRIME</b> -30%</span></span>
+                <span class="pintxo-tag"><img src="assets/icons/house-16.svg" alt="" />Same prices as in store</span>
               </div>
-              <span class="tag tag--contrast store-tile__tag-br">Only on Glovo</span>
+              <span class="pintxo-tag store-tile__tag-br" data-style="contrast" data-variant="primary">Only on Glovo</span>
               <div class="store-tile__toggle"><img src="assets/icons/heart.svg" alt="" /></div>
             </div>
             <div class="store-tile__desc">
@@ -119,7 +118,7 @@
             </div>
             <div class="feat-banner__media"><img src="assets/img/dominos.png" alt="" /></div>
             <span class="avatar-sq avatar-sq--s"><img src="assets/img/logo-dominos.png" alt="" /></span>
-            <span class="tag tag--promo feat-banner__tag">-20%</span>
+            <span class="pintxo-tag feat-banner__tag" data-style="promotion">-20%</span>
             <div class="feat-banner__go"><img src="assets/icons/arrow-forward-16.svg" alt="" /></div>
             <img data-ai-label="Ads featured banner icon" class="feat-banner__ai" src="assets/icons/ai-sparkle-solid.svg" alt="" />
           </div>
@@ -129,10 +128,10 @@
               <img class="store-tile__photo" src="assets/img/el-super-de-glovo.png" alt="" />
               <span class="avatar-sq avatar-sq--m"><img src="assets/img/logo-el-super-de-glovo.jpg" alt="" /></span>
               <div class="store-tile__tags">
-                <span class="tag-double"><span class="tag tag--promo">-20%</span><span class="tag tag--loyalty"><b>PRIME</b> -30%</span></span>
-                <span class="tag tag--neutral"><img src="assets/icons/house-16.svg" alt="" />Same prices as in store</span>
+                <span class="pintxo-tag-group"><span class="pintxo-tag" data-style="promotion">-20%</span><span class="pintxo-tag" data-style="loyalty"><b>PRIME</b> -30%</span></span>
+                <span class="pintxo-tag"><img src="assets/icons/house-16.svg" alt="" />Same prices as in store</span>
               </div>
-              <span class="tag tag--positive store-tile__tag-br"><img src="assets/icons/carrot-16.svg" alt="" />Freshness guarantee</span>
+              <span class="pintxo-tag store-tile__tag-br" data-style="positive" data-variant="secondary"><img src="assets/icons/carrot-16.svg" alt="" />Freshness guarantee</span>
               <div class="store-tile__toggle"><img src="assets/icons/heart.svg" alt="" /></div>
             </div>
             <div class="store-tile__desc">
@@ -161,7 +160,7 @@
             <div class="store-tile__image">
               <img class="store-tile__photo" src="assets/img/burger-king.jpg" alt="" />
               <div class="store-tile__content">
-                <div class="store-tile__top"><span class="tag tag--promo">2x1 in some products</span></div>
+                <div class="store-tile__top"><span class="pintxo-tag" data-style="promotion">2x1 in some products</span></div>
               </div>
               <div class="store-tile__toggle"><img src="assets/icons/heart.svg" alt="" /></div>
             </div>
@@ -183,13 +182,13 @@
         </main>
       </div>
 
-      <nav class="tabbar" aria-label="Main">
-        <div class="tabbar__tab is-active inert">
-          <span class="tabbar__icon"><img class="tabbar__blob" src="assets/icons/blob-tab.svg" alt="" /><img src="assets/icons/tab-house.svg" alt="" /></span>Home
+      <nav class="pintxo-tab-bar" aria-label="Main">
+        <div class="pintxo-tab-bar__tab pintxo-tab-bar__tab--active inert">
+          <span class="pintxo-tab-bar__icon"><img class="pintxo-tab-bar__blob" src="assets/icons/blob-tab.svg" alt="" /><img src="assets/icons/tab-house.svg" alt="" /></span>Home
         </div>
-        <div class="tabbar__tab inert"><span class="tabbar__icon"><img src="assets/icons/tab-search.svg" alt="" /></span>Discover</div>
-        <div class="tabbar__tab inert"><span class="tabbar__icon"><img src="assets/icons/tab-bags.svg" alt="" /></span>Orders</div>
-        <div class="tabbar__tab inert"><span class="tabbar__icon"><img src="assets/icons/tab-person.svg" alt="" /></span>Profile</div>
+        <div class="pintxo-tab-bar__tab inert"><span class="pintxo-tab-bar__icon"><img src="assets/icons/tab-search.svg" alt="" /></span>Discover</div>
+        <div class="pintxo-tab-bar__tab inert"><span class="pintxo-tab-bar__icon"><img src="assets/icons/tab-bags.svg" alt="" /></span>Orders</div>
+        <div class="pintxo-tab-bar__tab inert"><span class="pintxo-tab-bar__icon"><img src="assets/icons/tab-person.svg" alt="" /></span>Profile</div>
       </nav>
 
       <!-- Ad modalsheet (Figma 160:38331): overlay on the Store wall -->
@@ -200,11 +199,11 @@
           <div class="modal__surface">
             <div class="modal__header">
               <h2 class="modal__title pintxo-typography-title2" id="ad-modal-title">Paid Ad</h2>
-              <button class="icon-btn icon-btn--neutral modal__close" type="button" aria-label="Close" data-modal-close><img src="assets/icons/cross-24.svg" alt="" /></button>
+              <button class="pintxo-icon-button modal__close" type="button" aria-label="Close" data-modal-close><img src="assets/icons/cross-24.svg" alt="" /></button>
             </div>
             <div class="modal__body">
               <p class="pintxo-typography-body1">This ad has not been personalized nor is targeted on the basis of your account information or any prior browsing or purchasing activity. This ad is paid for by Domino’s Pizza.</p>
-              <span data-ai-label="Ads featured banner label" data-ai-after="Ads featured banner icon" class="tag tag--neutral"><img src="assets/icons/ai-sparkle-dark.svg" alt="" />AI generated</span>
+              <span data-ai-label="Ads featured banner label" data-ai-after="Ads featured banner icon" class="pintxo-tag"><img src="assets/icons/ai-sparkle-dark.svg" alt="" />AI generated</span>
             </div>
           </div>
           <div class="modal__unsafe"></div>

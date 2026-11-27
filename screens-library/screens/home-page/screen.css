@@ -1,0 +1,34 @@
+/* Home page: screen layout only. Components (banner, text field, buttons, text button,
+   home indicator) come from shared-design-system/pintxo/pintxo.css; tokens and fonts from ../_base/base.css. */
+html, body { height: 100%; }
+body { max-width: 390px; margin: 0 auto; overflow: hidden; line-height: 20px; }
+* { margin: 0; }
+button, input { font-family: inherit; }
+img { display: block; }
+.t-title3 { font-size: 21px; line-height: 24px; font-weight: 700; }
+.t-body2 { font-size: 14px; line-height: 20px; font-weight: 400; }
+.t-caption { font-size: 12px; line-height: 16px; font-weight: 400; }
+.t-secondary { color: var(--text-color-secondary); }
+
+.screen { position: relative; display: none; flex-direction: column; height: 100%; overflow: hidden; background: var(--background-color-primary); }
+.screen.is-active { display: flex; }
+.status-bar { position: absolute; top: 0; left: 0; z-index: 3; width: 100%; height: 62px; pointer-events: none; }
+.start__home-indicator { position: absolute; left: 50%; bottom: 8px; z-index: 3; transform: translateX(-50%); }
+
+.start { background: var(--brand-color-primary); }
+.start__hero { position: absolute; top: 0; left: 0; width: 100%; height: 389px; overflow: hidden; pointer-events: none; }
+.start__hero img { position: absolute; width: 149.71%; height: 147.32%; left: -24.75%; top: -47.39%; max-width: none; }
+.start__logo { position: absolute; top: 89px; left: 50%; width: 122px; height: 40px; transform: translateX(-50%); }
+.start__bottom { position: absolute; right: 0; bottom: 0; left: 0; display: flex; flex-direction: column; }
+.start__curve { width: 100%; height: 48px; }
+.start__sheet { display: flex; flex-direction: column; gap: var(--spacing-l); padding: var(--spacing-m) var(--spacing-m) var(--spacing-xxl); background: var(--background-color-primary); }
+.start__group { display: flex; flex-direction: column; gap: var(--spacing-m); }
+.start__heading { display: flex; flex-direction: column; align-items: center; gap: var(--spacing-xs); text-align: center; }
+.start__phone { display: flex; align-items: flex-start; gap: var(--spacing-xs); }
+.start__phone .pintxo-text-field:first-child { flex: 0 0 116px; }
+.start__phone .pintxo-text-field:last-child { flex: 1 1 0; }
+.start__alt { display: flex; flex-direction: column; align-items: center; gap: var(--spacing-s); }
+.start__alt .pintxo-button-group { align-self: stretch; }
+.start__more { display: flex; justify-content: center; }
+.start__legal { text-align: center; color: var(--text-color-secondary); }
+.start__legal a { color: inherit; text-decoration: underline; }

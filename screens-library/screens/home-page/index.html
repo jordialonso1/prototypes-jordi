@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" data-theme="core" data-ui-mode="light">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="data:," />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home page</title>
+  <link rel="stylesheet" href="../_base/base.css" />
+  <link rel="stylesheet" href="../../../shared-design-system/pintxo/pintxo.css" />
+  <link rel="stylesheet" href="./screen.css" />
+</head>
+<body>
+  <section class="screen start is-active" data-screen="start" aria-label="Start">
+    <div class="start__hero"><img src="assets/hero.png" alt="" /></div>
+    <img class="start__logo" src="assets/logo.svg" alt="Glovo" />
+    <div class="start__bottom">
+      <img class="start__curve" src="assets/curve.svg" alt="" />
+      <div class="start__sheet">
+        <div class="pintxo-banner" data-style="promotion" role="status">
+          <div class="pintxo-banner__accessory" aria-hidden="true">
+            <img class="pintxo-banner__blob" src="../../../shared-design-system/pintxo/assets/banner-blob-promotion.svg" alt="" />
+            <img class="pintxo-banner__art" src="../../../shared-design-system/pintxo/assets/banner-art-delivery.svg" alt="" />
+          </div>
+          <div class="pintxo-banner__content">
+            <p class="pintxo-banner__title">First order with free delivery</p>
+            <p class="pintxo-banner__description">For new customers only.</p>
+          </div>
+        </div>
+
+        <div class="start__group">
+          <div class="start__heading">
+            <h1 class="t-title3">Welcome!</h1>
+            <p class="t-body2 t-secondary">Let’s start with your phone number</p>
+          </div>
+          <div class="start__phone">
+            <label class="pintxo-text-field">
+              <span class="pintxo-text-field__label">Prefix</span>
+              <span class="pintxo-text-field__control">
+                <input value="🇪🇸 +34" readonly aria-label="Prefix" />
+                <img src="../../../shared-design-system/pintxo/assets/icon-chevron-down-24.svg" alt="" />
+              </span>
+            </label>
+            <label class="pintxo-text-field">
+              <span class="pintxo-text-field__label">Phone number</span>
+              <span class="pintxo-text-field__control"><input type="tel" inputmode="tel" value="612 345 678" aria-label="Phone number" /></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="start__group">
+          <div class="pintxo-button-group">
+            <button class="pintxo-button pintxo-button--l" type="button">SMS</button>
+            <button class="pintxo-button pintxo-button--primary pintxo-button--l" type="button">WhatsApp</button>
+          </div>
+          <div class="start__alt">
+            <p class="t-body2 t-secondary">Or continue with</p>
+            <div class="pintxo-button-group">
+              <button class="pintxo-button pintxo-button--l" type="button" aria-label="Apple"><img src="../../../shared-design-system/pintxo/assets/icon-apple-24.svg" alt="" /></button>
+              <button class="pintxo-button pintxo-button--l" type="button" aria-label="Google"><img src="../../../shared-design-system/pintxo/assets/icon-google-24.svg" alt="" /></button>
+              <button class="pintxo-button pintxo-button--l" type="button" aria-label="Email"><img src="../../../shared-design-system/pintxo/assets/icon-envelope-24.svg" alt="" /></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="start__more">
+          <button class="pintxo-text-button" type="button">More <img src="../../../shared-design-system/pintxo/assets/icon-chevron-forward-16.svg" alt="" /></button>
+        </div>
+
+        <p class="t-caption start__legal">
+          By continuing, you automatically accept our
+          <a href="https://glovoapp.com/docs/es/legal/terms?country=es" target="_blank" rel="noreferrer">Terms &amp; Conditions</a>,
+          <a href="https://glovoapp.com/docs/en/legal/privacy?country=es" target="_blank" rel="noreferrer">Privacy Policy</a> and
+          <a href="https://glovoapp.com/en/legal/cookies?country=es" target="_blank" rel="noreferrer">Cookies Policy</a>
+        </p>
+      </div>
+    </div>
+    <img class="status-bar" src="assets/statusbar.svg" alt="" />
+    <div class="pintxo-home-indicator start__home-indicator"></div>
+  </section>
+</body>
+</html>

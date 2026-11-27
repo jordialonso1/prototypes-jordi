@@ -11,6 +11,8 @@ export interface LibraryScreen {
 }
 
 export const SCREENS: LibraryScreen[] = [
+  { id: 'checkout', title: 'Checkout', src: './screens/checkout/index.html' },
+  { id: 'home-page', title: 'Home page', src: './screens/home-page/index.html' },
   { id: 'food-wall', title: 'Food wall', src: './screens/food-wall/index.html' },
   { id: 'store-view', title: 'Store view', src: './screens/store-view/index.html' },
   { id: 'product-view', title: 'Product view', src: './screens/product-view/index.html' },

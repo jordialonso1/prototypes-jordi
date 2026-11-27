@@ -7,6 +7,7 @@
   <title>Store view</title>
   <link rel="stylesheet" href="../_base/base.css" />
   <link rel="stylesheet" href="../../../shared-design-system/pintxo/pintxo.css" />
+  <link rel="stylesheet" href="../../../shared-design-system/pintxo/pintxo.css" />
   <link rel="stylesheet" href="./screen.css" />
 </head>
 <body>
@@ -16,26 +17,25 @@
 
       <!-- Fixed nav: floats over the hero, turns white once the page scrolls -->
       <div class="sv-nav" id="sv-nav">
-        <div class="sb sb--nav">
-          <div class="sb__time">9:41</div>
-          <div class="sb__spacer"></div>
-          <div class="sb__levels sb__levels--light">
+        <div class="pintxo-status-bar">
+          <div class="pintxo-status-bar__time">9:41</div>
+          <div class="pintxo-status-bar__levels sb__levels--light">
             <img src="assets/icons/sb-cell-light.svg" alt="" />
             <img src="assets/icons/sb-wifi-light.svg" alt="" />
             <img src="assets/icons/sb-battery-light.svg" alt="" />
           </div>
-          <div class="sb__levels sb__levels--dark">
+          <div class="pintxo-status-bar__levels sb__levels--dark">
             <img src="assets/icons/sb-cell-dark.svg" alt="" />
             <img src="assets/icons/sb-wifi-dark.svg" alt="" />
             <img src="assets/icons/sb-battery-dark.svg" alt="" />
           </div>
         </div>
         <div class="sv-nav__row">
-          <button class="icon-btn icon-btn--floating" id="sv-back" type="button" aria-label="Back"><img src="assets/icons/nav-back.svg" alt="" /></button>
+          <button class="pintxo-icon-button pintxo-icon-button--floating" id="sv-back" type="button" aria-label="Back"><img src="assets/icons/nav-back.svg" alt="" /></button>
           <div class="sv-nav__trailing">
-            <button class="icon-btn icon-btn--floating inert" type="button" aria-label="Search"><img src="assets/icons/nav-search.svg" alt="" /></button>
-            <button class="icon-btn icon-btn--floating" type="button" aria-label="Translate" data-modal-open="translations-modal"><img src="assets/icons/modal-translate.svg" alt="" /></button>
-            <button class="icon-btn icon-btn--floating inert" type="button" aria-label="More"><img src="assets/icons/nav-more.svg" alt="" /></button>
+            <button class="pintxo-icon-button pintxo-icon-button--floating inert" type="button" aria-label="Search"><img src="assets/icons/nav-search.svg" alt="" /></button>
+            <button class="pintxo-icon-button pintxo-icon-button--floating" type="button" aria-label="Translate" data-modal-open="translations-modal"><img src="assets/icons/modal-translate.svg" alt="" /></button>
+            <button class="pintxo-icon-button pintxo-icon-button--floating inert" type="button" aria-label="More"><img src="assets/icons/nav-more.svg" alt="" /></button>
           </div>
         </div>
       </div>
@@ -112,27 +112,27 @@
           <div class="modal__surface">
             <div class="modal__header modal__header--list">
               <h2 class="modal__title pintxo-typography-title2" id="translations-modal-title">Options</h2>
-              <button class="icon-btn icon-btn--neutral modal__close" type="button" aria-label="Close" data-modal-close><img src="assets/icons/cross-24.svg" alt="" /></button>
+              <button class="pintxo-icon-button modal__close" type="button" aria-label="Close" data-modal-close><img src="assets/icons/cross-24.svg" alt="" /></button>
             </div>
             <div class="modal__list">
-              <div class="list-item inert">
-                <span class="list-item__icon"><img src="assets/icons/modal-info.svg" alt="" /></span>
-                <div class="list-item__body"><div class="list-item__text"><p class="list-item__title">Store information</p></div></div>
+              <div class="pintxo-list-item inert">
+                <span class="pintxo-list-item__icon"><img src="assets/icons/modal-info.svg" alt="" /></span>
+                <div class="pintxo-list-item__body"><div class="pintxo-list-item__text"><p class="pintxo-list-item__title">Store information</p></div></div>
               </div>
-              <div class="list-item inert">
-                <span class="list-item__icon"><img src="assets/icons/modal-heart.svg" alt="" /></span>
-                <div class="list-item__body"><div class="list-item__text"><p class="list-item__title">Add to favourites</p></div></div>
+              <div class="pintxo-list-item inert">
+                <span class="pintxo-list-item__icon"><img src="assets/icons/modal-heart.svg" alt="" /></span>
+                <div class="pintxo-list-item__body"><div class="pintxo-list-item__text"><p class="pintxo-list-item__title">Add to favourites</p></div></div>
               </div>
-              <div class="list-item inert">
-                <span class="list-item__icon"><img src="assets/icons/modal-share.svg" alt="" /></span>
-                <div class="list-item__body"><div class="list-item__text"><p class="list-item__title">Share store</p></div></div>
+              <div class="pintxo-list-item inert">
+                <span class="pintxo-list-item__icon"><img src="assets/icons/modal-share.svg" alt="" /></span>
+                <div class="pintxo-list-item__body"><div class="pintxo-list-item__text"><p class="pintxo-list-item__title">Share store</p></div></div>
               </div>
-              <div class="list-item inert">
-                <span class="list-item__icon"><img src="assets/icons/modal-translate.svg" alt="" /></span>
-                <div class="list-item__body">
-                  <div class="list-item__text">
-                    <p class="list-item__title">Translate to Spanish</p>
-                    <p data-ai-label="Content translations" class="list-item__desc">AI generated</p>
+              <div class="pintxo-list-item inert">
+                <span class="pintxo-list-item__icon"><img src="assets/icons/modal-translate.svg" alt="" /></span>
+                <div class="pintxo-list-item__body">
+                  <div class="pintxo-list-item__text">
+                    <p class="pintxo-list-item__title">Translate to Spanish</p>
+                    <p data-ai-label="Content translations" class="pintxo-list-item__description">AI generated</p>
                   </div>
                 </div>
               </div>
