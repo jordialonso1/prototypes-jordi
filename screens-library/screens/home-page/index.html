@@ -5,6 +5,8 @@
   <link rel="icon" href="data:," />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home page</title>
+  <link rel="stylesheet" href="../_base/base.css" />
+  <link rel="stylesheet" href="../../../shared-design-system/pintxo/pintxo.css" />
   <link rel="stylesheet" href="./screen.css" />
 </head>
 <body>
@@ -14,14 +16,14 @@
     <div class="start__bottom">
       <img class="start__curve" src="assets/curve.svg" alt="" />
       <div class="start__sheet">
-        <div class="banner" role="status">
-          <div class="banner__accessory" aria-hidden="true">
-            <img class="banner__blob" src="assets/blob-promotion.svg" alt="" />
-            <img class="banner__art" src="assets/bag-motorbike-confetti.svg" alt="" />
+        <div class="pintxo-banner" data-style="promotion" role="status">
+          <div class="pintxo-banner__accessory" aria-hidden="true">
+            <img class="pintxo-banner__blob" src="../../../shared-design-system/pintxo/assets/banner-blob-promotion.svg" alt="" />
+            <img class="pintxo-banner__art" src="../../../shared-design-system/pintxo/assets/banner-art-delivery.svg" alt="" />
           </div>
-          <div class="banner__content">
-            <span class="t-body2" style="font-weight: 500">First order with free delivery</span>
-            <span class="t-body2">For new customers only.</span>
+          <div class="pintxo-banner__content">
+            <p class="pintxo-banner__title">First order with free delivery</p>
+            <p class="pintxo-banner__description">For new customers only.</p>
           </div>
         </div>
 
@@ -31,37 +33,37 @@
             <p class="t-body2 t-secondary">Let’s start with your phone number</p>
           </div>
           <div class="start__phone">
-            <label class="field">
-              <span class="field__label">Prefix</span>
-              <span class="input">
+            <label class="pintxo-text-field">
+              <span class="pintxo-text-field__label">Prefix</span>
+              <span class="pintxo-text-field__control">
                 <input value="🇪🇸 +34" readonly aria-label="Prefix" />
-                <img src="assets/icon-chevron-down.svg" alt="" />
+                <img src="../../../shared-design-system/pintxo/assets/icon-chevron-down-24.svg" alt="" />
               </span>
             </label>
-            <label class="field">
-              <span class="field__label">Phone number</span>
-              <span class="input"><input type="tel" inputmode="tel" value="612 345 678" aria-label="Phone number" /></span>
+            <label class="pintxo-text-field">
+              <span class="pintxo-text-field__label">Phone number</span>
+              <span class="pintxo-text-field__control"><input type="tel" inputmode="tel" value="612 345 678" aria-label="Phone number" /></span>
             </label>
           </div>
         </div>
 
         <div class="start__group">
-          <div class="btn-row btn-row--wide">
-            <button class="btn btn--l" type="button"><span class="btn__label">SMS</span></button>
-            <button class="btn btn--l btn--primary" type="button"><span class="btn__label">WhatsApp</span></button>
+          <div class="pintxo-button-group">
+            <button class="pintxo-button pintxo-button--l" type="button">SMS</button>
+            <button class="pintxo-button pintxo-button--primary pintxo-button--l" type="button">WhatsApp</button>
           </div>
           <div class="start__alt">
             <p class="t-body2 t-secondary">Or continue with</p>
-            <div class="btn-row">
-              <button class="btn btn--l" type="button" aria-label="Apple"><img src="assets/icon-apple.svg" alt="" /></button>
-              <button class="btn btn--l" type="button" aria-label="Google"><img src="assets/icon-google.svg" alt="" /></button>
-              <button class="btn btn--l" type="button" aria-label="Email"><img src="assets/icon-envelope.svg" alt="" /></button>
+            <div class="pintxo-button-group">
+              <button class="pintxo-button pintxo-button--l" type="button" aria-label="Apple"><img src="../../../shared-design-system/pintxo/assets/icon-apple-24.svg" alt="" /></button>
+              <button class="pintxo-button pintxo-button--l" type="button" aria-label="Google"><img src="../../../shared-design-system/pintxo/assets/icon-google-24.svg" alt="" /></button>
+              <button class="pintxo-button pintxo-button--l" type="button" aria-label="Email"><img src="../../../shared-design-system/pintxo/assets/icon-envelope-24.svg" alt="" /></button>
             </div>
           </div>
         </div>
 
         <div class="start__more">
-          <button class="text-button" type="button">More <img src="assets/icon-chevron-forward.svg" alt="" /></button>
+          <button class="pintxo-text-button" type="button">More <img src="../../../shared-design-system/pintxo/assets/icon-chevron-forward-16.svg" alt="" /></button>
         </div>
 
         <p class="t-caption start__legal">
@@ -73,7 +75,7 @@
       </div>
     </div>
     <img class="status-bar" src="assets/statusbar.svg" alt="" />
-    <div class="home-indicator"></div>
+    <div class="pintxo-home-indicator start__home-indicator"></div>
   </section>
 </body>
 </html>
