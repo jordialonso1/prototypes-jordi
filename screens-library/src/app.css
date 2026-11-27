@@ -1,8 +1,6 @@
 .lib { max-width: 1100px; margin: 0 auto; padding: 56px 32px 64px; }
 .lib__title { margin: 0 0 8px; font-size: 24px; line-height: 28px; }
 .lib__intro { margin: 0 0 32px; max-width: 560px; font-size: 14px; line-height: 20px; color: #626364; }
-.lib__group { margin-bottom: 40px; }
-.lib__group-title { margin: 0 0 16px; font-size: 14px; line-height: 20px; color: #626364; text-transform: uppercase; letter-spacing: 0.04em; }
 .lib__grid { margin: 0; padding: 0; list-style: none; display: grid; gap: 32px 24px; grid-template-columns: repeat(auto-fill, 195px); }
 .card { width: 195px; }
 .card__thumb { display: block; padding: 0; border: 1px solid #cdced0; border-radius: 16px; background: #fff; overflow: hidden; cursor: pointer; }
