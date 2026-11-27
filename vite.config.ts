@@ -23,6 +23,7 @@ const staticDirs = [
   // Shared CSS linked by static prototypes (../../shared-design-system/pintxo/pintxo.css).
   'shared-design-system/pintxo',
   'component-library',
+  'screens-library/screens',
   // Theme linked by the component library page.
   'shared-design-system/styles',
 ]

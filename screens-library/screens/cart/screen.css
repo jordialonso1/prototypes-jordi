@@ -1,0 +1,66 @@
+/* Cart: screen styles, pruned from the prototype CSS to what this screen uses. */
+/* =====================================================================
+       CART SCREEN (Figma 85:9460). Everything below is prototype-specific.
+       Typography: Figma sizes override the boilerplate line heights
+       (title3 21/24, body 16/20, 14/20, caption 12/16).
+       ===================================================================== */
+html,
+body { height: 100%; overflow: hidden; }
+.pintxo-typography-title3 { line-height: 24px; }
+.pintxo-typography-body1,
+.pintxo-typography-body1-emphasis { line-height: 20px; }
+.prototype-viewport { height: 100svh; max-height: 844px; }
+img { display: block; }
+.screen { position: absolute; inset: 0; background: var(--background-color-primary); }
+.screen[hidden] { display: none; }
+/* ---- Nav bar (status bar 62 + 52 row = 114) ---- */
+.navbar { position: absolute; top: 0; left: 0; right: 0; z-index: 3; height: 114px; background: var(--background-color-primary); }
+.status-bar { position: absolute; top: 0; left: 0; width: 100%; height: 62px; pointer-events: none; }
+.navbar__row { position: absolute; top: 52px; left: 0; right: 0; height: 52px; display: flex; align-items: center; justify-content: center; }
+.navbar__back { position: absolute; left: var(--spacing-m); top: 6px; }
+.navbar__title { margin: 0; }
+/* ---- Scrolling content ---- */
+.scroll { position: absolute; inset: 0; overflow-y: auto; padding: 114px var(--spacing-m) 126px; scrollbar-width: none; }
+.scroll::-webkit-scrollbar { display: none; }
+.stack { display: flex; flex-direction: column; gap: var(--spacing-m); }
+.stack + .stack { margin-top: var(--spacing-l); }
+.stack--end { align-items: flex-end; }
+/* ---- Section header ---- */
+.section-header { align-self: stretch; }
+.section-header__title-row { display: flex; align-items: flex-end; gap: var(--spacing-xs); }
+.section-header__title { flex: 1; margin: 0; padding: var(--spacing-xxs) 0; }
+.section-header__sub { margin: 0; color: var(--text-color-secondary); }
+.section-header__sub .count { color: var(--text-color-primary); }
+.section-header__sub a { color: rgba(3, 89, 73, 1); font-weight: 700; text-decoration: underline; }
+/* ---- Item rows ---- */
+.item-row { align-self: stretch; display: flex; flex-direction: column; gap: var(--spacing-s); padding: var(--spacing-m) 0; }
+.item-row__body { display: flex; align-items: flex-start; gap: var(--spacing-m); }
+.thumb { position: relative; flex: none; width: 64px; height: 64px; border-radius: var(--cornerRadius-m); overflow: hidden; }
+.thumb img { width: 100%; height: 100%; object-fit: cover; }
+.thumb::after { content: ''; position: absolute; inset: 0; background: var(--elevation-shadow-basic-color); }
+.item-row__info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: var(--spacing-xs); }
+.item-row__head { display: flex; align-items: flex-start; gap: var(--spacing-xs); }
+.item-row__name { flex: 1; margin: 0; min-width: 0; }
+.item-row__price { margin: 0; white-space: nowrap; text-align: right; }
+.item-row__desc { margin: 0; }
+.item-row__footer { display: flex; justify-content: flex-end; }
+/* ---- Upsell tiles ---- */
+.tiles { align-self: stretch; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--spacing-s); }
+.tile { display: flex; flex-direction: column; gap: var(--spacing-xs); min-width: 0; }
+.tile__img { position: relative; aspect-ratio: 1; border-radius: var(--cornerRadius-m); overflow: hidden; }
+.tile__img > img { width: 100%; height: 100%; object-fit: cover; }
+.tile__img::after { content: ''; position: absolute; inset: 0; background: var(--elevation-shadow-basic-color); }
+.tile__add { position: absolute; z-index: 1; right: var(--spacing-xs); bottom: var(--spacing-xs); }
+.tile__text { display: flex; flex-direction: column; gap: var(--spacing-xxxs); }
+.tile__name { margin: 0; font-weight: 500; }
+.tile__price { margin: 0; }
+/* ---- Footer (fixed at the bottom, content scrolls underneath) ---- */
+.footer { position: absolute; left: 0; right: 0; bottom: 0; z-index: 3; background: var(--background-color-primary); }
+.footer--raised { border-radius: var(--cornerRadius-m) var(--cornerRadius-m) 0 0; box-shadow: 0 0 2px 0 var(--elevation-shadow-basic-color), 0 0 8px 0 var(--elevation-shadow-raised-color); clip-path: inset(-12px -12px 0 -12px); }
+.footer__content { display: flex; align-items: center; gap: var(--spacing-xs); padding: var(--spacing-s) var(--spacing-m) 0; }
+.footer__price { flex: 1; display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-xs); min-width: 0; }
+.footer__total { margin: 0; font-weight: 500; }
+.footer__original { margin: 0; color: var(--text-color-secondary); text-decoration: line-through; }
+.footer__cta { flex: none; }
+.footer__home { height: 34px; display: flex; justify-content: center; align-items: flex-end; padding-bottom: 8px; }
+.footer__home::after { content: ''; width: 134px; height: 5px; border-radius: 100px; background: var(--text-color-primary); }

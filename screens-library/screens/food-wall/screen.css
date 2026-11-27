@@ -1,0 +1,293 @@
+/* Food wall: screen styles, pruned from the prototype CSS to what this screen uses. */
+/* =====================================================================
+       PROTOTYPE OVERRIDES (added; the boilerplate blocks above are untouched)
+
+       1. Typography: Figma / uds-react scale takes precedence over the
+          boilerplate pintxo-typography-* values (user decision).
+          Figma: title1 28/32, title2 24/28, title3 21/24, callout1 16/20,
+          callout2 14/20, body 16/20 and 14/20, caption 12/16.
+       ===================================================================== */
+.pintxo-typography-title1 { font-size: 28px; line-height: 32px; font-weight: 700; }
+.pintxo-typography-title2 { font-size: 24px; line-height: 28px; font-weight: 700; }
+.pintxo-typography-callout1 { font-size: 16px; line-height: 20px; font-weight: 700; }
+.pintxo-typography-callout2 { font-size: 14px; line-height: 20px; font-weight: 700; }
+.pintxo-typography-body1 { font-size: 16px; line-height: 20px; font-weight: 400; }
+.pintxo-typography-body1-emphasis { font-size: 16px; line-height: 20px; font-weight: 500; }
+.pintxo-typography-body2-emphasis { font-size: 14px; line-height: 20px; font-weight: 500; }
+.pintxo-typography-caption { font-size: 12px; line-height: 16px; font-weight: 400; }
+.pintxo-typography-caption-emphasis { font-size: 12px; line-height: 16px; font-weight: 500; }
+/* 2. Viewport: fixed height so each screen scrolls internally and the
+          chrome (header / tab bar / footer) stays put. */
+.prototype-viewport { min-height: 0; height: 100svh; }
+/* 3. Screens. Only one is visible at a time. Each screen is a column:
+          [fixed top chrome] [scrolling content] [fixed bottom chrome]. */
+.screen {
+      position: absolute;
+      inset: 0;
+      display: none;
+      flex-direction: column;
+      background: var(--background-color-primary);
+    }
+.screen.is-active { display: flex; }
+.screen__scroll {
+      flex: 1 1 auto;
+      min-height: 0;
+      overflow-y: auto;
+      overflow-x: hidden;
+      scrollbar-width: none;
+    }
+.screen__scroll::-webkit-scrollbar { display: none; }
+/* 4. Shared helpers */
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; margin: 0; cursor: pointer; }
+img { display: block; }
+[data-nav],
+[data-back] { cursor: pointer; }
+.inert { cursor: default; }
+/* 5. Shared components (used by more than one screen) */
+.blob16 { position: relative; width: 16px; height: 16px; flex: none; }
+.blob16 img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.tag {
+      display: inline-flex; align-items: center; gap: 4px;
+      min-height: 20px; padding: 2px 4px; border-radius: 4px;
+      font-size: 12px; line-height: 16px; font-weight: 500; white-space: nowrap;
+    }
+.tag--promo { background: #e70e42; color: #fff; }
+.tag--neutral { background: var(--background-color-secondary); color: var(--text-color-primary); }
+.tag--contrast { background: #161617; color: #fff; }
+.tag--positive { background: #e0f0ed; color: #017963; }
+.tag--loyalty { background: #594ddb; color: #fff; }
+.tag--sponsored { background: rgba(22, 23, 23, 0.6); color: #fff; }
+.tag-double { display: inline-flex; border-radius: 4px; background: #594ddb; }
+.tag-double .tag--promo { border-radius: 4px; }
+.tag-double .tag--loyalty b { font-weight: 700; }
+.tag img { width: 16px; height: 16px; }
+.icon-btn {
+      display: flex; align-items: center; justify-content: center; flex: none;
+      border-radius: 896px; width: 40px; height: 40px;
+    }
+.icon-btn--neutral { background: var(--background-color-secondary); }
+.icon-btn--floating { background: #fff; border: 1px solid var(--border-color-primary); }
+.icon-btn img { width: 24px; height: 24px; }
+.sb {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 54px; padding-top: 21px; flex: none;
+    }
+.sb__time {
+      flex: 1; text-align: center; line-height: 22px; font-size: 17px; font-weight: 600;
+      font-family: -apple-system, 'SF Pro', 'SF Pro Text', system-ui, sans-serif;
+    }
+.sb__spacer { width: 164px; height: 10px; flex: none; }
+.sb__levels { flex: 1; display: flex; align-items: center; justify-content: center; gap: 7px; padding: 0 16px 0 6px; }
+.sb__levels img:nth-child(1) { width: 19.2px; height: 12.226px; }
+.sb__levels img:nth-child(2) { width: 17.142px; height: 12.328px; }
+.sb__levels img:nth-child(3) { width: 27.328px; height: 13px; }
+/* =====================================================================
+       STORE WALL (Figma 141:29412)
+       ===================================================================== */
+.sw-header { background: var(--background-color-primary); }
+.sw-nav { display: flex; flex-direction: column; gap: 24px; padding: 0 16px 8px; }
+.sw-nav__row { display: flex; align-items: center; gap: 16px; min-height: 40px; }
+.sw-nav__body { flex: 1; display: flex; justify-content: center; }
+.sw-address {
+      display: flex; align-items: center; justify-content: center;
+      min-height: 40px; min-width: 48px; max-width: 224px; padding: 8px;
+      background: var(--background-color-secondary); border-radius: 896px;
+    }
+.sw-address span { padding: 0 4px; font-size: 14px; line-height: 20px; font-weight: 700; }
+.sw-address img { width: 24px; height: 24px; }
+.sw-nav__title { margin: 0; }
+.sw-search { padding: 16px; }
+.sw-search__input {
+      display: flex; align-items: center; gap: 8px; height: 40px; padding: 0 16px;
+      background: var(--background-color-secondary); border: 1px solid var(--border-color-primary);
+      border-radius: 896px; color: #838486; font-size: 16px; line-height: 20px;
+    }
+.sw-search__input img { width: 24px; height: 24px; }
+.sw-cats { display: flex; padding: 8px 16px; overflow: hidden; }
+.sw-cat { width: 91px; flex: none; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+/* Category art comes from uds-react illustrations (copied to assets/img/cat-*.svg). */
+.sw-cat__circle { width: 64px; height: 64px; border-radius: 50%; background: var(--background-color-secondary); display: flex; align-items: center; justify-content: center; }
+.sw-cat__circle img { width: 56px; height: 56px; }
+.sw-cat__label { font-size: 12px; line-height: 16px; font-weight: 500; white-space: nowrap; }
+.sw-chips { display: flex; gap: 12px; padding: 16px 16px 8px; overflow: hidden; }
+.sw-chip {
+      display: flex; align-items: center; flex: none; min-height: 32px; padding: 0 8px;
+      background: var(--background-color-secondary); border-radius: 896px;
+      font-size: 14px; line-height: 20px; font-weight: 500; white-space: nowrap;
+    }
+.sw-chip span { padding: 0 4px; }
+.sw-chip img { width: 24px; height: 24px; }
+/* Bottom padding clears the floating glass tab bar (about 76px + 16px offset). */
+.sw-feed { display: flex; flex-direction: column; gap: 32px; padding: 24px 16px 108px; }
+/* Collapsed header (from the real app): once the search field scrolls away,
+       a translucent header stays fixed with back / search / map and the chips. */
+.sw-sticky {
+      position: absolute; top: 0; left: 0; right: 0; z-index: 6;
+      display: flex; flex-direction: column;
+      background: rgba(255, 255, 255, 0.72);
+      -webkit-backdrop-filter: blur(16px) saturate(1.4); backdrop-filter: blur(16px) saturate(1.4);
+      opacity: 0; visibility: hidden; transform: translateY(-8px); pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s;
+    }
+.sw-sticky.is-visible {
+      opacity: 1; visibility: visible; transform: translateY(0); pointer-events: auto;
+      transition-delay: 0s;
+    }
+.sw-sticky__row { display: flex; align-items: center; gap: 12px; padding: 0 16px 8px; }
+.sw-sticky .icon-btn { background: rgba(255, 255, 255, 0.75); border: 1px solid rgba(205, 206, 208, 0.6); }
+.sw-sticky__search {
+      flex: 1; min-width: 0; display: flex; align-items: center; gap: 8px; height: 40px; padding: 0 12px;
+      background: rgba(255, 255, 255, 0.75); border: 1px solid rgba(205, 206, 208, 0.6); border-radius: 896px;
+      color: #838486; font-size: 16px; line-height: 20px; white-space: nowrap;
+    }
+.sw-sticky__search img { width: 24px; height: 24px; flex: none; }
+.sw-sticky .sw-chips { padding: 8px 16px; }
+.sw-sticky .sw-chip { background: rgba(255, 255, 255, 0.75); border: 1px solid rgba(205, 206, 208, 0.6); }
+@media (prefers-reduced-motion: reduce) {
+.sw-sticky { transition-duration: 0.01s; }
+}
+.store-tile { display: flex; flex-direction: column; gap: 8px; }
+.store-tile__image {
+      position: relative; height: 160px; border: 1px solid rgba(22, 23, 23, 0.05);
+      border-radius: 16px; overflow: hidden; background: #fff;
+    }
+.store-tile__image > img.store-tile__photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.store-tile__content {
+      position: absolute; inset: 0; padding: 8px; display: flex; flex-direction: column; justify-content: space-between;
+    }
+.store-tile__top { display: flex; }
+.store-tile__ai { position: absolute; right: 7px; bottom: 7px; width: 16px; height: 16px; }
+.store-tile__toggle {
+      position: absolute; top: 7px; right: 7px; width: 32px; height: 32px; border-radius: 896px;
+      background: #fff; border: 1px solid var(--border-color-primary); display: flex; align-items: center; justify-content: center;
+    }
+.store-tile__toggle img { width: 24px; height: 24px; }
+.store-tile--feed .store-tile__content { inset: -1px; }
+/* storeTileV3 (Figma 266:27283): 24px radius, no border, 16px side insets */
+.store-tile--v3 .store-tile__image { border: 0; border-radius: 24px; }
+.store-tile__photo--top { object-position: center top; }
+.store-tile--v3 .store-tile__toggle { top: 8px; right: 8px; }
+.store-tile--v3 .store-tile__ai { right: 16px; bottom: 32px; }
+.store-tile__tags { position: absolute; left: 16px; top: 8px; display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+.avatar-sq { position: absolute; overflow: hidden; background: #fff; border: 1px solid rgba(22, 23, 23, 0.05); }
+.avatar-sq img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.avatar-sq--s { width: 32px; height: 32px; border-radius: 8px; }
+.avatar-sq--m { width: 64px; height: 64px; border-radius: 12px; }
+.store-tile--v3 .avatar-sq--m { left: 8px; top: 88px; }
+.feat-banner .avatar-sq--s { right: 95px; top: 87px; }
+.store-tile__tag-br { position: absolute; right: 16px; bottom: 8px; }
+.store-tile__desc { display: flex; flex-direction: column; gap: 4px; }
+.store-tile__name-row { display: flex; align-items: flex-start; gap: 12px; }
+.store-tile__name { flex: 1; min-width: 0; display: flex; align-items: center; gap: 4px; }
+.store-tile__name p { margin: 0; font-size: 16px; line-height: 20px; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.store-tile__name .toprated { position: relative; width: 20px; height: 20px; flex: none; display: flex; align-items: center; justify-content: center; }
+.store-tile__fav { width: 20px; height: 20px; flex: none; display: flex; align-items: center; justify-content: center; }
+.store-tile__fav img { width: 24px; height: 24px; flex: none; }
+.store-tile__status { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; }
+.st-rating { display: flex; align-items: center; gap: 4px; overflow: hidden; }
+.st-rating b { font-size: 12px; line-height: 16px; font-weight: 500; width: 27px; }
+.st-rating span { font-size: 12px; line-height: 16px; color: var(--text-color-secondary); }
+.st-dot { font-size: 12px; line-height: 16px; }
+.st-time,
+.st-fee { display: flex; align-items: center; gap: 4px; }
+.st-time span:last-child,
+.st-fee span:last-child { font-size: 14px; line-height: 20px; }
+.st-fee { min-height: 20px; }
+.st-fee img { width: 16px; height: 16px; }
+.st-sponsored { display: flex; align-items: center; gap: 4px; font-size: 12px; line-height: 16px; }
+.st-social { display: flex; flex-wrap: wrap; align-items: center; gap: 0 4px; }
+.st-avatars { display: flex; align-items: center; width: 64px; height: 24px; }
+.st-avatar {
+      width: 24px; height: 24px; border-radius: 50%; margin-left: -4px; border: 1px solid #fff;
+      display: flex; align-items: center; justify-content: center; font-size: 12px; line-height: 16px; font-weight: 500;
+    }
+.st-avatar:first-child { margin-left: 0; }
+.st-social > span { font-size: 12px; line-height: 16px; }
+.feat-banner {
+      position: relative; display: flex; align-items: center; height: 128px; overflow: hidden;
+      background: #fff; border: 1px solid rgba(22, 23, 23, 0.05); border-radius: 12px;
+    }
+.feat-banner__content { flex: 1; min-width: 152px; height: 128px; padding: 8px; display: flex; flex-direction: column; justify-content: center; gap: 8px; }
+.feat-banner__title { margin: 0; font-size: 14px; line-height: 20px; font-weight: 700; }
+.feat-banner__desc { margin: 4px 0 0; font-size: 12px; line-height: 16px; }
+.feat-banner__info { display: flex; align-items: center; gap: 4px; font-size: 12px; line-height: 16px; }
+.feat-banner__info img { width: 16px; height: 16px; }
+.feat-banner__media {
+      width: 140px; height: 128px; flex: none; position: relative; overflow: hidden;
+      -webkit-mask-image: url(assets/icons/banner-mask.svg); mask-image: url(assets/icons/banner-mask.svg);
+      -webkit-mask-size: 400px 400px; mask-size: 400px 400px;
+      -webkit-mask-position: 0 -120px; mask-position: 0 -120px;
+      -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+    }
+.feat-banner__media img { width: 100%; height: 100%; object-fit: cover; }
+.feat-banner__go {
+      position: absolute; right: 7px; bottom: 7px; width: 24px; height: 24px; border-radius: 896px;
+      background: #fff; border: 1px solid var(--border-color-primary); display: flex; align-items: center; justify-content: center;
+    }
+.feat-banner__go img { width: 16px; height: 16px; }
+.feat-banner__tag { position: absolute; top: 7px; right: 7px; }
+.feat-banner__ai { position: absolute; right: 7px; top: 71px; width: 16px; height: 16px; }
+.feat-banner__info[data-modal-open] { cursor: pointer; align-self: flex-start; }
+/* Ad modalsheet (Figma 160:38331): overlay on the same screen.
+       Soft transition: scrim fades, sheet slides up with an ease-out curve. */
+.modal {
+      position: absolute; inset: 0; z-index: 50;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      visibility: hidden; pointer-events: none;
+      transition: visibility 0s linear 0.4s;
+    }
+.modal.is-open { visibility: visible; pointer-events: auto; transition-delay: 0s; }
+.modal__scrim {
+      position: absolute; inset: 0; background: rgba(22, 23, 23, 0.49);
+      opacity: 0; transition: opacity 0.35s ease;
+    }
+.modal.is-open .modal__scrim { opacity: 1; }
+.modal__sheet {
+      position: relative; display: flex; flex-direction: column;
+      filter: drop-shadow(0 0 2px rgba(22, 23, 23, 0.05)) drop-shadow(0 0 8px rgba(22, 23, 23, 0.21));
+      transform: translateY(100%);
+      transition: transform 0.4s cubic-bezier(0.32, 0.72, 0, 1);
+    }
+.modal.is-open .modal__sheet { transform: translateY(0); }
+.modal__top { display: block; width: 100%; height: 24px; }
+.modal__surface { background: #fff; display: flex; flex-direction: column; }
+.modal__header { display: flex; align-items: center; gap: 16px; padding: 12px 16px 16px; }
+.modal__title { flex: 1; min-width: 0; margin: 0; padding: 8px 0; color: var(--text-color-primary); }
+.modal__close { width: 40px; height: 40px; }
+.modal__close img { width: 24px; height: 24px; }
+.modal__body { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; padding: 0 16px 8px; }
+.modal__body p { margin: 0; }
+.modal__unsafe { height: 32px; background: #fff; }
+@media (prefers-reduced-motion: reduce) {
+.modal,
+.modal__scrim,
+.modal__sheet { transition-duration: 0.01s; }
+}
+/* Full-width banner (Figma 160:38411): 375px wide, so it runs 5px past the feed padding as in Figma. */
+.ai-banner { position: relative; width: calc(100% + 5px); height: 128px; border-radius: 12px; background: #fff; }
+.ai-banner__media { position: absolute; inset: 0; overflow: hidden; border-radius: 12px; }
+.ai-banner__media img { position: absolute; max-width: none; width: 139.73%; height: 202.64%; left: 0.27%; top: -53.76%; }
+.ai-banner .feat-banner__go { right: 8px; bottom: 8px; }
+.ai-banner__ai { position: absolute; right: 8px; top: 72px; width: 16px; height: 16px; }
+/* Liquid glass tab bar (from the real app): a floating translucent pill over
+       the feed. Blur + saturation let the content show through; the inner
+       highlights and soft shadow give the glass edge. */
+.tabbar {
+      position: absolute; left: 16px; right: 16px; bottom: 16px; z-index: 7;
+      display: flex; padding: 4px; border-radius: 896px;
+      background: rgba(255, 255, 255, 0.38);
+      -webkit-backdrop-filter: blur(20px) saturate(1.8); backdrop-filter: blur(20px) saturate(1.8);
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.8),
+        inset 0 -1px 1px rgba(255, 255, 255, 0.35),
+        0 8px 24px rgba(22, 23, 23, 0.18),
+        0 0 0 1px rgba(22, 23, 23, 0.04);
+    }
+.tabbar__tab { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 8px 4px; font-size: 12px; line-height: 16px; font-weight: 500; color: #161617; }
+.tabbar__tab.is-active { color: var(--text-color-primary); font-weight: 700; }
+.tabbar__icon { position: relative; width: 24px; height: 24px; }
+.tabbar__icon img { position: absolute; left: 0; top: 0; width: 24px; height: 24px; }
+.tabbar__icon img.tabbar__blob { left: -4px; top: -4px; width: 32px; height: 32px; }
+.screen { --sv-nav-h: 118px; }
+.sv-section-header__spacer { width: 32px; flex: none; }

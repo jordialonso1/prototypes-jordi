@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="core" data-ui-mode="light">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="data:," />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food wall</title>
+  <link rel="stylesheet" href="../_base/base.css" />
+  <link rel="stylesheet" href="./screen.css" />
+</head>
+<body>
+  <div class="prototype-viewport">
+
+<section class="screen is-active" id="screen-store-wall" data-screen="store-wall" aria-label="Store wall">
+
+      <!-- Collapsed header: fades in after scroll (search field + chips stay fixed) -->
+      <div class="sw-sticky" id="sw-sticky" aria-hidden="true">
+        <div class="sb">
+          <div class="sb__time">9:41</div>
+          <div class="sb__spacer"></div>
+          <div class="sb__levels">
+            <img src="assets/icons/sb-cell-dark.svg" alt="" />
+            <img src="assets/icons/sb-wifi-dark.svg" alt="" />
+            <img src="assets/icons/sb-battery-dark.svg" alt="" />
+          </div>
+        </div>
+        <div class="sw-sticky__row">
+          <button class="icon-btn icon-btn--floating inert" type="button" tabindex="-1" aria-label="Back"><img src="assets/icons/nav-back.svg" alt="" /></button>
+          <div class="sw-sticky__search inert"><img src="assets/icons/search-24.svg" alt="" /><span>Search in Food</span></div>
+          <button class="icon-btn icon-btn--floating inert" type="button" tabindex="-1" aria-label="Map"><img src="assets/icons/map-24.svg" alt="" /></button>
+        </div>
+        <div class="sw-chips">
+          <div class="sw-chip"><span>Promotions</span></div>
+          <div class="sw-chip"><span>Food type</span><img src="assets/icons/selector-chevron.svg" alt="" /></div>
+          <div class="sw-chip"><img src="assets/icons/person-walking.svg" alt="" /><span>Pickup</span></div>
+          <div class="sw-chip"><span>InStore prices</span></div>
+        </div>
+      </div>
+      <div class="screen__scroll" id="sw-scroll">
+
+        <header class="sw-header">
+          <div class="sb">
+            <div class="sb__time">9:41</div>
+            <div class="sb__spacer"></div>
+            <div class="sb__levels">
+              <img src="assets/icons/sb-cell-dark.svg" alt="" />
+              <img src="assets/icons/sb-wifi-dark.svg" alt="" />
+              <img src="assets/icons/sb-battery-dark.svg" alt="" />
+            </div>
+          </div>
+
+          <div class="sw-nav">
+            <div class="sw-nav__row">
+              <button class="icon-btn icon-btn--neutral inert" type="button" aria-label="Back"><img src="assets/icons/nav-back-gray.svg" alt="" /></button>
+              <div class="sw-nav__body">
+                <button class="sw-address inert" type="button"><span>Address</span><img src="assets/icons/chevron-down-24.svg" alt="" /></button>
+              </div>
+              <button class="icon-btn icon-btn--neutral inert" type="button" aria-label="Map"><img src="assets/icons/map-24.svg" alt="" /></button>
+            </div>
+            <h1 class="sw-nav__title pintxo-typography-title1">Food</h1>
+          </div>
+
+          <div class="sw-search" id="sw-search">
+            <div class="sw-search__input inert"><img src="assets/icons/search-24.svg" alt="" /><span>Search</span></div>
+          </div>
+
+          <div class="sw-cats" aria-hidden="true">
+            <div class="sw-cat"><div class="sw-cat__circle"><img src="assets/img/cat-promotions.svg" alt="" /></div><span class="sw-cat__label">Promotions</span></div>
+            <div class="sw-cat"><div class="sw-cat__circle"><img src="assets/img/cat-vegetarian.svg" alt="" /></div><span class="sw-cat__label">Vegetarian</span></div>
+            <div class="sw-cat"><div class="sw-cat__circle"><img src="assets/img/cat-mediterranean.svg" alt="" /></div><span class="sw-cat__label">Mediterranean</span></div>
+            <div class="sw-cat"><div class="sw-cat__circle"><img src="assets/img/cat-mexican.svg" alt="" /></div><span class="sw-cat__label">Mexican</span></div>
+            <div class="sw-cat"><div class="sw-cat__circle"><img src="assets/img/cat-asian.svg" alt="" /></div><span class="sw-cat__label">Asian</span></div>
+          </div>
+
+          <div class="sw-chips">
+            <div class="sw-chip"><span>Promotions</span></div>
+            <div class="sw-chip"><span>Food type</span><img src="assets/icons/selector-chevron.svg" alt="" /></div>
+            <div class="sw-chip"><img src="assets/icons/person-walking.svg" alt="" /><span>Pickup</span></div>
+            <div class="sw-chip"><span>InStore prices</span></div>
+          </div>
+        </header>
+
+        <main class="sw-feed">
+
+          <!-- Honest Greens: the only tile that navigates (to Store view) -->
+          <article class="store-tile store-tile--v3" role="link" tabindex="0" aria-label="Honest Greens">
+            <div class="store-tile__image">
+              <img class="store-tile__photo store-tile__photo--top" src="assets/img/honest-greens.png" alt="" />
+              <div class="store-tile__tags">
+                <span class="tag-double"><span class="tag tag--promo">-20%</span><span class="tag tag--loyalty"><b>PRIME</b> -30%</span></span>
+                <span class="tag tag--neutral"><img src="assets/icons/house-16.svg" alt="" />Same prices as in store</span>
+              </div>
+              <span class="tag tag--contrast store-tile__tag-br">Only on Glovo</span>
+              <div class="store-tile__toggle"><img src="assets/icons/heart.svg" alt="" /></div>
+            </div>
+            <div class="store-tile__desc">
+              <div class="store-tile__name-row">
+                <div class="store-tile__name"><p>Honest Greens</p></div>
+              </div>
+              <div class="store-tile__status">
+                <div class="st-rating">
+                  <span class="blob16"><img src="assets/icons/blob-green.svg" alt="" /><img src="assets/icons/thumb-up.svg" alt="" /></span>
+                  <b>98%</b><span>(413)</span>
+                </div>
+                <div class="st-fee"><span class="st-dot">•</span><img src="assets/icons/fee-rider.svg" alt="" /><span>2,49€</span></div>
+                <div class="st-time"><span class="st-dot">•</span><span>20-30min</span></div>
+                <div class="st-sponsored"><span class="st-dot">•</span><span>Sponsored</span></div>
+              </div>
+            </div>
+          </article>
+
+          <div class="feat-banner inert">
+            <div class="feat-banner__content">
+              <div>
+                <p class="feat-banner__title">Enjoy the new fall Menu at Domino’s Pizza!</p>
+                <p class="feat-banner__desc">Featuring seasonal flavors!</p>
+              </div>
+              <div class="feat-banner__info" data-modal-open="ad-modal" role="button" tabindex="0"><span>Info</span><img src="assets/icons/info-circle-16.svg" alt="" /></div>
+            </div>
+            <div class="feat-banner__media"><img src="assets/img/dominos.png" alt="" /></div>
+            <span class="avatar-sq avatar-sq--s"><img src="assets/img/logo-dominos.png" alt="" /></span>
+            <span class="tag tag--promo feat-banner__tag">-20%</span>
+            <div class="feat-banner__go"><img src="assets/icons/arrow-forward-16.svg" alt="" /></div>
+            <img data-ai-label="Ads featured banner icon" class="feat-banner__ai" src="assets/icons/ai-sparkle-solid.svg" alt="" />
+          </div>
+
+          <article class="store-tile store-tile--v3" role="link" tabindex="0" aria-label="El Súper de Glovo">
+            <div class="store-tile__image">
+              <img class="store-tile__photo" src="assets/img/el-super-de-glovo.png" alt="" />
+              <span class="avatar-sq avatar-sq--m"><img src="assets/img/logo-el-super-de-glovo.jpg" alt="" /></span>
+              <div class="store-tile__tags">
+                <span class="tag-double"><span class="tag tag--promo">-20%</span><span class="tag tag--loyalty"><b>PRIME</b> -30%</span></span>
+                <span class="tag tag--neutral"><img src="assets/icons/house-16.svg" alt="" />Same prices as in store</span>
+              </div>
+              <span class="tag tag--positive store-tile__tag-br"><img src="assets/icons/carrot-16.svg" alt="" />Freshness guarantee</span>
+              <div class="store-tile__toggle"><img src="assets/icons/heart.svg" alt="" /></div>
+            </div>
+            <div class="store-tile__desc">
+              <div class="store-tile__name-row">
+                <div class="store-tile__name"><p>El Súper de Glovo</p></div>
+              </div>
+              <div class="store-tile__status">
+                <div class="st-rating">
+                  <span class="blob16"><img src="assets/icons/blob-green.svg" alt="" /><img src="assets/icons/thumb-up.svg" alt="" /></span>
+                  <b>98%</b><span>(413)</span>
+                </div>
+                <div class="st-fee"><span class="st-dot">•</span><img src="assets/icons/fee-rider.svg" alt="" /><span>2,49€</span></div>
+                <div class="st-time"><span class="st-dot">•</span><span>20-30min</span></div>
+                <div class="st-sponsored"><span class="st-dot">•</span><span>Sponsored</span></div>
+              </div>
+            </div>
+          </article>
+
+          <div class="ai-banner inert">
+            <div class="ai-banner__media"><img src="assets/img/pepsi-banner.png" alt="" /></div>
+            <div class="feat-banner__go"><img src="assets/icons/arrow-forward-16.svg" alt="" /></div>
+            <img data-ai-label="Ads full width featured banner icon" class="ai-banner__ai" src="assets/icons/ai-sparkle-solid.svg" alt="" />
+          </div>
+
+          <article class="store-tile store-tile--feed inert">
+            <div class="store-tile__image">
+              <img class="store-tile__photo" src="assets/img/burger-king.jpg" alt="" />
+              <div class="store-tile__content">
+                <div class="store-tile__top"><span class="tag tag--promo">2x1 in some products</span></div>
+              </div>
+              <div class="store-tile__toggle"><img src="assets/icons/heart.svg" alt="" /></div>
+            </div>
+            <div class="store-tile__desc">
+              <div class="store-tile__name-row">
+                <div class="store-tile__name"><p>Burger King</p></div>
+              </div>
+              <div class="store-tile__status">
+                <div class="st-rating">
+                  <span class="blob16"><img src="assets/icons/blob-green.svg" alt="" /><img src="assets/icons/thumb-up.svg" alt="" /></span>
+                  <b>98%</b><span>(413)</span>
+                </div>
+                <div class="st-time"><span class="st-dot">•</span><span>20-30min</span></div>
+                <div class="st-fee"><span class="st-dot">•</span><img src="assets/icons/fee-rider.svg" alt="" /><span>2,49€</span></div>
+              </div>
+            </div>
+          </article>
+
+        </main>
+      </div>
+
+      <nav class="tabbar" aria-label="Main">
+        <div class="tabbar__tab is-active inert">
+          <span class="tabbar__icon"><img class="tabbar__blob" src="assets/icons/blob-tab.svg" alt="" /><img src="assets/icons/tab-house.svg" alt="" /></span>Home
+        </div>
+        <div class="tabbar__tab inert"><span class="tabbar__icon"><img src="assets/icons/tab-search.svg" alt="" /></span>Discover</div>
+        <div class="tabbar__tab inert"><span class="tabbar__icon"><img src="assets/icons/tab-bags.svg" alt="" /></span>Orders</div>
+        <div class="tabbar__tab inert"><span class="tabbar__icon"><img src="assets/icons/tab-person.svg" alt="" /></span>Profile</div>
+      </nav>
+
+      <!-- Ad modalsheet (Figma 160:38331): overlay on the Store wall -->
+      <div class="modal" id="ad-modal" role="dialog" aria-modal="true" aria-labelledby="ad-modal-title" aria-hidden="true">
+        <div class="modal__scrim" data-modal-close></div>
+        <div class="modal__sheet">
+          <img class="modal__top" src="assets/icons/modal-top.svg" alt="" />
+          <div class="modal__surface">
+            <div class="modal__header">
+              <h2 class="modal__title pintxo-typography-title2" id="ad-modal-title">Paid Ad</h2>
+              <button class="icon-btn icon-btn--neutral modal__close" type="button" aria-label="Close" data-modal-close><img src="assets/icons/cross-24.svg" alt="" /></button>
+            </div>
+            <div class="modal__body">
+              <p class="pintxo-typography-body1">This ad has not been personalized nor is targeted on the basis of your account information or any prior browsing or purchasing activity. This ad is paid for by Domino’s Pizza.</p>
+              <span data-ai-label="Ads featured banner label" data-ai-after="Ads featured banner icon" class="tag tag--neutral"><img src="assets/icons/ai-sparkle-dark.svg" alt="" />AI generated</span>
+            </div>
+          </div>
+          <div class="modal__unsafe"></div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <script src="../_base/base.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="core" data-ui-mode="light">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="data:," />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OTP</title>
+  <link rel="stylesheet" href="../_base/base.css" />
+  <link rel="stylesheet" href="./screen.css" />
+</head>
+<body>
+  <div class="prototype-viewport">
+
+<section class="screen is-active" id="screen-otp" data-screen="otp" data-otp-state="expanded" aria-label="OTP">
+      <div class="otp__map">
+        <img class="otp__map-base" src="assets/img/otp-map.png" alt="" />
+        <img class="otp__map-overlay" src="assets/img/otp-map-overlay.png" alt="" />
+        <div class="otp__pin otp__pin--yellow"><img src="assets/icons/otp-pin-yellow.svg" alt="" /></div>
+        <div class="otp__pin otp__pin--green"><img src="assets/icons/otp-pin-green.svg" alt="" /></div>
+      </div>
+
+      <header class="otp__header">
+        <div class="sb">
+          <div class="sb__time">9:41</div>
+          <div class="sb__spacer"></div>
+          <div class="sb__levels">
+            <img src="assets/icons/sb-cell-dark.svg" alt="" />
+            <img src="assets/icons/sb-wifi-dark.svg" alt="" />
+            <img src="assets/icons/sb-battery-dark.svg" alt="" />
+          </div>
+        </div>
+        <div class="otp__nav">
+          <button class="icon-btn icon-btn--neutral" type="button" aria-label="Close"><img src="assets/icons/chevron-down-24.svg" alt="" /></button>
+          <div class="otp__nav-spacer"></div>
+          <button class="icon-btn icon-btn--neutral inert" type="button" tabindex="-1" aria-label="Info"><img src="assets/icons/nav-info-24.svg" alt="" /></button>
+          <button class="otp__help inert" type="button" tabindex="-1"><span>Help</span></button>
+        </div>
+      </header>
+
+      <div class="otp__card">
+        <div class="otp__eta">10:30 - 10:40</div>
+        <div class="otp__bar"><img src="assets/icons/otp-track.svg" alt="" /></div>
+        <div class="otp__status">
+          <span class="otp__avatar"><img src="assets/img/logo-healthy-poke.png" alt="" /></span>
+          <p>Healthy Poke has received your order</p>
+          <span class="otp__divider"><img src="assets/icons/otp-divider.svg" alt="" /></span>
+        </div>
+      </div>
+
+      <!-- Premium banner (expanded). The close button turns it into the reduced banner below. -->
+      <div class="otp-banner otp-banner--expanded" data-otp-banner="expanded">
+        <div class="otp-banner__img">
+          <div class="otp-banner__pic"><img src="assets/img/pepsi-banner.png" alt="" /></div>
+          <button class="icon-btn icon-btn--floating otp-banner__close" type="button" data-otp-close aria-label="Close"><img src="assets/icons/cross-24.svg" alt="" /></button>
+          <img data-ai-label="OTP premium banner icon" class="otp-banner__ai" src="assets/icons/ai-sparkle-solid.svg" alt="" />
+        </div>
+        <div class="otp-banner__head">
+          <p class="otp-banner__title">Advertising from Pepsi</p>
+          <div class="otp-banner__row">
+            <div class="otp-banner__info">
+              <span class="tag tag--ad">Ad</span>
+              <span class="otp-banner__infobtn" data-modal-open="otp-ad-modal" role="button" tabindex="0" aria-label="Ad info"><img src="assets/icons/info-circle-16.svg" alt="" /></span>
+            </div>
+            <span class="otp-banner__link">Visit</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured banner (reduced) -->
+      <div class="otp-banner otp-banner--reduced" data-otp-banner="reduced">
+        <div class="otp-banner__content">
+          <p class="otp-banner__title">Advertising from Pepsi</p>
+          <div class="feat-banner__info" data-modal-open="otp-ad-modal" role="button" tabindex="0"><span>Info</span><img src="assets/icons/info-circle-16.svg" alt="" /></div>
+        </div>
+        <div class="feat-banner__media"><img src="assets/img/pepsi-banner.png" alt="" /></div>
+        <div class="feat-banner__go"><img src="assets/icons/arrow-forward-16.svg" alt="" /></div>
+        <img data-ai-label="OTP featured banner icon" class="otp-banner__ai-r" src="assets/icons/ai-sparkle-solid.svg" alt="" />
+      </div>
+
+      <!-- Ad modalsheet: same sheet as the Store wall one, opened by both banner info buttons -->
+      <div class="modal" id="otp-ad-modal" role="dialog" aria-modal="true" aria-labelledby="otp-ad-modal-title" aria-hidden="true">
+        <div class="modal__scrim" data-modal-close></div>
+        <div class="modal__sheet">
+          <img class="modal__top" src="assets/icons/modal-top.svg" alt="" />
+          <div class="modal__surface">
+            <div class="modal__header">
+              <h2 class="modal__title pintxo-typography-title2" id="otp-ad-modal-title">Paid Ad</h2>
+              <button class="icon-btn icon-btn--neutral modal__close" type="button" aria-label="Close" data-modal-close><img src="assets/icons/cross-24.svg" alt="" /></button>
+            </div>
+            <div class="modal__body">
+              <p class="pintxo-typography-body1">This ad has not been personalized nor is targeted on the basis of your account information or any prior browsing or purchasing activity. This ad is paid for by Pepsi.</p>
+              <span data-ai-label="OTP ads modal label" data-ai-after="OTP featured banner icon" class="tag tag--neutral"><img src="assets/icons/ai-sparkle-dark.svg" alt="" />AI generated</span>
+            </div>
+          </div>
+          <div class="modal__unsafe"></div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <script src="../_base/base.js"></script>
+</body>
+</html>

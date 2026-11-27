@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { SCREENS, type LibraryScreen } from './screens'
 
 const DEVICE_WIDTH = 390
@@ -7,32 +7,14 @@ const THUMB_SCALE = 0.5
 const FULL_MAX_HEIGHT = 0.86
 
 function Preview({ screen, scale }: { screen: LibraryScreen; scale: number }) {
-  const frameRef = useRef<HTMLIFrameElement>(null)
-  const post = useCallback(() => {
-    if (!screen.screen) return
-    frameRef.current?.contentWindow?.postMessage(
-      { type: 'goto-screen', screen: screen.screen },
-      window.location.origin,
-    )
-  }, [screen.screen])
-
-  if (!screen.src) {
-    return (
-      <div className="preview preview--pending" style={{ width: DEVICE_WIDTH * scale, height: DEVICE_HEIGHT * scale }}>
-        <span>Not on main yet</span>
-      </div>
-    )
-  }
   return (
     <div className="preview" style={{ width: DEVICE_WIDTH * scale, height: DEVICE_HEIGHT * scale }}>
       <iframe
-        ref={frameRef}
         className="preview__frame"
         title={screen.title}
         src={screen.src}
         loading="lazy"
         style={{ width: DEVICE_WIDTH, height: DEVICE_HEIGHT, transform: `scale(${scale})` }}
-        onLoad={post}
       />
     </div>
   )
@@ -73,7 +55,6 @@ export default function App() {
             <button
               type="button"
               className="card__thumb"
-              disabled={!s.src}
               onClick={() => setOpen(s)}
               aria-label={`Open ${s.title}`}
             >

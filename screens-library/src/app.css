@@ -4,12 +4,10 @@
 .lib__grid { margin: 0; padding: 0; list-style: none; display: grid; gap: 32px 24px; grid-template-columns: repeat(auto-fill, 195px); }
 .card { width: 195px; }
 .card__thumb { display: block; padding: 0; border: 1px solid #cdced0; border-radius: 16px; background: #fff; overflow: hidden; cursor: pointer; }
-.card__thumb:hover:not(:disabled) { border-color: #161617; }
-.card__thumb:disabled { cursor: default; }
+.card__thumb:hover { border-color: #161617; }
 .card__title { margin: 12px 0 0; font-size: 16px; line-height: 20px; }
 .preview { position: relative; overflow: hidden; background: #fff; }
 .preview__frame { position: absolute; top: 0; left: 0; border: 0; transform-origin: top left; }
-.preview--pending { display: grid; place-items: center; background: repeating-linear-gradient(45deg, #f2f2f3, #f2f2f3 8px, #eceef0 8px, #eceef0 16px); color: #626364; font-size: 14px; }
 .card__thumb .preview__frame { pointer-events: none; }
 .overlay { position: fixed; inset: 0; z-index: 10; display: grid; place-items: center; background: rgba(22, 23, 23, 0.6); }
 .overlay__body { display: grid; gap: 12px; }

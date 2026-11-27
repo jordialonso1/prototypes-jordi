@@ -1,0 +1,190 @@
+/* OTP: screen styles, pruned from the prototype CSS to what this screen uses. */
+.pintxo-typography-title2 { font-size: 24px; line-height: 28px; font-weight: 700; }
+.pintxo-typography-callout1 { font-size: 16px; line-height: 20px; font-weight: 700; }
+.pintxo-typography-callout2 { font-size: 14px; line-height: 20px; font-weight: 700; }
+.pintxo-typography-body1 { font-size: 16px; line-height: 20px; font-weight: 400; }
+.pintxo-typography-body1-emphasis { font-size: 16px; line-height: 20px; font-weight: 500; }
+.pintxo-typography-body2-emphasis { font-size: 14px; line-height: 20px; font-weight: 500; }
+.pintxo-typography-caption { font-size: 12px; line-height: 16px; font-weight: 400; }
+.pintxo-typography-caption-emphasis { font-size: 12px; line-height: 16px; font-weight: 500; }
+/* 2. Viewport: fixed height so each screen scrolls internally and the
+          chrome (header / tab bar / footer) stays put. */
+.prototype-viewport { min-height: 0; height: 100svh; }
+/* 3. Screens. Only one is visible at a time. Each screen is a column:
+          [fixed top chrome] [scrolling content] [fixed bottom chrome]. */
+.screen {
+      position: absolute;
+      inset: 0;
+      display: none;
+      flex-direction: column;
+      background: var(--background-color-primary);
+    }
+.screen.is-active { display: flex; }
+/* 4. Shared helpers */
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; margin: 0; cursor: pointer; }
+img { display: block; }
+[data-nav],
+[data-back] { cursor: pointer; }
+.inert { cursor: default; }
+.tag {
+      display: inline-flex; align-items: center; gap: 4px;
+      min-height: 20px; padding: 2px 4px; border-radius: 4px;
+      font-size: 12px; line-height: 16px; font-weight: 500; white-space: nowrap;
+    }
+.tag--neutral { background: var(--background-color-secondary); color: var(--text-color-primary); }
+.tag--sponsored { background: rgba(22, 23, 23, 0.6); color: #fff; }
+.tag img { width: 16px; height: 16px; }
+.icon-btn {
+      display: flex; align-items: center; justify-content: center; flex: none;
+      border-radius: 896px; width: 40px; height: 40px;
+    }
+.icon-btn--neutral { background: var(--background-color-secondary); }
+.icon-btn--floating { background: #fff; border: 1px solid var(--border-color-primary); }
+.icon-btn img { width: 24px; height: 24px; }
+.sb {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 54px; padding-top: 21px; flex: none;
+    }
+.sb__time {
+      flex: 1; text-align: center; line-height: 22px; font-size: 17px; font-weight: 600;
+      font-family: -apple-system, 'SF Pro', 'SF Pro Text', system-ui, sans-serif;
+    }
+.sb__spacer { width: 164px; height: 10px; flex: none; }
+.sb__levels { flex: 1; display: flex; align-items: center; justify-content: center; gap: 7px; padding: 0 16px 0 6px; }
+.sb__levels img:nth-child(1) { width: 19.2px; height: 12.226px; }
+.sb__levels img:nth-child(2) { width: 17.142px; height: 12.328px; }
+.sb__levels img:nth-child(3) { width: 27.328px; height: 13px; }
+.store-tile__ai { position: absolute; right: 7px; bottom: 7px; width: 16px; height: 16px; }
+.store-tile__fav { width: 20px; height: 20px; flex: none; display: flex; align-items: center; justify-content: center; }
+.store-tile__fav img { width: 24px; height: 24px; flex: none; }
+.st-social { display: flex; flex-wrap: wrap; align-items: center; gap: 0 4px; }
+.st-avatars { display: flex; align-items: center; width: 64px; height: 24px; }
+.st-avatar {
+      width: 24px; height: 24px; border-radius: 50%; margin-left: -4px; border: 1px solid #fff;
+      display: flex; align-items: center; justify-content: center; font-size: 12px; line-height: 16px; font-weight: 500;
+    }
+.st-avatar:first-child { margin-left: 0; }
+.st-social > span { font-size: 12px; line-height: 16px; }
+.feat-banner__info { display: flex; align-items: center; gap: 4px; font-size: 12px; line-height: 16px; }
+.feat-banner__info img { width: 16px; height: 16px; }
+.feat-banner__media {
+      width: 140px; height: 128px; flex: none; position: relative; overflow: hidden;
+      -webkit-mask-image: url(assets/icons/banner-mask.svg); mask-image: url(assets/icons/banner-mask.svg);
+      -webkit-mask-size: 400px 400px; mask-size: 400px 400px;
+      -webkit-mask-position: 0 -120px; mask-position: 0 -120px;
+      -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+    }
+.feat-banner__media img { width: 100%; height: 100%; object-fit: cover; }
+.feat-banner__go {
+      position: absolute; right: 7px; bottom: 7px; width: 24px; height: 24px; border-radius: 896px;
+      background: #fff; border: 1px solid var(--border-color-primary); display: flex; align-items: center; justify-content: center;
+    }
+.feat-banner__go img { width: 16px; height: 16px; }
+.feat-banner__info[data-modal-open] { cursor: pointer; align-self: flex-start; }
+/* Ad modalsheet (Figma 160:38331): overlay on the same screen.
+       Soft transition: scrim fades, sheet slides up with an ease-out curve. */
+.modal {
+      position: absolute; inset: 0; z-index: 50;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      visibility: hidden; pointer-events: none;
+      transition: visibility 0s linear 0.4s;
+    }
+.modal.is-open { visibility: visible; pointer-events: auto; transition-delay: 0s; }
+.modal__scrim {
+      position: absolute; inset: 0; background: rgba(22, 23, 23, 0.49);
+      opacity: 0; transition: opacity 0.35s ease;
+    }
+.modal.is-open .modal__scrim { opacity: 1; }
+.modal__sheet {
+      position: relative; display: flex; flex-direction: column;
+      filter: drop-shadow(0 0 2px rgba(22, 23, 23, 0.05)) drop-shadow(0 0 8px rgba(22, 23, 23, 0.21));
+      transform: translateY(100%);
+      transition: transform 0.4s cubic-bezier(0.32, 0.72, 0, 1);
+    }
+.modal.is-open .modal__sheet { transform: translateY(0); }
+.modal__top { display: block; width: 100%; height: 24px; }
+.modal__surface { background: #fff; display: flex; flex-direction: column; }
+.modal__header { display: flex; align-items: center; gap: 16px; padding: 12px 16px 16px; }
+.modal__title { flex: 1; min-width: 0; margin: 0; padding: 8px 0; color: var(--text-color-primary); }
+.modal__close { width: 40px; height: 40px; }
+.modal__close img { width: 24px; height: 24px; }
+.modal__body { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; padding: 0 16px 8px; }
+.modal__body p { margin: 0; }
+.modal__unsafe { height: 32px; background: #fff; }
+@media (prefers-reduced-motion: reduce) {
+.modal,
+.modal__scrim,
+.modal__sheet { transition-duration: 0.01s; }
+}
+.screen { --sv-nav-h: 118px; }
+.sv-section-header__spacer { width: 32px; flex: none; }
+/* OTP screen (Figma 266:35363 expanded, 266:35642 reduced): one screen, two banner states.
+       Closing the premium banner (data-otp-close) switches data-otp-state to "reduced". */
+.otp__map { position: absolute; inset: 0; overflow: hidden; background: #e8e6e0; }
+.otp__map img { position: absolute; max-width: none; }
+.otp__map-base { inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.9; }
+.otp__map-overlay { left: 0; top: -12px; width: 100%; height: calc(100% + 23px); object-fit: cover; }
+.otp__pin { position: absolute; }
+.otp__pin img { position: static; width: 100%; height: 100%; }
+.otp__pin--yellow { inset: 48.65% 11.73% 43.47% 66.93%; }
+.otp__pin--green { inset: 59.73% 64.8% 32.39% 13.87%; }
+.otp__header { position: absolute; top: 0; left: 0; right: 0; z-index: 3; background: #fff; padding-bottom: 8px; }
+.otp__nav { display: flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 16px; }
+.otp__nav-spacer { flex: 1; }
+.otp__help {
+      min-height: 40px; min-width: 48px; padding: 8px; border-radius: 896px; background: var(--background-color-secondary);
+      display: flex; align-items: center; justify-content: center; font-size: 14px; line-height: 20px; font-weight: 700;
+    }
+.otp__help span { padding: 0 4px; }
+.otp__card {
+      position: absolute; top: 102px; left: 0; right: 0; z-index: 2; background: #fff;
+      border-radius: 0 0 16px 16px; padding: 8px 12px 0; display: flex; flex-direction: column; gap: 16px;
+      box-shadow: 0 0 1px rgba(22, 23, 23, 0.05), 0 0 4px rgba(22, 23, 23, 0.21);
+    }
+.otp__eta { height: 60px; display: flex; align-items: center; font-size: 28px; line-height: 32px; font-weight: 700; }
+.otp__bar { overflow: hidden; }
+.otp__bar img { width: 375px; max-width: none; height: 8px; }
+.otp__status { position: relative; min-height: 56px; padding: 12px 0; display: flex; align-items: center; gap: 8px; }
+.otp__avatar { width: 32px; height: 32px; flex: none; border-radius: 8px; overflow: hidden; }
+.otp__avatar img { width: 100%; height: 100%; object-fit: cover; }
+.otp__status p { margin: 0; padding: 4px 0; font-size: 14px; line-height: 20px; }
+.otp__divider { position: absolute; left: 0; right: 0; bottom: 0; height: 1px; }
+.otp__divider img { width: 100%; height: 1px; }
+.otp-banner {
+      position: absolute; left: 16px; right: 16px; bottom: 48px; z-index: 2;
+      opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(16px);
+      transition: opacity 0.3s ease, transform 0.4s cubic-bezier(0.32, 0.72, 0, 1), visibility 0s linear 0.4s;
+    }
+#screen-otp[data-otp-state="expanded"] .otp-banner--expanded,
+#screen-otp[data-otp-state="reduced"] .otp-banner--reduced {
+      opacity: 1; visibility: visible; pointer-events: auto; transform: none; transition-delay: 0s;
+    }
+#screen-otp[data-otp-state="expanded"] .otp-banner--reduced { transform: translateY(48px); }
+#screen-otp[data-otp-state="reduced"] .otp-banner--expanded { transform: translateY(-24px); }
+.otp-banner--expanded { border-radius: 16px; background: #fff; box-shadow: 0 0 1px rgba(22, 23, 23, 0.05), 0 0 4px rgba(22, 23, 23, 0.21); }
+.otp-banner__img { position: relative; aspect-ratio: 343 / 197; }
+.otp-banner__pic { position: absolute; inset: 0; overflow: hidden; border-radius: 16px 16px 0 0; }
+.otp-banner__pic img { position: absolute; max-width: none; width: 143.12%; height: 123.35%; left: -0.12%; top: 0; }
+.otp-banner__close { position: absolute; top: 16px; right: 16px; }
+.otp-banner__ai { position: absolute; right: 8px; bottom: 8px; width: 16px; height: 16px; }
+.otp-banner__head { padding: 12px 16px; display: flex; flex-direction: column; gap: 4px; background: #fff; border-radius: 0 0 16px 16px; }
+.otp-banner__title { margin: 0; font-size: 14px; line-height: 20px; font-weight: 700; }
+.otp-banner__row { display: flex; align-items: center; gap: 4px; }
+.otp-banner__info { flex: 1; display: flex; align-items: center; gap: 4px; }
+.otp-banner__infobtn { cursor: pointer; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; }
+.otp-banner__infobtn img { width: 16px; height: 16px; }
+.otp-banner__link { font-size: 16px; line-height: 20px; font-weight: 700; color: #035949; text-decoration: underline; }
+.tag--ad { background: rgba(22, 23, 23, 0.05); color: var(--text-color-secondary); font-weight: 500; }
+.otp-banner--reduced {
+      display: flex; align-items: center; height: 128px; background: #fff; border-radius: 12px;
+      box-shadow: 0 0 2px rgba(22, 23, 23, 0.05), 0 0 8px rgba(22, 23, 23, 0.21);
+    }
+.otp-banner__content { width: 152px; flex: none; height: 128px; padding: 8px; display: flex; flex-direction: column; justify-content: center; gap: 8px; }
+.otp-banner--reduced .feat-banner__media { width: auto; flex: 1; border-radius: 0 12px 12px 0; }
+/* Figma sizes the image against a 223px media box (the banner clips its right edge), so use px, not %. */
+.otp-banner--reduced .feat-banner__media img { position: absolute; max-width: none; width: 276.3px; height: 136.8px; left: -0.2px; top: -4.4px; object-fit: fill; }
+.otp-banner--reduced .feat-banner__go { right: 8px; bottom: 8px; }
+.otp-banner__ai-r { position: absolute; right: 8px; bottom: 36px; width: 16px; height: 16px; }
+@media (prefers-reduced-motion: reduce) {
+.otp-banner { transition-duration: 0.01s; }
+}
