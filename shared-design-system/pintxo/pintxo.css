@@ -71,8 +71,8 @@
 
 /* ---- Icon button -------------------------------------------------------
    <button class="pintxo-icon-button" aria-label="Back"><img src="x.svg" alt="" /></button>
-   Default 40px with a 24px icon. --s is 32px with a 16px icon.
-   Style: neutral (default) or --floating (white with a border). */
+   Default 40px with a 24px icon. --s is 32px with a 16px icon, --xs is 24px with a 16px icon.
+   Style: neutral (default), --transparent (no background) or --floating (white with a border). */
 .pintxo-icon-button {
   display: grid;
   place-items: center;
@@ -90,6 +90,9 @@
 .pintxo-icon-button img { width: 24px; height: 24px; }
 .pintxo-icon-button--s { width: 32px; height: 32px; }
 .pintxo-icon-button--s img { width: 16px; height: 16px; }
+.pintxo-icon-button--xs { width: 24px; height: 24px; }
+.pintxo-icon-button--xs img { width: 16px; height: 16px; }
+.pintxo-icon-button--transparent { background: transparent; }
 .pintxo-icon-button--floating {
   background: var(--background-color-primary);
   border: 1px solid var(--border-color-primary);
@@ -363,6 +366,9 @@
 }
 .pintxo-section-header__text { flex: 1; min-width: 0; display: flex; flex-direction: column; }
 .pintxo-section-header__title {
+  display: flex;
+  align-items: center;
+  gap: 4px;
   margin: 0;
   padding: 4px 0;
   font-size: 21px;
@@ -559,6 +565,18 @@
 .pintxo-list-item__text { padding: 2px 0; display: flex; flex-direction: column; gap: 2px; }
 .pintxo-list-item__title { margin: 0; font-size: 16px; line-height: 20px; font-weight: 500; }
 .pintxo-list-item__description { margin: 0; font-size: 14px; line-height: 20px; font-weight: 400; }
+/* Variants: --plain drops the hairline and the last-row inset; --compact is the 40px row
+   (4px padding) used in cards and price summaries. __title--regular is the book weight,
+   __description--warning the amber line, __trailing the right slot (icon, chevron, toggle, price),
+   __value a right-aligned price in a summary row. */
+.pintxo-list-item--plain, .pintxo-list-item--plain:last-child { border-bottom: 0; padding-left: 0; padding-right: 0; }
+.pintxo-list-item--compact { min-height: 40px; padding-top: var(--spacing-xxs); padding-bottom: var(--spacing-xxs); }
+.pintxo-list-item__title--regular { font-weight: 400; }
+.pintxo-list-item__description--warning { font-weight: 500; color: var(--text-color-warning); }
+.pintxo-list-item__trailing { flex: none; display: flex; align-items: center; justify-content: flex-end; gap: var(--spacing-xs); min-height: 32px; min-width: 48px; }
+.pintxo-list-item__trailing--chevron { min-width: 0; padding-right: var(--spacing-xxs); }
+.pintxo-list-item__trailing img { width: 24px; height: 24px; }
+.pintxo-list-item__value { margin: 0; padding: 6px 0; font-size: 16px; line-height: 20px; font-weight: 400; text-align: right; white-space: nowrap; }
 
 /* ---- Tab bar -----------------------------------------------------------
    <nav class="pintxo-tab-bar" aria-label="Main">
@@ -601,3 +619,180 @@
 .pintxo-tab-bar__icon { position: relative; width: 24px; height: 24px; }
 .pintxo-tab-bar__icon img { position: absolute; left: 0; top: 0; width: 24px; height: 24px; }
 .pintxo-tab-bar__icon img.pintxo-tab-bar__blob { left: -4px; top: -4px; width: 32px; height: 32px; }
+
+/* ---- Segmented control -------------------------------------------------
+   <div class="pintxo-segmented-control" role="tablist">
+     <button class="pintxo-segmented-control__segment" role="tab" aria-selected="true">Delivery</button>
+     <button class="pintxo-segmented-control__segment" role="tab" aria-selected="false">Pickup</button>
+   </div>
+   Pill switch between 2+ views (min height 40, 4px inset). The selected segment is a white
+   pill with medium weight; the others are book weight. Keep aria-selected in sync in JS. */
+.pintxo-segmented-control {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xxs);
+  min-height: 40px;
+  padding: var(--spacing-xxs);
+  border-radius: var(--cornerRadius-full);
+  background: var(--background-color-secondary);
+}
+.pintxo-segmented-control__segment {
+  flex: 1 1 0;
+  min-width: 80px;
+  min-height: 32px;
+  padding: 2px var(--spacing-s);
+  border: 0;
+  border-radius: var(--cornerRadius-full);
+  background: transparent;
+  color: var(--text-color-primary);
+  font: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.pintxo-segmented-control__segment[aria-selected='true'] { background: var(--background-color-primary); color: #000; font-weight: 500; }
+
+/* ---- Card --------------------------------------------------------------
+   <div class="pintxo-card">  <!-- compact outlined card: 12px padding, 8px radius -->
+     <div class="pintxo-card__main">
+       <span class="pintxo-card__text"><span class="pintxo-card__title">Standard</span><span class="pintxo-card__subtitle">20-30 min</span></span>
+       <span class="pintxo-card__trailing">+1,00€</span>
+     </div>
+   </div>
+   Modifiers: --selected (2px dark border, a selectable card that is chosen), --filled
+   (data-style positive: tinted background, no border), --row (children side by side), --plain (no padding or border, 16px radius). The border is drawn inside the box
+   (inset shadow), like a Figma stroke, so the 12px padding is measured from the edge.
+   Use role="radio" / aria-checked on selectable cards. */
+.pintxo-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m);
+  min-width: 48px;
+  padding: var(--spacing-s);
+  border-radius: var(--cornerRadius-xs);
+  background: var(--background-color-primary);
+  box-shadow: inset 0 0 0 1px var(--border-color-primary);
+  color: var(--text-color-primary);
+  text-align: left;
+}
+.pintxo-card--selected { box-shadow: inset 0 0 0 2px var(--text-color-primary); }
+.pintxo-card[data-style='positive'] { background: var(--background-color-positive); box-shadow: none; overflow: hidden; }
+.pintxo-card--plain { padding: 0; box-shadow: none; border-radius: var(--cornerRadius-m); }
+.pintxo-card__main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--spacing-xxs);
+  padding: 2px 0;
+}
+.pintxo-card--row { flex-direction: row; align-items: flex-start; }
+.pintxo-card__text { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--spacing-xxs); white-space: nowrap; }
+.pintxo-card__title { margin: 0; font-size: 14px; line-height: 20px; font-weight: 500; }
+.pintxo-card__subtitle { margin: 0; font-size: 12px; line-height: 16px; font-weight: 400; color: var(--text-color-secondary); }
+.pintxo-card__trailing { margin-left: auto; font-size: 14px; line-height: 20px; font-weight: 500; }
+button.pintxo-card, .pintxo-card[role='radio'] { width: 100%; border: 0; font: inherit; cursor: pointer; }
+
+/* ---- Expander ----------------------------------------------------------
+   <div class="pintxo-expander" data-open="false">
+     <button class="pintxo-expander__header" aria-expanded="false">
+       <span class="pintxo-expander__content">
+         <span class="pintxo-expander__title">Salad Market</span>
+         <span class="pintxo-expander__subtitle">3 products</span>
+       </span>
+       <span class="pintxo-expander__chevron"><img src="chevron-down.svg" alt="" /></span>
+     </button>
+     <div class="pintxo-expander__body">...</div>
+   </div>
+   Collapsible section: header with title, subtitle and a chevron. data-open="true" shows the
+   body. Swap the chevron image in JS (down when closed, up when open). Inside a .pintxo-card
+   the expander loses its bottom spacing. */
+.pintxo-expander { display: flex; flex-direction: column; gap: var(--spacing-xs); padding-bottom: var(--spacing-xs); width: 100%; }
+.pintxo-card > .pintxo-expander { padding-bottom: 0; }
+.pintxo-expander__header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  width: 100%;
+  padding: 0 var(--spacing-xs);
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.pintxo-expander__content { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; min-height: 32px; padding: 6px 0; }
+.pintxo-expander__title { font-size: 16px; line-height: 20px; font-weight: 500; }
+.pintxo-expander__subtitle { font-size: 14px; line-height: 20px; font-weight: 400; }
+.pintxo-expander__chevron { flex: none; display: grid; place-items: center; width: 40px; height: 40px; }
+.pintxo-expander__chevron img { width: 24px; height: 24px; }
+.pintxo-expander__body { display: none; flex-direction: column; gap: var(--spacing-s); }
+.pintxo-expander[data-open='true'] .pintxo-expander__body { display: flex; }
+
+/* ---- Toggle switch -----------------------------------------------------
+   <button class="pintxo-toggle" role="switch" aria-checked="false" aria-label="Need cutlery?"></button>
+   48 x 32 switch (uds-react ToggleSwitch). Off: grey track with a 2px grey border and a grey
+   knob on the left. On (aria-checked="true"): green track, white knob on the right.
+   Keep aria-checked in sync in JS. */
+.pintxo-toggle {
+  position: relative;
+  flex: none;
+  box-sizing: border-box;
+  width: 48px;
+  height: 32px;
+  padding: 0;
+  border: 2px solid var(--icon-color-foreground-secondary);
+  border-radius: var(--cornerRadius-full);
+  background: var(--background-color-secondary);
+  cursor: pointer;
+}
+.pintxo-toggle::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--cornerRadius-full);
+  background: var(--icon-color-foreground-secondary);
+  transition: left 0.1s ease, background-color 0.1s ease;
+}
+.pintxo-toggle[aria-checked='true'] { border-color: var(--brand-color-secondary); background: var(--brand-color-secondary); }
+.pintxo-toggle[aria-checked='true']::after { left: 18px; background: #fff; }
+.pintxo-toggle:focus-visible { outline: 2px solid var(--component-button-background-color-primary-enabled); outline-offset: 4px; }
+
+/* ---- Chip group --------------------------------------------------------
+   <div class="pintxo-chip-group" role="radiogroup" aria-label="Courier tip">
+     <button class="pintxo-chip" data-variant="contrast" role="radio" aria-checked="true">0%</button>
+     <button class="pintxo-chip" data-variant="contrast" role="radio" aria-checked="false">5%</button>
+   </div>
+   Single-selection chips on a grey pill. Chips are white (data-variant="contrast"); the selected
+   one (aria-checked="true") is Glovo yellow. */
+.pintxo-chip-group {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xxs);
+  border-radius: var(--cornerRadius-full);
+  background: var(--background-color-secondary);
+}
+.pintxo-chip[data-variant='contrast'] { background: var(--background-color-primary); color: var(--text-color-primary); }
+.pintxo-chip[data-variant='contrast'][aria-checked='true'] { background: #ffc042; color: #3b2f16; }
+
+/* ---- Divider -----------------------------------------------------------
+   <hr class="pintxo-divider" />   1px hairline in the primary border colour. */
+.pintxo-divider { width: 100%; height: 0; margin: 0; border: 0; border-top: 1px solid var(--border-color-primary); }
+
+/* ---- Curve + footer ----------------------------------------------------
+   <img class="pintxo-curve" src="curve.svg" alt="" />   8px wavy top edge for a grey sheet
+   that starts under white content (the sheet below it uses background-color-secondary).
+   <footer class="pintxo-footer"><button class="pintxo-button pintxo-button--primary pintxo-button--m pintxo-button--block">Pay</button></footer>
+   Bottom bar for the main action: 12px / 16px padding. */
+.pintxo-curve { display: block; width: 100%; height: 8px; }
+.pintxo-footer { display: flex; justify-content: center; padding: var(--spacing-s) var(--spacing-m); }
