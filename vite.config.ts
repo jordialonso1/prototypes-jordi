@@ -6,7 +6,7 @@ import react from '@vitejs/plugin-react'
 const root = import.meta.dirname
 
 /* Every prototype is a folder with its own index.html. Add new ones here. */
-const prototypes = ['ai-label-prototype', 'signup-login-flow', 'screens-library']
+const prototypes = ['ai-label-prototype', 'signup-login-flow', 'pna-cna-replacements', 'screens-library']
 
 /* Extra bundled HTML entries (React prototypes rendered inside an iframe). */
 const extraInputs = { 'signup-login-flow-prototype': 'signup-login-flow/prototype/index.html' }
@@ -17,7 +17,15 @@ const udsSrc = '/Users/jordi/claude-projects/uds-react/src'
 
 /* Plain static folders (not bundled, e.g. HTML loaded in an iframe) that must
    be copied as-is into dist. In dev Vite already serves them from the root. */
-const staticDirs = ['ai-label-prototype/prototype']
+const staticDirs = [
+  'ai-label-prototype/prototype',
+  'pna-cna-replacements/prototype',
+  // Shared CSS linked by static prototypes (../../shared-design-system/pintxo/pintxo.css).
+  'shared-design-system/pintxo',
+  'component-library',
+  // Theme linked by the component library page.
+  'shared-design-system/styles',
+]
 
 function copyStaticDirs(): Plugin {
   return {

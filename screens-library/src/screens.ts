@@ -52,8 +52,25 @@ export const SCREENS: LibraryScreen[] = [
   {
     id: 'cart',
     title: 'Cart',
-    description: 'Regular cart, plus variants with missing customisation (CNA) and unavailable items (PNA).',
+    description: 'Regular cart with items, totals and checkout.',
     source: 'pna-cna-replacements',
-    pending: 'Lives in the PNA / CNA replacements prototype, which is not merged to main yet.',
+    src: '../pna-cna-replacements/prototype/index.html',
+    screen: 'regular',
+  },
+  {
+    id: 'cart-cna',
+    title: 'Cart: missing customisation (CNA)',
+    description: 'Cart where some items still need a customisation selected.',
+    source: 'pna-cna-replacements',
+    src: '../pna-cna-replacements/prototype/index.html',
+    screen: 'cna',
+  },
+  {
+    id: 'cart-pna',
+    title: 'Cart: unavailable items (PNA)',
+    description: 'Cart where some items are out of stock.',
+    source: 'pna-cna-replacements',
+    src: '../pna-cna-replacements/prototype/index.html',
+    screen: 'pna',
   },
 ]

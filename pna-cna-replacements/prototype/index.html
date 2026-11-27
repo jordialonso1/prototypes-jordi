@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<!--
+  PINTXO PROTOTYPE BOILERPLATE
+  ============================
+  Before using:
+  1. Copy the fonts/ folder from AI Prototyping Context V2/ into the same
+     folder as your prototype HTML. The @font-face blocks reference them
+     by relative path — no encoding needed.
+  2. Set lang="" to the correct locale (e.g. "es", "en", "ar").
+  3. Set data-ui-mode to "light" or "dark" to match the Figma frame.
+  4. Set the viewport width to the target device:
+       Mobile  -> max-width: 390px  (default, already set)
+       Tablet  -> max-width: 768px
+       Desktop -> max-width: 1280px  (remove the centering wrapper if full-bleed)
+-->
+<html lang="es" data-theme="core" data-ui-mode="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart</title>
+
+  <style>
+    /* =====================================================================
+       FONTS — loaded from the fonts/ folder sitting next to this file.
+       Copy fonts/ from AI Prototyping Context V2/ into your output folder.
+       Do NOT inline or base64-encode these. Do not modify these @font-face
+       blocks in any way when generating a prototype.
+       ===================================================================== */
+    @font-face {
+      font-family: 'Glovo Sans';
+      src: url(fonts/GlovoSans-Book.woff2) format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Glovo Sans';
+      src: url(fonts/GlovoSans-Medium.woff2) format('woff2');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Glovo Sans';
+      src: url(fonts/GlovoSans-Bold.woff2) format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* =====================================================================
+       DESIGN TOKENS — Core theme (light mode)
+       Source: uds-react/src/generated/style/
+         core-theme-constants.scss  (geometry — same for light and dark)
+         core-theme-mode-colors.scss (colors — light mixin shown here)
+       To switch to dark mode: change data-ui-mode="dark" on <html> AND
+       swap in the dark-mode color values from core-dark-css-variables mixin.
+       ===================================================================== */
+    :root,
+    [data-theme="core"] {
+      /* -- Spacing scale -------------------------------------------------- */
+      --spacing-none:  0px;
+      --spacing-xxxs:  2px;
+      --spacing-xxs:   4px;
+      --spacing-xs:    8px;
+      --spacing-s:    12px;
+      --spacing-m:    16px;
+      --spacing-l:    24px;
+      --spacing-xl:   32px;
+      --spacing-xxl:  48px;
+      --spacing-xxxl: 64px;
+      --spacing-xxxxl: 80px;
+
+      /* -- Corner radius scale --------------------------------------------- */
+      --cornerRadius-none:  0px;
+      --cornerRadius-xxxs:  2px;
+      --cornerRadius-xxs:   4px;
+      --cornerRadius-xs:    8px;
+      --cornerRadius-s:    12px;
+      --cornerRadius-m:    16px;
+      --cornerRadius-l:    24px;
+      --cornerRadius-xl:   32px;
+      --cornerRadius-xxl:  48px;
+      --cornerRadius-full: 896px;
+
+      /* -- Border widths --------------------------------------------------- */
+      --border-width-none: 0px;
+      --border-width-s:    1px;
+      --border-width-m:    2px;
+      --border-width-l:    4px;
+
+      /* -- Icon sizes ----------------------------------------------------- */
+      --icon-size-s:  16px;
+      --icon-size-m:  24px;
+      --icon-size-l:  32px;
+      --icon-size-xl: 48px;
+
+      /* -- Elevation shadows ----------------------------------------------- */
+      --elevation-shadow-basic-color:    rgba(22, 23, 23, 0.05);
+      --elevation-shadow-raised-color:   rgba(22, 23, 23, 0.21);
+      --elevation-shadow-floating-color: rgba(22, 23, 23, 0.21);
+
+      /* -- Semantic text colors (light) ------------------------------------ */
+      --text-color-primary:        rgba(22, 22, 23, 1);    /* gray9  */
+      --text-color-secondary:      rgba(98, 99, 100, 1);   /* gray39 */
+      --text-color-disabled:       rgba(167, 168, 170, 1); /* gray66 */
+      --text-color-critical:       rgba(212, 22, 22, 1);   /* red46  */
+      --text-color-positive:       rgba(1, 121, 99, 1);    /* green24 */
+      --text-color-warning:        rgba(137, 97, 16, 1);   /* yellow30 */
+      --text-color-marketing:      rgba(19, 114, 170, 1);  /* blue38 */
+      --text-color-persistentLight: rgba(255, 255, 255, 1);
+      --text-color-persistentDark:  rgba(22, 22, 23, 1);
+
+      /* -- Semantic background colors (light) ------------------------------ */
+      --background-color-primary:    rgba(255, 255, 255, 1);  /* white */
+      --background-color-secondary:  rgba(242, 242, 243, 1);  /* gray95 */
+      --background-color-critical:   rgba(249, 235, 235, 1);  /* red95 */
+      --background-color-positive:   rgba(224, 240, 237, 1);  /* green91 */
+      --background-color-warning:    rgba(249, 239, 220, 1);  /* yellow92 */
+      --background-color-marketing:  rgba(211, 231, 243, 1);  /* blue89 */
+      --background-color-loyalty:    rgba(230, 229, 246, 1);  /* purple93 */
+      --background-color-persistentLight: rgba(255, 255, 255, 1);
+      --background-color-persistentDark:  rgba(22, 22, 23, 1);
+
+      /* -- Semantic border colors (light) ---------------------------------- */
+      --border-color-primary:    rgba(205, 206, 208, 1);  /* gray81 */
+      --border-color-secondary:  rgba(242, 242, 243, 1);  /* gray95 */
+      --border-color-active:     rgba(0, 158, 129, 1);    /* green31 */
+      --border-color-critical:   rgba(212, 22, 22, 1);    /* red46  */
+      --border-color-warning:    rgba(236, 159, 4, 1);    /* yellow47 */
+      --border-color-marketing:  rgba(19, 114, 170, 1);   /* blue38 */
+      --border-color-loyalty:    rgba(89, 77, 219, 1);    /* purple58 */
+
+      /* -- Brand colors ---------------------------------------------------- */
+      --brand-color-primary:   rgba(255, 192, 66, 1);   /* yellow63 — Glovo yellow */
+      --brand-color-secondary: rgba(0, 158, 129, 1);    /* green31  — Glovo green  */
+
+      /* -- Semantic icon colors (light) ------------------------------------ */
+      --icon-color-foreground-primary:    rgba(22, 22, 23, 1);
+      --icon-color-foreground-secondary:  rgba(98, 99, 100, 1);
+      --icon-color-foreground-disabled:   rgba(167, 168, 170, 1);
+      --icon-color-foreground-critical:   rgba(212, 22, 22, 1);
+      --icon-color-foreground-positive:   rgba(1, 121, 99, 1);
+      --icon-color-foreground-warning:    rgba(137, 97, 16, 1);
+      --icon-color-foreground-marketing:  rgba(19, 114, 170, 1);
+      --icon-color-foreground-persistentLight: rgba(255, 255, 255, 1);
+      --icon-color-foreground-persistentDark:  rgba(22, 22, 23, 1);
+
+      /* -- Button (primary variant, light) --------------------------------- */
+      --component-button-background-color-primary-enabled:  rgba(1, 121, 99, 1);    /* green24 */
+      --component-button-background-color-primary-hover:    rgba(3, 89, 73, 1);     /* green18 */
+      --component-button-background-color-primary-pressed:  rgba(3, 89, 73, 1);     /* green18 */
+      --component-button-background-color-primary-disabled: rgba(205, 206, 208, 1); /* gray81 */
+      --component-button-icon-color-foreground-primary-enabled:  rgba(255, 255, 255, 1);
+      --component-button-icon-color-foreground-primary-disabled: rgba(98, 99, 100, 1);
+      --component-button-cornerRadius: 896px;
+      --component-button-minHeight-s: 40px;
+      --component-button-minHeight-m: 48px;
+      --component-button-minHeight-l: 64px;
+
+      /* -- RadioButton (light) --------------------------------------------- */
+      --component-radioButton-background-color-enabled-selected:   rgba(0, 158, 129, 1);    /* green31 */
+      --component-radioButton-background-color-enabled-unselected: rgba(242, 242, 243, 1);  /* gray95  */
+      --component-radioButton-border-color-enabled-unselected:     rgba(98, 99, 100, 1);    /* gray39  */
+      --component-radioButton-thumb-color-enabled-selected:        rgba(255, 255, 255, 1);
+
+      /* -- ListItem (light) ------------------------------------------------ */
+      --component-listItem-cornerRadius: 0px;
+      --component-listItem-padding-horizontal: 16px;
+      --component-listItem-padding-vertical:   12px;
+      --component-listItem-gap:                16px;
+    }
+
+    /* =====================================================================
+       TYPOGRAPHY UTILITY CLASSES
+       Mirror of pintxo-typography-* classes from uds-react.
+       Font sizes in px, line heights in px — matching the token scale.
+       ===================================================================== */
+    .pintxo-typography-feature1 { font-size: 64px; line-height: 72px; font-weight: 700; letter-spacing: 0; }
+    .pintxo-typography-feature2 { font-size: 49px; line-height: 56px; font-weight: 700; letter-spacing: 0; }
+    .pintxo-typography-feature3 { font-size: 37px; line-height: 44px; font-weight: 700; letter-spacing: 0; }
+    .pintxo-typography-title1   { font-size: 32px; line-height: 40px; font-weight: 700; letter-spacing: 0; }
+    .pintxo-typography-title2   { font-size: 24px; line-height: 32px; font-weight: 700; letter-spacing: 0; }
+    .pintxo-typography-title3   { font-size: 21px; line-height: 28px; font-weight: 700; letter-spacing: 0; }
+    .pintxo-typography-callout1 { font-size: 18px; line-height: 24px; font-weight: 500; letter-spacing: 0; }
+    .pintxo-typography-callout2 { font-size: 16px; line-height: 24px; font-weight: 500; letter-spacing: 0; }
+    .pintxo-typography-callout3 { font-size: 14px; line-height: 20px; font-weight: 500; letter-spacing: 0; }
+    .pintxo-typography-body1          { font-size: 16px; line-height: 24px; font-weight: 400; letter-spacing: 0; }
+    .pintxo-typography-body1-emphasis  { font-size: 16px; line-height: 24px; font-weight: 500; letter-spacing: 0; }
+    .pintxo-typography-body1-link      { font-size: 16px; line-height: 24px; font-weight: 400; letter-spacing: 0; text-decoration: underline; }
+    .pintxo-typography-body2          { font-size: 14px; line-height: 20px; font-weight: 400; letter-spacing: 0; }
+    .pintxo-typography-body2-emphasis  { font-size: 14px; line-height: 20px; font-weight: 500; letter-spacing: 0; }
+    .pintxo-typography-body2-link      { font-size: 14px; line-height: 20px; font-weight: 400; letter-spacing: 0; text-decoration: underline; }
+    .pintxo-typography-caption         { font-size: 12px; line-height: 16px; font-weight: 400; letter-spacing: 0; }
+    .pintxo-typography-caption-emphasis { font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0; }
+    .pintxo-typography-caption-link    { font-size: 12px; line-height: 16px; font-weight: 400; letter-spacing: 0; text-decoration: underline; }
+
+    /* =====================================================================
+       ELEVATION UTILITY CLASSES
+       ===================================================================== */
+    .pintxo-elevation-hollow  { box-shadow: none; }
+    .pintxo-elevation-primary { box-shadow: 0 0 2px 0 var(--elevation-shadow-basic-color); }
+    .pintxo-elevation-raised  { box-shadow: 0 0 8px 0 var(--elevation-shadow-raised-color); }
+    .pintxo-elevation-floating { box-shadow: 0 0 24px 0 var(--elevation-shadow-floating-color); }
+
+    /* =====================================================================
+       RESET & BASE
+       ===================================================================== */
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Glovo Sans', Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--text-color-primary);
+      background: var(--background-color-primary);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* =====================================================================
+       DEVICE VIEWPORT WRAPPER
+       Simulates a mobile frame (390px). Adjust max-width for tablet/desktop.
+       ===================================================================== */
+    .prototype-viewport {
+      max-width: 390px;  /* Mobile (iPhone 14). Change to 768px (tablet) or 1280px (desktop) */
+      min-height: 100svh;
+      margin: 0 auto;
+      background: var(--background-color-primary);
+      position: relative;
+      overflow: hidden;
+    }
+  </style>
+
+  <!-- Shared Pintxo components (button, icon button, counter, banner) -->
+  <link rel="stylesheet" href="../../shared-design-system/pintxo/pintxo.css" />
+
+  <style>
+    /* =====================================================================
+       CART SCREEN (Figma 85:9460). Everything below is prototype-specific.
+       Typography: Figma sizes override the boilerplate line heights
+       (title3 21/24, body 16/20, 14/20, caption 12/16).
+       ===================================================================== */
+    html, body { height: 100%; overflow: hidden; }
+    .pintxo-typography-title3 { line-height: 24px; }
+    .pintxo-typography-body1, .pintxo-typography-body1-emphasis { line-height: 20px; }
+
+    .prototype-viewport { height: 100svh; max-height: 844px; }
+    img { display: block; }
+
+    .screen { position: absolute; inset: 0; background: var(--background-color-primary); }
+    .screen[hidden] { display: none; }
+
+    /* ---- Nav bar (status bar 62 + 52 row = 114) ---- */
+    .navbar { position: absolute; top: 0; left: 0; right: 0; z-index: 3; height: 114px; background: var(--background-color-primary); }
+    .status-bar { position: absolute; top: 0; left: 0; width: 100%; height: 62px; pointer-events: none; }
+    .navbar__row { position: absolute; top: 52px; left: 0; right: 0; height: 52px; display: flex; align-items: center; justify-content: center; }
+    .navbar__back { position: absolute; left: var(--spacing-m); top: 6px; }
+    .navbar__title { margin: 0; }
+
+    /* ---- Scrolling content ---- */
+    .scroll { position: absolute; inset: 0; overflow-y: auto; padding: 114px var(--spacing-m) 126px; scrollbar-width: none; }
+    .scroll::-webkit-scrollbar { display: none; }
+    .stack { display: flex; flex-direction: column; gap: var(--spacing-m); }
+    .stack + .stack { margin-top: var(--spacing-l); }
+    .stack--end { align-items: flex-end; }
+
+    /* ---- Section header ---- */
+    .section-header { align-self: stretch; }
+    .section-header__title-row { display: flex; align-items: flex-end; gap: var(--spacing-xs); }
+    .section-header__title { flex: 1; margin: 0; padding: var(--spacing-xxs) 0; }
+    .section-header__sub { margin: 0; color: var(--text-color-secondary); }
+    .section-header__sub .count { color: var(--text-color-primary); }
+    .section-header__sub a { color: rgba(3, 89, 73, 1); font-weight: 700; text-decoration: underline; }
+
+    /* ---- Item rows ---- */
+    .item-row { align-self: stretch; display: flex; flex-direction: column; gap: var(--spacing-s); padding: var(--spacing-m) 0; }
+    .item-row--compact { padding: 0; }
+    .item-row__body { display: flex; align-items: flex-start; gap: var(--spacing-m); }
+    .thumb { position: relative; flex: none; width: 64px; height: 64px; border-radius: var(--cornerRadius-m); overflow: hidden; }
+    .thumb--l { width: 112px; height: 112px; }
+    .thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .thumb::after { content: ''; position: absolute; inset: 0; background: var(--elevation-shadow-basic-color); }
+    .item-row__info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: var(--spacing-xs); }
+    .item-row__head { display: flex; align-items: flex-start; gap: var(--spacing-xs); }
+    .item-row__name { flex: 1; margin: 0; min-width: 0; }
+    .item-row__name--medium { font-weight: 500; }
+    .item-row__price { margin: 0; white-space: nowrap; text-align: right; }
+    .item-row__desc { margin: 0; }
+    .item-row__warning { display: flex; align-items: center; gap: var(--spacing-xxxs); color: var(--text-color-critical); }
+    .item-row__warning p { margin: 0; }
+    .item-row--oos .item-row__flag { margin: 0; color: var(--text-color-critical); font-weight: 500; }
+    .item-row--oos .item-row__info > * , .item-row--oos .item-row__head * { color: var(--text-color-disabled); }
+    .item-row--oos .item-row__flag { color: var(--text-color-critical); }
+    .item-row--oos .item-row__name { font-weight: 500; }
+    .item-row__footer { display: flex; justify-content: flex-end; }
+
+    /* ---- Upsell tiles ---- */
+    .tiles { align-self: stretch; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--spacing-s); }
+    .tile { display: flex; flex-direction: column; gap: var(--spacing-xs); min-width: 0; }
+    .tile__img { position: relative; aspect-ratio: 1; border-radius: var(--cornerRadius-m); overflow: hidden; }
+    .tile__img > img { width: 100%; height: 100%; object-fit: cover; }
+    .tile__img::after { content: ''; position: absolute; inset: 0; background: var(--elevation-shadow-basic-color); }
+    .tile__add { position: absolute; z-index: 1; right: var(--spacing-xs); bottom: var(--spacing-xs); }
+    .tile__text { display: flex; flex-direction: column; gap: var(--spacing-xxxs); }
+    .tile__name { margin: 0; font-weight: 500; }
+    .tile__price { margin: 0; }
+
+    /* ---- Footer (fixed at the bottom, content scrolls underneath) ---- */
+    .footer { position: absolute; left: 0; right: 0; bottom: 0; z-index: 3; background: var(--background-color-primary); }
+    .footer--raised { border-radius: var(--cornerRadius-m) var(--cornerRadius-m) 0 0; box-shadow: 0 0 2px 0 var(--elevation-shadow-basic-color), 0 0 8px 0 var(--elevation-shadow-raised-color); clip-path: inset(-12px -12px 0 -12px); }
+    .footer__content { display: flex; align-items: center; gap: var(--spacing-xs); padding: var(--spacing-s) var(--spacing-m) 0; }
+    .footer--plain .footer__content { gap: var(--spacing-s); padding-bottom: var(--spacing-s); }
+    .footer__price { flex: 1; display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-xs); min-width: 0; }
+    .footer--plain .footer__price { flex: none; width: 165px; }
+    .footer__total { margin: 0; font-weight: 500; }
+    .footer__original { margin: 0; color: var(--text-color-secondary); text-decoration: line-through; }
+    .footer__fees { display: flex; align-items: center; gap: var(--spacing-xxs); color: var(--text-color-secondary); }
+    .footer__fees p { margin: 0; }
+    .footer__cta { flex: none; }
+    .footer--plain .footer__cta { flex: 1; }
+    .footer__home { height: 34px; display: flex; justify-content: center; align-items: flex-end; padding-bottom: 8px; }
+    .footer__home::after { content: ''; width: 134px; height: 5px; border-radius: 100px; background: var(--text-color-primary); }
+  </style>
+</head>
+
+<body>
+  <!--
+    Wrap all prototype content in .prototype-viewport.
+    Remove this wrapper (or change max-width) for tablet/desktop frames.
+  -->
+  <div class="prototype-viewport">
+
+    <!-- ============================ REGULAR CART (85:9461) ============================ -->
+    <section class="screen" data-screen="regular" aria-label="Cart">
+      <div class="scroll">
+        <div class="stack stack--end">
+          <header class="section-header">
+            <div class="section-header__title-row">
+              <h1 class="section-header__title pintxo-typography-title3">Your cart</h1>
+              <button type="button" class="pintxo-icon-button pintxo-icon-button--s" aria-label="Empty cart"><img src="assets/icon-trash-16.svg" width="16" height="16" alt="" /></button>
+            </div>
+            <p class="section-header__sub pintxo-typography-body2"><span class="count">2 products from</span> <a href="#">Healthy Poke</a></p>
+          </header>
+
+          <article class="item-row">
+            <div class="item-row__body">
+              <div class="thumb"><img src="assets/item-gyozas.jpg" alt="" /></div>
+              <div class="item-row__info">
+                <div class="item-row__head">
+                  <p class="item-row__name pintxo-typography-body1">Gyozas de salmón</p>
+                  <p class="item-row__price pintxo-typography-body2">9,99€</p>
+                </div>
+                <p class="item-row__desc pintxo-typography-body2">Empanadillas japonesas con salmón. Cinco unidades. Contiene soja, pescado, trigo.</p>
+              </div>
+            </div>
+            <div class="item-row__footer">
+              <div class="pintxo-counter">
+                <button type="button" class="pintxo-counter__button" aria-label="Remove"><img src="assets/icon-trash-16.svg" width="16" height="16" alt="" /></button>
+                <span class="pintxo-counter__label">1</span>
+                <button type="button" class="pintxo-counter__button" aria-label="Add one more"><img src="assets/icon-plus-16.svg" width="16" height="16" alt="" /></button>
+              </div>
+            </div>
+          </article>
+
+          <button type="button" class="pintxo-button pintxo-button--s">Add more items</button>
+        </div>
+
+        <div class="stack">
+          <header class="section-header"><h2 class="section-header__title pintxo-typography-title3">You might also like</h2></header>
+          <div class="tiles">
+            <article class="tile">
+              <div class="tile__img"><img src="assets/item-plate.jpg" alt="" /><button type="button" class="pintxo-icon-button pintxo-icon-button--s pintxo-icon-button--floating tile__add" aria-label="Add Item name"><img src="assets/icon-plus-16.svg" width="16" height="16" alt="" /></button></div>
+              <div class="tile__text"><p class="tile__name pintxo-typography-body1-emphasis">Item name</p><p class="tile__price pintxo-typography-body2">9,99€</p></div>
+            </article>
+            <article class="tile">
+              <div class="tile__img"><img src="assets/item-plate.jpg" alt="" /><button type="button" class="pintxo-icon-button pintxo-icon-button--s pintxo-icon-button--floating tile__add" aria-label="Add Item name"><img src="assets/icon-plus-16.svg" width="16" height="16" alt="" /></button></div>
+              <div class="tile__text"><p class="tile__name pintxo-typography-body1-emphasis">Item name</p><p class="tile__price pintxo-typography-body2">9,99€</p></div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar">
+        <img class="status-bar" src="assets/statusbar.svg" alt="" />
+        <div class="navbar__row">
+          <button type="button" class="pintxo-icon-button navbar__back" aria-label="Back"><img src="assets/icon-back-24.svg" width="24" height="24" alt="" /></button>
+          <h2 class="navbar__title pintxo-typography-body1-emphasis">Cart</h2>
+        </div>
+      </div>
+
+      <footer class="footer footer--raised">
+        <div class="footer__content">
+          <div class="footer__price">
+            <p class="footer__total pintxo-typography-body1-emphasis">8,00€</p>
+            <p class="footer__original pintxo-typography-body1">10,00€</p>
+          </div>
+          <button type="button" class="pintxo-button pintxo-button--primary pintxo-button--m pintxo-button--trailing-icon footer__cta">Go to checkout <img src="assets/icon-chevron-forward-white.svg" alt="" /></button>
+        </div>
+        <div class="footer__home"></div>
+      </footer>
+    </section>
+
+    <!-- ===================== CNA: customisation missing (34:1394) ===================== -->
+    <section class="screen" data-screen="cna" aria-label="Cart with missing selections" hidden>
+      <div class="scroll">
+        <div class="stack stack--end">
+          <header class="section-header">
+            <div class="section-header__title-row">
+              <h1 class="section-header__title pintxo-typography-title3">Your cart</h1>
+              <button type="button" class="pintxo-icon-button pintxo-icon-button--s" aria-label="Empty cart"><img src="assets/icon-trash-16.svg" width="16" height="16" alt="" /></button>
+            </div>
+            <p class="section-header__sub pintxo-typography-body2"><span class="count">2 products from</span> <a href="#">Healthy Poke</a></p>
+          </header>
+
+          <div class="pintxo-banner" data-style="warning" role="status">
+            <span class="pintxo-icon-blob" data-style="warning" aria-hidden="true"></span>
+            <div class="pintxo-banner__content">
+              <p class="pintxo-banner__title">Missing selections</p>
+              <p class="pintxo-banner__description">Review before checkout</p>
+            </div>
+          </div>
+
+          <article class="item-row">
+            <div class="item-row__body">
+              <div class="thumb"><img src="assets/item-gyozas.jpg" alt="" /></div>
+              <div class="item-row__info">
+                <div class="item-row__head">
+                  <p class="item-row__name pintxo-typography-body1">Gyozas de salmón</p>
+                  <p class="item-row__price pintxo-typography-body2">9,99€</p>
+                </div>
+                <div class="item-row__warning pintxo-typography-body2">
+                  <img src="assets/icon-warning-critical.svg" width="16" height="14.6" alt="" />
+                  <p>Action required</p>
+                </div>
+              </div>
+            </div>
+            <div class="item-row__footer">
+              <div class="pintxo-counter">
+                <button type="button" class="pintxo-counter__button" aria-label="Remove"><img src="assets/icon-trash-16.svg" width="16" height="16" alt="" /></button>
+                <span class="pintxo-counter__label">1</span>
+                <button type="button" class="pintxo-counter__button" aria-label="Add one more" disabled><img src="assets/icon-plus-16.svg" width="16" height="16" alt="" /></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-row">
+            <div class="item-row__body">
+              <div class="thumb"><img src="assets/item-gyozas.jpg" alt="" /></div>
+              <div class="item-row__info">
+                <div class="item-row__head">
+                  <p class="item-row__name pintxo-typography-body1">Gyozas de salmón</p>
+                  <p class="item-row__price pintxo-typography-body2">9,99€</p>
+                </div>
+                <p class="item-row__desc pintxo-typography-body2">Empanadillas japonesas con salmón. Cinco unidades. Contiene soja, pescado, trigo.</p>
+              </div>
+            </div>
+            <div class="item-row__footer">
+              <div class="pintxo-counter">
+                <button type="button" class="pintxo-counter__button" aria-label="Remove"><img src="assets/icon-trash-16.svg" width="16" height="16" alt="" /></button>
+                <span class="pintxo-counter__label">1</span>
+                <button type="button" class="pintxo-counter__button" aria-label="Add one more"><img src="assets/icon-plus-16.svg" width="16" height="16" alt="" /></button>
+              </div>
+            </div>
+          </article>
+
+          <button type="button" class="pintxo-button pintxo-button--s">Add more items</button>
+        </div>
+
+        <div class="stack">
+          <header class="section-header"><h2 class="section-header__title pintxo-typography-title3">You might also like</h2></header>
+          <div class="tiles">
+            <article class="tile">
+              <div class="tile__img"><img src="assets/item-plate.jpg" alt="" /><button type="button" class="pintxo-icon-button pintxo-icon-button--s pintxo-icon-button--floating tile__add" aria-label="Add Item name"><img src="assets/icon-plus-16.svg" width="16" height="16" alt="" /></button></div>
+              <div class="tile__text"><p class="tile__name pintxo-typography-body1-emphasis">Item name</p><p class="tile__price pintxo-typography-body2">9,99€</p></div>
+            </article>
+            <article class="tile">
+              <div class="tile__img"><img src="assets/item-plate.jpg" alt="" /><button type="button" class="pintxo-icon-button pintxo-icon-button--s pintxo-icon-button--floating tile__add" aria-label="Add Item name"><img src="assets/icon-plus-16.svg" width="16" height="16" alt="" /></button></div>
+              <div class="tile__text"><p class="tile__name pintxo-typography-body1-emphasis">Item name</p><p class="tile__price pintxo-typography-body2">9,99€</p></div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar">
+        <img class="status-bar" src="assets/statusbar.svg" alt="" />
+        <div class="navbar__row">
+          <button type="button" class="pintxo-icon-button navbar__back" aria-label="Back"><img src="assets/icon-back-24.svg" width="24" height="24" alt="" /></button>
+          <h2 class="navbar__title pintxo-typography-body1-emphasis">Cart</h2>
+        </div>
+      </div>
+
+      <footer class="footer footer--plain">
+        <div class="footer__content">
+          <div class="footer__price">
+            <p class="footer__total pintxo-typography-body1-emphasis">20,80€</p>
+            <div class="footer__fees pintxo-typography-body2"><p>+ fees</p><img src="assets/icon-info-16.svg" width="16" height="16" alt="" /></div>
+          </div>
+          <button type="button" class="pintxo-button pintxo-button--primary pintxo-button--m footer__cta" disabled>Go to checkout</button>
+        </div>
+      </footer>
+    </section>
+
+    <!-- ===================== PNA: product not available (33:2044) ===================== -->
+    <section class="screen" data-screen="pna" aria-label="Cart with unavailable items" hidden>
+      <div class="scroll">
+        <div class="stack stack--end">
+          <header class="section-header">
+            <div class="section-header__title-row">
+              <h1 class="section-header__title pintxo-typography-title3">Your cart</h1>
+              <button type="button" class="pintxo-icon-button pintxo-icon-button--s" aria-label="Empty cart"><img src="assets/icon-trash-16.svg" width="16" height="16" alt="" /></button>
+            </div>
+            <p class="section-header__sub pintxo-typography-body2"><span class="count">2 products from</span> <a href="#">Healthy Poke</a></p>
+          </header>
+
+          <div class="pintxo-banner" data-style="critical" role="status">
+            <span class="pintxo-icon-blob" data-style="critical" aria-hidden="true"></span>
+            <div class="pintxo-banner__content">
+              <p class="pintxo-banner__title">Some items are not available</p>
+              <p class="pintxo-banner__description">You won’t be charged for them</p>
+            </div>
+          </div>
+
+          <article class="item-row item-row--compact">
+            <div class="item-row__body">
+              <div class="thumb"><img src="assets/item-plate.jpg" alt="" /></div>
+              <div class="item-row__info">
+                <div class="item-row__head">
+                  <p class="item-row__name item-row__name--medium pintxo-typography-body1-emphasis">Onigiri Anguila</p>
+                  <p class="item-row__price pintxo-typography-body2">9,99€</p>
+                </div>
+                <p class="item-row__desc pintxo-typography-body2">Onigiri con anguila kabayaki. Alérgenos - pescado, soja, trigo.</p>
+              </div>
+            </div>
+            <div class="item-row__footer">
+              <div class="pintxo-counter">
+                <button type="button" class="pintxo-counter__button" aria-label="Remove"><img src="assets/icon-trash-16.svg" width="16" height="16" alt="" /></button>
+                <span class="pintxo-counter__label">1</span>
+                <button type="button" class="pintxo-counter__button" aria-label="Add one more"><img src="assets/icon-plus-16.svg" width="16" height="16" alt="" /></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-row item-row--compact">
+            <div class="item-row__body">
+              <div class="thumb"><img src="assets/item-plate.jpg" alt="" /></div>
+              <div class="item-row__info">
+                <div class="item-row__head">
+                  <p class="item-row__name item-row__name--medium pintxo-typography-body1-emphasis">Onigiri Anguila</p>
+                  <p class="item-row__price pintxo-typography-body2">9,99€</p>
+                </div>
+                <p class="item-row__desc pintxo-typography-body2">Onigiri con anguila kabayaki. Alérgenos - pescado, soja, trigo.</p>
+              </div>
+            </div>
+            <div class="item-row__footer">
+              <div class="pintxo-counter">
+                <button type="button" class="pintxo-counter__button" aria-label="Remove"><img src="assets/icon-trash-16.svg" width="16" height="16" alt="" /></button>
+                <span class="pintxo-counter__label">1</span>
+                <button type="button" class="pintxo-counter__button" aria-label="Add one more"><img src="assets/icon-plus-16.svg" width="16" height="16" alt="" /></button>
+              </div>
+            </div>
+          </article>
+
+          <button type="button" class="pintxo-button pintxo-button--s">Add more items</button>
+        </div>
+
+        <div class="stack">
+          <header class="section-header"><h2 class="section-header__title pintxo-typography-title3">Out of stock</h2></header>
+          <article class="item-row item-row--compact item-row--oos">
+            <div class="item-row__body">
+              <div class="thumb thumb--l"><img src="assets/item-plate.jpg" alt="" /></div>
+              <div class="item-row__info">
+                <p class="item-row__flag pintxo-typography-caption-emphasis">Out of stock</p>
+                <div class="item-row__head">
+                  <p class="item-row__name item-row__name--medium pintxo-typography-body1-emphasis">Item name</p>
+                  <p class="item-row__price pintxo-typography-body2">9,99€</p>
+                </div>
+                <p class="item-row__desc pintxo-typography-body2">Description</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="stack">
+          <header class="section-header"><h2 class="section-header__title pintxo-typography-title3">You might also like</h2></header>
+          <div class="tiles">
+            <article class="tile">
+              <div class="tile__img"><img src="assets/item-plate.jpg" alt="" /><button type="button" class="pintxo-icon-button pintxo-icon-button--s pintxo-icon-button--floating tile__add" aria-label="Add Item name"><img src="assets/icon-plus-16.svg" width="16" height="16" alt="" /></button></div>
+              <div class="tile__text"><p class="tile__name pintxo-typography-body1-emphasis">Item name</p><p class="tile__price pintxo-typography-body2">9,99€</p></div>
+            </article>
+            <article class="tile">
+              <div class="tile__img"><img src="assets/item-plate.jpg" alt="" /><button type="button" class="pintxo-icon-button pintxo-icon-button--s pintxo-icon-button--floating tile__add" aria-label="Add Item name"><img src="assets/icon-plus-16.svg" width="16" height="16" alt="" /></button></div>
+              <div class="tile__text"><p class="tile__name pintxo-typography-body1-emphasis">Item name</p><p class="tile__price pintxo-typography-body2">9,99€</p></div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar">
+        <img class="status-bar" src="assets/statusbar.svg" alt="" />
+        <div class="navbar__row">
+          <button type="button" class="pintxo-icon-button navbar__back" aria-label="Back"><img src="assets/icon-back-24.svg" width="24" height="24" alt="" /></button>
+          <h2 class="navbar__title pintxo-typography-body1-emphasis">Cart</h2>
+        </div>
+      </div>
+
+      <footer class="footer footer--raised">
+        <div class="footer__content">
+          <div class="footer__price">
+            <p class="footer__total pintxo-typography-body1-emphasis">8,00€</p>
+            <p class="footer__original pintxo-typography-body1">10,00€</p>
+          </div>
+          <button type="button" class="pintxo-button pintxo-button--primary pintxo-button--m pintxo-button--trailing-icon footer__cta">Go to checkout <img src="assets/icon-chevron-forward-white.svg" alt="" /></button>
+        </div>
+        <div class="footer__home"></div>
+      </footer>
+    </section>
+
+    <script>
+      /* Shows one of the three static versions: regular | cna | pna.
+         Driven by the wrapper page (postMessage) or by ?screen=<id>. */
+      (function () {
+        var screens = Array.prototype.slice.call(document.querySelectorAll('.screen'));
+        function show(id) {
+          if (!screens.some(function (s) { return s.dataset.screen === id; })) id = 'regular';
+          screens.forEach(function (s) { s.hidden = s.dataset.screen !== id; });
+        }
+        window.addEventListener('message', function (e) {
+          if (e.origin !== window.location.origin) return;
+          if (e.data && e.data.type === 'goto-screen') show(e.data.screen);
+        });
+        show(new URLSearchParams(window.location.search).get('screen') || 'regular');
+      })();
+    </script>
+
+  </div>
+</body>
+</html>
