@@ -8,10 +8,11 @@ screens-library/screens/
   <screen>/       index.html, screen.css (pruned to what the screen uses), assets/
 ```
 
-## Reuse a screen in a new prototype
-1. Copy `screens/<screen>/` and `screens/_base/` next to your prototype (keep them side by side, since the pages link `../_base/`).
-2. Open or embed `<screen>/index.html`, or paste its `.prototype-viewport` markup into your page and keep `screen.css`.
-3. Navigation is intentionally not wired: add your own `click` handlers.
+## Using a screen in a prototype (rules for Claude)
+- **Default: embed.** Load the library module as it is (for example an iframe to `screens-library/screens/<screen>/index.html`, same pattern as the library page). Do not copy it. The screen then stays in sync with the library.
+- **Iterating on a screen: do it at prototype level.** If the user wants changes to a screen inside a prototype, copy `screens/<screen>/` and `screens/_base/` into that prototype (keep them side by side, since the pages link `../_base/`) and edit the copy. The copy no longer follows the library.
+- **Never modify `screens-library/screens/` unless the user explicitly says to change the shared screen.** A change there affects every prototype that embeds it.
+- Navigation is intentionally not wired in the modules: a prototype adds its own click handlers around the embed or on its copy.
 
 Cart also links the shared Pintxo components (`shared-design-system/pintxo/pintxo.css`).
 
