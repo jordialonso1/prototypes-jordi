@@ -85,8 +85,6 @@ export default function App() {
                   <Preview screen={s} scale={THUMB_SCALE} />
                 </button>
                 <h3 className="card__title">{s.title}</h3>
-                <p className="card__desc">{s.pending ?? s.description}</p>
-                {s.screen && <code className="card__id">{s.source} / {s.screen}</code>}
               </li>
             ))}
           </ul>

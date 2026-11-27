@@ -8,9 +8,7 @@
 .card__thumb { display: block; padding: 0; border: 1px solid #cdced0; border-radius: 16px; background: #fff; overflow: hidden; cursor: pointer; }
 .card__thumb:hover:not(:disabled) { border-color: #161617; }
 .card__thumb:disabled { cursor: default; }
-.card__title { margin: 12px 0 4px; font-size: 16px; line-height: 20px; }
-.card__desc { margin: 0 0 8px; font-size: 13px; line-height: 18px; color: #626364; }
-.card__id { font-size: 12px; color: #626364; }
+.card__title { margin: 12px 0 0; font-size: 16px; line-height: 20px; }
 .preview { position: relative; overflow: hidden; background: #fff; }
 .preview__frame { position: absolute; top: 0; left: 0; border: 0; transform-origin: top left; }
 .preview--pending { display: grid; place-items: center; background: repeating-linear-gradient(45deg, #f2f2f3, #f2f2f3 8px, #eceef0 8px, #eceef0 16px); color: #626364; font-size: 14px; }
