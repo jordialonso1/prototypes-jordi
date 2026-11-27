@@ -312,15 +312,10 @@
     .footer { position: absolute; left: 0; right: 0; bottom: 0; z-index: 3; background: var(--background-color-primary); }
     .footer--raised { border-radius: var(--cornerRadius-m) var(--cornerRadius-m) 0 0; box-shadow: 0 0 2px 0 var(--elevation-shadow-basic-color), 0 0 8px 0 var(--elevation-shadow-raised-color); clip-path: inset(-12px -12px 0 -12px); }
     .footer__content { display: flex; align-items: center; gap: var(--spacing-xs); padding: var(--spacing-s) var(--spacing-m) 0; }
-    .footer--plain .footer__content { gap: var(--spacing-s); padding-bottom: var(--spacing-s); }
     .footer__price { flex: 1; display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-xs); min-width: 0; }
-    .footer--plain .footer__price { flex: none; width: 165px; }
     .footer__total { margin: 0; font-weight: 500; }
     .footer__original { margin: 0; color: var(--text-color-secondary); text-decoration: line-through; }
-    .footer__fees { display: flex; align-items: center; gap: var(--spacing-xxs); color: var(--text-color-secondary); }
-    .footer__fees p { margin: 0; }
     .footer__cta { flex: none; }
-    .footer--plain .footer__cta { flex: 1; }
     .footer__home { height: 34px; display: flex; justify-content: center; align-items: flex-end; padding-bottom: 8px; }
     .footer__home::after { content: ''; width: 134px; height: 5px; border-radius: 100px; background: var(--text-color-primary); }
   </style>
@@ -492,14 +487,14 @@
         </div>
       </div>
 
-      <footer class="footer footer--plain">
+      <footer class="footer footer--raised">
         <div class="footer__content">
           <div class="footer__price">
             <p class="footer__total pintxo-typography-body1-emphasis">20,80€</p>
-            <div class="footer__fees pintxo-typography-body2"><p>+ fees</p><img src="assets/icon-info-16.svg" width="16" height="16" alt="" /></div>
           </div>
-          <button type="button" class="pintxo-button pintxo-button--primary pintxo-button--m footer__cta" disabled>Go to checkout</button>
+          <button type="button" class="pintxo-button pintxo-button--primary pintxo-button--m pintxo-button--trailing-icon footer__cta" disabled>Go to checkout <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6.16708 3.50805C6.39257 3.27795 6.7619 3.27422 6.99199 3.49972L11.1587 7.58305C11.2706 7.69277 11.3337 7.84292 11.3337 7.99967C11.3337 8.15643 11.2706 8.30658 11.1587 8.4163L6.99199 12.4996C6.7619 12.7251 6.39257 12.7214 6.16708 12.4913C5.94158 12.2612 5.94531 11.8919 6.17541 11.6664L9.91695 7.99967L6.17541 4.33297C5.94531 4.10747 5.94158 3.73814 6.16708 3.50805Z" fill-rule="evenodd" clip-rule="evenodd" fill="currentColor"/></svg></button>
         </div>
+        <div class="footer__home"></div>
       </footer>
     </section>
 
