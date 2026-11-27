@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" data-theme="core" data-ui-mode="light">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="data:," />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home page</title>
+  <link rel="stylesheet" href="./screen.css" />
+</head>
+<body>
+  <section class="screen start is-active" data-screen="start" aria-label="Start">
+    <div class="start__hero"><img src="assets/hero.png" alt="" /></div>
+    <img class="start__logo" src="assets/logo.svg" alt="Glovo" />
+    <div class="start__bottom">
+      <img class="start__curve" src="assets/curve.svg" alt="" />
+      <div class="start__sheet">
+        <div class="banner" role="status">
+          <div class="banner__accessory" aria-hidden="true">
+            <img class="banner__blob" src="assets/blob-promotion.svg" alt="" />
+            <img class="banner__art" src="assets/bag-motorbike-confetti.svg" alt="" />
+          </div>
+          <div class="banner__content">
+            <span class="t-body2" style="font-weight: 500">First order with free delivery</span>
+            <span class="t-body2">For new customers only.</span>
+          </div>
+        </div>
+
+        <div class="start__group">
+          <div class="start__heading">
+            <h1 class="t-title3">Welcome!</h1>
+            <p class="t-body2 t-secondary">Let’s start with your phone number</p>
+          </div>
+          <div class="start__phone">
+            <label class="field">
+              <span class="field__label">Prefix</span>
+              <span class="input">
+                <input value="🇪🇸 +34" readonly aria-label="Prefix" />
+                <img src="assets/icon-chevron-down.svg" alt="" />
+              </span>
+            </label>
+            <label class="field">
+              <span class="field__label">Phone number</span>
+              <span class="input"><input type="tel" inputmode="tel" value="612 345 678" aria-label="Phone number" /></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="start__group">
+          <div class="btn-row btn-row--wide">
+            <button class="btn btn--l" type="button"><span class="btn__label">SMS</span></button>
+            <button class="btn btn--l btn--primary" type="button"><span class="btn__label">WhatsApp</span></button>
+          </div>
+          <div class="start__alt">
+            <p class="t-body2 t-secondary">Or continue with</p>
+            <div class="btn-row">
+              <button class="btn btn--l" type="button" aria-label="Apple"><img src="assets/icon-apple.svg" alt="" /></button>
+              <button class="btn btn--l" type="button" aria-label="Google"><img src="assets/icon-google.svg" alt="" /></button>
+              <button class="btn btn--l" type="button" aria-label="Email"><img src="assets/icon-envelope.svg" alt="" /></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="start__more">
+          <button class="text-button" type="button">More <img src="assets/icon-chevron-forward.svg" alt="" /></button>
+        </div>
+
+        <p class="t-caption start__legal">
+          By continuing, you automatically accept our
+          <a href="https://glovoapp.com/docs/es/legal/terms?country=es" target="_blank" rel="noreferrer">Terms &amp; Conditions</a>,
+          <a href="https://glovoapp.com/docs/en/legal/privacy?country=es" target="_blank" rel="noreferrer">Privacy Policy</a> and
+          <a href="https://glovoapp.com/en/legal/cookies?country=es" target="_blank" rel="noreferrer">Cookies Policy</a>
+        </p>
+      </div>
+    </div>
+    <img class="status-bar" src="assets/statusbar.svg" alt="" />
+    <div class="home-indicator"></div>
+  </section>
+</body>
+</html>
