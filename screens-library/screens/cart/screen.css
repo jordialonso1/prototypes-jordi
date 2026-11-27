@@ -42,6 +42,7 @@ img { display: block; }
 .item-row__head { display: flex; align-items: flex-start; gap: var(--spacing-xs); }
 .item-row__name { flex: 1; margin: 0; min-width: 0; }
 .item-row__price { margin: 0; white-space: nowrap; text-align: right; }
+.item-row__name--medium { font-weight: 500; }
 .item-row__desc { margin: 0; }
 .item-row__footer { display: flex; justify-content: flex-end; }
 /* ---- Upsell tiles ---- */
