@@ -22,5 +22,5 @@
     "baseUrl": ".",
     "paths": { "@shared": ["shared-design-system/index.ts"], "@shared/*": ["shared-design-system/*"] }
   },
-  "include": ["ai-label-prototype/src", "signup-login-flow/src", "shared-design-system"]
+  "include": ["ai-label-prototype/src", "signup-login-flow/src", "screens-library/src", "shared-design-system"]
 }
