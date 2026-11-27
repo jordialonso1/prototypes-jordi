@@ -1,0 +1,8628 @@
+{
+ "store": {
+  "name": "Honest Greens",
+  "storeId": "34801",
+  "addressId": "66944",
+  "layout": "LIST_VIEW_LAYOUT",
+  "vertical": "food",
+  "city": "BCN",
+  "language": "en"
+ },
+ "sections": [
+  {
+   "id": "top-sellers-ts",
+   "title": "Top sellers",
+   "cover": null,
+   "products": [
+    {
+     "id": "42274330448",
+     "name": "Breakfast Burrito",
+     "description": "Tortilla con tofu scramble, aguacate, pico de gallo, kale, maíz, crème fraîche plant-based de anacardos, almendra, bacon de coco, frijoles, jalapeño, cebolla morada, cilantro, salsa chipotle.",
+     "price": 8.45,
+     "priceText": "8,45 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/efc3a9c4-abfc-44ea-9dd9-e3cd9ee76414.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Escoge tus extras",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Huevos revueltos con Dukkah",
+         "price": 2.95
+        },
+        {
+         "name": "Huevo Poché",
+         "price": 1.45
+        },
+        {
+         "name": "Salmón ahumado",
+         "price": 4.95
+        },
+        {
+         "name": "Halloumi",
+         "price": 2.95
+        },
+        {
+         "name": "Aguacate",
+         "price": 2.95
+        },
+        {
+         "name": "Doble Pan",
+         "price": 1.95
+        }
+       ]
+      },
+      {
+       "title": "Personalizar tu plato",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Sin Chipotle",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Cilantro",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Frutos Secos",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Oliva",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Cebolla",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Tomate",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42361803644",
+     "name": "Protein-Power Overnight Oats",
+     "description": "Con avena, quinoa tricolor, leche de almendra y coco, canela, granola de avellana, anacardo, almendra, piñones, pistacho, sésamo, yogur de coco, plátano caramelizado, mantequilla de almendra, frambuesa, mermelada de arándano, naranja, sumac.",
+     "price": 7.75,
+     "priceText": "7,75 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/b75d3378-aea4-4002-aef5-d2b180256af2.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Escoge tus Extras",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Keto Granola",
+         "price": 1.95
+        }
+       ]
+      },
+      {
+       "title": "Personalizar tu plato",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Sin Plátano",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Menta",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42362378176",
+     "name": "Loaded Avocado Toast",
+     "description": "Huevos revueltos, cebolla, kale, perejil, menta, cilantro, salsa holandesa plant-based a base de aceite de oliva con almendra, dukkah de avellana, aguacate, pimienta, sal en escamas.",
+     "price": 9.25,
+     "priceText": "9,25 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/05f3b036-c036-4860-a7fb-07aba21db310.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Escoge tus extras",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Huevos revueltos con Dukkah",
+         "price": 2.95
+        },
+        {
+         "name": "Huevo Poché",
+         "price": 1.45
+        },
+        {
+         "name": "Salmón ahumado",
+         "price": 4.95
+        },
+        {
+         "name": "Halloumi",
+         "price": 2.95
+        },
+        {
+         "name": "Aguacate",
+         "price": 2.95
+        },
+        {
+         "name": "Doble Pan",
+         "price": 1.95
+        }
+       ]
+      },
+      {
+       "title": "Personalizar tu plato",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Sin Chipotle",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Cilantro",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Frutos Secos",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Oliva",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Cebolla",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Tomate",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    }
+   ]
+  },
+  {
+   "id": "desayunos-s.6433107955",
+   "title": "Desayunos",
+   "cover": null,
+   "products": [
+    {
+     "id": "42359521787",
+     "name": "Smoked Salmon Florentine",
+     "description": "Dos huevos de corral escalfados, espinaca, salmón ahumado, holandesa chili crunch a base de aceite de oliva con almendra, eneldo, aguacate, microbrotes, flores comestibles, sumac, sal en escamas.",
+     "price": 11.45,
+     "priceText": "11,45 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/e499c88c-da9a-477c-9def-b1f524dacc1f.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Escoge tus extras",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Huevos revueltos con Dukkah",
+         "price": 2.95
+        },
+        {
+         "name": "Huevo Poché",
+         "price": 1.45
+        },
+        {
+         "name": "Salmón ahumado",
+         "price": 4.95
+        },
+        {
+         "name": "Halloumi",
+         "price": 2.95
+        },
+        {
+         "name": "Aguacate",
+         "price": 2.95
+        },
+        {
+         "name": "Doble Pan",
+         "price": 1.95
+        }
+       ]
+      },
+      {
+       "title": "Personalizar tu plato",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Sin Chipotle",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Cilantro",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Frutos Secos",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Oliva",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Cebolla",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Tomate",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42336174195",
+     "name": "Matcha Pistachio Pancakes",
+     "description": "Con ricotta, crème fraîche plant-based de anacardos, plátano, frambuesa, arándano, pistacho, mermelada de arándanos, almíbar de naranja, matcha en polvo, pétalos de rosa.",
+     "price": 10.25,
+     "priceText": "10,25 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/183194e6-8080-4753-bad1-394b30445c42.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Escoge tus Extras",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Keto Granola",
+         "price": 1.95
+        }
+       ]
+      },
+      {
+       "title": "Personalizar tu plato",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Sin Plátano",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Menta",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42359521784",
+     "name": "XL Yogurt with Fresh Fruit",
+     "description": "Con piña, kiwi, pitahaya, plátano, fresa, frambuesa, arándano, compota de mango maracuyá, mantequilla de almendra, granola de avellana, anacardo, almendra, piñones, pistacho, sésamo, granada, pera en almíbar de remolacha, menta.",
+     "price": 10.25,
+     "priceText": "10,25 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/032aee9a-6054-4c5c-8e21-172ad8a07107.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "¿Qué probarás hoy?",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Yogur Griego",
+         "price": 0.0
+        },
+        {
+         "name": "Yogur de Coco",
+         "price": 0.75
+        }
+       ]
+      },
+      {
+       "title": "Escoge tus Extras",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Keto Granola",
+         "price": 1.95
+        }
+       ]
+      },
+      {
+       "title": "Personalizar tu plato",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Sin Plátano",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Menta",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42359521780",
+     "name": "Mediterranean Eggs Benedict",
+     "description": "Dos huevos de corral escalfados, portobellos, salsa holandesa a base de aceite de oliva con almendra, tomates, avellanas, microbrotes, aceitunas kalamata, bacon de coco, sal en escamas.",
+     "price": 9.75,
+     "priceText": "9,75 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/2ff781de-e186-453e-9e2b-e352fbf8221c.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Escoge tus extras",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Huevos revueltos con Dukkah",
+         "price": 2.95
+        },
+        {
+         "name": "Huevo Poché",
+         "price": 1.45
+        },
+        {
+         "name": "Salmón ahumado",
+         "price": 4.95
+        },
+        {
+         "name": "Halloumi",
+         "price": 2.95
+        },
+        {
+         "name": "Aguacate",
+         "price": 2.95
+        },
+        {
+         "name": "Doble Pan",
+         "price": 1.95
+        }
+       ]
+      },
+      {
+       "title": "Personalizar tu plato",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Sin Chipotle",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Cilantro",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Frutos Secos",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Oliva",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Cebolla",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Tomate",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42359521781",
+     "name": "Açaí Bowl",
+     "description": "Con fresa, plátano, kiwi, pitahaya, paleo crumble, granola keto con pecanas, nueces, almendra, sésamo, mantequilla de almendra, nibs de cacao, menta.",
+     "price": 9.75,
+     "priceText": "9,75 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/18e7ce5a-adee-47e3-8b41-aadf93e29fca.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Escoge tus Extras",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Keto Granola",
+         "price": 1.95
+        }
+       ]
+      },
+      {
+       "title": "Personalizar tu plato",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Sin Plátano",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Menta",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42362378176",
+     "name": "Loaded Avocado Toast",
+     "description": "Huevos revueltos, cebolla, kale, perejil, menta, cilantro, salsa holandesa plant-based a base de aceite de oliva con almendra, dukkah de avellana, aguacate, pimienta, sal en escamas.",
+     "price": 9.25,
+     "priceText": "9,25 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/05f3b036-c036-4860-a7fb-07aba21db310.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Escoge tus extras",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Huevos revueltos con Dukkah",
+         "price": 2.95
+        },
+        {
+         "name": "Huevo Poché",
+         "price": 1.45
+        },
+        {
+         "name": "Salmón ahumado",
+         "price": 4.95
+        },
+        {
+         "name": "Halloumi",
+         "price": 2.95
+        },
+        {
+         "name": "Aguacate",
+         "price": 2.95
+        },
+        {
+         "name": "Doble Pan",
+         "price": 1.95
+        }
+       ]
+      },
+      {
+       "title": "Personalizar tu plato",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Sin Chipotle",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Cilantro",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Frutos Secos",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Oliva",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Cebolla",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Tomate",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42359521788",
+     "name": "Loaded Tomato Toast",
+     "description": "Con aguacate, salmorejo, feta plant-based, albahaca, huevo poché, aceite de oliva virgen extra, sal en escamas, espirulina.",
+     "price": 8.75,
+     "priceText": "8,75 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/2b99920b-521c-468d-a9f1-1a9b34d900c9.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Escoge tus extras",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Huevos revueltos con Dukkah",
+         "price": 2.95
+        },
+        {
+         "name": "Huevo Poché",
+         "price": 1.45
+        },
+        {
+         "name": "Salmón ahumado",
+         "price": 4.95
+        },
+        {
+         "name": "Halloumi",
+         "price": 2.95
+        },
+        {
+         "name": "Aguacate",
+         "price": 2.95
+        },
+        {
+         "name": "Doble Pan",
+         "price": 1.95
+        }
+       ]
+      },
+      {
+       "title": "Personalizar tu plato",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Sin Chipotle",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Cilantro",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Frutos Secos",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Oliva",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Cebolla",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Tomate",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42362378177",
+     "name": "Breakfast \"Tostada\"",
+     "description": "Tortilla de maíz crujiente, salsa chipotle, aguacate, kale, huevos revueltos, pico de gallo, yogur de coco, chorizo plant-based, cilantro, jalapeño encurtido, tajín.",
+     "price": 8.45,
+     "priceText": "8,45 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/48079ec0-d789-4c07-8500-efed26407a95.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Escoge tus extras",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Huevos revueltos con Dukkah",
+         "price": 2.95
+        },
+        {
+         "name": "Huevo Poché",
+         "price": 1.45
+        },
+        {
+         "name": "Salmón ahumado",
+         "price": 4.95
+        },
+        {
+         "name": "Halloumi",
+         "price": 2.95
+        },
+        {
+         "name": "Aguacate",
+         "price": 2.95
+        },
+        {
+         "name": "Doble Pan",
+         "price": 1.95
+        }
+       ]
+      },
+      {
+       "title": "Personalizar tu plato",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Sin Chipotle",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Cilantro",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Frutos Secos",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Oliva",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Cebolla",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Tomate",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42274330448",
+     "name": "Breakfast Burrito",
+     "description": "Tortilla con tofu scramble, aguacate, pico de gallo, kale, maíz, crème fraîche plant-based de anacardos, almendra, bacon de coco, frijoles, jalapeño, cebolla morada, cilantro, salsa chipotle.",
+     "price": 8.45,
+     "priceText": "8,45 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/efc3a9c4-abfc-44ea-9dd9-e3cd9ee76414.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Escoge tus extras",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Huevos revueltos con Dukkah",
+         "price": 2.95
+        },
+        {
+         "name": "Huevo Poché",
+         "price": 1.45
+        },
+        {
+         "name": "Salmón ahumado",
+         "price": 4.95
+        },
+        {
+         "name": "Halloumi",
+         "price": 2.95
+        },
+        {
+         "name": "Aguacate",
+         "price": 2.95
+        },
+        {
+         "name": "Doble Pan",
+         "price": 1.95
+        }
+       ]
+      },
+      {
+       "title": "Personalizar tu plato",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Sin Chipotle",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Cilantro",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Frutos Secos",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Oliva",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Cebolla",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Tomate",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42362561748",
+     "name": "Turkish Eggs",
+     "description": "Dos huevos de corral escalfados, yogur, kale, pistacho, eneldo, cilantro, aceite de harissa, cebolla, sumac, sal en escamas.A elegir:Yogur griego  ·  Yogur de coco (+0,50€)",
+     "price": 7.95,
+     "priceText": "7,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/145da508-463c-489a-9190-b2010fdb380d.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "¿Qué probarás hoy?",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Yogur Griego",
+         "price": 0.0
+        },
+        {
+         "name": "Yogur de Coco",
+         "price": 0.5
+        }
+       ]
+      },
+      {
+       "title": "Escoge tus extras",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Huevos revueltos con Dukkah",
+         "price": 2.95
+        },
+        {
+         "name": "Huevo Poché",
+         "price": 1.45
+        },
+        {
+         "name": "Salmón ahumado",
+         "price": 4.95
+        },
+        {
+         "name": "Halloumi",
+         "price": 2.95
+        },
+        {
+         "name": "Aguacate",
+         "price": 2.95
+        },
+        {
+         "name": "Doble Pan",
+         "price": 1.95
+        }
+       ]
+      },
+      {
+       "title": "Personalizar tu plato",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Sin Chipotle",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Cilantro",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Frutos Secos",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Oliva",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Cebolla",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Tomate",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42361803644",
+     "name": "Protein-Power Overnight Oats",
+     "description": "Con avena, quinoa tricolor, leche de almendra y coco, canela, granola de avellana, anacardo, almendra, piñones, pistacho, sésamo, yogur de coco, plátano caramelizado, mantequilla de almendra, frambuesa, mermelada de arándano, naranja, sumac.",
+     "price": 7.75,
+     "priceText": "7,75 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/b75d3378-aea4-4002-aef5-d2b180256af2.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Escoge tus Extras",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Keto Granola",
+         "price": 1.95
+        }
+       ]
+      },
+      {
+       "title": "Personalizar tu plato",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Sin Plátano",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Menta",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42274330453",
+     "name": "Avocado Toast de Semillas “Bagel”",
+     "description": "Aceite de oliva virgen extra, pipas de calabaza, piñones, pepino, rabanito, sal en escamas.",
+     "price": 7.45,
+     "priceText": "7,45 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/d6c3ad42-7a7b-4e34-af39-9bc0b4be9483.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Escoge tus extras",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Huevos revueltos con Dukkah",
+         "price": 2.95
+        },
+        {
+         "name": "Huevo Poché",
+         "price": 1.45
+        },
+        {
+         "name": "Salmón ahumado",
+         "price": 4.95
+        },
+        {
+         "name": "Halloumi",
+         "price": 2.95
+        },
+        {
+         "name": "Aguacate",
+         "price": 2.95
+        },
+        {
+         "name": "Doble Pan",
+         "price": 1.95
+        }
+       ]
+      },
+      {
+       "title": "Personalizar tu plato",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Sin Chipotle",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Cilantro",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Frutos Secos",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Oliva",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Cebolla",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Tomate",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42341531146",
+     "name": "Blueberry Chía-Pudding",
+     "description": "Con leche de coco, soja y almendra, granola keto con pecanas, nueces, almendra, sésamo, compota de mango maracuyá, frambuesa, arándano, menta picada, coco rallado.",
+     "price": 7.45,
+     "priceText": "7,45 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/36459020-884d-4090-aee2-17961dfee933.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Escoge tus Extras",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Keto Granola",
+         "price": 1.95
+        }
+       ]
+      },
+      {
+       "title": "Personalizar tu plato",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Sin Plátano",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Menta",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42274330444",
+     "name": "Honest Pan Tumaca",
+     "description": "Tomates, salmorejo, feta plant-based, albahaca, aceite de oliva virgen extra, sal en escamas, espirulina.",
+     "price": 4.75,
+     "priceText": "4,75 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/c1780f19-c4cb-43f1-b8d4-74234e48bbbc.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Escoge tus extras",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Huevos revueltos con Dukkah",
+         "price": 2.95
+        },
+        {
+         "name": "Huevo Poché",
+         "price": 1.45
+        },
+        {
+         "name": "Salmón ahumado",
+         "price": 4.95
+        },
+        {
+         "name": "Halloumi",
+         "price": 2.95
+        },
+        {
+         "name": "Aguacate",
+         "price": 2.95
+        },
+        {
+         "name": "Doble Pan",
+         "price": 1.95
+        }
+       ]
+      },
+      {
+       "title": "Personalizar tu plato",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Sin Chipotle",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Cilantro",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Frutos Secos",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Oliva",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Cebolla",
+         "price": 0.0
+        },
+        {
+         "name": "Sin Tomate",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42366577788",
+     "name": "Zumo de Naranja",
+     "description": "Zumo de Naranja recién exprimido sin conservantes ni aditivos.",
+     "price": 3.95,
+     "priceText": "3,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/d18d01d4-0fe6-4d67-9b0f-1640c3463cef.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    }
+   ]
+  },
+  {
+   "id": "honest-bites-s.6433107961",
+   "title": "Honest Bites",
+   "cover": null,
+   "products": [
+    {
+     "id": "42320609711",
+     "name": "Chocolate Avo Mousse with Olive Oil & Salt",
+     "description": "Con aguacate, almendra molida, aceite de oliva virgen extra, crumble de arroz.",
+     "price": 5.95,
+     "priceText": "5,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/a381ae37-674e-4451-b118-e4493267db3d.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42320609716",
+     "name": "Pistacho Matcha Overnight Protein Oats",
+     "description": "Con avena, pistachos, chía, mermelada de frambuesa, yogur de coco.",
+     "price": 5.95,
+     "priceText": "5,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/e25ce54c-0655-4870-ba09-e88d60833fe9.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42333383578",
+     "name": "Shoyu Pecan Pie",
+     "description": "Con nueces pecanas, caramelo de shoyu, base de trigo sarraceno.",
+     "price": 5.75,
+     "priceText": "5,75 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/b17dfb56-2d41-44d3-ae01-15173bb5d6bd.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42361483592",
+     "name": "Miso Koji Apple Pie",
+     "description": "Con manzana, avellanas, base de trigo sarraceno.",
+     "price": 5.75,
+     "priceText": "5,75 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/dff1e0b2-edd4-4852-97af-a6cdeae66aed.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42347804425",
+     "name": "Banana Bread",
+     "description": "Con azúcar de coco, canela, vainilla, nueces, almendras, agave, harinas sin gluten.",
+     "price": 4.25,
+     "priceText": "4,25 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/4c0be278-4d80-4987-b2fb-8c267a03e82f.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42285244357",
+     "name": "Marbled Chocolate and Tahini Cake with Coffee Glaze",
+     "description": "Con glaseado de café, frambuesa, harinas sin gluten, aceite de oliva.",
+     "price": 4.25,
+     "priceText": "4,25 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/ee73f0b7-cf68-459b-bbdb-96baf3364e32.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42328111039",
+     "name": "Yellow Carrot Chai Cake",
+     "description": "Con zanahoria, almendra, nueces, glaseado de vainilla, semillas de calabaza, aceite de oliva, harinas sin gluten.",
+     "price": 4.25,
+     "priceText": "4,25 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/fb87d530-abe7-4ace-b60b-e2f7a1e97452.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42331817202",
+     "name": "Chocolate Chip Cookie",
+     "description": "Con aceite de oliva, azúcar de coco, harinas sin gluten.",
+     "price": 4.25,
+     "priceText": "4,25 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/060868f6-ab83-446f-a380-5aa25bbbf764.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42343507725",
+     "name": "Cookie de Frambuesa y Pistacho",
+     "description": "Con frambuesa, pistachos, aceite de oliva, azúcar de coco, harinas sin gluten.",
+     "price": 4.25,
+     "priceText": "4,25 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/41fc248d-bac5-4f6c-8ed9-c54420b23a05.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42351978592",
+     "name": "Raw Chocolate Duo",
+     "description": "Con cacao, dátiles, nueces, trigo sarraceno, anacardo, plátano, leche de coco.",
+     "price": 3.95,
+     "priceText": "3,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/cc898c22-a7a6-4814-8abe-48944c37fc53.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42326314053",
+     "name": "Raw Maca Coconut Bar",
+     "description": "Con coco, vainilla, maca, dátiles, almendras, nueces, cacao, chocolate, flores comestibles.",
+     "price": 3.95,
+     "priceText": "3,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/c3296caa-9ef2-4852-87a1-834209c6aaf4.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42311668870",
+     "name": "Lime Pistacho & Raspberry Bar",
+     "description": "Con matcha, lima, dátiles, nueces, almendras, pistachos, chocolate blanco de frambuesa con anacardos.",
+     "price": 3.95,
+     "priceText": "3,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/841de462-4bcc-40ac-a73c-ab6e919f76f8.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42251465072",
+     "name": "Orange Protein Power",
+     "description": "Con albaricoque, almendra, dátil, naranja, zanahoria, coco, vainilla, cúrcuma, proteína plant-based.",
+     "price": 2.65,
+     "priceText": "2,65 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/4b2ea38a-a8b8-48b8-bd6f-30d82ddd2182.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42274011074",
+     "name": "Matcha Protein Power",
+     "description": "Con dátil, pistacho, almendra, chía, vainilla, manzana, proteína plant-based.",
+     "price": 2.65,
+     "priceText": "2,65 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/0cc6de07-d70c-4043-b7a1-408613976613.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42326314061",
+     "name": "Cocoa Protein Power",
+     "description": "Con cacao, avellana, dátil, boniato, sésamo, agave, azúcar de coco, proteína plant-based.",
+     "price": 2.65,
+     "priceText": "2,65 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/34c1a580-63db-4b42-a837-e3a30067faaa.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    }
+   ]
+  },
+  {
+   "id": "shakers-s.6433107956",
+   "title": "Shakers",
+   "cover": null,
+   "products": [
+    {
+     "id": "42374661323",
+     "name": "Cinnamon Matcha Cloud Large",
+     "description": "Mascarpone, caramelo, canela y tu leche favorita, con una nube de coco y matcha por encima.",
+     "price": 6.25,
+     "priceText": "6,25 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/36b0aa0e-1c1a-43b8-aa66-867e8bf5bd62.PNG",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra Matcha",
+         "price": 1.25
+        }
+       ]
+      },
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade Proteina",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra Proteína Vegetal (25g)",
+         "price": 1.45
+        }
+       ]
+      },
+      {
+       "title": "Añade Colágeno",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Colágeno",
+         "price": 1.45
+        }
+       ]
+      },
+      {
+       "title": "Añade extra protein foam",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Protein Matcha Cold Foam",
+         "price": 1.95
+        },
+        {
+         "name": "Protein Cold Foam",
+         "price": 1.95
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42374661319",
+     "name": "Black Sesame Matcha Latte Large",
+     "description": "Sirope de caramelo y sésamo negro, matcha y tu leche favorita.",
+     "price": 6.25,
+     "priceText": "6,25 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/f1938aad-54a6-4c0f-bafb-9eae2e2015ca.PNG",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra Matcha",
+         "price": 1.25
+        }
+       ]
+      },
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade Proteina",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra Proteína Vegetal (25g)",
+         "price": 1.45
+        }
+       ]
+      },
+      {
+       "title": "Añade Colágeno",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Colágeno",
+         "price": 1.45
+        }
+       ]
+      },
+      {
+       "title": "Añade extra protein foam",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Protein Matcha Cold Foam",
+         "price": 1.95
+        },
+        {
+         "name": "Protein Cold Foam",
+         "price": 1.95
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42247726041",
+     "name": "Fruit Matcha Latte Large",
+     "description": "Matcha con mermelada de mango o fresa y tu leche favorita.",
+     "price": 5.95,
+     "priceText": "5,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/40beac96-d049-41e0-9762-2f9f10ccf72a.PNG",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "¿Qué probarás hoy?",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Fresa",
+         "price": 0.0
+        },
+        {
+         "name": "Mango",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra Matcha",
+         "price": 1.25
+        }
+       ]
+      },
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade extra protein foam",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Protein Matcha Cold Foam",
+         "price": 1.95
+        },
+        {
+         "name": "Protein Cold Foam",
+         "price": 1.95
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42374661318",
+     "name": "Black Sesame Latte Large",
+     "description": "Sirope de caramelo y sésamo negro, espresso y tu leche favorita.",
+     "price": 5.75,
+     "priceText": "5,75 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/91264190-ca2b-40b9-aa21-462b110aa4fb.PNG",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra shot",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "¿Lo quieres decaf?",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Descafeinado",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade Proteina",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra Proteína Vegetal (25g)",
+         "price": 1.45
+        }
+       ]
+      },
+      {
+       "title": "Añade Colágeno",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Colágeno",
+         "price": 1.45
+        }
+       ]
+      },
+      {
+       "title": "Añade extra protein foam",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Protein Matcha Cold Foam",
+         "price": 1.95
+        },
+        {
+         "name": "Protein Cold Foam",
+         "price": 1.95
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42247360192",
+     "name": "Iced Vanilla Matcha Latte Large",
+     "description": "Matcha y vainilla, yogur de coco, terminado con matcha en polvo y tu leche favorita.",
+     "price": 5.75,
+     "priceText": "5,75 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/ff905173-8f0f-472a-ac44-a0f14bb6b439.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra Matcha",
+         "price": 1.25
+        }
+       ]
+      },
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade Proteina",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra Proteína Vegetal (25g)",
+         "price": 1.45
+        }
+       ]
+      },
+      {
+       "title": "Añade Colágeno",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Colágeno",
+         "price": 1.45
+        }
+       ]
+      },
+      {
+       "title": "Añade extra protein foam",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Protein Matcha Cold Foam",
+         "price": 1.95
+        },
+        {
+         "name": "Protein Cold Foam",
+         "price": 1.95
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42374661307",
+     "name": "Cinnamon Matcha Cloud Small",
+     "description": "Mascarpone, caramelo, canela y tu leche favorita, con una nube de coco y matcha por encima.",
+     "price": 5.45,
+     "priceText": "5,45 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/36b0aa0e-1c1a-43b8-aa66-867e8bf5bd62.PNG",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra Matcha",
+         "price": 1.25
+        }
+       ]
+      },
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade Proteina",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra Proteína Vegetal (25g)",
+         "price": 1.45
+        }
+       ]
+      },
+      {
+       "title": "Añade Colágeno",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Colágeno",
+         "price": 1.45
+        }
+       ]
+      },
+      {
+       "title": "Añade extra protein foam",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Protein Matcha Cold Foam",
+         "price": 1.95
+        },
+        {
+         "name": "Protein Cold Foam",
+         "price": 1.95
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42374661317",
+     "name": "Black Sesame Matcha Latte Small",
+     "description": "Sirope de caramelo y sésamo negro, matcha y tu leche favorita.",
+     "price": 5.45,
+     "priceText": "5,45 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/f1938aad-54a6-4c0f-bafb-9eae2e2015ca.PNG",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra Matcha",
+         "price": 1.25
+        }
+       ]
+      },
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade Proteina",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra Proteína Vegetal (25g)",
+         "price": 1.45
+        }
+       ]
+      },
+      {
+       "title": "Añade Colágeno",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Colágeno",
+         "price": 1.45
+        }
+       ]
+      },
+      {
+       "title": "Añade extra protein foam",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Protein Matcha Cold Foam",
+         "price": 1.95
+        },
+        {
+         "name": "Protein Cold Foam",
+         "price": 1.95
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42362171825",
+     "name": "Fruit Matcha Latte Medium",
+     "description": "Matcha con mermelada de mango o fresa y tu leche favorita.",
+     "price": 5.45,
+     "priceText": "5,45 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/40beac96-d049-41e0-9762-2f9f10ccf72a.PNG",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "¿Qué probarás hoy?",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Fresa",
+         "price": 0.0
+        },
+        {
+         "name": "Mango",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra Matcha",
+         "price": 1.25
+        }
+       ]
+      },
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade extra protein foam",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Protein Matcha Cold Foam",
+         "price": 1.95
+        },
+        {
+         "name": "Protein Cold Foam",
+         "price": 1.95
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42247726037",
+     "name": "Aerocano Large",
+     "description": "Espresso, agua fría y hielo, texturizados al vapor para lograr una espuma ligera y cremosa.",
+     "price": 4.95,
+     "priceText": "4,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/2a529bcf-caa8-49e9-9964-c960134a9ba4.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "¿Lo quieres decaf?",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Descafeinado",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade extra protein foam",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Protein Matcha Cold Foam",
+         "price": 1.95
+        },
+        {
+         "name": "Protein Cold Foam",
+         "price": 1.95
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42247360198",
+     "name": "Red Berry Shaker Large",
+     "description": "Mermelada de frutos rojos con yogur de coco, polvo de remolacha y tu leche favorita.",
+     "price": 4.95,
+     "priceText": "4,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/3c038e79-f7ad-4def-a023-c5084c4c3d68.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade Proteina",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra Proteína Vegetal (25g)",
+         "price": 1.45
+        }
+       ]
+      },
+      {
+       "title": "Añade Colágeno",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Colágeno",
+         "price": 1.45
+        }
+       ]
+      },
+      {
+       "title": "Añade extra protein foam",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Protein Matcha Cold Foam",
+         "price": 1.95
+        },
+        {
+         "name": "Protein Cold Foam",
+         "price": 1.95
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42361803640",
+     "name": "Iced Vanilla Matcha Latte Small",
+     "description": "Matcha y vainilla, yogur de coco, terminado con matcha en polvo y tu leche favorita.",
+     "price": 4.95,
+     "priceText": "4,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/ff905173-8f0f-472a-ac44-a0f14bb6b439.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra Matcha",
+         "price": 1.25
+        }
+       ]
+      },
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade Proteina",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra Proteína Vegetal (25g)",
+         "price": 1.45
+        }
+       ]
+      },
+      {
+       "title": "Añade Colágeno",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Colágeno",
+         "price": 1.45
+        }
+       ]
+      },
+      {
+       "title": "Añade extra protein foam",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Protein Matcha Cold Foam",
+         "price": 1.95
+        },
+        {
+         "name": "Protein Cold Foam",
+         "price": 1.95
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42374661321",
+     "name": "Black Sesame Latte Small",
+     "description": "Sirope de caramelo y sésamo negro, espresso y tu leche favorita.",
+     "price": 4.75,
+     "priceText": "4,75 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/91264190-ca2b-40b9-aa21-462b110aa4fb.PNG",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra shot",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "¿Lo quieres decaf?",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Descafeinado",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade Proteina",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra Proteína Vegetal (25g)",
+         "price": 1.45
+        }
+       ]
+      },
+      {
+       "title": "Añade Colágeno",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Colágeno",
+         "price": 1.45
+        }
+       ]
+      },
+      {
+       "title": "Añade extra protein foam",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Protein Matcha Cold Foam",
+         "price": 1.95
+        },
+        {
+         "name": "Protein Cold Foam",
+         "price": 1.95
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42247726012",
+     "name": "Iced Matcha Latte",
+     "description": "Matcha Latte frío con matcha orgánico y la leche que elijas.",
+     "price": 4.75,
+     "priceText": "4,75 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/1cdd7245-4639-475d-878b-2ec221c6449e.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra Matcha",
+         "price": 1.25
+        }
+       ]
+      },
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade Proteina",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra Proteína Vegetal (25g)",
+         "price": 1.45
+        }
+       ]
+      },
+      {
+       "title": "Añade Colágeno",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Colágeno",
+         "price": 1.45
+        }
+       ]
+      },
+      {
+       "title": "Añade extra protein foam",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Protein Matcha Cold Foam",
+         "price": 1.95
+        },
+        {
+         "name": "Protein Cold Foam",
+         "price": 1.95
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42247726022",
+     "name": "Aerocano Small",
+     "description": "Espresso, agua fría y hielo, texturizados al vapor para lograr una espuma ligera y cremosa.",
+     "price": 4.45,
+     "priceText": "4,45 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/2a529bcf-caa8-49e9-9964-c960134a9ba4.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "¿Lo quieres decaf?",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Descafeinado",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade extra protein foam",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Protein Matcha Cold Foam",
+         "price": 1.95
+        },
+        {
+         "name": "Protein Cold Foam",
+         "price": 1.95
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42311668872",
+     "name": "Red Berry Shaker Small",
+     "description": "Mermelada de frutos rojos con yogur de coco, polvo de remolacha y tu leche favorita.",
+     "price": 4.45,
+     "priceText": "4,45 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/3c038e79-f7ad-4def-a023-c5084c4c3d68.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade Proteina",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra Proteína Vegetal (25g)",
+         "price": 1.45
+        }
+       ]
+      },
+      {
+       "title": "Añade Colágeno",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Colágeno",
+         "price": 1.45
+        }
+       ]
+      },
+      {
+       "title": "Añade extra protein foam",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Protein Matcha Cold Foam",
+         "price": 1.95
+        },
+        {
+         "name": "Protein Cold Foam",
+         "price": 1.95
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    }
+   ]
+  },
+  {
+   "id": "cafe-y-tes-s.6433107959",
+   "title": "Café y Tés",
+   "cover": null,
+   "products": [
+    {
+     "id": "42374661322",
+     "name": "Matcha Tahini Latte Large",
+     "description": "Galleta de halva triturada, sirope de tahini, matcha y tu leche favorita.",
+     "price": 5.75,
+     "priceText": "5,75 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/9b1e1450-a414-4f17-bc7d-aa36043be530.PNG",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra Matcha",
+         "price": 1.25
+        }
+       ]
+      },
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42374661316",
+     "name": "Ube Matcha Latte Large",
+     "description": "Ube en polvo, matcha y tu leche favorita.",
+     "price": 5.75,
+     "priceText": "5,75 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/2d097dd2-bb77-4706-a3a3-b1f11e1e34aa.PNG",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra Matcha",
+         "price": 1.25
+        }
+       ]
+      },
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42374661308",
+     "name": "Pistacho Matcha Latte Large",
+     "description": "Sirope de pistacho, matcha y tu leche favorita, con matcha en polvo por encima.",
+     "price": 5.65,
+     "priceText": "5,65 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/76f2526f-3773-4f26-bd2d-f811328d9504.PNG",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra Matcha",
+         "price": 1.25
+        }
+       ]
+      },
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42374473434",
+     "name": "Matcha Latte Large",
+     "description": "Té verde tradicional japonés servido con leche.",
+     "price": 5.25,
+     "priceText": "5,25 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/0b48d444-9a2a-4681-8383-689c4ffed9c6.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra Matcha",
+         "price": 1.25
+        }
+       ]
+      },
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42374661306",
+     "name": "Tiramisu Date Latte Large",
+     "description": "Sirope de dátil, mascarpone, espresso, cacao en polvo, tu leche favorita.",
+     "price": 4.85,
+     "priceText": "4,85 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/a04a6a6d-985c-4e22-b43c-8fb4c9304853.PNG",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra shot",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "¿Lo quieres decaf?",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Descafeinado",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42374661309",
+     "name": "Matcha Tahini Latte Small",
+     "description": "Galleta de halva triturada, sirope de tahini, matcha y tu leche favorita.",
+     "price": 4.75,
+     "priceText": "4,75 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/9b1e1450-a414-4f17-bc7d-aa36043be530.PNG",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra Matcha",
+         "price": 1.25
+        }
+       ]
+      },
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42374661305",
+     "name": "Ube Matcha Latte Small",
+     "description": "Ube en polvo, matcha y tu leche favorita.",
+     "price": 4.75,
+     "priceText": "4,75 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/2d097dd2-bb77-4706-a3a3-b1f11e1e34aa.PNG",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra Matcha",
+         "price": 1.25
+        }
+       ]
+      },
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42374661304",
+     "name": "Gingerbread Pumpkin Latte Large",
+     "description": "Sirope de calabaza y gingerbread, espresso y tu leche favorita.",
+     "price": 4.65,
+     "priceText": "4,65 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/77c7ad25-98c9-4972-a13f-1087c5d0501a.PNG",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra shot",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "¿Lo quieres decaf?",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Descafeinado",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42374661310",
+     "name": "Pistacho Matcha Latte Small",
+     "description": "Sirope de pistacho, matcha y tu leche favorita, con matcha en polvo por encima.",
+     "price": 4.65,
+     "priceText": "4,65 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/76f2526f-3773-4f26-bd2d-f811328d9504.PNG",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra Matcha",
+         "price": 1.25
+        }
+       ]
+      },
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42374661320",
+     "name": "Salted Caramel Latte Large",
+     "description": "Caramelo salado, espresso y tu leche favorita.",
+     "price": 4.65,
+     "priceText": "4,65 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/01852e35-c268-46a9-b925-a9d43e232bea.PNG",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra shot",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "¿Lo quieres decaf?",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Descafeinado",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42374697464",
+     "name": "Hojicha Latte Large",
+     "description": "Té verde japonés tostado y tu leche favorita.",
+     "price": 4.65,
+     "priceText": "4,65 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/f989db19-74d4-465f-8eeb-825e283e12d2.PNG",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42247726005",
+     "name": "Choco Caramel Latte Large",
+     "description": "Nibs de cacao, chocolate, caramelo y leche.",
+     "price": 4.55,
+     "priceText": "4,55 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/44c4f0de-bd84-4cb8-a469-795165509b07.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42247726036",
+     "name": "Dirty Chai Large",
+     "description": "Con base de Té Chai y uno o dos shots de café (según formato) el cual proviene de centro América y África, por defecto se sirve con Leche Fresca procedente de Granja Local.También disponible con bebidas vegetales de Avena, Almendra, Soja y Sin Lactosa.",
+     "price": 4.55,
+     "priceText": "4,55 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/28f3ac1c-4ecd-42a6-a9c2-135e6a6aa6ad.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra shot",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "¿Lo quieres decaf?",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Descafeinado",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Enfríalo",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Hielo",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42274330456",
+     "name": "Cold Brew Large",
+     "description": "Café de extracción en frío, macerado 16h.",
+     "price": 4.25,
+     "priceText": "4,25 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/834a0d79-0dfe-40ef-aa98-57a4650b090b.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Añade extra protein foam",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Protein Matcha Cold Foam",
+         "price": 1.95
+        },
+        {
+         "name": "Protein Cold Foam",
+         "price": 1.95
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42374473435",
+     "name": "Matcha Latte Small",
+     "description": "Té verde tradicional japonés servido con leche.",
+     "price": 4.25,
+     "priceText": "4,25 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/0b48d444-9a2a-4681-8383-689c4ffed9c6.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra Matcha",
+         "price": 1.25
+        }
+       ]
+      },
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42247726029",
+     "name": "Iced Latte Large",
+     "description": "Dos shots de nuestro espresso especial cubierto con hielo y leche de su elección fría espumada perfectamente (leches de una granja local, sin lactosa y leches vegetales disponibles a continuación). También disponible en descafeinado.",
+     "price": 3.95,
+     "priceText": "3,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/b33d9a08-15b0-4d1e-8ea6-23eff6fc72dc.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra shot",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "¿Lo quieres decaf?",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Descafeinado",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Añade Proteina",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra Proteína Vegetal (25g)",
+         "price": 1.45
+        }
+       ]
+      },
+      {
+       "title": "Añade Colágeno",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Colágeno",
+         "price": 1.45
+        }
+       ]
+      },
+      {
+       "title": "Añade extra protein foam",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Protein Matcha Cold Foam",
+         "price": 1.95
+        },
+        {
+         "name": "Protein Cold Foam",
+         "price": 1.95
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42374661313",
+     "name": "Tahini Halva Latte Large",
+     "description": "Galleta de halva triturada, sirope de tahini, espresso y tu leche favorita.",
+     "price": 3.95,
+     "priceText": "3,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/88550bc6-0871-41a4-a1d7-7fa155038ca0.PNG",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra shot",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "¿Lo quieres decaf?",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Descafeinado",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42374661303",
+     "name": "Pistacho Latte Large",
+     "description": "Sirope de pistacho, espresso y tu leche favorita.",
+     "price": 3.95,
+     "priceText": "3,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/69ee1d2f-9c6b-4feb-b8b1-a16f1df66fe7.PNG",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra shot",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "¿Lo quieres decaf?",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Descafeinado",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42247726019",
+     "name": "Latte Large",
+     "description": "Nuestro espresso especial cubierto con leche perfectamente cremada de su elección (leches de una granja local, sin lactosa y leches vegetales disponibles a continuación) Agregue un toque de cacao o canela para obtener un sabor adicional, también disponible en descafeinado.",
+     "price": 3.95,
+     "priceText": "3,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/24f1c765-baf0-446d-a9d1-59e4a840bc0e.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "¿Lo quieres decaf?",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Descafeinado",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42247726030",
+     "name": "Capuccino Large",
+     "description": "Nuestro café Blend cubierto con una leche de su elección espumada perfectamente (leches de una granja local, sin lactosa y leches vegetales disponibles a continuación) Agregue un toque de cacao o canela para obtener un sabor adicional, también disponible en descafeinado.",
+     "price": 3.95,
+     "priceText": "3,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/5d15ca89-85af-43f7-a516-11f11134d454.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra shot",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "¿Lo quieres decaf?",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Descafeinado",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42274330458",
+     "name": "Chai Latte Large",
+     "description": "Té negro de especias indias servido con leche.",
+     "price": 3.95,
+     "priceText": "3,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/81494d63-3189-4f17-a708-be4b213db47e.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Enfríalo",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Hielo",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42374661315",
+     "name": "Tiramisu Date Latte Small",
+     "description": "Sirope de dátil, mascarpone, espresso, cacao en polvo, tu leche favorita.",
+     "price": 3.85,
+     "priceText": "3,85 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/a04a6a6d-985c-4e22-b43c-8fb4c9304853.PNG",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra shot",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "¿Lo quieres decaf?",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Descafeinado",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42374661314",
+     "name": "Tahini Halva Latte Small",
+     "description": "Galleta de halva triturada, sirope de tahini, espresso y tu leche favorita.",
+     "price": 3.85,
+     "priceText": "3,85 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/88550bc6-0871-41a4-a1d7-7fa155038ca0.PNG",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra shot",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "¿Lo quieres decaf?",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Descafeinado",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42374661311",
+     "name": "Gingerbread Pumpkin Latte Small",
+     "description": "Sirope de calabaza y gingerbread, espresso y tu leche favorita.",
+     "price": 3.85,
+     "priceText": "3,85 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/77c7ad25-98c9-4972-a13f-1087c5d0501a.PNG",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra shot",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "¿Lo quieres decaf?",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Descafeinado",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42374661312",
+     "name": "Salted Caramel Latte Small",
+     "description": "Caramelo salado, espresso y tu leche favorita.",
+     "price": 3.85,
+     "priceText": "3,85 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/01852e35-c268-46a9-b925-a9d43e232bea.PNG",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra shot",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "¿Lo quieres decaf?",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Descafeinado",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42374697465",
+     "name": "Hojicha Latte Small",
+     "description": "Té verde japonés tostado y tu leche favorita.",
+     "price": 3.85,
+     "priceText": "3,85 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/f989db19-74d4-465f-8eeb-825e283e12d2.PNG",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42374661324",
+     "name": "Pistacho Latte Small",
+     "description": "Sirope de pistacho, espresso y tu leche favorita.",
+     "price": 3.75,
+     "priceText": "3,75 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/69ee1d2f-9c6b-4feb-b8b1-a16f1df66fe7.PNG",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra shot",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "¿Lo quieres decaf?",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Descafeinado",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42296680696",
+     "name": "Iced Latte Small",
+     "description": "Dos shots de nuestro espresso especial cubierto con hielo y leche de su elección fría espumada perfectamente (leches de una granja local, sin lactosa y leches vegetales disponibles a continuación). También disponible en descafeinado.",
+     "price": 3.55,
+     "priceText": "3,55 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/b33d9a08-15b0-4d1e-8ea6-23eff6fc72dc.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra shot",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "¿Lo quieres decaf?",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Descafeinado",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Añade Proteina",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra Proteína Vegetal (25g)",
+         "price": 1.45
+        }
+       ]
+      },
+      {
+       "title": "Añade Colágeno",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Colágeno",
+         "price": 1.45
+        }
+       ]
+      },
+      {
+       "title": "Añade extra protein foam",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Protein Matcha Cold Foam",
+         "price": 1.95
+        },
+        {
+         "name": "Protein Cold Foam",
+         "price": 1.95
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42247725994",
+     "name": "Choco Caramel Latte Small",
+     "description": "Nibs de cacao, chocolate, caramelo y leche.",
+     "price": 3.55,
+     "priceText": "3,55 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/44c4f0de-bd84-4cb8-a469-795165509b07.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42283197753",
+     "name": "Mocha Caramel Latte",
+     "description": "Cafe, concentrado de cacao, caramelo, nibs de cacao, leche",
+     "price": 3.55,
+     "priceText": "3,55 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/f95cce40-e50d-4950-9b71-846e2307f2c4.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra shot",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "¿Lo quieres decaf?",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Descafeinado",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42247726040",
+     "name": "Dirty Chai Small",
+     "description": "Con base de Té Chai y uno o dos shots de café (según formato) el cual proviene de centro América y África, por defecto se sirve con Leche Fresca procedente de Granja Local.También disponible con bebidas vegetales de Avena, Almendra, Soja y Sin Lactosa.",
+     "price": 3.55,
+     "priceText": "3,55 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/28f3ac1c-4ecd-42a6-a9c2-135e6a6aa6ad.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra shot",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "¿Lo quieres decaf?",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Descafeinado",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Enfríalo",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Hielo",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42362171827",
+     "name": "Cold Brew Small",
+     "description": "Café de extracción en frío, macerado 16h.",
+     "price": 3.5,
+     "priceText": "3,50 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/834a0d79-0dfe-40ef-aa98-57a4650b090b.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Añade extra protein foam",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Protein Matcha Cold Foam",
+         "price": 1.95
+        },
+        {
+         "name": "Protein Cold Foam",
+         "price": 1.95
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42247726044",
+     "name": "Latte Small",
+     "description": "Nuestro espresso especial cubierto con leche perfectamente cremada de su elección (leches de una granja local, sin lactosa y leches vegetales disponibles a continuación) Agregue un toque de cacao o canela para obtener un sabor adicional, también disponible en descafeinado.",
+     "price": 3.25,
+     "priceText": "3,25 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/24f1c765-baf0-446d-a9d1-59e4a840bc0e.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "¿Lo quieres decaf?",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Descafeinado",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42247726014",
+     "name": "Capuccino Small",
+     "description": "Nuestro café Blend cubierto con una leche de su elección espumada perfectamente (leches de una granja local, sin lactosa y leches vegetales disponibles a continuación) Agregue un toque de cacao o canela para obtener un sabor adicional, también disponible en descafeinado.",
+     "price": 3.25,
+     "priceText": "3,25 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/5d15ca89-85af-43f7-a516-11f11134d454.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra shot",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "¿Lo quieres decaf?",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Descafeinado",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42326314055",
+     "name": "Flat White ",
+     "description": "El fuerte hermano de los lattes, dos shots de nuestro espresso especial servido con 110 ml de leche de su elección perfectamente cremada (leches de una granja local, sin lactosa y leches vegetales disponibles a continuación). También disponible en descafeinado.",
+     "price": 3.25,
+     "priceText": "3,25 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/8362ebf7-854b-4f07-963d-62ca986f3cbf.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra shot",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "¿Lo quieres decaf?",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Descafeinado",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42247726015",
+     "name": "Americano Large",
+     "description": "Para una experiencia de café más grande, dos shots de nuestro espresso especial enicma de agua caliente para un total de 110 ml de una rica bebida de café. Agregue leche fresca, sin lactosa o leche vegetales de su elección. También disponible en descafeinado.",
+     "price": 2.95,
+     "priceText": "2,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/51ad6ecb-040c-471e-a761-6fb392f00979.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra shot",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "¿Lo quieres decaf?",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Descafeinado",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Esto es la leche",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Enfríalo",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Hielo",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42247725997",
+     "name": "Macchiato Large",
+     "description": "Nuestro espresso especial cubierto con una pequeña cantidad de leche de su elección cremada perfectamente (leches de una granja local, sin lactosa y leches vegetales disponible a continuación, también disponibles en descafeinado).",
+     "price": 2.95,
+     "priceText": "2,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/fd94a529-aae0-4789-8fbe-8e264a0b6b7a.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "¿Lo quieres decaf?",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Descafeinado",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42274330443",
+     "name": "Chai Latte Small",
+     "description": "Té negro de especias indias servido con leche.",
+     "price": 2.95,
+     "priceText": "2,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/81494d63-3189-4f17-a708-be4b213db47e.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Enfríalo",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Hielo",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42247726018",
+     "name": "Americano Small",
+     "description": "Para una experiencia de café más grande, dos shots de nuestro espresso especial enicma de agua caliente para un total de 110 ml de una rica bebida de café. Agregue leche fresca, sin lactosa o leche vegetales de su elección. También disponible en descafeinado.",
+     "price": 2.75,
+     "priceText": "2,75 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/51ad6ecb-040c-471e-a761-6fb392f00979.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra shot",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "¿Lo quieres decaf?",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Descafeinado",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Esto es la leche",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Enfríalo",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Hielo",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42296680676",
+     "name": "Infusiones",
+     "description": "Elige entre nuestras opciones ecológicas.",
+     "price": 2.65,
+     "priceText": "2,65 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/7e3fbefa-eae8-4e65-9e0f-3779ebbafbba.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Escoge tu sabor",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Earl Grey Cítricos",
+         "price": 0.0
+        },
+        {
+         "name": "Té Negro Chai Naranja",
+         "price": 0.0
+        },
+        {
+         "name": "Frutos Rojos",
+         "price": 0.0
+        },
+        {
+         "name": "Chai con Cúrcuma",
+         "price": 0.0
+        },
+        {
+         "name": "Té Verde Cilantro Gunpowder",
+         "price": 0.0
+        },
+        {
+         "name": "Regaliz Cardamomo",
+         "price": 0.0
+        },
+        {
+         "name": "Rooibos Vainilla Masai Mara",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Esto es la leche",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.0
+        },
+        {
+         "name": "Soja",
+         "price": 0.0
+        },
+        {
+         "name": "Almendra",
+         "price": 0.0
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42296680688",
+     "name": "Macchiato Small",
+     "description": "Nuestro espresso especial cubierto con una pequeña cantidad de leche de su elección cremada perfectamente (leches de una granja local, sin lactosa y leches vegetales disponible a continuación, también disponibles en descafeinado).",
+     "price": 2.45,
+     "priceText": "2,45 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/fd94a529-aae0-4789-8fbe-8e264a0b6b7a.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "¿Lo quieres decaf?",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Descafeinado",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42247726035",
+     "name": "Macchiato Small",
+     "description": "Nuestro espresso especial cubierto con una pequeña cantidad de leche de su elección cremada perfectamente (leches de una granja local, sin lactosa y leches vegetales disponible a continuación, también disponibles en descafeinado).",
+     "price": 2.45,
+     "priceText": "2,45 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/fd94a529-aae0-4789-8fbe-8e264a0b6b7a.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "¿Lo quieres decaf?",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Descafeinado",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42296680695",
+     "name": "Espresso Doble",
+     "description": "Dos shots de nuestro Blend de espresso de especialidad, orgánico y de origen sostenible proveniente de Guatemala. Notas de sabor de avellana, clavo y chocolate, disponibles también en descafeinado (de Brasil).",
+     "price": 2.25,
+     "priceText": "2,25 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/3c46044f-95e1-42f0-b842-b5e4a81ed8df.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Dame doble",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Extra shot",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "¿Lo quieres decaf?",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Descafeinado",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Enfríalo",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Hielo",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42296680693",
+     "name": "Vaso de Leche",
+     "description": "Vaso de Leche.",
+     "price": 2.25,
+     "priceText": "2,25 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/c3768f0c-88f3-4cd5-ac49-ee8172c79498.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "Esto es la leche",
+       "min": 1,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vaca",
+         "price": 0.0
+        },
+        {
+         "name": "Avena",
+         "price": 0.25
+        },
+        {
+         "name": "Soja",
+         "price": 0.25
+        },
+        {
+         "name": "Almendra",
+         "price": 0.25
+        },
+        {
+         "name": "Alta Proteina Sin Lactosa",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Temperatura leche",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Muy Caliente",
+         "price": 0.0
+        },
+        {
+         "name": "Templado",
+         "price": 0.0
+        },
+        {
+         "name": "Frío",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42296680680",
+     "name": "Espresso",
+     "description": "Un shot de nuestro Blend de espresso de especialidad, orgánico y de origen sostenible proveniente de Guatemala. Notas de sabor a avellana, clavo y chocolate, disponibles también en descafeinado (de Brasil).",
+     "price": 1.95,
+     "priceText": "1,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/def9e823-9ee4-46bc-a97d-6d77d6f28780.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [
+      {
+       "title": "¿Lo quieres decaf?",
+       "min": 0,
+       "max": 1,
+       "removal": false,
+       "options": [
+        {
+         "name": "Descafeinado",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Spice it up",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Canela",
+         "price": 0.0
+        },
+        {
+         "name": "Cacao",
+         "price": 0.0
+        }
+       ]
+      },
+      {
+       "title": "Añade un house-made flavour",
+       "min": 0,
+       "max": 99,
+       "removal": false,
+       "options": [
+        {
+         "name": "Vainilla",
+         "price": 0.45
+        },
+        {
+         "name": "Caramelo Salado",
+         "price": 0.75
+        },
+        {
+         "name": "Chocolate",
+         "price": 0.45
+        }
+       ]
+      },
+      {
+       "title": "Enfríalo",
+       "min": 0,
+       "max": 5,
+       "removal": false,
+       "options": [
+        {
+         "name": "Hielo",
+         "price": 0.0
+        }
+       ]
+      }
+     ],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    }
+   ]
+  },
+  {
+   "id": "bebidas-s.6433107958",
+   "title": "Bebidas",
+   "cover": null,
+   "products": [
+    {
+     "id": "40155539540",
+     "name": "Volador",
+     "description": "(Tinto)Garnacha, Cariñena y Syrah D.O. Montsant.",
+     "price": 24.95,
+     "priceText": "24,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/bfad1aa1-64ea-4770-8781-001d41749e20.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42359521790",
+     "name": "Volador",
+     "description": "(Blanco)Garnacha Blanca D.O. Montsant.",
+     "price": 24.95,
+     "priceText": "24,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/19b5d42d-895b-4d9f-b92e-2bcb86258bd1.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42359521789",
+     "name": "Le Naturel Blanco",
+     "description": "Le Naturel blanco para Honest Greens. Garnacha D.O Navarra Vino natural sin sulfitos añadidos. Orgánico y plant-based.",
+     "price": 22.95,
+     "priceText": "22,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/491a0008-0009-4d85-8001-e7fba56e9d0b.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "40155539523",
+     "name": "Le Naturel Tinto",
+     "description": "Garnacha D.O Navarra Vino natural sin sulfitos añadidos. Orgánico y plant-based.",
+     "price": 22.95,
+     "priceText": "22,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/c3d707bf-00f7-492e-aecc-8647d402daeb.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42362017673",
+     "name": "Detox",
+     "description": "Apio, espinaca, jengibre, lima, limón, pepino y manzana.",
+     "price": 5.45,
+     "priceText": "5,45 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/17e4775a-caa3-4e76-ac6a-178a6215178a.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42318872269",
+     "name": "Power",
+     "description": "Manzana, zanahoria, remolacha, pepino, limón y jengibre.",
+     "price": 5.45,
+     "priceText": "5,45 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/4faed128-af09-4be8-ae34-4e5b0de33c95.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42362561746",
+     "name": "Happiness",
+     "description": "Cúrcuma, jengibre, limón y manzana.",
+     "price": 5.45,
+     "priceText": "5,45 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/9d1ed56e-2173-47ec-a7ab-e4e88ac0ef1b.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42318872271",
+     "name": "Glow",
+     "description": "Manzana, zanahoria, limón y jengibre.",
+     "price": 5.45,
+     "priceText": "5,45 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/589ce844-b49e-4bb5-a4a8-2f4f087fab3b.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42364031245",
+     "name": "Blueberry Lavender Bloom",
+     "description": "Arándanos, lavanda.",
+     "price": 4.75,
+     "priceText": "4,75 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/70f84551-e0f8-49ab-ad37-52d2eae5484a.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42364031242",
+     "name": "Ginger Mint Moringa",
+     "description": "Jengibre, menta, moringa.",
+     "price": 4.75,
+     "priceText": "4,75 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/772a03d0-30b5-41ba-96e6-7075b60407bd.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42364031243",
+     "name": "Papaya Grapefruit Rise",
+     "description": "Papaya, zanahoria, pomelo.",
+     "price": 4.75,
+     "priceText": "4,75 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/7a7bb14e-ad47-4534-bf7f-14dfd4d5dd75.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42364031244",
+     "name": "Mango Hibiscus Heat",
+     "description": "Rooibos, mango, hibiscus",
+     "price": 4.75,
+     "priceText": "4,75 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/d5f863f4-cf5c-4ac3-8a09-4c7c07c3936e.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42336352806",
+     "name": "Ginger Shot",
+     "description": "Jengibre, manzana y limón.",
+     "price": 4.25,
+     "priceText": "4,25 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/416e88fb-6db1-48a1-b485-9df1fb29d0ea.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42336352807",
+     "name": "Spirulina Ginger Shot",
+     "description": "Jengibre, manzana, espirulina, limón y hierbabuena.",
+     "price": 4.25,
+     "priceText": "4,25 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/f6056ccd-912b-4ffe-bae3-aff3f8278e20.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42366577788",
+     "name": "Zumo de Naranja",
+     "description": "Zumo de Naranja recién exprimido sin conservantes ni aditivos.",
+     "price": 3.95,
+     "priceText": "3,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/d18d01d4-0fe6-4d67-9b0f-1640c3463cef.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42259130940",
+     "name": "Agua",
+     "description": "Agua.",
+     "price": 2.95,
+     "priceText": "2,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/e1c4cacc-3d04-4b32-87bd-8df8d879c6b7.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42355758279",
+     "name": "Limonada de Fresa y Jengibre ",
+     "description": "Limonada de Fresa y Jengibre.",
+     "price": 2.95,
+     "priceText": "2,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/2c614dc5-45c5-4fe1-912d-ee1c2b4b9240.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42289194153",
+     "name": "Agua con gas",
+     "description": "Agua con gas.",
+     "price": 2.95,
+     "priceText": "2,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/8a7e8618-3a54-49d9-ba6c-b8796f1f2a89.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42339775096",
+     "name": "Mojito de Pepino",
+     "description": "Mojito de Pepino.",
+     "price": 2.95,
+     "priceText": "2,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/a9ec2764-b4dd-469e-88c9-181ee7adb2a6.PNG",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42341531145",
+     "name": "Zanahoria, Naranja y Cúrcuma",
+     "description": "Zanahoria, Naranja y Cúrcuma.",
+     "price": 2.95,
+     "priceText": "2,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/7c6b6a73-dcad-47bd-abf5-9b7b076e96ee.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42341531144",
+     "name": "Arándanos, romero y menta.",
+     "description": "Arándanos, romero y menta.",
+     "price": 2.95,
+     "priceText": "2,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/7837a906-fb15-45bf-8fcb-d391359eeecd.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    }
+   ]
+  },
+  {
+   "id": "salsas-s.6433107960",
+   "title": "Salsas",
+   "cover": null,
+   "products": [
+    {
+     "id": "42362561747",
+     "name": "Smoked Olive Oil Butter",
+     "description": "Mantequilla de pasto, aceite de oliva, sal fina y polvo de aceituna.",
+     "price": 1.95,
+     "priceText": "1,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/7c7f8ddd-cbac-4ef0-af5c-fb7d993c5409.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42287289486",
+     "name": "Truffle Mayo",
+     "description": "AOS, vinagre de sidra, leche de soja, ajo fresco, sal y pasta de trufa.",
+     "price": 1.25,
+     "priceText": "1,25 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/cbe0fac1-8ccf-4e81-b080-069525e3718f.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42337995579",
+     "name": "Alioli Vegano",
+     "description": "Aceite de oliva, vinagre de sidra, leche de soja, ajo y sal.",
+     "price": 1.25,
+     "priceText": "1,25 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/17140904-81ff-4f93-85d4-40535a55fd20.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42339775099",
+     "name": "Fermented Chilli Jam",
+     "description": "Mora, arándano, chile rojo, vinagre de vino blanco, agave y sal.",
+     "price": 1.25,
+     "priceText": "1,25 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/a5eac946-d1bc-4dde-9f90-10ab71c46143.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42274011066",
+     "name": "Chipotle Mayo",
+     "description": "Aceite de oliva, leche de soja, vinagre de sidra, ajo, chipotle adobado, chipotle en polvo y sal.",
+     "price": 1.25,
+     "priceText": "1,25 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/60c02e52-ca44-48d4-b8cd-da278c4adcc2.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42249589397",
+     "name": "Tahini",
+     "description": "Aceite de oliva virgen extra, pasta de sésamo, ajo, zumo de limón.",
+     "price": 1.25,
+     "priceText": "1,25 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/2a9d40f5-b7bd-457c-bdd9-b6900aee6723.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    }
+   ]
+  },
+  {
+   "id": "productos-s.6433107957",
+   "title": "Productos",
+   "cover": null,
+   "products": [
+    {
+     "id": "42247726024",
+     "name": "Decaf Specialty Coffee (250g)",
+     "description": "Notas a avellana, cacao, frutos secos y caramelo, origen de México 100% orgánico y tostado local. Proceso de descafeinado: Mountain Water.",
+     "price": 13.95,
+     "priceText": "13,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/8f5f08a7-d294-4d1c-8c4e-725b8f16152f.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    },
+    {
+     "id": "42247726007",
+     "name": "Specialty Coffee (250g)",
+     "description": "Notas de avellana, cacao y panela con origen de Guatemala 100% orgánico.",
+     "price": 13.95,
+     "priceText": "13,95 €",
+     "currency": "EUR",
+     "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/5e721b65-edc6-43c0-9776-5ece4b7ce91e.png",
+     "images": [],
+     "promotion": null,
+     "customizations": [],
+     "ageRestricted": false,
+     "quantityLimit": null,
+     "soldBy": "piece_piece"
+    }
+   ]
+  }
+ ]
+}
