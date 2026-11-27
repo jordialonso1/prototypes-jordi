@@ -146,7 +146,96 @@ window.CATALOG = {
    "price": 5.95,
    "image": "https://hnst-files.s3-eu-west-1.amazonaws.com/products/medium/40beac96-d049-41e0-9762-2f9f10ccf72a.PNG",
    "requiredChoices": [],
-   "selected": []
+   "selected": [],
+   "customizations": [
+    {
+     "title": "¿Qué probarás hoy?",
+     "min": 1,
+     "max": 1,
+     "options": [
+      {
+       "name": "Fresa",
+       "price": 0.0
+      },
+      {
+       "name": "Mango",
+       "price": 0.0
+      }
+     ]
+    },
+    {
+     "title": "Dame doble",
+     "min": 0,
+     "max": 5,
+     "options": [
+      {
+       "name": "Extra Matcha",
+       "price": 1.25
+      }
+     ]
+    },
+    {
+     "title": "Esto es la leche",
+     "min": 1,
+     "max": 1,
+     "options": [
+      {
+       "name": "Vaca",
+       "price": 0.0
+      },
+      {
+       "name": "Avena",
+       "price": 0.25
+      },
+      {
+       "name": "Soja",
+       "price": 0.25
+      },
+      {
+       "name": "Almendra",
+       "price": 0.25
+      },
+      {
+       "name": "Alta Proteina Sin Lactosa",
+       "price": 0.0
+      }
+     ]
+    },
+    {
+     "title": "Añade extra protein foam",
+     "min": 0,
+     "max": 5,
+     "options": [
+      {
+       "name": "Protein Matcha Cold Foam",
+       "price": 1.95
+      },
+      {
+       "name": "Protein Cold Foam",
+       "price": 1.95
+      }
+     ]
+    },
+    {
+     "title": "Añade un house-made flavour",
+     "min": 0,
+     "max": 99,
+     "options": [
+      {
+       "name": "Vainilla",
+       "price": 0.45
+      },
+      {
+       "name": "Caramelo Salado",
+       "price": 0.75
+      },
+      {
+       "name": "Chocolate",
+       "price": 0.45
+      }
+     ]
+    }
+   ]
   },
   "42374661322": {
    "id": "42374661322",

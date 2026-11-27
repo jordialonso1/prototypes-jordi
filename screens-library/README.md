@@ -18,3 +18,6 @@ Cart also links the shared Pintxo components (`shared-design-system/pintxo/pintx
 
 ## Add a screen
 Create `screens/<id>/` with the same files and add an entry to `src/screens.ts`.
+
+## Store view
+The Store view is catalog-driven (Honest Greens, `store-catalog.js`, rendered by `sv.js`): tabs that scroll to each section, a collapsed Pintxo counter that becomes the full counter after the first add, and a cart-style footer with the running total and "Go to cart". It runs standalone (the cart starts empty). A prototype can seed it with `?cart=<json {productId: qty}>&n=<products in cart>&t=<cart total>` and listens to its `postMessage` events `sv-add`, `sv-remove` and `sv-close`. It uses Pintxo components from `shared-design-system/pintxo/pintxo.css`.

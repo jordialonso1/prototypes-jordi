@@ -278,6 +278,11 @@
     /* ---- Item rows ---- */
     .item-row { align-self: stretch; display: flex; flex-direction: column; gap: var(--spacing-s); padding: var(--spacing-m) 0; }
     .item-row--compact { padding: 0; }
+    .item-row--action { cursor: pointer; }
+    .item-row--action:focus-visible { outline: 2px solid var(--border-color-active); outline-offset: 4px; border-radius: var(--cornerRadius-m); }
+    .pv-frame { position: absolute; inset: 0; z-index: 20; width: 100%; height: 100%; border: 0; background: #fff; }
+    .pv-frame[hidden] { display: none; }
+    .section-header__sub a { cursor: pointer; }
     .item-row__body { display: flex; align-items: flex-start; gap: var(--spacing-m); }
     .thumb { position: relative; flex: none; width: 64px; height: 64px; border-radius: var(--cornerRadius-m); overflow: hidden; }
     .thumb--l { width: 112px; height: 112px; }
@@ -614,6 +619,9 @@
     </section>
 
 
+    <iframe class="pv-frame" id="pv-frame" title="Product view" hidden></iframe>
+    <iframe class="pv-frame" id="sv-frame" title="Store view" hidden></iframe>
+
     <script src="catalog.js"></script>
     <script>
       /* Cart state + rendering for each version, using real Honest Greens products
@@ -624,29 +632,50 @@
         if (!C) return;
         var P = C.products;
         var TILES = ['42320609711', '42333383578', '42320609716', '42374661323', '42287289486', '42247726007'];
-        var STATE = {
-          regular: { items: [{ id: '42274330448', qty: 1 }, { id: '42336174195', qty: 1 }], tiles: TILES },
-          cna:     { items: [{ id: '42359521784', qty: 1, missing: true }, { id: '42274330448', qty: 1 }], tiles: TILES },
-          pna:     { items: [{ id: '42361803644', qty: 1 }, { id: '42362378176', qty: 1 }], oos: '42359521787', tiles: TILES }
-        };
+        function initialState() {
+          return {
+            regular: { items: [{ id: '42274330448', qty: 1 }, { id: '42336174195', qty: 1 }], tiles: TILES },
+            /* Fruit Matcha Latte: the milk it was ordered with is no longer available, so that
+               section comes back empty in the product view; the other choices are kept. */
+            cna:     { items: [{ id: '42247726041', qty: 1, missing: true, sel: {
+                '¿Qué probarás hoy?': ['Fresa'], 'Dame doble': ['Extra Matcha'], 'Esto es la leche': [],
+                'Añade extra protein foam': [], 'Añade un house-made flavour': ['Vainilla'] } }, { id: '42274330448', qty: 1 }], tiles: TILES },
+            pna:     { items: [{ id: '42361803644', qty: 1 }, { id: '42362378176', qty: 1 }], oos: '42359521787', tiles: TILES }
+          };
+        }
+        var STATE = initialState();
         function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
         function money(n) { return n.toFixed(2).replace('.', ',') + '€'; }
         function icon(name, size) { return '<img src="assets/icon-' + name + '.svg" width="' + size + '" height="' + size + '" alt="" />'; }
         function desc(p) { return p.selected && p.selected.length ? '<p class="item-row__desc pintxo-typography-body2">' + esc(p.selected.join(', ')) + '</p>' : ''; }
+        /* Unit price = product + the options chosen in the product view. */
+        function picks(it) {
+          var out = [];
+          (P[it.id].customizations || []).forEach(function (s) {
+            ((it.sel || {})[s.title] || []).forEach(function (n) { out.push({ name: n, price: (s.options.filter(function (o) { return o.name === n; })[0] || {}).price || 0 }); });
+          });
+          return out;
+        }
+        function unit(it) { return picks(it).reduce(function (t, o) { return t + o.price; }, P[it.id].price); }
+        function itemDesc(it) {
+          if (!it.sel) return desc(P[it.id]);
+          var names = picks(it).slice(0, 3).map(function (o) { return o.name; });
+          return names.length ? '<p class="item-row__desc pintxo-typography-body2">' + esc(names.join(', ')) + '</p>' : '';
+        }
 
         function row(it, compact) {
           var p = P[it.id];
           var info = it.missing
             ? '<div class="item-row__warning pintxo-typography-body2"><img src="assets/icon-warning-critical.svg" width="16" height="14.6" alt="" /><p>Action required</p></div>'
-            : desc(p);
+            : itemDesc(it);
           var left = it.qty > 1
             ? '<button type="button" class="pintxo-counter__button" data-act="dec" aria-label="Remove one">' + icon('minus-24', 16) + '</button>'
             : '<button type="button" class="pintxo-counter__button" data-act="dec" aria-label="Remove">' + icon('trash-16', 16) + '</button>';
-          return '<article class="item-row' + (compact ? ' item-row--compact' : '') + '" data-id="' + p.id + '">' +
+          return '<article class="item-row' + (compact ? ' item-row--compact' : '') + (it.missing ? ' item-row--action' : '') + '" data-id="' + p.id + '"' + (it.missing ? ' role="button" tabindex="0" aria-label="Review ' + esc(p.name) + '"' : '') + '>' +
             '<div class="item-row__body"><div class="thumb"><img src="' + esc(p.image) + '" alt="" loading="lazy" /></div>' +
             '<div class="item-row__info"><div class="item-row__head">' +
             '<p class="item-row__name item-row__name--medium pintxo-typography-body1-emphasis">' + esc(p.name) + '</p>' +
-            '<p class="item-row__price pintxo-typography-body2">' + money(p.price * it.qty) + '</p></div>' + info + '</div></div>' +
+            '<p class="item-row__price pintxo-typography-body2">' + money(unit(it) * it.qty) + '</p></div>' + info + '</div></div>' +
             '<div class="item-row__footer"><div class="pintxo-counter">' + left +
             '<span class="pintxo-counter__label">' + it.qty + '</span>' +
             '<button type="button" class="pintxo-counter__button" data-act="inc" aria-label="Add one more"' + (it.missing ? ' disabled' : '') + '>' + icon('plus-16', 16) + '</button>' +
@@ -691,14 +720,14 @@
           stack.querySelectorAll(':scope > .item-row').forEach(function (r) { r.remove(); });
           var total = 0, count = 0, anyMissing = false;
           st.items.forEach(function (it) {
-            total += P[it.id].price * it.qty; count += it.qty;
+            total += unit(it) * it.qty; count += it.qty;
             if (it.missing) anyMissing = true;
             addBtn.insertAdjacentHTML('beforebegin', row(it, id === 'pna'));
           });
           var sub = el.querySelector('.section-header__sub');
           sub.querySelector('.count').textContent = count + (count === 1 ? ' product from' : ' products from');
           sub.querySelector('a').textContent = C.store;
-          addBtn.disabled = !nextNew(st);
+          addBtn.disabled = false;
           var o = el.querySelector('.item-row--oos');
           if (o) {
             o.closest('.stack').hidden = !st.oos;
@@ -715,11 +744,81 @@
           el.querySelector('.footer__cta').disabled = !count || anyMissing;
         }
 
+        /* Product view overlay (copy of the shared screen, see product-view/): opened from a
+           cart row that needs action, closed on confirm or X. */
+        var frame = document.getElementById('pv-frame');
+        function closeProduct() { frame.hidden = true; frame.removeAttribute('src'); }
+        /* Store view overlay (copy of the shared screen, see store-view/): the PNA cart's way
+           to add products from the store's catalog. */
+        var storeFrame = document.getElementById('sv-frame');
+        function closeStore() { storeFrame.hidden = true; storeFrame.removeAttribute('src'); }
+        var storeFor = 'regular';
+        function openStore(id) {
+          storeFor = id;
+          var counts = {}, n = 0, t = 0;
+          STATE[id].items.forEach(function (i) { counts[i.id] = i.qty; n += i.qty; t += unit(i) * i.qty; });
+          storeFrame.src = 'store-view/index.html?cart=' + encodeURIComponent(JSON.stringify(counts)) + '&n=' + n + '&t=' + t.toFixed(2);
+          storeFrame.hidden = false;
+        }
+        function openProduct(it) {
+          frame.src = 'product-view/index.html?id=' + encodeURIComponent(it.id) + '&sel=' + encodeURIComponent(JSON.stringify(it.sel || {}));
+          frame.hidden = false;
+        }
+        window.addEventListener('message', function (e) {
+          if (e.origin !== window.location.origin || !e.data) return;
+          if (e.data.type === 'pv-close') closeProduct();
+          if (e.data.type === 'pv-confirm') {
+            var it = STATE.cna.items.filter(function (i) { return i.id === e.data.id; })[0];
+            if (it) { it.sel = e.data.sel; delete it.missing; }
+            closeProduct();
+            render('cna');
+          }
+          if (e.data.type === 'sv-close') closeStore();
+          if (e.data.type === 'sv-add') {
+            var np = e.data.product;
+            if (!P[np.id]) P[np.id] = np;
+            addItem(STATE[storeFor], np.id);
+            render(storeFor);
+          }
+          if (e.data.type === 'sv-remove') {
+            var rs = STATE[storeFor];
+            var ri = rs.items.filter(function (i) { return i.id === e.data.id; })[0];
+            if (ri) { ri.qty--; if (ri.qty < 1) rs.items.splice(rs.items.indexOf(ri), 1); render(storeFor); }
+          }
+          if (e.data.type === 'reset-screen' || e.data.type === 'goto-screen') { closeProduct(); closeStore(); }
+        });
+
+        /* Restores a version to its original cart (the wrapper's Reset button posts this). */
+        function resetVersion(id) {
+          if (!STATE[id]) return;
+          var fresh = initialState()[id];
+          STATE[id].items = fresh.items;
+          STATE[id].oos = fresh.oos;
+          render(id);
+        }
+        window.addEventListener('message', function (e) {
+          if (e.origin !== window.location.origin) return;
+          if (e.data && e.data.type === 'reset-screen') resetVersion(e.data.screen);
+        });
+
         Object.keys(STATE).forEach(function (id) {
           var el = document.querySelector('.screen[data-screen="' + id + '"]');
           if (!el) return;
           var st = STATE[id];
+          function edit(e) {
+            var row = e.target.closest('.item-row--action');
+            if (!row || e.target.closest('.pintxo-counter')) return false;
+            var it = st.items.filter(function (i) { return i.id === row.dataset.id; })[0];
+            if (it) openProduct(it);
+            return true;
+          }
+          el.addEventListener('keydown', function (e) {
+            if ((e.key === 'Enter' || e.key === ' ') && e.target.classList.contains('item-row--action')) { e.preventDefault(); edit(e); }
+          });
           el.addEventListener('click', function (e) {
+            var link = e.target.closest('.section-header__sub a');
+            if (link) { e.preventDefault(); openStore(id); return; }
+            if (edit(e)) return;
             var b = e.target.closest('button');
             if (!b || b.disabled) return;
             var article = b.closest('[data-id]');
@@ -734,7 +833,8 @@
             } else if (act === 'tile-add') {
               addItem(st, article.dataset.id);
             } else if (b.classList.contains('pintxo-button') && b.textContent.trim() === 'Add more items') {
-              var n = nextNew(st); if (n) addItem(st, n);
+              openStore(id);
+              return;
             } else if (b.getAttribute('aria-label') === 'Empty cart') {
               st.items = []; st.oos = null;
             } else return;
@@ -757,6 +857,8 @@
         window.addEventListener('message', function (e) {
           if (e.origin !== window.location.origin) return;
           if (e.data && e.data.type === 'goto-screen') show(e.data.screen);
+          /* Which design option is being shown ("live" = how the app behaves today). Later options hook in here. */
+          if (e.data && e.data.type === 'goto-option') document.documentElement.dataset.option = e.data.option;
         });
         show(new URLSearchParams(window.location.search).get('screen') || 'regular');
       })();

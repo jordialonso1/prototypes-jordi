@@ -31,6 +31,13 @@ body {
   color: var(--text);
 }
 
+.page__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 24px;
+}
+
 .page__select {
   display: flex;
   align-items: center;
@@ -42,6 +49,18 @@ body {
 
 .page__select select {
   font: inherit;
+  padding: 10px 40px 10px 16px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.page__reset {
+  font: inherit;
+  font-size: 14px;
+  line-height: 20px;
   padding: 10px 16px;
   border: 0;
   border-radius: 999px;

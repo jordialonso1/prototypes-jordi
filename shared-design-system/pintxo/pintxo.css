@@ -141,6 +141,13 @@
 .pintxo-counter--l .pintxo-counter__button { width: 48px; height: 48px; }
 .pintxo-counter--l .pintxo-counter__button img { width: 24px; height: 24px; }
 .pintxo-counter--l .pintxo-counter__label { font-size: 16px; line-height: 20px; }
+/* Collapsed (neutral): only the trailing "+" is visible, for a product that is not in
+   the cart yet. Render just the trailing button inside the counter, then swap it for
+   the full counter (trash or minus, quantity, plus) after the first add:
+   <div class="pintxo-counter pintxo-counter--collapsed">
+     <button class="pintxo-counter__button" aria-label="Add"><img src="plus.svg" alt="" /></button>
+   </div> */
+.pintxo-counter--collapsed { min-width: 0; }
 
 /* ---- Banner + icon blob ------------------------------------------------
    <div class="pintxo-banner" data-style="warning">
@@ -199,3 +206,178 @@
     url(assets/icon-blob-critical.svg);
   background-size: 20.02px 18.23px, 18.27px 16.48px, 24px 24px;
 }
+
+/* ---- Radio button + Checkbox -------------------------------------------
+   <label class="pintxo-radio-button">
+     <input class="pintxo-radio-button__input" type="radio" name="size" data-checked="false" />
+     <span class="pintxo-radio-button__label">Medium</span>
+   </label>
+   <label class="pintxo-checkbox">
+     <input class="pintxo-checkbox__input" type="checkbox" data-state="unchecked" />
+     <span class="pintxo-checkbox__label">Extra salmon</span>
+   </label>
+   Mirrors uds-react (controls/radio-button, controls/checkbox). The native input is
+   restyled (appearance: none), so it stays focusable and clickable. Keep the data
+   attributes in sync with the input in JS: radio `data-checked`; checkbox
+   `data-state` (checked | unchecked | indeterminate); both `data-disabled` and
+   `data-error` ("true" | "false"). data-align="right" puts the control after the
+   label. */
+.pintxo-radio-button, .pintxo-checkbox {
+  display: inline-flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+}
+.pintxo-radio-button[data-align='right'], .pintxo-checkbox[data-align='right'] { flex-direction: row-reverse; }
+.pintxo-radio-button__input, .pintxo-checkbox__input {
+  -webkit-appearance: none;
+  appearance: none;
+  flex: none;
+  margin: 0;
+  width: 24px;
+  height: 24px;
+  border-width: 2px;
+  border-style: solid;
+  outline: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--component-radioButton-background-color-enabled-unselected, rgba(242, 242, 243, 1));
+  border-color: var(--component-radioButton-border-color-enabled-unselected, rgba(98, 99, 100, 1));
+  cursor: pointer;
+  transition: background-color 0.1s ease, border-color 0.1s ease;
+}
+.pintxo-radio-button__input { border-radius: var(--cornerRadius-full); }
+.pintxo-radio-button__input[data-checked='true'] {
+  border-width: 0;
+  background-color: var(--component-radioButton-background-color-enabled-selected, rgba(0, 158, 129, 1));
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><circle cx="4" cy="4" r="4" fill="white"/></svg>');
+}
+.pintxo-radio-button__input[data-error='true'] { border-width: 2px; border-color: var(--border-color-critical); }
+.pintxo-checkbox__input { border-radius: 4px; }
+.pintxo-checkbox__input[data-state='checked'], .pintxo-checkbox__input[data-state='indeterminate'] {
+  background-color: var(--component-radioButton-background-color-enabled-selected, rgba(0, 158, 129, 1));
+  border-color: var(--component-radioButton-background-color-enabled-selected, rgba(0, 158, 129, 1));
+}
+.pintxo-checkbox__input[data-state='checked'] {
+  background-image: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.3012 3.16692C13.7154 2.73513 14.4011 2.72084 14.8329 3.13501C15.2647 3.54917 15.279 4.23495 14.8648 4.66674L7.0315 12.8334C6.8299 13.0436 6.55217 13.1637 6.26096 13.1668C5.96974 13.1698 5.68957 13.0555 5.48364 12.8495L1.15031 8.5162C0.727241 8.09313 0.727241 7.4072 1.15031 6.98413C1.57338 6.56106 2.25931 6.56106 2.68237 6.98413L6.23355 10.5353L13.3012 3.16692Z" fill="white"/></svg>');
+}
+.pintxo-checkbox__input[data-state='indeterminate'] {
+  background-image: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.4167 9.0835C14.015 9.0835 14.5 8.59847 14.5 8.00017C14.5 7.40186 14.015 6.91683 13.4167 6.91683H2.58333C1.98502 6.91683 1.5 7.40186 1.5 8.00017C1.5 8.59847 1.98502 9.0835 2.58333 9.0835H13.4167Z" fill="white"/></svg>');
+}
+.pintxo-checkbox__input[data-error='true'] { border-color: var(--border-color-critical); }
+.pintxo-radio-button__input[data-disabled='true'], .pintxo-checkbox__input[data-disabled='true'] {
+  cursor: default;
+  border-color: var(--border-color-primary);
+  background-color: var(--background-color-secondary);
+}
+.pintxo-radio-button__input[data-checked='true'][data-disabled='true'],
+.pintxo-checkbox__input[data-state='checked'][data-disabled='true'] { background-color: var(--border-color-primary); }
+.pintxo-radio-button__input:focus-visible, .pintxo-checkbox__input:focus-visible {
+  outline: 2px solid var(--component-button-background-color-primary-enabled);
+  outline-offset: 4px;
+}
+.pintxo-radio-button__label, .pintxo-checkbox__label { color: var(--text-color-primary); }
+.pintxo-radio-button__label[data-disabled='true'], .pintxo-checkbox__label[data-disabled='true'] { color: var(--text-color-disabled); }
+
+/* ---- Tag ---------------------------------------------------------------
+   <span class="pintxo-tag pintxo-typography-caption-emphasis" data-style="critical" data-variant="primary">Required</span>
+   Mirrors uds-react Tag. data-style: neutral (default), positive, critical, warning,
+   contrast. data-variant: primary (solid, default) or secondary (tinted). An optional
+   leading <svg> or <img> icon is 16px. Add the caption-emphasis typography class. */
+.pintxo-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  width: max-content;
+  min-height: 20px;
+  padding: 2px 4px;
+  border-radius: 4px;
+  outline: 1px solid transparent;
+  vertical-align: middle;
+  background: var(--background-color-secondary);
+  color: var(--text-color-primary);
+}
+.pintxo-tag > svg, .pintxo-tag > img { width: 16px; height: 16px; flex: none; }
+.pintxo-tag[data-style='neutral'][data-variant='secondary'] { color: var(--text-color-secondary); }
+.pintxo-tag[data-style='positive'][data-variant='primary'] { background: rgba(1, 121, 99, 1); color: #fff; }
+.pintxo-tag[data-style='positive'][data-variant='secondary'] { background: rgba(224, 240, 237, 1); color: rgba(1, 121, 99, 1); }
+.pintxo-tag[data-style='critical'][data-variant='primary'] { background: rgba(212, 22, 22, 1); color: #fff; }
+.pintxo-tag[data-style='critical'][data-variant='secondary'] { background: rgba(249, 235, 235, 1); color: rgba(212, 22, 22, 1); }
+.pintxo-tag[data-style='warning'][data-variant='primary'] { background: rgba(137, 97, 16, 1); color: #fff; }
+.pintxo-tag[data-style='warning'][data-variant='secondary'] { background: rgba(249, 239, 220, 1); color: rgba(137, 97, 16, 1); }
+.pintxo-tag[data-style='contrast'][data-variant='primary'] { background: rgba(22, 22, 23, 1); color: #fff; }
+.pintxo-tag[data-style='contrast'][data-variant='secondary'] { background: rgba(98, 99, 100, 1); color: #fff; }
+
+/* ---- Section header ----------------------------------------------------
+   <header class="pintxo-section-header">
+     <div class="pintxo-section-header__text">
+       <h2 class="pintxo-section-header__title">Salmon type</h2>
+       <p class="pintxo-section-header__description">Choose 1 item</p>
+     </div>
+     <div class="pintxo-section-header__trailing"><!-- tag, icon button, link... --></div>
+   </header>
+   Title is 21/24 bold, description 14/20 secondary. Both the description and the
+   trailing slot are optional. data-state="error" on the header turns the description
+   red. Put a heading level that fits the page (h1 for a screen title, h2 for sections). */
+.pintxo-section-header {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  gap: 8px;
+}
+.pintxo-section-header__text { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.pintxo-section-header__title {
+  margin: 0;
+  padding: 4px 0;
+  font-size: 21px;
+  line-height: 24px;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: var(--text-color-primary);
+}
+.pintxo-section-header__description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--text-color-secondary);
+}
+.pintxo-section-header[data-state='error'] .pintxo-section-header__description { color: var(--text-color-critical); }
+.pintxo-section-header__trailing { flex: none; display: flex; align-items: center; gap: 8px; }
+
+/* ---- Status bar --------------------------------------------------------
+   <div class="pintxo-status-bar">
+     <span class="pintxo-status-bar__time">9:41</span>
+     <span class="pintxo-status-bar__levels">
+       <img src="status-bar-cell.svg" alt="" /><img src="status-bar-wifi.svg" alt="" /><img src="status-bar-battery.svg" alt="" />
+     </span>
+   </div>
+   iOS status bar for the top of a prototype screen (62px, space for the notch in the
+   middle). Icons live in pintxo/assets; adjust the src path to the prototype's depth.
+   Position it yourself (absolute or in a fixed nav). */
+.pintxo-status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 154px;
+  box-sizing: border-box;
+  height: 62px;
+  padding: 21px 24px 19px;
+  flex: none;
+  color: var(--text-color-primary);
+}
+.pintxo-status-bar__time {
+  flex: 1;
+  height: 22px;
+  padding-top: 1.5px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 600;
+  font-family: -apple-system, 'SF Pro', 'SF Pro Text', system-ui, sans-serif;
+}
+.pintxo-status-bar__levels { flex: 1; display: flex; align-items: center; justify-content: center; gap: 7px; padding: 1px 1px 0 0; }
+.pintxo-status-bar__levels img:nth-child(1) { width: 19.2px; height: 12.226px; }
+.pintxo-status-bar__levels img:nth-child(2) { width: 17.142px; height: 12.328px; }
+.pintxo-status-bar__levels img:nth-child(3) { width: 27.328px; height: 13px; }
