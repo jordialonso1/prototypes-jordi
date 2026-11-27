@@ -6,7 +6,7 @@ import react from '@vitejs/plugin-react'
 const root = import.meta.dirname
 
 /* Every prototype is a folder with its own index.html. Add new ones here. */
-const prototypes = ['ai-label-prototype', 'signup-login-flow', 'pna-cna-replacements']
+const prototypes = ['ai-label-prototype', 'signup-login-flow', 'pna-cna-replacements', 'screens-library']
 
 /* Extra bundled HTML entries (React prototypes rendered inside an iframe). */
 const extraInputs = { 'signup-login-flow-prototype': 'signup-login-flow/prototype/index.html' }

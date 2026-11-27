@@ -1715,6 +1715,7 @@
       window.addEventListener('message', function (event) {
         var data = event.data;
         if (event.origin !== window.location.origin || !data) { return; }
+        if (data.type === 'goto-screen' && screens[data.screen]) { history = historyFor(data.screen); show(data.screen, true); }
         if (data.type === 'focus-ai-label') { focusAiLabel(data.index); }
         if (data.type === 'ai-labels-query') { reportAiLabel(-1); }
         if (data.type === 'ai-content' && Array.isArray(data.value)) {
